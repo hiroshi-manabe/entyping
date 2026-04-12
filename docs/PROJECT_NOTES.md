@@ -26,7 +26,7 @@
 
 - Source TSV: [book_data.tsv](/Users/manabe/Software/entyping/content/new_crown1/source/book_data.tsv)
 - Source notes: [new_crown1_combined_japanese_notes.md](/Users/manabe/Software/entyping/content/new_crown1/source/new_crown1_combined_japanese_notes.md)
-- Generated dataset: [new_crown1.json](/Users/manabe/Software/entyping/content/new_crown1/dataset/new_crown1.json)
+- Generated dataset: [content.json](/Users/manabe/Software/entyping/content/new_crown1/content.json)
 - Downloaded local audio root: [audio](/Users/manabe/Software/entyping/content/new_crown1/audio)
 
 ## Dataset Status
@@ -58,7 +58,18 @@
 - Use the textbook publisher MP3 files as the primary English audio source.
 - Store audio locally rather than depending on remote URLs at runtime.
 - Preserve the original relative path structure under `content/new_crown1/audio/`.
+- Put the generated dataset at the package root so runtime audio URLs can stay simple, such as `audio/...`.
 - Japanese audio is not needed.
+
+## Runtime Loading Decisions
+
+- The runtime entry point should be a dataset JSON URL, not a package name hardcoded in the app.
+- The same loading rule should be used locally and in deployed environments.
+- Item-level `audio_url` values should normally be relative, so the same dataset remains portable across hosts.
+- The runtime should also accept absolute `audio_url` values when present.
+- Relative audio paths should be resolved against the dataset JSON URL.
+- The chosen dataset URL should be saved locally in the browser and editable later from settings.
+- Local validation should use a served URL such as `http://127.0.0.1:4173/content/new_crown1/content.json`, not `file://`.
 
 ## Synthetic Fallback Dataset
 
@@ -96,6 +107,8 @@
 ```bash
 npm run dev
 ```
+
+- Local development should still use the same JSON-URL-driven runtime model as deployment, with the dev server only providing the local HTTP URL.
 
 - Current public site build command:
 

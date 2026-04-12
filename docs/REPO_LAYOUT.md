@@ -20,10 +20,12 @@ This repository is split into three concerns:
   - textbook-aligned content package
 - `content/new_crown1/source/`
   - source TSV and combined Japanese notes
-- `content/new_crown1/dataset/`
+- `content/new_crown1/content.json`
   - generated app-ready JSON dataset
 - `content/new_crown1/audio/`
   - downloaded local MP3 files with original relative paths preserved
+
+At runtime, the app should be configured with the URL of `content.json` and resolve relative `audio_url` values from there.
 
 - `content/synthetic/`
   - fallback synthetic content package

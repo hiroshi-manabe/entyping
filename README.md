@@ -45,6 +45,28 @@ The current generated dataset shape is intentionally generic:
 
 This keeps the runtime model neutral even when the source material uses labels such as `Lesson 2` or `Part 1 Scene 1`.
 
+## Runtime Content Loading
+
+The intended runtime contract is:
+
+- the app is given a dataset JSON URL
+- the app fetches that JSON
+- each item may contain an `audio_url`
+- if `audio_url` is relative, the app resolves it against the JSON URL
+- if `audio_url` is absolute, the app uses it as-is
+
+This same rule should be used both for local development and for deployed hosting.
+
+In practice, a local package can be loaded from a URL such as:
+
+- `http://127.0.0.1:4173/content/new_crown1/content.json`
+
+and a hosted package can be loaded from a URL such as:
+
+- `https://entyping-assets.pages.dev/new_crown1/content.json`
+
+The chosen dataset URL should be stored locally by the app so the user does not need to enter it on every launch.
+
 ## Private Content Workflow
 
 This public repository is intended to work with local content packages.
@@ -52,7 +74,7 @@ This public repository is intended to work with local content packages.
 For example, a private package can live under:
 
 - `content/<package-name>/source/`
-- `content/<package-name>/dataset/`
+- `content/<package-name>/content.json`
 - `content/<package-name>/audio/`
 
 Large or sensitive content can be kept out of Git with `.gitignore`, while the app and tooling remain reusable.

@@ -6,7 +6,7 @@ async function checkLocalDataset() {
   }
 
   try {
-    const response = await fetch("/content/new_crown1/dataset/new_crown1.json", {
+    const response = await fetch("/content/new_crown1/content.json", {
       cache: "no-store",
     });
     if (!response.ok) {
@@ -20,7 +20,7 @@ async function checkLocalDataset() {
     datasetStatus.dataset.state = "ok";
   } catch (_error) {
     datasetStatus.textContent =
-      "No local content package detected at /content/new_crown1/dataset/new_crown1.json.";
+      "No local content package detected at /content/new_crown1/content.json.";
     datasetStatus.dataset.state = "missing";
   }
 }

@@ -5,6 +5,7 @@ import argparse
 import csv
 import html
 import json
+import os
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -13,8 +14,8 @@ from typing import Any
 
 DEFAULT_TSV = Path("content/new_crown1/source/book_data.tsv")
 DEFAULT_NOTES = Path("content/new_crown1/source/new_crown1_combined_japanese_notes.md")
-DEFAULT_OUTPUT = Path("content/new_crown1/dataset/new_crown1.json")
-LOCAL_AUDIO_ROOT = "content/new_crown1/audio"
+DEFAULT_OUTPUT = Path("content/new_crown1/content.json")
+LOCAL_AUDIO_ROOT = Path("content/new_crown1/audio")
 
 
 TAG_RE = re.compile(r"<[^>]+>")
@@ -199,6 +200,7 @@ def parse_book_and_items(
     tsv_path: Path,
     notes_by_audio: dict[str, NoteEntry],
     notes_path: Path,
+    output_path: Path,
 ) -> dict[str, Any]:
     rows = list(csv.reader(tsv_path.open(encoding="utf-8", newline=""), delimiter="\t"))
 
@@ -261,6 +263,8 @@ def parse_book_and_items(
             note_entry = notes_by_audio.get(normalized_audio)
             if note_entry is None:
                 raise ValueError(f"missing note entry for audio path: {normalized_audio}")
+            audio_local_path = LOCAL_AUDIO_ROOT / normalized_audio
+            audio_url = Path(os.path.relpath(audio_local_path, output_path.parent)).as_posix()
 
             item = {
                 "id": f"item_{item_counter:04d}",
@@ -280,7 +284,8 @@ def parse_book_and_items(
                 "pronunciation_note": note_entry.pronunciation_note,
                 "textbook_pronunciation_advice": advice or None,
                 "audio_relative_path": normalized_audio,
-                "audio_local_path": f"{LOCAL_AUDIO_ROOT}/{normalized_audio}",
+                "audio_url": audio_url,
+                "audio_local_path": audio_local_path.as_posix(),
                 "duration_raw": duration_cell.strip() or None,
                 "duration_seconds": parse_duration_seconds(duration_cell),
             }
@@ -345,7 +350,7 @@ def parse_book_and_items(
             "tsv": str(tsv_path),
             "notes_markdown": str(notes_path),
         },
-        "audio_root": LOCAL_AUDIO_ROOT,
+        "audio_root": Path(os.path.relpath(LOCAL_AUDIO_ROOT, output_path.parent)).as_posix(),
         "unit_count": len(units),
         "part_count": sum(len(unit["parts"]) for unit in units),
         "item_count": item_counter,
@@ -376,7 +381,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     notes_by_audio = parse_note_entries(args.notes)
-    dataset = parse_book_and_items(args.tsv, notes_by_audio, args.notes)
+    dataset = parse_book_and_items(args.tsv, notes_by_audio, args.notes, args.output)
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(

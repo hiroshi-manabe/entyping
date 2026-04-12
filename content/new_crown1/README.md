@@ -6,7 +6,7 @@ Structure:
 
 - `source/`
   - original TSV and combined Japanese notes
-- `dataset/`
+- `content.json`
   - generated app-ready JSON
 - `audio/`
   - local MP3 assets
