@@ -1,0 +1,501 @@
+id,lesson,item,focus,sentence,ja
+1,1,1,be verb with I/you; basic yes-no questions,I'm Ken.,ケンです。
+2,1,2,be verb with I/you; basic yes-no questions,You're Emi.,あなたはエミです。
+3,1,3,be verb with I/you; basic yes-no questions,I'm twelve.,わたしは12歳です。
+4,1,4,be verb with I/you; basic yes-no questions,You're in my class.,あなたはわたしと同じクラスです。
+5,1,5,be verb with I/you; basic yes-no questions,I'm not late.,わたしは遅れていません。
+6,1,6,be verb with I/you; basic yes-no questions,You're not my teacher.,あなたはわたしの先生ではありません。
+7,1,7,be verb with I/you; basic yes-no questions,Am I next?,わたしの番ですか？
+8,1,8,be verb with I/you; basic yes-no questions,Are you ready?,準備はいいですか？
+9,1,9,be verb with I/you; basic yes-no questions,Is this easy?,これは簡単ですか？
+10,1,10,be verb with I/you; basic yes-no questions,Is that your bag?,あれはあなたのかばんですか？
+11,2,1,"names, from, be verb, my/your",My name is Ken.,わたしの名前はケンです。
+12,2,2,"names, from, be verb, my/your",Your name is Emi.,あなたの名前はエミです。
+13,2,3,"names, from, be verb, my/your",I'm from Nara.,わたしは奈良出身です。
+14,2,4,"names, from, be verb, my/your",You're from Osaka.,あなたは大阪出身です。
+15,2,5,"names, from, be verb, my/your",I'm not from Tokyo.,わたしは東京出身ではありません。
+16,2,6,"names, from, be verb, my/your",You're not from Kyoto.,あなたは京都出身ではありません。
+17,2,7,"names, from, be verb, my/your",Are you from Japan?,あなたは日本出身ですか？
+18,2,8,"names, from, be verb, my/your",Am I in Room 3?,わたしは3号室にいますか？
+19,2,9,"names, from, be verb, my/your",Is your name Emi?,あなたの名前はエミですか？
+20,2,10,"names, from, be verb, my/your",Is my seat here?,わたしの席はここですか？
+21,3,1,this/that/these/those; possession,This is my book.,これはわたしの本です。
+22,3,2,this/that/these/those; possession,That is your pen.,あれはあなたのペンです。
+23,3,3,this/that/these/those; possession,These are my shoes.,これらはわたしのくつです。
+24,3,4,this/that/these/those; possession,Those are your notebooks.,あれらはあなたのノートです。
+25,3,5,this/that/these/those; possession,This isn't my desk.,これはわたしの机ではありません。
+26,3,6,this/that/these/those; possession,That isn't your box.,あれはあなたの箱ではありません。
+27,3,7,this/that/these/those; possession,Are these your keys?,これらはあなたのかぎですか？
+28,3,8,this/that/these/those; possession,Are those my socks?,あれらはわたしのくつ下ですか？
+29,3,9,this/that/these/those; possession,Is this your room?,これはあなたの部屋ですか？
+30,3,10,this/that/these/those; possession,Is that my hat?,あれはわたしのぼうしですか？
+31,4,1,we/they; our/their; be verb review,We are friends.,わたしたちは友だちです。
+32,4,2,we/they; our/their; be verb review,They are students.,彼らは生徒です。
+33,4,3,we/they; our/their; be verb review,Our school is big.,わたしたちの学校は大きいです。
+34,4,4,we/they; our/their; be verb review,Their room is clean.,彼らの部屋はきれいです。
+35,4,5,we/they; our/their; be verb review,We aren't busy now.,わたしたちは今忙しくありません。
+36,4,6,we/they; our/their; be verb review,They aren't at home.,彼らは家にいません。
+37,4,7,we/they; our/their; be verb review,Are we in the same class?,わたしたちは同じクラスですか？
+38,4,8,we/they; our/their; be verb review,Are they from Japan?,彼らは日本出身ですか？
+39,4,9,we/they; our/their; be verb review,Is our bus here?,わたしたちのバスはここですか？
+40,4,10,we/they; our/their; be verb review,Is their dog cute?,彼らの犬はかわいいですか？
+41,5,1,he/she; his/her; be verb review,He is my friend.,彼はわたしの友だちです。
+42,5,2,he/she; his/her; be verb review,She is your teacher.,彼女はあなたの先生です。
+43,5,3,he/she; his/her; be verb review,His bag is black.,彼のかばんは黒いです。
+44,5,4,he/she; his/her; be verb review,Her bike is new.,彼女の自転車は新しいです。
+45,5,5,he/she; his/her; be verb review,He isn't in my group.,彼はわたしのグループにいません。
+46,5,6,he/she; his/her; be verb review,She isn't in our club.,彼女はわたしたちのクラブにいません。
+47,5,7,he/she; his/her; be verb review,Is he from Kobe?,彼は神戸出身ですか？
+48,5,8,he/she; his/her; be verb review,Is she your sister?,彼女はあなたのお姉さんですか？
+49,5,9,he/she; his/her; be verb review,Is his room small?,彼の部屋は小さいですか？
+50,5,10,he/she; his/her; be verb review,Is her desk over there?,彼女の机はあそこですか？
+51,6,1,object pronouns with can,Look at me.,わたしを見て。
+52,6,2,object pronouns with can,I can help you.,わたしはあなたを手伝えます。
+53,6,3,object pronouns with can,You can call me Ken.,あなたはわたしをケンと呼べます。
+54,6,4,object pronouns with can,We can see them.,わたしたちには彼らが見えます。
+55,6,5,object pronouns with can,They can hear us.,彼らにはわたしたちの声が聞こえます。
+56,6,6,object pronouns with can,He can't see me.,彼にはわたしが見えません。
+57,6,7,object pronouns with can,She can't hear you.,彼女にはあなたの声が聞こえません。
+58,6,8,object pronouns with can,Can you help me?,わたしを手伝ってくれますか？
+59,6,9,object pronouns with can,Can they hear us?,彼らにはわたしたちの声が聞こえますか？
+60,6,10,object pronouns with can,Can he see them?,彼には彼らが見えますか？
+61,7,1,simple present with I/you/we/they; do/don't,I play tennis.,わたしはテニスをします。
+62,7,2,simple present with I/you/we/they; do/don't,"You play tennis, too.",あなたもテニスをします。
+63,7,3,simple present with I/you/we/they; do/don't,We play after school.,わたしたちは放課後にテニスをします。
+64,7,4,simple present with I/you/we/they; do/don't,They play in the park.,彼らは公園でテニスをします。
+65,7,5,simple present with I/you/we/they; do/don't,I don't play today.,わたしは今日はテニスをしません。
+66,7,6,simple present with I/you/we/they; do/don't,You don't play on Sunday.,あなたは日曜日にはテニスをしません。
+67,7,7,simple present with I/you/we/they; do/don't,Do I need this?,わたしにはこれが必要ですか？
+68,7,8,simple present with I/you/we/they; do/don't,Do you play every day?,あなたは毎日テニスをしますか？
+69,7,9,simple present with I/you/we/they; do/don't,Do we start now?,わたしたちは今始めますか？
+70,7,10,simple present with I/you/we/they; do/don't,Do they practice here?,彼らはここで練習しますか？
+71,8,1,have/like with I/you/we/they,I like this song.,わたしはこの歌が好きです。
+72,8,2,have/like with I/you/we/they,You like that song.,あなたはあの歌が好きです。
+73,8,3,have/like with I/you/we/they,We like math.,わたしたちは数学が好きです。
+74,8,4,have/like with I/you/we/they,They like English.,彼らは英語が好きです。
+75,8,5,have/like with I/you/we/they,I don't like milk.,わたしは牛乳が好きではありません。
+76,8,6,have/like with I/you/we/they,You don't like natto.,あなたは納豆が好きではありません。
+77,8,7,have/like with I/you/we/they,Do I have your book?,わたしはあなたの本を持っていますか？
+78,8,8,have/like with I/you/we/they,Do you have my pen?,あなたはわたしのペンを持っていますか？
+79,8,9,have/like with I/you/we/they,Do we have enough time?,わたしたちには十分な時間がありますか？
+80,8,10,have/like with I/you/we/they,Do they have lunch now?,彼らは今昼食を食べますか？
+81,9,1,daily routine with I/you/we/they; when/where,I get up at six.,わたしは6時に起きます。
+82,9,2,daily routine with I/you/we/they; when/where,You go to school at eight.,あなたは8時に学校へ行きます。
+83,9,3,daily routine with I/you/we/they; when/where,We eat lunch at noon.,わたしたちは正午に昼食を食べます。
+84,9,4,daily routine with I/you/we/they; when/where,They study after dinner.,彼らは夕食のあとに勉強します。
+85,9,5,daily routine with I/you/we/they; when/where,I don't get up at five.,わたしは5時には起きません。
+86,9,6,daily routine with I/you/we/they; when/where,You don't go by bus.,あなたはバスでは行きません。
+87,9,7,daily routine with I/you/we/they; when/where,Do I look tired?,わたしは疲れて見えますか？
+88,9,8,daily routine with I/you/we/they; when/where,Do you eat breakfast here?,あなたはここで朝食を食べますか？
+89,9,9,daily routine with I/you/we/they; when/where,When do we study English?,わたしたちはいつ英語を勉強しますか？
+90,9,10,daily routine with I/you/we/they; when/where,Where do they eat lunch?,彼らはどこで昼食を食べますか？
+91,10,1,places and be verb review,I'm in the library now.,わたしは今図書館にいます。
+92,10,2,places and be verb review,You're in the music room now.,あなたは今音楽室にいます。
+93,10,3,places and be verb review,We are in the gym now.,わたしたちは今体育館にいます。
+94,10,4,places and be verb review,They are in the classroom now.,彼らは今教室にいます。
+95,10,5,places and be verb review,I'm not in the hall now.,わたしは今ろうかにいません。
+96,10,6,places and be verb review,You're not in the office now.,あなたは今職員室にいません。
+97,10,7,places and be verb review,Are we in the right room?,わたしたちは正しい部屋にいますか？
+98,10,8,places and be verb review,Are they in the art room?,彼らは美術室にいますか？
+99,10,9,places and be verb review,Where am I?,わたしはどこにいますか？
+100,10,10,places and be verb review,Where are you now?,あなたは今どこにいますか？
+101,11,1,present progressive with I/you/we/they,I'm reading now.,今、わたしは読んでいます。
+102,11,2,present progressive with I/you/we/they,You're writing now.,あなたは今、書いています。
+103,11,3,present progressive with I/you/we/they,We are studying now.,わたしたちは今、勉強しています。
+104,11,4,present progressive with I/you/we/they,They are eating now.,彼らは今、食事をしています。
+105,11,5,present progressive with I/you/we/they,I'm not sleeping now.,今、わたしは寝ていません。
+106,11,6,present progressive with I/you/we/they,You're not waiting now.,あなたは今、待っていません。
+107,11,7,present progressive with I/you/we/they,Am I speaking too fast?,わたしは話すのが速すぎますか？
+108,11,8,present progressive with I/you/we/they,Are you listening to me?,あなたはわたしの話を聞いていますか？
+109,11,9,present progressive with I/you/we/they,What are we doing now?,わたしたちは今、何をしていますか？
+110,11,10,present progressive with I/you/we/they,Why are they running?,なぜ彼らは走っているのですか？
+111,12,1,"imperatives, let's, can",Let's start now.,今始めましょう。
+112,12,2,"imperatives, let's, can",Let's open our books.,本を開きましょう。
+113,12,3,"imperatives, let's, can",Let's sit here.,ここに座りましょう。
+114,12,4,"imperatives, let's, can",Please help me.,わたしを手伝ってください。
+115,12,5,"imperatives, let's, can",Please don't run.,走らないでください。
+116,12,6,"imperatives, let's, can",Please don't open that.,それを開けないでください。
+117,12,7,"imperatives, let's, can",Can you stand up?,立ってくれますか？
+118,12,8,"imperatives, let's, can",Can you close the door?,ドアを閉めてくれますか？
+119,12,9,"imperatives, let's, can",Can we go now?,わたしたちは今、行けますか？
+120,12,10,"imperatives, let's, can",Can they come with us?,彼らはわたしたちといっしょに来られますか？
+121,13,1,there is/are,There is a cat here.,ここに猫がいます。
+122,13,2,there is/are,There is a pen on my desk.,わたしの机の上にペンがあります。
+123,13,3,there is/are,There are two books in my bag.,わたしのかばんの中に本が2冊あります。
+124,13,4,there is/are,There are three boys in the park.,公園に男の子が3人います。
+125,13,5,there is/are,There isn't a bus now.,今、バスはありません。
+126,13,6,there is/are,There aren't any apples here.,ここにはりんごがありません。
+127,13,7,there is/are,Is there a station near here?,この近くに駅はありますか？
+128,13,8,there is/are,Are there any shops there?,そこにお店はありますか？
+129,13,9,there is/are,What's in your bag?,あなたのかばんの中に何がありますか？
+130,13,10,there is/are,What's on that table?,あのテーブルの上に何がありますか？
+131,14,1,prepositions and location,My book is on the desk.,わたしの本は机の上にあります。
+132,14,2,prepositions and location,Your bag is under the chair.,あなたのかばんはいすの下にあります。
+133,14,3,prepositions and location,Our room is near the library.,わたしたちの部屋は図書館の近くにあります。
+134,14,4,prepositions and location,Their house is by the river.,彼らの家は川のそばにあります。
+135,14,5,prepositions and location,My pen isn't on the table.,わたしのペンはテーブルの上にありません。
+136,14,6,prepositions and location,Your shoes aren't under the bed.,あなたのくつはベッドの下にありません。
+137,14,7,prepositions and location,Is our classroom on this floor?,わたしたちの教室はこの階にありますか？
+138,14,8,prepositions and location,Is their house near the station?,彼らの家は駅の近くにありますか？
+139,14,9,prepositions and location,Where is my notebook?,わたしのノートはどこにありますか？
+140,14,10,prepositions and location,Where are your glasses?,あなたのめがねはどこにありますか？
+141,15,1,want/need with I/you/we/they,I want a new bike.,わたしは新しい自転車がほしいです。
+142,15,2,want/need with I/you/we/they,You want a blue cap.,あなたは青いぼうしがほしいです。
+143,15,3,want/need with I/you/we/they,We want cold juice.,わたしたちは冷たいジュースがほしいです。
+144,15,4,want/need with I/you/we/they,They want some bread.,彼らはパンがほしいです。
+145,15,5,want/need with I/you/we/they,I don't want this one.,わたしはこれはほしくありません。
+146,15,6,want/need with I/you/we/they,You don't want that one.,あなたはあれがほしくありません。
+147,15,7,want/need with I/you/we/they,Do I need a map?,わたしには地図が必要ですか？
+148,15,8,want/need with I/you/we/they,Do you want my help?,あなたはわたしの助けがほしいですか？
+149,15,9,want/need with I/you/we/they,Do we need more chairs?,わたしたちにはもっといすが必要ですか？
+150,15,10,want/need with I/you/we/they,Do they want some water?,彼らは水がほしいですか？
+151,16,1,can/can't review,I can swim well.,わたしは上手に泳げます。
+152,16,2,can/can't review,You can sing very well.,あなたはとても上手に歌えます。
+153,16,3,can/can't review,We can play soccer here.,わたしたちはここでサッカーができます。
+154,16,4,can/can't review,They can speak English well.,彼らは英語を上手に話せます。
+155,16,5,can/can't review,I can't swim today.,わたしは今日は泳げません。
+156,16,6,can/can't review,You can't use my phone.,あなたはわたしの電話を使えません。
+157,16,7,can/can't review,Can I try again?,もう一度やってもいいですか？
+158,16,8,can/can't review,Can you speak Japanese?,あなたは日本語を話せますか？
+159,16,9,can/can't review,Can we play here?,わたしたちはここで遊べますか？
+160,16,10,can/can't review,Can they come today?,彼らは今日来られますか？
+161,17,1,be going to with I/you/we/they,I'm going to study tonight.,わたしは今夜勉強するつもりです。
+162,17,2,be going to with I/you/we/they,You're going to call me later.,あなたはあとでわたしに電話するつもりです。
+163,17,3,be going to with I/you/we/they,We are going to play tomorrow.,わたしたちは明日遊ぶつもりです。
+164,17,4,be going to with I/you/we/they,They are going to visit Nara.,彼らは奈良を訪れるつもりです。
+165,17,5,be going to with I/you/we/they,I'm not going to stay home.,わたしは家にいるつもりはありません。
+166,17,6,be going to with I/you/we/they,You're not going to walk there.,あなたはそこまで歩いて行くつもりはありません。
+167,17,7,be going to with I/you/we/they,Am I going to see you tomorrow?,わたしは明日あなたに会うつもりですか？
+168,17,8,be going to with I/you/we/they,Are you going to use this room?,あなたはこの部屋を使うつもりですか？
+169,17,9,be going to with I/you/we/they,What are we going to do next?,わたしたちは次に何をするつもりですか？
+170,17,10,be going to with I/you/we/they,Where are they going to meet us?,彼らはどこでわたしたちと会うつもりですか？
+171,18,1,be going to with he/she,He is going to come soon.,彼はもうすぐ来るつもりです。
+172,18,2,be going to with he/she,She is going to read this book.,彼女はこの本を読むつもりです。
+173,18,3,be going to with he/she,His team is going to win.,彼のチームは勝ちそうです。
+174,18,4,be going to with he/she,Her class is going to sing.,彼女のクラスは歌を歌う予定です。
+175,18,5,be going to with he/she,He isn't going to join us.,彼はわたしたちに加わるつもりはありません。
+176,18,6,be going to with he/she,She isn't going to stay long.,彼女は長くいるつもりはありません。
+177,18,7,be going to with he/she,Is he going to call you?,彼はあなたに電話するつもりですか？
+178,18,8,be going to with he/she,Is she going to help me?,彼女はわたしを手伝うつもりですか？
+179,18,9,be going to with he/she,When is his bus going to leave?,彼のバスはいつ出る予定ですか？
+180,18,10,be going to with he/she,Where is her family going to eat?,彼女の家族はどこで食事をする予定ですか？
+181,19,1,simple present 3rd person begins,He plays tennis.,彼はテニスをします。
+182,19,2,simple present 3rd person begins,"She plays tennis, too.",彼女もテニスをします。
+183,19,3,simple present 3rd person begins,He likes this song.,彼はこの歌が好きです。
+184,19,4,simple present 3rd person begins,She likes that song.,彼女はあの歌が好きです。
+185,19,5,simple present 3rd person begins,He doesn't play today.,彼は今日はテニスをしません。
+186,19,6,simple present 3rd person begins,She doesn't like milk.,彼女は牛乳が好きではありません。
+187,19,7,simple present 3rd person begins,Does he have my book?,彼はわたしの本を持っていますか？
+188,19,8,simple present 3rd person begins,Does she know your name?,彼女はあなたの名前を知っていますか？
+189,19,9,simple present 3rd person begins,When does he study English?,彼はいつ英語を勉強しますか？
+190,19,10,simple present 3rd person begins,Where does she eat lunch?,彼女はどこで昼食を食べますか？
+191,20,1,simple present 3rd person routines,He gets up at six.,彼は6時に起きます。
+192,20,2,simple present 3rd person routines,She goes to school at eight.,彼女は8時に学校へ行きます。
+193,20,3,simple present 3rd person routines,He watches TV at night.,彼は夜にテレビを見ます。
+194,20,4,simple present 3rd person routines,She reads in the library.,彼女は図書館で本を読みます。
+195,20,5,simple present 3rd person routines,He doesn't get up at five.,彼は5時には起きません。
+196,20,6,simple present 3rd person routines,She doesn't go by bus.,彼女はバスでは行きません。
+197,20,7,simple present 3rd person routines,Does he watch TV every day?,彼は毎日テレビを見ますか？
+198,20,8,simple present 3rd person routines,Does she read comics here?,彼女はここでマンガを読みますか？
+199,20,9,simple present 3rd person routines,What does he want now?,彼は今何がほしいですか？
+200,20,10,simple present 3rd person routines,What does she need today?,彼女は今日何が必要ですか？
+201,21,1,present progressive with he/she,He is reading now.,彼は今、読んでいます。
+202,21,2,present progressive with he/she,She is writing now.,彼女は今、書いています。
+203,21,3,present progressive with he/she,He is studying in his room.,彼は自分の部屋で勉強しています。
+204,21,4,present progressive with he/she,She is eating with her friends.,彼女は友だちと食事をしています。
+205,21,5,present progressive with he/she,He isn't sleeping now.,彼は今、寝ていません。
+206,21,6,present progressive with he/she,She isn't waiting for us.,彼女はわたしたちを待っていません。
+207,21,7,present progressive with he/she,Is he speaking too fast?,彼は話すのが速すぎますか？
+208,21,8,present progressive with he/she,Is she listening to me?,彼女はわたしの話を聞いていますか？
+209,21,9,present progressive with he/she,What is he doing now?,彼は今、何をしていますか？
+210,21,10,present progressive with he/she,Why is she running?,なぜ彼女は走っているのですか？
+211,22,1,object pronouns review,I know him.,わたしは彼を知っています。
+212,22,2,object pronouns review,You know her.,あなたは彼女を知っています。
+213,22,3,object pronouns review,We see him at school.,わたしたちは学校で彼を見かけます。
+214,22,4,object pronouns review,They call her Emi.,彼らは彼女をエミと呼びます。
+215,22,5,object pronouns review,He knows me.,彼はわたしを知っています。
+216,22,6,object pronouns review,She calls you Ken.,彼女はあなたをケンと呼びます。
+217,22,7,object pronouns review,I don't know them.,わたしは彼らを知りません。
+218,22,8,object pronouns review,You don't see us now.,あなたには今、わたしたちが見えません。
+219,22,9,object pronouns review,Do we know her?,わたしたちは彼女を知っていますか？
+220,22,10,object pronouns review,Do they call him Taro?,彼らは彼をタロウと呼びますか？
+221,23,1,mine/yours/his/hers/ours/theirs,"This is my bike, not yours.",これはわたしの自転車で、あなたのではありません。
+222,23,2,mine/yours/his/hers/ours/theirs,"That is your desk, not mine.",あれはあなたの机で、わたしのではありません。
+223,23,3,mine/yours/his/hers/ours/theirs,These books are ours.,これらの本はわたしたちのものです。
+224,23,4,mine/yours/his/hers/ours/theirs,Those pencils are theirs.,あれらのえんぴつは彼らのものです。
+225,23,5,mine/yours/his/hers/ours/theirs,This notebook isn't his.,このノートは彼のものではありません。
+226,23,6,mine/yours/his/hers/ours/theirs,That bag isn't hers.,あのかばんは彼女のものではありません。
+227,23,7,mine/yours/his/hers/ours/theirs,Is this pen mine?,このペンはわたしのものですか？
+228,23,8,mine/yours/his/hers/ours/theirs,Is that umbrella yours?,あのかさはあなたのものですか？
+229,23,9,mine/yours/his/hers/ours/theirs,Are these shoes ours?,このくつはわたしたちのものですか？
+230,23,10,mine/yours/his/hers/ours/theirs,Are those seats theirs?,あの席は彼らのものですか？
+231,24,1,what/who/which questions,What is this?,これは何ですか？
+232,24,2,what/who/which questions,What are those?,あれらは何ですか？
+233,24,3,what/who/which questions,Who is he?,彼はだれですか？
+234,24,4,what/who/which questions,Who is she?,彼女はだれですか？
+235,24,5,what/who/which questions,Which is your bag?,どれがあなたのかばんですか？
+236,24,6,what/who/which questions,Which are our seats?,どれがわたしたちの席ですか？
+237,24,7,what/who/which questions,What do you want?,あなたは何がほしいですか？
+238,24,8,what/who/which questions,Who do you know here?,あなたはここでだれを知っていますか？
+239,24,9,what/who/which questions,Which do you like better?,あなたはどちらがより好きですか？
+240,24,10,what/who/which questions,Who is going to help us?,だれがわたしたちを手伝うつもりですか？
+241,25,1,routine verbs review,I eat breakfast before school.,わたしは学校の前に朝食を食べます。
+242,25,2,routine verbs review,You wash your face after lunch.,あなたは昼食のあとに顔を洗います。
+243,25,3,routine verbs review,We clean our room on Saturday.,わたしたちは土曜日に部屋をそうじします。
+244,25,4,routine verbs review,They use this room every day.,彼らは毎日この部屋を使います。
+245,25,5,routine verbs review,I don't eat breakfast at school.,わたしは学校で朝食を食べません。
+246,25,6,routine verbs review,You don't wash your bike here.,あなたはここで自転車を洗いません。
+247,25,7,routine verbs review,Do we clean this room on Friday?,わたしたちは金曜日にこの部屋をそうじしますか？
+248,25,8,routine verbs review,Do they use these computers?,彼らはこれらのコンピューターを使いますか？
+249,25,9,routine verbs review,When do I wash my shoes?,わたしはいつくつを洗いますか？
+250,25,10,routine verbs review,Where do you eat with your friends?,あなたはどこで友だちと食事をしますか？
+251,26,1,frequency adverbs with I/you/we/they,I usually walk to school.,わたしはふだん歩いて学校へ行きます。
+252,26,2,frequency adverbs with I/you/we/they,You usually come by bus.,あなたはふだんバスで来ます。
+253,26,3,frequency adverbs with I/you/we/they,We often play in the gym.,わたしたちはよく体育館で遊びます。
+254,26,4,frequency adverbs with I/you/we/they,They often study in the library.,彼らはよく図書館で勉強します。
+255,26,5,frequency adverbs with I/you/we/they,I don't usually walk home.,わたしはふだん歩いて帰りません。
+256,26,6,frequency adverbs with I/you/we/they,You don't often come early.,あなたはあまり早く来ません。
+257,26,7,frequency adverbs with I/you/we/they,Do we usually eat here?,わたしたちはふだんここで食べますか？
+258,26,8,frequency adverbs with I/you/we/they,Do they often play after school?,彼らはよく放課後に遊びますか？
+259,26,9,frequency adverbs with I/you/we/they,When do I usually see you?,わたしはふだんいつあなたに会いますか？
+260,26,10,frequency adverbs with I/you/we/they,How do you usually study English?,あなたはふだんどのように英語を勉強しますか？
+261,27,1,frequency adverbs with he/she,He usually walks to school.,彼はふだん歩いて学校へ行きます。
+262,27,2,frequency adverbs with he/she,She usually comes by bus.,彼女はふだんバスで来ます。
+263,27,3,frequency adverbs with he/she,He often plays in the park.,彼はよく公園で遊びます。
+264,27,4,frequency adverbs with he/she,She often studies at home.,彼女はよく家で勉強します。
+265,27,5,frequency adverbs with he/she,He doesn't usually walk home.,彼はふだん歩いて帰りません。
+266,27,6,frequency adverbs with he/she,She doesn't often come early.,彼女はあまり早く来ません。
+267,27,7,frequency adverbs with he/she,Does he usually eat here?,彼はふだんここで食べますか？
+268,27,8,frequency adverbs with he/she,Does she often play after school?,彼女はよく放課後に遊びますか？
+269,27,9,frequency adverbs with he/she,When does he usually see you?,彼はふだんいつあなたに会いますか？
+270,27,10,frequency adverbs with he/she,How does she usually study English?,彼女はふだんどのように英語を勉強しますか？
+271,28,1,want to with I/you/we/they,I want to play soccer.,わたしはサッカーをしたいです。
+272,28,2,want to with I/you/we/they,You want to read this book.,あなたはこの本を読みたいです。
+273,28,3,want to with I/you/we/they,We want to see the movie.,わたしたちはその映画を見たいです。
+274,28,4,want to with I/you/we/they,They want to eat now.,彼らは今食べたいです。
+275,28,5,want to with I/you/we/they,I don't want to go alone.,わたしはひとりで行きたくありません。
+276,28,6,want to with I/you/we/they,You don't want to sing here.,あなたはここで歌いたくありません。
+277,28,7,want to with I/you/we/they,Do we want to stay there?,わたしたちはそこにいたいですか？
+278,28,8,want to with I/you/we/they,Do they want to help us?,彼らはわたしたちを手伝いたいですか？
+279,28,9,want to with I/you/we/they,What do I want to do now?,わたしは今何をしたいですか？
+280,28,10,want to with I/you/we/they,Where do you want to go?,あなたはどこへ行きたいですか？
+281,29,1,want to with he/she,He wants to play soccer.,彼はサッカーをしたがっています。
+282,29,2,want to with he/she,She wants to read this book.,彼女はこの本を読みたがっています。
+283,29,3,want to with he/she,He wants to see the movie.,彼はその映画を見たがっています。
+284,29,4,want to with he/she,She wants to eat now.,彼女は今食べたがっています。
+285,29,5,want to with he/she,He doesn't want to go alone.,彼はひとりで行きたがっていません。
+286,29,6,want to with he/she,She doesn't want to sing here.,彼女はここで歌いたがっていません。
+287,29,7,want to with he/she,Does he want to stay there?,彼はそこにいたがっていますか？
+288,29,8,want to with he/she,Does she want to help us?,彼女はわたしたちを手伝いたがっていますか？
+289,29,9,want to with he/she,What does he want to do now?,彼は今何をしたがっていますか？
+290,29,10,want to with he/she,Where does she want to go?,彼女はどこへ行きたがっていますか？
+291,30,1,have to with I/you/we/they,I have to go now.,わたしは今行かなければなりません。
+292,30,2,have to with I/you/we/they,You have to study tonight.,あなたは今夜勉強しなければなりません。
+293,30,3,have to with I/you/we/they,We have to clean the room.,わたしたちはその部屋をそうじしなければなりません。
+294,30,4,have to with I/you/we/they,They have to wait here.,彼らはここで待たなければなりません。
+295,30,5,have to with I/you/we/they,I don't have to go today.,わたしは今日は行かなくてもいいです。
+296,30,6,have to with I/you/we/they,You don't have to come early.,あなたは早く来なくてもいいです。
+297,30,7,have to with I/you/we/they,Do we have to bring lunch?,わたしたちは昼食を持って来なければなりませんか？
+298,30,8,have to with I/you/we/they,Do they have to wear white shoes?,彼らは白いくつをはかなければなりませんか？
+299,30,9,have to with I/you/we/they,When do I have to finish this?,わたしはいつこれを終えなければなりませんか？
+300,30,10,have to with I/you/we/they,Where do you have to go now?,あなたは今どこへ行かなければなりませんか？
+301,31,1,have to with he/she,He has to go now.,彼は今行かなければなりません。
+302,31,2,have to with he/she,She has to study tonight.,彼女は今夜勉強しなければなりません。
+303,31,3,have to with he/she,He has to clean his room.,彼は自分の部屋をそうじしなければなりません。
+304,31,4,have to with he/she,She has to wait here.,彼女はここで待たなければなりません。
+305,31,5,have to with he/she,He doesn't have to go today.,彼は今日は行かなくてもいいです。
+306,31,6,have to with he/she,She doesn't have to come early.,彼女は早く来なくてもいいです。
+307,31,7,have to with he/she,Does he have to bring lunch?,彼は昼食を持って来なければなりませんか？
+308,31,8,have to with he/she,Does she have to wear white shoes?,彼女は白いくつをはかなければなりませんか？
+309,31,9,have to with he/she,When does he have to finish this?,彼はいつこれを終えなければなりませんか？
+310,31,10,have to with he/she,Where does she have to go now?,彼女は今どこへ行かなければなりませんか？
+311,32,1,know/tell basic review,Can you tell me the time?,時間を教えてくれますか？
+312,32,2,know/tell basic review,Can you tell me your name again?,もう一度名前を教えてくれますか？
+313,32,3,know/tell basic review,Do you know the answer?,あなたは答えを知っていますか？
+314,32,4,know/tell basic review,Do you know my brother?,あなたはわたしの兄弟を知っていますか？
+315,32,5,know/tell basic review,I don't know the answer.,わたしは答えを知りません。
+316,32,6,know/tell basic review,You don't know her name.,あなたは彼女の名前を知りません。
+317,32,7,know/tell basic review,Do we know the way?,わたしたちは道を知っていますか？
+318,32,8,know/tell basic review,Do they know our teacher?,彼らはわたしたちの先生を知っていますか？
+319,32,9,know/tell basic review,Who knows the answer?,だれが答えを知っていますか？
+320,32,10,know/tell basic review,Which student knows this answer?,どの生徒がこの答えを知っていますか？
+321,33,1,indirect questions: where,Do you know where the station is?,駅がどこにあるか知っていますか？
+322,33,2,indirect questions: where,Can you tell me where the bus stop is?,バス停がどこにあるか教えてくれますか？
+323,33,3,indirect questions: where,Do you know where my book is?,わたしの本がどこにあるか知っていますか？
+324,33,4,indirect questions: where,Can you tell me where your room is?,あなたの部屋がどこにあるか教えてくれますか？
+325,33,5,indirect questions: where,I don't know where the station is.,わたしは駅がどこにあるか知りません。
+326,33,6,indirect questions: where,You don't know where the key is.,あなたはかぎがどこにあるか知りません。
+327,33,7,indirect questions: where,Do we know where the gym is?,わたしたちは体育館がどこにあるか知っていますか？
+328,33,8,indirect questions: where,Do they know where our seats are?,彼らはわたしたちの席がどこにあるか知っていますか？
+329,33,9,indirect questions: where,He knows where the teacher is.,彼は先生がどこにいるか知っています。
+330,33,10,indirect questions: where,She knows where the map is.,彼女は地図がどこにあるか知っています。
+331,34,1,indirect questions: what,Do you know what time it is?,今何時か知っていますか？
+332,34,2,indirect questions: what,Can you tell me what day it is?,今日は何曜日か教えてくれますか？
+333,34,3,indirect questions: what,Do you know what her name is?,彼女の名前が何か知っていますか？
+334,34,4,indirect questions: what,Can you tell me what his job is?,彼の仕事が何か教えてくれますか？
+335,34,5,indirect questions: what,I don't know what time it is.,わたしは今何時か知りません。
+336,34,6,indirect questions: what,You don't know what the answer is.,あなたは答えが何か知りません。
+337,34,7,indirect questions: what,Do we know what his plan is?,わたしたちは彼の計画が何か知っていますか？
+338,34,8,indirect questions: what,Do they know what our homework is?,彼らはわたしたちの宿題が何か知っていますか？
+339,34,9,indirect questions: what,He knows what the problem is.,彼は問題が何か知っています。
+340,34,10,indirect questions: what,She knows what the rule is.,彼女はルールが何か知っています。
+341,35,1,indirect questions: who,Do you know who that boy is?,あの男の子がだれか知っていますか？
+342,35,2,indirect questions: who,Can you tell me who that girl is?,あの女の子がだれか教えてくれますか？
+343,35,3,indirect questions: who,Do you know who our English teacher is?,わたしたちの英語の先生がだれか知っていますか？
+344,35,4,indirect questions: who,Can you tell me who his friend is?,彼の友だちがだれか教えてくれますか？
+345,35,5,indirect questions: who,I don't know who that boy is.,わたしはあの男の子がだれか知りません。
+346,35,6,indirect questions: who,You don't know who her sister is.,あなたは彼女の姉妹がだれか知りません。
+347,35,7,indirect questions: who,Do we know who the new student is?,わたしたちは新しい生徒がだれか知っていますか？
+348,35,8,indirect questions: who,Do they know who our coach is?,彼らはわたしたちのコーチがだれか知っていますか？
+349,35,9,indirect questions: who,He knows who that man is.,彼はあの男の人がだれか知っています。
+350,35,10,indirect questions: who,She knows who the singer is.,彼女はその歌手がだれか知っています。
+351,36,1,indirect questions: when,Do you know when the train leaves?,電車がいつ出るか知っていますか？
+352,36,2,indirect questions: when,Can you tell me when the class starts?,授業がいつ始まるか教えてくれますか？
+353,36,3,indirect questions: when,Do you know when your bus comes?,あなたのバスがいつ来るか知っていますか？
+354,36,4,indirect questions: when,Can you tell me when his birthday is?,彼の誕生日がいつか教えてくれますか？
+355,36,5,indirect questions: when,I don't know when the train leaves.,わたしは電車がいつ出るか知りません。
+356,36,6,indirect questions: when,You don't know when the game starts.,あなたは試合がいつ始まるか知りません。
+357,36,7,indirect questions: when,Do we know when our test is?,わたしたちはテストがいつか知っていますか？
+358,36,8,indirect questions: when,Do they know when the store opens?,彼らは店がいつ開くか知っていますか？
+359,36,9,indirect questions: when,He knows when the movie starts.,彼は映画がいつ始まるか知っています。
+360,36,10,indirect questions: when,She knows when lunch ends.,彼女は昼休みがいつ終わるか知っています。
+361,37,1,indirect questions: why,Do you know why he is late?,彼がなぜ遅れているか知っていますか？
+362,37,2,indirect questions: why,Can you tell me why she is sad?,彼女がなぜ悲しいのか教えてくれますか？
+363,37,3,indirect questions: why,Do you know why the door is open?,ドアがなぜ開いているか知っていますか？
+364,37,4,indirect questions: why,Can you tell me why your bag is here?,なぜあなたのかばんがここにあるのか教えてくれますか？
+365,37,5,indirect questions: why,I don't know why he is late.,わたしは彼がなぜ遅れているか知りません。
+366,37,6,indirect questions: why,You don't know why she is sad.,あなたは彼女がなぜ悲しいのか知りません。
+367,37,7,indirect questions: why,Do we know why our bus is slow?,わたしたちはなぜバスが遅いのか知っていますか？
+368,37,8,indirect questions: why,Do they know why the room is cold?,彼らはなぜその部屋が寒いのか知っていますか？
+369,37,9,indirect questions: why,He knows why the light is on.,彼はなぜ電気がついているのか知っています。
+370,37,10,indirect questions: why,She knows why the class is quiet.,彼女はなぜ教室が静かなのか知っています。
+371,38,1,weather and it,The weather is sunny today.,今日は晴れです。
+372,38,2,weather and it,It is warm in this room.,この部屋は暖かいです。
+373,38,3,weather and it,It is cold outside now.,外は今寒いです。
+374,38,4,weather and it,It is rainy this morning.,今朝は雨です。
+375,38,5,weather and it,It isn't sunny today.,今日は晴れていません。
+376,38,6,weather and it,It isn't warm in here.,ここは暖かくありません。
+377,38,7,weather and it,Is it cold outside now?,外は今寒いですか？
+378,38,8,weather and it,Is it rainy in Nara today?,今日は奈良で雨が降っていますか？
+379,38,9,weather and it,What's the weather like today?,今日はどんな天気ですか？
+380,38,10,weather and it,How is it outside now?,外は今どんなようすですか？
+381,39,1,it/whose review,It is my bike.,それはわたしの自転車です。
+382,39,2,it/whose review,It is your desk.,それはあなたの机です。
+383,39,3,it/whose review,It is our dog.,それはわたしたちの犬です。
+384,39,4,it/whose review,It is their room.,それは彼らの部屋です。
+385,39,5,it/whose review,It isn't his pen.,それは彼のペンではありません。
+386,39,6,it/whose review,It isn't her hat.,それは彼女のぼうしではありません。
+387,39,7,it/whose review,Is it my turn?,それはわたしの番ですか？
+388,39,8,it/whose review,Is it your lunch box?,それはあなたの弁当箱ですか？
+389,39,9,it/whose review,Whose bike is it?,それはだれの自転車ですか？
+390,39,10,it/whose review,Whose room is it?,それはだれの部屋ですか？
+391,40,1,past be with I/you/we/they,I was at home yesterday.,わたしは昨日家にいました。
+392,40,2,past be with I/you/we/they,You were in the park yesterday.,あなたは昨日公園にいました。
+393,40,3,past be with I/you/we/they,We were busy last night.,わたしたちは昨夜忙しかったです。
+394,40,4,past be with I/you/we/they,They were at school this morning.,彼らは今朝学校にいました。
+395,40,5,past be with I/you/we/they,I wasn't at the station then.,わたしはそのとき駅にいませんでした。
+396,40,6,past be with I/you/we/they,You weren't in the library then.,あなたはそのとき図書館にいませんでした。
+397,40,7,past be with I/you/we/they,Was I late yesterday?,わたしは昨日遅れましたか？
+398,40,8,past be with I/you/we/they,Were you at home last night?,あなたは昨夜家にいましたか？
+399,40,9,past be with I/you/we/they,Were we in the same class then?,わたしたちはそのとき同じクラスでしたか？
+400,40,10,past be with I/you/we/they,Were they busy this morning?,彼らは今朝忙しかったですか？
+401,41,1,past be with he/she,He was at home yesterday.,彼は昨日家にいました。
+402,41,2,past be with he/she,She was in the park yesterday.,彼女は昨日公園にいました。
+403,41,3,past be with he/she,He was busy last night.,彼は昨夜忙しかったです。
+404,41,4,past be with he/she,She was at school this morning.,彼女は今朝学校にいました。
+405,41,5,past be with he/she,He wasn't at the station then.,彼はそのとき駅にいませんでした。
+406,41,6,past be with he/she,She wasn't in the library then.,彼女はそのとき図書館にいませんでした。
+407,41,7,past be with he/she,Was he late yesterday?,彼は昨日遅れましたか？
+408,41,8,past be with he/she,Was she at home last night?,彼女は昨夜家にいましたか？
+409,41,9,past be with he/she,Was his class easy then?,彼の授業はそのとき簡単でしたか？
+410,41,10,past be with he/she,Was her bag on the desk then?,彼女のかばんはそのとき机の上にありましたか？
+411,42,1,regular past with I/you/we/they,I played soccer yesterday.,わたしは昨日サッカーをしました。
+412,42,2,regular past with I/you/we/they,You studied English last night.,あなたは昨夜英語を勉強しました。
+413,42,3,regular past with I/you/we/they,We visited Nara last week.,わたしたちは先週奈良を訪れました。
+414,42,4,regular past with I/you/we/they,They watched a movie on Sunday.,彼らは日曜日に映画を見ました。
+415,42,5,regular past with I/you/we/they,I didn't play soccer yesterday.,わたしは昨日サッカーをしませんでした。
+416,42,6,regular past with I/you/we/they,You didn't study English last night.,あなたは昨夜英語を勉強しませんでした。
+417,42,7,regular past with I/you/we/they,Did we visit Nara last week?,わたしたちは先週奈良を訪れましたか？
+418,42,8,regular past with I/you/we/they,Did they watch a movie on Sunday?,彼らは日曜日に映画を見ましたか？
+419,42,9,regular past with I/you/we/they,What did I do yesterday?,わたしは昨日何をしましたか？
+420,42,10,regular past with I/you/we/they,Where did you study last night?,あなたは昨夜どこで勉強しましたか？
+421,43,1,regular past with he/she,He played soccer yesterday.,彼は昨日サッカーをしました。
+422,43,2,regular past with he/she,She studied English last night.,彼女は昨夜英語を勉強しました。
+423,43,3,regular past with he/she,He visited Nara last week.,彼は先週奈良を訪れました。
+424,43,4,regular past with he/she,She watched a movie on Sunday.,彼女は日曜日に映画を見ました。
+425,43,5,regular past with he/she,He didn't play soccer yesterday.,彼は昨日サッカーをしませんでした。
+426,43,6,regular past with he/she,She didn't study English last night.,彼女は昨夜英語を勉強しませんでした。
+427,43,7,regular past with he/she,Did he visit Nara last week?,彼は先週奈良を訪れましたか？
+428,43,8,regular past with he/she,Did she watch a movie on Sunday?,彼女は日曜日に映画を見ましたか？
+429,43,9,regular past with he/she,What did he do yesterday?,彼は昨日何をしましたか？
+430,43,10,regular past with he/she,Where did she study last night?,彼女は昨夜どこで勉強しましたか？
+431,44,1,irregular past with I/you/we/they,I went to school yesterday.,わたしは昨日学校へ行きました。
+432,44,2,irregular past with I/you/we/they,You came to my house last night.,あなたは昨夜わたしの家に来ました。
+433,44,3,irregular past with I/you/we/they,We had lunch at noon.,わたしたちは正午に昼食を食べました。
+434,44,4,irregular past with I/you/we/they,They made lunch after school.,彼らは放課後に昼食を作りました。
+435,44,5,irregular past with I/you/we/they,I didn't go by bus yesterday.,わたしは昨日バスでは行きませんでした。
+436,44,6,irregular past with I/you/we/they,You didn't come to the gym last night.,あなたは昨夜体育館に来ませんでした。
+437,44,7,irregular past with I/you/we/they,Did we have English at noon?,わたしたちは正午に英語がありましたか？
+438,44,8,irregular past with I/you/we/they,Did they make lunch after school?,彼らは放課後に昼食を作りましたか？
+439,44,9,irregular past with I/you/we/they,What did I have for lunch?,わたしは昼食に何を食べましたか？
+440,44,10,irregular past with I/you/we/they,Where did you go after school?,あなたは放課後どこへ行きましたか？
+441,45,1,irregular past with he/she,He went to school yesterday.,彼は昨日学校へ行きました。
+442,45,2,irregular past with he/she,She came to my house last night.,彼女は昨夜わたしの家に来ました。
+443,45,3,irregular past with he/she,He had lunch at noon.,彼は正午に昼食を食べました。
+444,45,4,irregular past with he/she,She made lunch after school.,彼女は放課後に昼食を作りました。
+445,45,5,irregular past with he/she,He didn't go by bus yesterday.,彼は昨日バスでは行きませんでした。
+446,45,6,irregular past with he/she,She didn't come to the gym last night.,彼女は昨夜体育館に来ませんでした。
+447,45,7,irregular past with he/she,Did he have English at noon?,彼は正午に英語がありましたか？
+448,45,8,irregular past with he/she,Did she make lunch after school?,彼女は放課後に昼食を作りましたか？
+449,45,9,irregular past with he/she,What did he have for lunch?,彼は昼食に何を食べましたか？
+450,45,10,irregular past with he/she,Where did she go after school?,彼女は放課後どこへ行きましたか？
+451,46,1,past with object pronouns,I saw him at school.,わたしは学校で彼を見ました。
+452,46,2,past with object pronouns,You saw her in the park.,あなたは公園で彼女を見ました。
+453,46,3,past with object pronouns,We met them after class.,わたしたちは授業のあとで彼らに会いました。
+454,46,4,past with object pronouns,They saw us at the station.,彼らは駅でわたしたちを見ました。
+455,46,5,past with object pronouns,I didn't see him yesterday.,わたしは昨日彼を見ませんでした。
+456,46,6,past with object pronouns,You didn't see her this morning.,あなたは今朝彼女を見ませんでした。
+457,46,7,past with object pronouns,Did we meet them after class?,わたしたちは授業のあとで彼らに会いましたか？
+458,46,8,past with object pronouns,Did they see us at the station?,彼らは駅でわたしたちを見ましたか？
+459,46,9,past with object pronouns,When did I see him last?,わたしは最後にいつ彼を見ましたか？
+460,46,10,past with object pronouns,Where did you meet her?,あなたはどこで彼女に会いましたか？
+461,47,1,past with object pronouns and he/she,He saw me at school.,彼は学校でわたしを見ました。
+462,47,2,past with object pronouns and he/she,She saw you in the park.,彼女は公園であなたを見ました。
+463,47,3,past with object pronouns and he/she,He met us after class.,彼は授業のあとでわたしたちに会いました。
+464,47,4,past with object pronouns and he/she,She saw them at the station.,彼女は駅で彼らを見ました。
+465,47,5,past with object pronouns and he/she,He didn't see me yesterday.,彼は昨日わたしを見ませんでした。
+466,47,6,past with object pronouns and he/she,She didn't see you this morning.,彼女は今朝あなたを見ませんでした。
+467,47,7,past with object pronouns and he/she,Did he meet us after class?,彼は授業のあとでわたしたちに会いましたか？
+468,47,8,past with object pronouns and he/she,Did she see them at the station?,彼女は駅で彼らを見ましたか？
+469,47,9,past with object pronouns and he/she,When did he see me last?,彼は最後にいつわたしを見ましたか？
+470,47,10,past with object pronouns and he/she,Where did she meet you?,彼女はどこであなたに会いましたか？
+471,48,1,future and past contrast review,I'm going to play soccer tomorrow.,わたしは明日サッカーをするつもりです。
+472,48,2,future and past contrast review,I played soccer yesterday.,わたしは昨日サッカーをしました。
+473,48,3,future and past contrast review,You're going to study tonight.,あなたは今夜勉強するつもりです。
+474,48,4,future and past contrast review,You studied last night.,あなたは昨夜勉強しました。
+475,48,5,future and past contrast review,We are going to visit Kyoto next week.,わたしたちは来週京都を訪れるつもりです。
+476,48,6,future and past contrast review,We visited Nara last week.,わたしたちは先週奈良を訪れました。
+477,48,7,future and past contrast review,They are going to watch a movie tomorrow.,彼らは明日映画を見るつもりです。
+478,48,8,future and past contrast review,They watched a movie on Sunday.,彼らは日曜日に映画を見ました。
+479,48,9,future and past contrast review,Are we going to leave soon?,わたしたちはもうすぐ出発するつもりですか？
+480,48,10,future and past contrast review,Did they leave early yesterday?,彼らは昨日早く出発しましたか？
+481,49,1,indirect question review,Do you know where the hotel is?,ホテルがどこにあるか知っていますか？
+482,49,2,indirect question review,Can you tell me where the bank is?,銀行がどこにあるか教えてくれますか？
+483,49,3,indirect question review,Do you know what time the store opens?,店が何時に開くか知っていますか？
+484,49,4,indirect question review,Can you tell me when the train leaves?,電車がいつ出るか教えてくれますか？
+485,49,5,indirect question review,Do you know who that woman is?,あの女性がだれか知っていますか？
+486,49,6,indirect question review,Can you tell me why the door is open?,なぜドアが開いているのか教えてくれますか？
+487,49,7,indirect question review,I don't know where the hotel is.,わたしはホテルがどこにあるか知りません。
+488,49,8,indirect question review,You don't know what time the store opens.,あなたは店が何時に開くか知りません。
+489,49,9,indirect question review,Do we know when our bus leaves?,わたしたちはバスがいつ出るか知っていますか？
+490,49,10,indirect question review,Do they know why the window is open?,彼らはなぜ窓が開いているのか知っていますか？
+491,50,1,mixed review and think,I think this is his bag.,わたしはこれは彼のかばんだと思います。
+492,50,2,mixed review and think,You think that is her book.,あなたはあれは彼女の本だと思います。
+493,50,3,mixed review and think,We think these are our seats.,わたしたちはこれらがわたしたちの席だと思います。
+494,50,4,mixed review and think,They think those are their bikes.,彼らはあれらが自分たちの自転車だと思います。
+495,50,5,mixed review and think,I don't think this is my pen.,わたしはこれはわたしのペンではないと思います。
+496,50,6,mixed review and think,You don't think that is your desk.,あなたはあれはあなたの机ではないと思います。
+497,50,7,mixed review and think,Do we think he is ready?,わたしたちは彼は準備ができていると思いますか？
+498,50,8,mixed review and think,Do they think she is busy?,彼らは彼女は忙しいと思いますか？
+499,50,9,mixed review and think,Why do I think this is right?,わたしはなぜこれが正しいと思うのですか？
+500,50,10,mixed review and think,Why do you think that is wrong?,あなたはなぜあれがまちがっていると思うのですか？
