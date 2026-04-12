@@ -67,14 +67,15 @@ Large or sensitive content can be kept out of Git with `.gitignore`, while the a
 ## Example Commands
 
 ```bash
-python3 scripts/build_static_site.py
+npm run dev
+npm run build
 python3 scripts/build_new_crown_dataset.py
 python3 scripts/download_new_crown_audio.py --limit 10 --dry-run
 ```
 
-These scripts expect the corresponding local source files to exist under the package paths they target.
-
-The placeholder site build writes a deployable `dist/` directory for static hosting.
+`npm run dev` serves `app/site` locally and exposes local content packages under `/content/...`.
+The build command writes a deployable `dist/` directory for static hosting.
+The content scripts expect the corresponding local source files to exist under the package paths they target.
 
 ## Notes
 

@@ -87,13 +87,25 @@
 
 ## Build Scripts
 
+- Local dev server: [dev_server.py](/Users/manabe/Software/entyping/scripts/dev_server.py)
 - Static placeholder build: [build_static_site.py](/Users/manabe/Software/entyping/scripts/build_static_site.py)
 - Dataset build script: [build_new_crown_dataset.py](/Users/manabe/Software/entyping/scripts/build_new_crown_dataset.py)
 - Audio downloader: [download_new_crown_audio.py](/Users/manabe/Software/entyping/scripts/download_new_crown_audio.py)
-- Current rebuild command:
+- Current local app command:
 
 ```bash
-python3 scripts/build_static_site.py
+npm run dev
+```
+
+- Current public site build command:
+
+```bash
+npm run build
+```
+
+- Current local content rebuild command:
+
+```bash
 python3 scripts/build_new_crown_dataset.py
 ```
 

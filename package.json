@@ -1,0 +1,10 @@
+{
+  "name": "entyping",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A local-first English typing app with pluggable content packages.",
+  "scripts": {
+    "dev": "python3 scripts/dev_server.py",
+    "build": "python3 scripts/build_static_site.py"
+  }
+}

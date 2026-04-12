@@ -95,3 +95,13 @@ pre {
 a {
   color: var(--accent);
 }
+
+.status[data-state="ok"] {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.status[data-state="missing"] {
+  color: #8f2d2d;
+  font-weight: 600;
+}

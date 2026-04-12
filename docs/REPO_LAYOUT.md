@@ -34,6 +34,8 @@ This repository is split into three concerns:
 
 - `scripts/build_static_site.py`
   - builds the public-safe placeholder site into `dist/`
+- `scripts/dev_server.py`
+  - serves `app/site` locally and exposes local content packages under `/content/`
 - `scripts/build_new_crown_dataset.py`
   - rebuilds the generated New Crown dataset from the source files
 - `scripts/download_new_crown_audio.py`
@@ -42,7 +44,8 @@ This repository is split into three concerns:
 ## Common Commands
 
 ```bash
-python3 scripts/build_static_site.py
+npm run dev
+npm run build
 python3 scripts/build_new_crown_dataset.py
 python3 scripts/download_new_crown_audio.py --limit 10 --dry-run
 ```
