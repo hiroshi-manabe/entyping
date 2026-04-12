@@ -32,6 +32,8 @@ This repository is split into three concerns:
 
 ## Tools
 
+- `scripts/build_static_site.py`
+  - builds the public-safe placeholder site into `dist/`
 - `scripts/build_new_crown_dataset.py`
   - rebuilds the generated New Crown dataset from the source files
 - `scripts/download_new_crown_audio.py`
@@ -40,6 +42,7 @@ This repository is split into three concerns:
 ## Common Commands
 
 ```bash
+python3 scripts/build_static_site.py
 python3 scripts/build_new_crown_dataset.py
 python3 scripts/download_new_crown_audio.py --limit 10 --dry-run
 ```

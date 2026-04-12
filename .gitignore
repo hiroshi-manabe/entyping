@@ -1,6 +1,7 @@
 .DS_Store
 __pycache__/
 *.pyc
+dist/
 content/new_crown1/audio/
 content/new_crown1/dataset/
 content/new_crown1/source/

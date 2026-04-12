@@ -87,11 +87,13 @@
 
 ## Build Scripts
 
+- Static placeholder build: [build_static_site.py](/Users/manabe/Software/entyping/scripts/build_static_site.py)
 - Dataset build script: [build_new_crown_dataset.py](/Users/manabe/Software/entyping/scripts/build_new_crown_dataset.py)
 - Audio downloader: [download_new_crown_audio.py](/Users/manabe/Software/entyping/scripts/download_new_crown_audio.py)
 - Current rebuild command:
 
 ```bash
+python3 scripts/build_static_site.py
 python3 scripts/build_new_crown_dataset.py
 ```
 
