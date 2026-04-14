@@ -16,30 +16,75 @@
       <p class="eyebrow">Entyping</p>
       <h1>A local-first English typing app.</h1>
       <p class="lede">
-        This is a public-safe placeholder deployment for the project. The real
-        typing UI and any private content packages are handled separately.
+        This is the current bootstrap shell for the project. It now uses the
+        same dataset-URL flow that the real typing UI will use later.
       </p>
 
       <section class="panel">
-        <h2>Current Direction</h2>
-        <ul>
-          <li>Keep the runtime generic.</li>
-          <li>Load content through pluggable packages.</li>
-          <li>Start with a simple unit and part selection flow.</li>
-        </ul>
+        <h2>Dataset Source</h2>
+        <form id="dataset-form" class="source-form">
+          <label class="field">
+            <span>Dataset JSON URL</span>
+            <input
+              id="dataset-url"
+              name="dataset-url"
+              type="url"
+              spellcheck="false"
+              placeholder="https://example.com/package/content.json"
+              autocomplete="off"
+            />
+          </label>
+          <div class="source-actions">
+            <button type="submit">Load dataset</button>
+            <button id="reset-source" type="button" class="button-secondary">
+              Reset saved source
+            </button>
+          </div>
+        </form>
+        <p id="dataset-status" class="status">
+          No dataset source loaded yet.
+        </p>
       </section>
 
       <section class="panel">
-        <h2>Planned Data Shape</h2>
-        <pre><code>content
-units
-parts
-items</code></pre>
+        <h2>Loaded Package</h2>
+        <dl id="dataset-summary" class="summary" hidden>
+          <div>
+            <dt>Content ID</dt>
+            <dd id="summary-content-id">-</dd>
+          </div>
+          <div>
+            <dt>Units</dt>
+            <dd id="summary-units">-</dd>
+          </div>
+          <div>
+            <dt>Parts</dt>
+            <dd id="summary-parts">-</dd>
+          </div>
+          <div>
+            <dt>Items</dt>
+            <dd id="summary-items">-</dd>
+          </div>
+          <div>
+            <dt>First Unit</dt>
+            <dd id="summary-first-unit">-</dd>
+          </div>
+          <div>
+            <dt>First Part</dt>
+            <dd id="summary-first-part">-</dd>
+          </div>
+          <div>
+            <dt>Sample Audio URL</dt>
+            <dd id="summary-audio-url" class="summary-break">-</dd>
+          </div>
+        </dl>
       </section>
 
       <section class="panel">
-        <h2>Local Dev Check</h2>
-        <p id="dataset-status" class="status">Checking for a local content package...</p>
+        <h2>Runtime Contract</h2>
+        <pre><code>JSON URL -> fetch dataset
+audio_url -> resolve relative to JSON URL
+same rule for local and deployed use</code></pre>
       </section>
 
       <section class="panel">
