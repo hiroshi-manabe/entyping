@@ -1,4 +1,5 @@
 const STORAGE_KEY = "entyping.datasetUrl";
+const OPEN_UNITS_STORAGE_KEY = "entyping.openUnits";
 const LOCAL_DATASET_PATH = "/content/new_crown1/content.json";
 
 const datasetForm = document.querySelector("#dataset-form");
@@ -39,6 +40,40 @@ function saveDatasetUrl(url) {
 
 function clearDatasetUrl() {
   window.localStorage.removeItem(STORAGE_KEY);
+}
+
+function loadOpenUnitsByContent() {
+  const raw = window.localStorage.getItem(OPEN_UNITS_STORAGE_KEY);
+  if (!raw) {
+    return {};
+  }
+
+  try {
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+function loadOpenUnitIds(contentId) {
+  const saved = loadOpenUnitsByContent()[contentId];
+  return Array.isArray(saved) ? saved.filter((id) => typeof id === "string") : null;
+}
+
+function saveOpenUnitIds(contentId, openUnitIds) {
+  const saved = loadOpenUnitsByContent();
+  saved[contentId] = [...openUnitIds];
+  window.localStorage.setItem(OPEN_UNITS_STORAGE_KEY, JSON.stringify(saved));
+}
+
+function getOpenUnitIdsFromDom() {
+  if (!contentsList) {
+    return [];
+  }
+  return [...contentsList.querySelectorAll(".unit-card[open]")]
+    .map((details) => details.dataset.unitId)
+    .filter(Boolean);
 }
 
 function getPartItemCount(part) {
@@ -157,11 +192,13 @@ function renderPartRow(unit, part) {
   return row;
 }
 
-function renderUnit(unit, index) {
+function renderUnit(unit, index, openUnitIds, contentId) {
   const details = makeElement("details", { className: "unit-card" });
-  if (index === 0) {
-    details.open = true;
-  }
+  details.dataset.unitId = unit.id;
+  details.open = openUnitIds.has(unit.id);
+  details.addEventListener("toggle", () => {
+    saveOpenUnitIds(contentId, getOpenUnitIdsFromDom());
+  });
 
   const partCount = unit.parts?.length ?? 0;
   const itemCount = (unit.parts ?? []).reduce(
@@ -196,13 +233,20 @@ function renderContents(data) {
   }
 
   const { units, partCount, itemCount } = getDatasetCounts(data);
+  const validUnitIds = new Set(units.map((unit) => unit.id).filter(Boolean));
+  const savedOpenUnitIds = loadOpenUnitIds(data.content.id);
+  const initialOpenUnitIds = savedOpenUnitIds
+    ? savedOpenUnitIds.filter((unitId) => validUnitIds.has(unitId))
+    : [units[0]?.id].filter(Boolean);
+  const openUnitIds = new Set(initialOpenUnitIds);
+
   contentsSummary.textContent = `${data.content.title ?? data.content.id}: ${units.length} units, ${partCount} parts, ${itemCount} items.`;
   selectedPart.hidden = true;
   selectedPartLabel.textContent = "-";
 
   contentsList.innerHTML = "";
   for (const [index, unit] of units.entries()) {
-    contentsList.append(renderUnit(unit, index));
+    contentsList.append(renderUnit(unit, index, openUnitIds, data.content.id));
   }
 }
 
