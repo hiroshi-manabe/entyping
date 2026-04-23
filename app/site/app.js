@@ -5,14 +5,12 @@ const datasetForm = document.querySelector("#dataset-form");
 const datasetUrlInput = document.querySelector("#dataset-url");
 const datasetStatus = document.querySelector("#dataset-status");
 const resetSourceButton = document.querySelector("#reset-source");
-const datasetSummary = document.querySelector("#dataset-summary");
-const summaryContentId = document.querySelector("#summary-content-id");
-const summaryUnits = document.querySelector("#summary-units");
-const summaryParts = document.querySelector("#summary-parts");
-const summaryItems = document.querySelector("#summary-items");
-const summaryFirstUnit = document.querySelector("#summary-first-unit");
-const summaryFirstPart = document.querySelector("#summary-first-part");
-const summaryAudioUrl = document.querySelector("#summary-audio-url");
+const contentsSummary = document.querySelector("#contents-summary");
+const contentsList = document.querySelector("#contents-list");
+const selectedPart = document.querySelector("#selected-part");
+const selectedPartLabel = document.querySelector("#selected-part-label");
+
+let activeDatasetUrl = "";
 
 function isLocalDevelopmentHost() {
   const host = window.location.hostname;
@@ -31,10 +29,35 @@ function setStatus(message, state) {
   datasetStatus.dataset.state = state;
 }
 
-function hideSummary() {
-  if (datasetSummary) {
-    datasetSummary.hidden = true;
-  }
+function loadSavedDatasetUrl() {
+  return window.localStorage.getItem(STORAGE_KEY);
+}
+
+function saveDatasetUrl(url) {
+  window.localStorage.setItem(STORAGE_KEY, url);
+}
+
+function clearDatasetUrl() {
+  window.localStorage.removeItem(STORAGE_KEY);
+}
+
+function getPartItemCount(part) {
+  return Array.isArray(part.items) ? part.items.length : 0;
+}
+
+function getDatasetCounts(data) {
+  const units = Array.isArray(data.units) ? data.units : [];
+  const partCount = units.reduce((count, unit) => count + (unit.parts?.length ?? 0), 0);
+  const itemCount = units.reduce(
+    (count, unit) =>
+      count +
+      (unit.parts ?? []).reduce(
+        (partTotal, part) => partTotal + getPartItemCount(part),
+        0
+      ),
+    0
+  );
+  return { units, partCount, itemCount };
 }
 
 function getFirstItem(data) {
@@ -67,34 +90,125 @@ function resolveAudioUrl(datasetUrl, audioUrl) {
   return new URL(audioUrl, datasetUrl).toString();
 }
 
-function renderSummary(datasetUrl, data) {
-  const { firstUnit, firstPart, firstItem } = getFirstItem(data);
-  const resolvedAudioUrl = resolveAudioUrl(datasetUrl, firstItem.audio_url);
-
-  summaryContentId.textContent = data.content.id;
-  summaryUnits.textContent = String(data.unit_count ?? data.units.length);
-  summaryParts.textContent = String(data.part_count ?? 0);
-  summaryItems.textContent = String(data.item_count ?? 0);
-  summaryFirstUnit.textContent = firstUnit?.label ?? "-";
-  summaryFirstPart.textContent = firstPart?.label ?? "-";
-  summaryAudioUrl.textContent = resolvedAudioUrl;
-  datasetSummary.hidden = false;
+function makeElement(tagName, options = {}) {
+  const element = document.createElement(tagName);
+  if (options.className) {
+    element.className = options.className;
+  }
+  if (options.text !== undefined) {
+    element.textContent = options.text;
+  }
+  return element;
 }
 
-function loadSavedDatasetUrl() {
-  return window.localStorage.getItem(STORAGE_KEY);
+function renderEmptyState(message) {
+  if (!contentsList) {
+    return;
+  }
+  contentsList.innerHTML = "";
+  contentsList.append(
+    makeElement("div", {
+      className: "empty-state",
+      text: message,
+    })
+  );
 }
 
-function saveDatasetUrl(url) {
-  window.localStorage.setItem(STORAGE_KEY, url);
+function formatPartContext(unit, part) {
+  return [unit.label, part.label].filter(Boolean).join(" / ");
 }
 
-function clearDatasetUrl() {
-  window.localStorage.removeItem(STORAGE_KEY);
+function handlePartSelect(unit, part) {
+  if (!selectedPart || !selectedPartLabel) {
+    return;
+  }
+
+  selectedPart.hidden = false;
+  selectedPartLabel.textContent = `${formatPartContext(unit, part)} (${getPartItemCount(part)} items)`;
+
+  const firstItem = part.items?.[0];
+  if (firstItem?.audio_url) {
+    const audioUrl = resolveAudioUrl(activeDatasetUrl, firstItem.audio_url);
+    setStatus(`Selected ${part.label}. First audio resolves to ${audioUrl}`, "ok");
+  } else {
+    setStatus(`Selected ${part.label}.`, "ok");
+  }
+}
+
+function renderPartRow(unit, part) {
+  const row = makeElement("article", { className: "part-row" });
+
+  const body = makeElement("div", { className: "part-body" });
+  const label = makeElement("h3", { text: part.label ?? "Part" });
+  const meta = makeElement("p", {
+    className: "part-meta",
+    text: `${getPartItemCount(part)} items`,
+  });
+  body.append(label, meta);
+
+  const action = makeElement("button", {
+    className: "part-action",
+    text: "Choose part",
+  });
+  action.type = "button";
+  action.addEventListener("click", () => handlePartSelect(unit, part));
+
+  row.append(body, action);
+  return row;
+}
+
+function renderUnit(unit, index) {
+  const details = makeElement("details", { className: "unit-card" });
+  if (index === 0) {
+    details.open = true;
+  }
+
+  const partCount = unit.parts?.length ?? 0;
+  const itemCount = (unit.parts ?? []).reduce(
+    (total, part) => total + getPartItemCount(part),
+    0
+  );
+
+  const summary = makeElement("summary", { className: "unit-summary" });
+  const titleGroup = makeElement("span", { className: "unit-title-group" });
+  titleGroup.append(
+    makeElement("span", { className: "unit-kicker", text: `Unit ${index + 1}` }),
+    makeElement("span", { className: "unit-title", text: unit.label ?? "Untitled" })
+  );
+  const counts = makeElement("span", {
+    className: "unit-counts",
+    text: `${partCount} parts / ${itemCount} items`,
+  });
+  summary.append(titleGroup, counts);
+
+  const parts = makeElement("div", { className: "part-list" });
+  for (const part of unit.parts ?? []) {
+    parts.append(renderPartRow(unit, part));
+  }
+
+  details.append(summary, parts);
+  return details;
+}
+
+function renderContents(data) {
+  if (!contentsList || !contentsSummary) {
+    return;
+  }
+
+  const { units, partCount, itemCount } = getDatasetCounts(data);
+  contentsSummary.textContent = `${data.content.title ?? data.content.id}: ${units.length} units, ${partCount} parts, ${itemCount} items.`;
+  selectedPart.hidden = true;
+  selectedPartLabel.textContent = "-";
+
+  contentsList.innerHTML = "";
+  for (const [index, unit] of units.entries()) {
+    contentsList.append(renderUnit(unit, index));
+  }
 }
 
 async function loadDataset(datasetUrl, { save = true } = {}) {
   const normalizedUrl = new URL(datasetUrl, window.location.href).toString();
+  activeDatasetUrl = normalizedUrl;
   setStatus(`Loading dataset from ${normalizedUrl} ...`, "loading");
 
   const response = await fetch(normalizedUrl, {
@@ -106,14 +220,15 @@ async function loadDataset(datasetUrl, { save = true } = {}) {
 
   const data = await response.json();
   validateDataset(data);
-  renderSummary(normalizedUrl, data);
+  renderContents(data);
 
   if (save) {
     saveDatasetUrl(normalizedUrl);
   }
 
+  const { units, partCount, itemCount } = getDatasetCounts(data);
   setStatus(
-    `Loaded ${data.content.id} (${data.unit_count} units, ${data.part_count} parts, ${data.item_count} items).`,
+    `Loaded ${data.content.id} (${units.length} units, ${partCount} parts, ${itemCount} items).`,
     "ok"
   );
   if (datasetUrlInput) {
@@ -123,7 +238,6 @@ async function loadDataset(datasetUrl, { save = true } = {}) {
 
 async function handleSubmit(event) {
   event.preventDefault();
-  hideSummary();
 
   const candidateUrl = datasetUrlInput?.value.trim();
   if (!candidateUrl) {
@@ -134,13 +248,21 @@ async function handleSubmit(event) {
   try {
     await loadDataset(candidateUrl, { save: true });
   } catch (error) {
+    renderEmptyState("Dataset could not be loaded. Check the settings URL.");
     setStatus(error instanceof Error ? error.message : "Failed to load dataset.", "missing");
   }
 }
 
 function handleReset() {
   clearDatasetUrl();
-  hideSummary();
+  activeDatasetUrl = "";
+  renderEmptyState("Dataset contents will appear here after loading.");
+  if (contentsSummary) {
+    contentsSummary.textContent = "Load a dataset to show available units and parts.";
+  }
+  if (selectedPart) {
+    selectedPart.hidden = true;
+  }
   if (datasetUrlInput) {
     datasetUrlInput.value = isLocalDevelopmentHost() ? getDefaultDatasetUrl() : "";
   }
@@ -160,14 +282,14 @@ async function bootstrap() {
   datasetUrlInput.value = initialUrl;
 
   if (!initialUrl) {
-    setStatus("Enter a dataset JSON URL to begin.", "missing");
+    setStatus("Open settings and enter a dataset JSON URL to begin.", "missing");
     return;
   }
 
   try {
     await loadDataset(initialUrl, { save: Boolean(savedUrl) });
   } catch (error) {
-    hideSummary();
+    renderEmptyState("Dataset could not be loaded. Check the settings URL.");
     setStatus(error instanceof Error ? error.message : "Failed to load dataset.", "missing");
   }
 }

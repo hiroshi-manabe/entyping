@@ -31,6 +31,8 @@ That means:
   - content-package layout and local package area
 - [scripts](/Users/manabe/Software/entyping/scripts)
   - dataset/audio build utilities
+- [workspace](/Users/manabe/Software/entyping/workspace)
+  - investigation and intermediate files that should not become runtime content
 - [docs](/Users/manabe/Software/entyping/docs)
   - project notes and repository layout notes
 
@@ -78,6 +80,22 @@ For example, a private package can live under:
 - `content/<package-name>/audio/`
 
 Large or sensitive content can be kept out of Git with `.gitignore`, while the app and tooling remain reusable.
+
+## Workspace Area
+
+`workspace/` is the scratch area for material that is not yet part of the app or the runtime content packages.
+
+Typical uses:
+
+- downloaded upstream files
+- reverse-engineering notes
+- one-off extraction experiments
+- intermediate parsed outputs
+
+This keeps investigation work separate from:
+
+- `app/` for product code
+- `content/` for runtime-ready packages
 
 ## Current Scripts
 

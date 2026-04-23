@@ -1,6 +1,6 @@
 # Repository Layout
 
-This repository is split into three concerns:
+This repository is split into four concerns:
 
 - `app/`
   - the typing program itself
@@ -8,6 +8,8 @@ This repository is split into three concerns:
   - content packages, generated datasets, and local audio assets
 - `scripts/`
   - content import and build utilities
+- `workspace/`
+  - investigation, reverse-engineering, and intermediate files that should not become runtime data by default
 
 ## App
 
@@ -42,6 +44,17 @@ At runtime, the app should be configured with the URL of `content.json` and reso
   - rebuilds the generated New Crown dataset from the source files
 - `scripts/download_new_crown_audio.py`
   - downloads textbook MP3 files into the New Crown content package
+
+## Workspace
+
+- `workspace/new_crown1/`
+  - scratch area for `NEW CROWN 1` investigation
+- `workspace/new_crown1/upstream/`
+  - raw downloaded site files
+- `workspace/new_crown1/extracted/`
+  - parsed intermediate outputs
+- `workspace/new_crown1/notes/`
+  - temporary notes and mappings
 
 ## Common Commands
 

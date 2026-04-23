@@ -24,17 +24,17 @@
 
 ## Primary Content Source
 
-- Source TSV: [book_data.tsv](/Users/manabe/Software/entyping/content/new_crown1/source/book_data.tsv)
-- Source notes: [new_crown1_combined_japanese_notes.md](/Users/manabe/Software/entyping/content/new_crown1/source/new_crown1_combined_japanese_notes.md)
+- Editorial source TSV: [index_reachable_natural_segments.tsv](/Users/manabe/Software/entyping/workspace/new_crown1/extracted/index_reachable_natural_segments.tsv)
 - Generated dataset: [content.json](/Users/manabe/Software/entyping/content/new_crown1/content.json)
 - Downloaded local audio root: [audio](/Users/manabe/Software/entyping/content/new_crown1/audio)
+- Older pronunciation-check-based data is preserved only as legacy reference under [legacy](/Users/manabe/Software/entyping/workspace/new_crown1/legacy).
 
 ## Dataset Status
 
 - The generated New Crown dataset currently contains:
-  - `18` units
-  - `80` parts
-  - `754` items
+  - `25` units
+  - `72` parts
+  - `925` items
 - The generated schema is intentionally generic:
   - `content`
   - `units`
@@ -80,10 +80,10 @@
 
 ## Selection UI Decisions
 
-- Do not copy the publisher site’s two-level multi-select checkbox UI.
-- The typing app should keep selection simpler:
-  - choose one unit
-  - then choose either `All parts` or one specific part
+- Use a textbook-style contents page rather than keeping dataset loading as the main screen.
+- Dataset source controls belong in settings because normal use should focus on lesson navigation.
+- Units should expand and collapse for navigation.
+- Full units are too large as practice targets, so the playable selection unit is a single part.
 - Do not support arbitrary multi-select combinations across unrelated units in version 1.
 - A child-facing typing app benefits more from fast start and clarity than from maximum content-selection flexibility.
 

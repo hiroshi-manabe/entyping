@@ -13,85 +13,60 @@
   </head>
   <body>
     <main class="shell">
-      <p class="eyebrow">Entyping</p>
-      <h1>A local-first English typing app.</h1>
-      <p class="lede">
-        This is the current bootstrap shell for the project. It now uses the
-        same dataset-URL flow that the real typing UI will use later.
-      </p>
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Entyping</p>
+          <h1>Choose a part to practice.</h1>
+          <p class="lede">
+            Pick a textbook part, then start a focused typing session. Full
+            units are shown for navigation only; practice happens at the part
+            level.
+          </p>
+        </div>
+        <details class="settings-panel">
+          <summary>Settings</summary>
+          <form id="dataset-form" class="source-form">
+            <label class="field">
+              <span>Dataset JSON URL</span>
+              <input
+                id="dataset-url"
+                name="dataset-url"
+                type="url"
+                spellcheck="false"
+                placeholder="https://example.com/package/content.json"
+                autocomplete="off"
+              />
+            </label>
+            <div class="source-actions">
+              <button type="submit">Load dataset</button>
+              <button id="reset-source" type="button" class="button-secondary">
+                Reset saved source
+              </button>
+            </div>
+          </form>
+          <p id="dataset-status" class="status">
+            No dataset source loaded yet.
+          </p>
+        </details>
+      </header>
 
-      <section class="panel">
-        <h2>Dataset Source</h2>
-        <form id="dataset-form" class="source-form">
-          <label class="field">
-            <span>Dataset JSON URL</span>
-            <input
-              id="dataset-url"
-              name="dataset-url"
-              type="url"
-              spellcheck="false"
-              placeholder="https://example.com/package/content.json"
-              autocomplete="off"
-            />
-          </label>
-          <div class="source-actions">
-            <button type="submit">Load dataset</button>
-            <button id="reset-source" type="button" class="button-secondary">
-              Reset saved source
-            </button>
-          </div>
-        </form>
-        <p id="dataset-status" class="status">
-          No dataset source loaded yet.
-        </p>
+      <section class="contents-header" aria-live="polite">
+        <div>
+          <h2 id="contents-title">Contents</h2>
+          <p id="contents-summary" class="muted">
+            Load a dataset to show available units and parts.
+          </p>
+        </div>
+        <div id="selected-part" class="selected-part" hidden>
+          <span>Selected part</span>
+          <strong id="selected-part-label">-</strong>
+        </div>
       </section>
 
-      <section class="panel">
-        <h2>Loaded Package</h2>
-        <dl id="dataset-summary" class="summary" hidden>
-          <div>
-            <dt>Content ID</dt>
-            <dd id="summary-content-id">-</dd>
-          </div>
-          <div>
-            <dt>Units</dt>
-            <dd id="summary-units">-</dd>
-          </div>
-          <div>
-            <dt>Parts</dt>
-            <dd id="summary-parts">-</dd>
-          </div>
-          <div>
-            <dt>Items</dt>
-            <dd id="summary-items">-</dd>
-          </div>
-          <div>
-            <dt>First Unit</dt>
-            <dd id="summary-first-unit">-</dd>
-          </div>
-          <div>
-            <dt>First Part</dt>
-            <dd id="summary-first-part">-</dd>
-          </div>
-          <div>
-            <dt>Sample Audio URL</dt>
-            <dd id="summary-audio-url" class="summary-break">-</dd>
-          </div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Runtime Contract</h2>
-        <pre><code>JSON URL -> fetch dataset
-audio_url -> resolve relative to JSON URL
-same rule for local and deployed use</code></pre>
-      </section>
-
-      <section class="panel">
-        <h2>Repository</h2>
-        <p>
-          <a href="https://github.com/hiroshi-manabe/entyping">GitHub</a>
-        </p>
+      <section id="contents-list" class="contents-list" aria-labelledby="contents-title">
+        <div class="empty-state">
+          Dataset contents will appear here after loading.
+        </div>
       </section>
     </main>
   </body>
