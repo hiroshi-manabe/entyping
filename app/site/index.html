@@ -68,6 +68,59 @@
           Dataset contents will appear here after loading.
         </div>
       </section>
+
+      <section id="practice-screen" class="practice-screen" hidden>
+        <div class="practice-topbar">
+          <button id="back-to-contents" type="button" class="button-secondary">
+            Back
+          </button>
+          <div>
+            <p id="practice-context" class="practice-context">-</p>
+            <h2 id="practice-title">Practice</h2>
+          </div>
+        </div>
+
+        <div class="practice-progress">
+          <span id="practice-progress-text">1 / 1</span>
+          <div class="progress-track" aria-hidden="true">
+            <span id="practice-progress-bar"></span>
+          </div>
+        </div>
+
+        <article class="typing-card">
+          <div class="prompt-actions">
+            <button id="play-audio" type="button">Play Audio</button>
+          </div>
+          <p id="target-text" class="target-text"></p>
+          <label class="typing-field">
+            <span>Type here</span>
+            <input
+              id="typing-input"
+              type="text"
+              autocomplete="off"
+              autocapitalize="none"
+              spellcheck="false"
+            />
+          </label>
+          <p id="typing-feedback" class="typing-feedback" aria-live="polite"></p>
+        </article>
+
+        <div class="support-notes">
+          <section>
+            <h3>Japanese</h3>
+            <p id="translation-text"></p>
+          </section>
+          <section>
+            <h3>Note</h3>
+            <p id="study-note-text"></p>
+          </section>
+        </div>
+
+        <div class="practice-actions">
+          <button id="prev-item" type="button" class="button-secondary">Previous</button>
+          <button id="next-item" type="button">Next</button>
+        </div>
+      </section>
     </main>
   </body>
 </html>

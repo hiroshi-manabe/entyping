@@ -10,8 +10,26 @@ const contentsSummary = document.querySelector("#contents-summary");
 const contentsList = document.querySelector("#contents-list");
 const selectedPart = document.querySelector("#selected-part");
 const selectedPartLabel = document.querySelector("#selected-part-label");
+const hero = document.querySelector(".hero");
+const contentsHeader = document.querySelector(".contents-header");
+const practiceScreen = document.querySelector("#practice-screen");
+const backToContentsButton = document.querySelector("#back-to-contents");
+const practiceContext = document.querySelector("#practice-context");
+const practiceTitle = document.querySelector("#practice-title");
+const practiceProgressText = document.querySelector("#practice-progress-text");
+const practiceProgressBar = document.querySelector("#practice-progress-bar");
+const playAudioButton = document.querySelector("#play-audio");
+const targetText = document.querySelector("#target-text");
+const typingInput = document.querySelector("#typing-input");
+const typingFeedback = document.querySelector("#typing-feedback");
+const translationText = document.querySelector("#translation-text");
+const studyNoteText = document.querySelector("#study-note-text");
+const previousItemButton = document.querySelector("#prev-item");
+const nextItemButton = document.querySelector("#next-item");
 
 let activeDatasetUrl = "";
+let activeAudio = null;
+let practiceSession = null;
 
 function isLocalDevelopmentHost() {
   const host = window.location.hostname;
@@ -125,6 +143,16 @@ function resolveAudioUrl(datasetUrl, audioUrl) {
   return new URL(audioUrl, datasetUrl).toString();
 }
 
+function normalizeTypedText(value) {
+  return value
+    .trim()
+    .replaceAll("’", "'")
+    .replaceAll("‘", "'")
+    .replaceAll("“", '"')
+    .replaceAll("”", '"')
+    .replace(/\s+/g, " ");
+}
+
 function makeElement(tagName, options = {}) {
   const element = document.createElement(tagName);
   if (options.className) {
@@ -153,6 +181,39 @@ function formatPartContext(unit, part) {
   return [unit.label, part.label].filter(Boolean).join(" / ");
 }
 
+function showContentsView() {
+  if (hero) {
+    hero.hidden = false;
+  }
+  if (contentsHeader) {
+    contentsHeader.hidden = false;
+  }
+  if (contentsList) {
+    contentsList.hidden = false;
+  }
+  if (practiceScreen) {
+    practiceScreen.hidden = true;
+  }
+  if (activeAudio) {
+    activeAudio.pause();
+  }
+}
+
+function showPracticeView() {
+  if (hero) {
+    hero.hidden = true;
+  }
+  if (contentsHeader) {
+    contentsHeader.hidden = true;
+  }
+  if (contentsList) {
+    contentsList.hidden = true;
+  }
+  if (practiceScreen) {
+    practiceScreen.hidden = false;
+  }
+}
+
 function handlePartSelect(unit, part) {
   if (!selectedPart || !selectedPartLabel) {
     return;
@@ -168,6 +229,122 @@ function handlePartSelect(unit, part) {
   } else {
     setStatus(`Selected ${part.label}.`, "ok");
   }
+
+  startPractice(unit, part);
+}
+
+function getCurrentItem() {
+  return practiceSession?.items[practiceSession.currentIndex] ?? null;
+}
+
+function setTypingFeedback(message, state) {
+  if (!typingFeedback) {
+    return;
+  }
+  typingFeedback.textContent = message;
+  typingFeedback.dataset.state = state;
+}
+
+function playCurrentAudio() {
+  const item = getCurrentItem();
+  if (!item?.audio_url) {
+    return;
+  }
+
+  if (activeAudio) {
+    activeAudio.pause();
+  }
+  activeAudio = new Audio(resolveAudioUrl(activeDatasetUrl, item.audio_url));
+  activeAudio.play().catch(() => {
+    setTypingFeedback("Audio is ready. Press Play Audio.", "neutral");
+  });
+}
+
+function renderPracticeItem({ playAudio = false } = {}) {
+  const item = getCurrentItem();
+  if (!practiceSession || !item) {
+    return;
+  }
+
+  const itemNumber = practiceSession.currentIndex + 1;
+  const total = practiceSession.items.length;
+  const progress = Math.round((itemNumber / total) * 100);
+
+  practiceContext.textContent = formatPartContext(practiceSession.unit, practiceSession.part);
+  practiceTitle.textContent = practiceSession.part.label ?? "Practice";
+  practiceProgressText.textContent = `${itemNumber} / ${total}`;
+  practiceProgressBar.style.width = `${progress}%`;
+  targetText.textContent = item.text;
+  translationText.textContent = item.ja || "-";
+  studyNoteText.textContent = item.study_note || "-";
+  typingInput.value = "";
+  typingInput.disabled = false;
+  previousItemButton.disabled = practiceSession.currentIndex === 0;
+  nextItemButton.textContent = practiceSession.currentIndex === total - 1 ? "Finish" : "Next";
+  setTypingFeedback("", "neutral");
+  typingInput.focus();
+
+  if (playAudio) {
+    playCurrentAudio();
+  }
+}
+
+function startPractice(unit, part) {
+  const items = Array.isArray(part.items) ? part.items : [];
+  if (!items.length) {
+    setStatus(`${part.label} has no practice items.`, "missing");
+    return;
+  }
+
+  practiceSession = {
+    unit,
+    part,
+    items,
+    currentIndex: 0,
+  };
+  showPracticeView();
+  renderPracticeItem({ playAudio: true });
+}
+
+function checkTypedAnswer() {
+  const item = getCurrentItem();
+  if (!item || !typingInput) {
+    return false;
+  }
+
+  const actual = normalizeTypedText(typingInput.value);
+  const expected = normalizeTypedText(item.text);
+  const isCorrect = actual === expected;
+  if (isCorrect) {
+    setTypingFeedback("Correct.", "correct");
+  } else if (actual.length >= expected.length) {
+    setTypingFeedback("Check the sentence and try again.", "incorrect");
+  } else {
+    setTypingFeedback("", "neutral");
+  }
+  return isCorrect;
+}
+
+function goToNextItem() {
+  if (!practiceSession) {
+    return;
+  }
+  if (practiceSession.currentIndex >= practiceSession.items.length - 1) {
+    showContentsView();
+    setStatus(`Finished ${practiceSession.part.label}.`, "ok");
+    practiceSession = null;
+    return;
+  }
+  practiceSession.currentIndex += 1;
+  renderPracticeItem({ playAudio: true });
+}
+
+function goToPreviousItem() {
+  if (!practiceSession || practiceSession.currentIndex === 0) {
+    return;
+  }
+  practiceSession.currentIndex -= 1;
+  renderPracticeItem({ playAudio: true });
 }
 
 function renderPartRow(unit, part) {
@@ -183,7 +360,7 @@ function renderPartRow(unit, part) {
 
   const action = makeElement("button", {
     className: "part-action",
-    text: "Choose part",
+    text: "Start",
   });
   action.type = "button";
   action.addEventListener("click", () => handlePartSelect(unit, part));
@@ -243,6 +420,7 @@ function renderContents(data) {
   contentsSummary.textContent = `${data.content.title ?? data.content.id}: ${units.length} units, ${partCount} parts, ${itemCount} items.`;
   selectedPart.hidden = true;
   selectedPartLabel.textContent = "-";
+  showContentsView();
 
   contentsList.innerHTML = "";
   for (const [index, unit] of units.entries()) {
@@ -320,6 +498,23 @@ async function bootstrap() {
 
   datasetForm.addEventListener("submit", handleSubmit);
   resetSourceButton.addEventListener("click", handleReset);
+  backToContentsButton?.addEventListener("click", () => {
+    showContentsView();
+    practiceSession = null;
+  });
+  playAudioButton?.addEventListener("click", playCurrentAudio);
+  typingInput?.addEventListener("input", checkTypedAnswer);
+  typingInput?.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" && checkTypedAnswer()) {
+      goToNextItem();
+    }
+  });
+  nextItemButton?.addEventListener("click", () => {
+    if (checkTypedAnswer()) {
+      goToNextItem();
+    }
+  });
+  previousItemButton?.addEventListener("click", goToPreviousItem);
 
   const savedUrl = loadSavedDatasetUrl();
   const initialUrl = savedUrl || (isLocalDevelopmentHost() ? getDefaultDatasetUrl() : "");

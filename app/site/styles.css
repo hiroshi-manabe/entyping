@@ -134,7 +134,10 @@ input[type="url"] {
 }
 
 .source-actions button,
-.part-action {
+.part-action,
+.practice-actions button,
+.prompt-actions button,
+.practice-topbar button {
   padding: 11px 15px;
   border: 1px solid transparent;
   border-radius: 999px;
@@ -143,18 +146,29 @@ input[type="url"] {
 }
 
 .source-actions button:hover,
-.part-action:hover {
+.part-action:hover,
+.practice-actions button:hover,
+.prompt-actions button:hover {
   background: var(--accent-dark);
 }
 
-.source-actions .button-secondary {
+.source-actions .button-secondary,
+.practice-actions .button-secondary,
+.practice-topbar .button-secondary {
   border-color: var(--line);
   background: transparent;
   color: var(--ink);
 }
 
-.source-actions .button-secondary:hover {
+.source-actions .button-secondary:hover,
+.practice-actions .button-secondary:hover,
+.practice-topbar .button-secondary:hover {
   background: var(--paper-strong);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
 }
 
 .status {
@@ -335,6 +349,154 @@ input[type="url"] {
   flex: 0 0 auto;
 }
 
+.practice-screen {
+  display: grid;
+  gap: 18px;
+}
+
+.practice-screen[hidden] {
+  display: none;
+}
+
+.practice-topbar {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+}
+
+.practice-context {
+  color: var(--mark);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.practice-title {
+  margin-top: 4px;
+  font-size: clamp(1.7rem, 5vw, 3rem);
+}
+
+.practice-progress {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.progress-track {
+  height: 10px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.progress-track span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+  transition: width 180ms ease;
+}
+
+.typing-card,
+.support-notes section {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 250, 240, 0.92);
+  box-shadow: var(--shadow);
+}
+
+.typing-card {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+}
+
+.prompt-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.target-text {
+  font-size: clamp(1.55rem, 4vw, 2.4rem);
+  line-height: 1.28;
+}
+
+.typing-field {
+  display: grid;
+  gap: 8px;
+}
+
+.typing-field span {
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.typing-field input {
+  width: 100%;
+  min-height: 54px;
+  padding: 12px 14px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 1.2rem;
+}
+
+.typing-field input:focus {
+  border-color: var(--accent);
+  outline: 3px solid rgba(11, 110, 79, 0.16);
+}
+
+.typing-feedback {
+  min-height: 1.5em;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.typing-feedback[data-state="correct"] {
+  color: var(--accent);
+}
+
+.typing-feedback[data-state="incorrect"] {
+  color: #8f2d2d;
+}
+
+.support-notes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.support-notes section {
+  padding: 16px;
+}
+
+.support-notes h3 {
+  color: var(--mark);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.support-notes p {
+  margin-top: 8px;
+  line-height: 1.65;
+}
+
+.practice-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 @media (max-width: 760px) {
   .shell {
     padding-top: 36px;
@@ -352,18 +514,34 @@ input[type="url"] {
   .selected-part {
     min-width: 0;
   }
+
+  .support-notes {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 560px) {
   .source-actions,
-  .part-row {
+  .part-row,
+  .practice-actions {
     flex-direction: column;
     align-items: stretch;
   }
 
   .source-actions button,
-  .part-action {
+  .part-action,
+  .practice-actions button,
+  .prompt-actions button,
+  .practice-topbar button {
     width: 100%;
+  }
+
+  .practice-topbar {
+    grid-template-columns: 1fr;
+  }
+
+  .prompt-actions {
+    justify-content: stretch;
   }
 
   .unit-summary {
