@@ -22,6 +22,8 @@ const playAudioButton = document.querySelector("#play-audio");
 const targetText = document.querySelector("#target-text");
 const typingInput = document.querySelector("#typing-input");
 const typingFeedback = document.querySelector("#typing-feedback");
+const mistakeCount = document.querySelector("#mistake-count");
+const accuracyValue = document.querySelector("#accuracy-value");
 const translationText = document.querySelector("#translation-text");
 const studyNoteText = document.querySelector("#study-note-text");
 const previousItemButton = document.querySelector("#prev-item");
@@ -143,14 +145,12 @@ function resolveAudioUrl(datasetUrl, audioUrl) {
   return new URL(audioUrl, datasetUrl).toString();
 }
 
-function normalizeTypedText(value) {
+function normalizeTypingCharacters(value) {
   return value
-    .trim()
     .replaceAll("’", "'")
     .replaceAll("‘", "'")
     .replaceAll("“", '"')
-    .replaceAll("”", '"')
-    .replace(/\s+/g, " ");
+    .replaceAll("”", '"');
 }
 
 function makeElement(tagName, options = {}) {
@@ -245,6 +245,86 @@ function setTypingFeedback(message, state) {
   typingFeedback.dataset.state = state;
 }
 
+function createTypingState(item) {
+  return {
+    displayText: item.text,
+    expectedText: normalizeTypingCharacters(item.text),
+    cursorIndex: 0,
+  };
+}
+
+function getCurrentTypingState() {
+  return practiceSession?.typingState ?? null;
+}
+
+function getTypedPrefix(state) {
+  return state.expectedText.slice(0, state.cursorIndex);
+}
+
+function getSessionAccuracy() {
+  if (!practiceSession?.totalKeys) {
+    return 100;
+  }
+  return Math.round((practiceSession.correctKeys / practiceSession.totalKeys) * 100);
+}
+
+function getKeyLabel(char) {
+  if (char === " ") {
+    return "space";
+  }
+  return char;
+}
+
+function renderSessionStats() {
+  if (mistakeCount) {
+    mistakeCount.textContent = String(practiceSession?.mistakes ?? 0);
+  }
+  if (accuracyValue) {
+    accuracyValue.textContent = `${getSessionAccuracy()}%`;
+  }
+}
+
+function renderTargetCharacters() {
+  const state = getCurrentTypingState();
+  if (!state || !targetText) {
+    return;
+  }
+
+  targetText.textContent = "";
+  for (const [index, char] of [...state.displayText].entries()) {
+    const span = makeElement("span", { text: char });
+    span.classList.add("target-char");
+    if (char === " ") {
+      span.classList.add("target-space");
+    }
+    if (index < state.cursorIndex) {
+      span.classList.add("is-correct");
+    } else if (index === state.cursorIndex) {
+      span.classList.add("is-current");
+    } else {
+      span.classList.add("is-pending");
+    }
+    targetText.append(span);
+  }
+}
+
+function renderTypingState() {
+  const state = getCurrentTypingState();
+  if (!state) {
+    return;
+  }
+  if (typingInput) {
+    typingInput.value = getTypedPrefix(state);
+  }
+  renderTargetCharacters();
+  renderSessionStats();
+}
+
+function isTypingComplete() {
+  const state = getCurrentTypingState();
+  return Boolean(state && state.cursorIndex >= state.expectedText.length);
+}
+
 function playCurrentAudio() {
   const item = getCurrentItem();
   if (!item?.audio_url) {
@@ -274,14 +354,16 @@ function renderPracticeItem({ playAudio = false } = {}) {
   practiceTitle.textContent = practiceSession.part.label ?? "Practice";
   practiceProgressText.textContent = `${itemNumber} / ${total}`;
   practiceProgressBar.style.width = `${progress}%`;
-  targetText.textContent = item.text;
+  practiceSession.typingState = createTypingState(item);
   translationText.textContent = item.ja || "-";
   studyNoteText.textContent = item.study_note || "-";
   typingInput.value = "";
   typingInput.disabled = false;
+  typingInput.readOnly = true;
   previousItemButton.disabled = practiceSession.currentIndex === 0;
   nextItemButton.textContent = practiceSession.currentIndex === total - 1 ? "Finish" : "Next";
   setTypingFeedback("", "neutral");
+  renderTypingState();
   typingInput.focus();
 
   if (playAudio) {
@@ -301,28 +383,12 @@ function startPractice(unit, part) {
     part,
     items,
     currentIndex: 0,
+    mistakes: 0,
+    correctKeys: 0,
+    totalKeys: 0,
   };
   showPracticeView();
   renderPracticeItem({ playAudio: true });
-}
-
-function checkTypedAnswer() {
-  const item = getCurrentItem();
-  if (!item || !typingInput) {
-    return false;
-  }
-
-  const actual = normalizeTypedText(typingInput.value);
-  const expected = normalizeTypedText(item.text);
-  const isCorrect = actual === expected;
-  if (isCorrect) {
-    setTypingFeedback("Correct.", "correct");
-  } else if (actual.length >= expected.length) {
-    setTypingFeedback("Check the sentence and try again.", "incorrect");
-  } else {
-    setTypingFeedback("", "neutral");
-  }
-  return isCorrect;
 }
 
 function goToNextItem() {
@@ -337,6 +403,59 @@ function goToNextItem() {
   }
   practiceSession.currentIndex += 1;
   renderPracticeItem({ playAudio: true });
+}
+
+function handleTypingKeydown(event) {
+  const state = getCurrentTypingState();
+  if (!state || event.isComposing || event.ctrlKey || event.metaKey || event.altKey) {
+    return;
+  }
+
+  if (event.key === "Enter") {
+    event.preventDefault();
+    if (isTypingComplete()) {
+      goToNextItem();
+    }
+    return;
+  }
+
+  if (event.key === "Backspace") {
+    event.preventDefault();
+    if (state.cursorIndex > 0) {
+      state.cursorIndex -= 1;
+      setTypingFeedback("", "neutral");
+      renderTypingState();
+    }
+    return;
+  }
+
+  if (event.key.length !== 1) {
+    return;
+  }
+
+  event.preventDefault();
+  if (isTypingComplete()) {
+    return;
+  }
+
+  const expectedChar = state.expectedText[state.cursorIndex];
+  const typedChar = normalizeTypingCharacters(event.key);
+  practiceSession.totalKeys += 1;
+
+  if (typedChar === expectedChar) {
+    state.cursorIndex += 1;
+    practiceSession.correctKeys += 1;
+    if (isTypingComplete()) {
+      setTypingFeedback("Item complete. Press Enter or Next.", "correct");
+    } else {
+      setTypingFeedback("", "neutral");
+    }
+  } else {
+    practiceSession.mistakes += 1;
+    setTypingFeedback(`Expected "${getKeyLabel(expectedChar)}".`, "incorrect");
+  }
+
+  renderTypingState();
 }
 
 function goToPreviousItem() {
@@ -503,15 +622,12 @@ async function bootstrap() {
     practiceSession = null;
   });
   playAudioButton?.addEventListener("click", playCurrentAudio);
-  typingInput?.addEventListener("input", checkTypedAnswer);
-  typingInput?.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" && checkTypedAnswer()) {
-      goToNextItem();
-    }
-  });
+  typingInput?.addEventListener("keydown", handleTypingKeydown);
   nextItemButton?.addEventListener("click", () => {
-    if (checkTypedAnswer()) {
+    if (isTypingComplete()) {
       goToNextItem();
+    } else {
+      setTypingFeedback("Finish typing the sentence first.", "incorrect");
     }
   });
   previousItemButton?.addEventListener("click", goToPreviousItem);
