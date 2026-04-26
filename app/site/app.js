@@ -421,11 +421,6 @@ function handleTypingKeydown(event) {
 
   if (event.key === "Backspace") {
     event.preventDefault();
-    if (state.cursorIndex > 0) {
-      state.cursorIndex -= 1;
-      setTypingFeedback("", "neutral");
-      renderTypingState();
-    }
     return;
   }
 
