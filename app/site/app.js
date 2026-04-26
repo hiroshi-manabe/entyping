@@ -32,6 +32,7 @@ const nextItemButton = document.querySelector("#next-item");
 let activeDatasetUrl = "";
 let activeAudio = null;
 let practiceSession = null;
+let mistakeFlashTimer = null;
 
 function isLocalDevelopmentHost() {
   const host = window.location.hostname;
@@ -250,6 +251,7 @@ function createTypingState(item) {
     displayText: item.text,
     expectedText: normalizeTypingCharacters(item.text),
     cursorIndex: 0,
+    mistakeFlash: false,
   };
 }
 
@@ -301,6 +303,9 @@ function renderTargetCharacters() {
       span.classList.add("is-correct");
     } else if (index === state.cursorIndex) {
       span.classList.add("is-current");
+      if (state.mistakeFlash) {
+        span.classList.add("is-mistake");
+      }
     } else {
       span.classList.add("is-pending");
     }
@@ -438,6 +443,11 @@ function handleTypingKeydown(event) {
   practiceSession.totalKeys += 1;
 
   if (typedChar === expectedChar) {
+    state.mistakeFlash = false;
+    if (mistakeFlashTimer) {
+      window.clearTimeout(mistakeFlashTimer);
+      mistakeFlashTimer = null;
+    }
     state.cursorIndex += 1;
     practiceSession.correctKeys += 1;
     if (isTypingComplete()) {
@@ -447,6 +457,15 @@ function handleTypingKeydown(event) {
     }
   } else {
     practiceSession.mistakes += 1;
+    state.mistakeFlash = true;
+    if (mistakeFlashTimer) {
+      window.clearTimeout(mistakeFlashTimer);
+    }
+    mistakeFlashTimer = window.setTimeout(() => {
+      state.mistakeFlash = false;
+      renderTypingState();
+      mistakeFlashTimer = null;
+    }, 180);
     setTypingFeedback(`Expected "${getKeyLabel(expectedChar)}".`, "incorrect");
   }
 
