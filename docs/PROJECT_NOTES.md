@@ -87,6 +87,16 @@
 - Do not support arbitrary multi-select combinations across unrelated units in version 1.
 - A child-facing typing app benefits more from fast start and clarity than from maximum content-selection flexibility.
 
+## Long-Term Navigation Direction
+
+- Contents and practice should eventually be distinct app views with meaningful URLs.
+- The app can still be implemented as a single static page, but practice state should be addressable through lightweight routing.
+- A likely static-hosting-friendly shape is:
+  - `/`
+  - `#/practice/part_006`
+- Browser Back should return from practice to contents naturally.
+- Direct linking, reload restoration, and saved progress can later build on the same route structure.
+
 ## Reference Value Of The Publisher Pronunciation Site
 
 - The New Crown pronunciation site is useful as a reference for:
