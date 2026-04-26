@@ -483,33 +483,12 @@ button:disabled {
   color: var(--ink);
 }
 
-.typing-field {
-  display: grid;
-  gap: 8px;
-}
-
-.typing-field span {
-  color: var(--muted);
-  font-size: 0.84rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.typing-field input {
-  width: 100%;
-  min-height: 54px;
-  padding: 12px 14px;
-  border: 2px solid var(--line);
-  border-radius: 8px;
-  background: #fff;
-  color: var(--ink);
-  font-size: 1.2rem;
-}
-
-.typing-field input:focus {
-  border-color: var(--accent);
-  outline: 3px solid rgba(11, 110, 79, 0.16);
+.typing-input-sink {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .typing-feedback {

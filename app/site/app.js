@@ -213,6 +213,9 @@ function showPracticeView() {
   if (practiceScreen) {
     practiceScreen.hidden = false;
   }
+  window.requestAnimationFrame(() => {
+    practiceScreen?.scrollIntoView({ block: "start" });
+  });
 }
 
 function handlePartSelect(unit, part) {

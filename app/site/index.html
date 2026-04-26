@@ -102,16 +102,15 @@
             <button id="play-audio" type="button">Play Audio</button>
           </div>
           <p id="target-text" class="target-text"></p>
-          <label class="typing-field">
-            <span>Keystroke input</span>
-            <input
-              id="typing-input"
-              type="text"
-              autocomplete="off"
-              autocapitalize="none"
-              spellcheck="false"
-            />
-          </label>
+          <input
+            id="typing-input"
+            class="typing-input-sink"
+            type="text"
+            aria-label="Typing input"
+            autocomplete="off"
+            autocapitalize="none"
+            spellcheck="false"
+          />
           <p id="typing-feedback" class="typing-feedback" aria-live="polite"></p>
         </article>
 
