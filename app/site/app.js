@@ -292,7 +292,7 @@ function renderTargetCharacters() {
 
   targetText.textContent = "";
   for (const [index, char] of [...state.displayText].entries()) {
-    const span = makeElement("span", { text: char });
+    const span = makeElement("span", { text: char === " " ? "\u00a0" : char });
     span.classList.add("target-char");
     if (char === " ") {
       span.classList.add("target-space");

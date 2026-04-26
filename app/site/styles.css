@@ -461,6 +461,10 @@ button:disabled {
   border-radius: 4px;
 }
 
+.target-space {
+  width: 0.6em;
+}
+
 .target-char.is-correct {
   color: var(--accent);
 }
@@ -472,10 +476,6 @@ button:disabled {
 
 .target-char.is-pending {
   color: var(--ink);
-}
-
-.target-space.is-current {
-  min-width: 0.6em;
 }
 
 .typing-field {
