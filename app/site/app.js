@@ -19,6 +19,7 @@ const practiceTitle = document.querySelector("#practice-title");
 const practiceProgressText = document.querySelector("#practice-progress-text");
 const practiceProgressBar = document.querySelector("#practice-progress-bar");
 const playAudioButton = document.querySelector("#play-audio");
+const typingCard = document.querySelector(".typing-card");
 const targetText = document.querySelector("#target-text");
 const typingInput = document.querySelector("#typing-input");
 const typingFeedback = document.querySelector("#typing-feedback");
@@ -333,6 +334,20 @@ function isTypingComplete() {
   return Boolean(state && state.cursorIndex >= state.expectedText.length);
 }
 
+function isEditableTarget(target) {
+  if (!(target instanceof Element) || target === typingInput) {
+    return false;
+  }
+  return Boolean(target.closest("input, textarea, select, [contenteditable]"));
+}
+
+function focusTypingInput() {
+  if (!practiceSession || !typingInput || practiceScreen?.hidden) {
+    return;
+  }
+  typingInput.focus({ preventScroll: true });
+}
+
 function playCurrentAudio() {
   const item = getCurrentItem();
   if (!item?.audio_url) {
@@ -372,7 +387,7 @@ function renderPracticeItem({ playAudio = false } = {}) {
   nextItemButton.textContent = practiceSession.currentIndex === total - 1 ? "Finish" : "Next";
   setTypingFeedback("", "neutral");
   renderTypingState();
-  typingInput.focus();
+  focusTypingInput();
 
   if (playAudio) {
     playCurrentAudio();
@@ -414,6 +429,10 @@ function goToNextItem() {
 }
 
 function handleTypingKeydown(event) {
+  if (!practiceSession || practiceScreen?.hidden || isEditableTarget(event.target)) {
+    return;
+  }
+
   const state = getCurrentTypingState();
   if (!state || event.isComposing || event.ctrlKey || event.metaKey || event.altKey) {
     return;
@@ -638,13 +657,23 @@ async function bootstrap() {
     showContentsView();
     practiceSession = null;
   });
-  playAudioButton?.addEventListener("click", playCurrentAudio);
-  typingInput?.addEventListener("keydown", handleTypingKeydown);
+  playAudioButton?.addEventListener("click", () => {
+    playCurrentAudio();
+    window.requestAnimationFrame(focusTypingInput);
+  });
+  typingCard?.addEventListener("pointerdown", () => {
+    window.requestAnimationFrame(focusTypingInput);
+  });
+  practiceScreen?.addEventListener("pointerdown", () => {
+    window.requestAnimationFrame(focusTypingInput);
+  });
+  document.addEventListener("keydown", handleTypingKeydown);
   nextItemButton?.addEventListener("click", () => {
     if (isTypingComplete()) {
       goToNextItem();
     } else {
       setTypingFeedback("Finish typing the sentence first.", "incorrect");
+      window.requestAnimationFrame(focusTypingInput);
     }
   });
   previousItemButton?.addEventListener("click", goToPreviousItem);
