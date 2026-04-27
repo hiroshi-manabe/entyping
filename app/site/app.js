@@ -516,6 +516,26 @@ function goToNextItem() {
   renderPracticeItem({ playAudio: true });
 }
 
+function handleDebugShortcut(event) {
+  if (
+    !isLocalDevelopmentHost() ||
+    !practiceSession ||
+    practiceSession.completed ||
+    practiceScreen?.hidden ||
+    isCompletionDialogOpen() ||
+    event.key.toLowerCase() !== "j" ||
+    !event.ctrlKey ||
+    !event.shiftKey ||
+    event.metaKey ||
+    event.altKey
+  ) {
+    return;
+  }
+
+  event.preventDefault();
+  showCompletionView();
+}
+
 function handleTypingKeydown(event) {
   if (
     !practiceSession ||
@@ -812,6 +832,7 @@ async function bootstrap() {
   practiceScreen?.addEventListener("pointerdown", () => {
     window.requestAnimationFrame(focusTypingInput);
   });
+  document.addEventListener("keydown", handleDebugShortcut);
   document.addEventListener("keydown", handleTypingKeydown);
   nextItemButton?.addEventListener("click", () => {
     if (isTypingComplete()) {
