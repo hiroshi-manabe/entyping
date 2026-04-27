@@ -136,6 +136,7 @@ input[type="url"] {
 .source-actions button,
 .part-action,
 .practice-actions button,
+.completion-actions button,
 .prompt-actions button,
 .practice-topbar button {
   padding: 11px 15px;
@@ -148,12 +149,14 @@ input[type="url"] {
 .source-actions button:hover,
 .part-action:hover,
 .practice-actions button:hover,
+.completion-actions button:hover,
 .prompt-actions button:hover {
   background: var(--accent-dark);
 }
 
 .source-actions .button-secondary,
 .practice-actions .button-secondary,
+.completion-actions .button-secondary,
 .practice-topbar .button-secondary {
   border-color: var(--line);
   background: transparent;
@@ -162,6 +165,7 @@ input[type="url"] {
 
 .source-actions .button-secondary:hover,
 .practice-actions .button-secondary:hover,
+.completion-actions .button-secondary:hover,
 .practice-topbar .button-secondary:hover {
   background: var(--paper-strong);
 }
@@ -350,6 +354,7 @@ button:disabled {
 }
 
 .practice-screen {
+  position: relative;
   display: grid;
   gap: 18px;
 }
@@ -533,6 +538,79 @@ button:disabled {
   gap: 12px;
 }
 
+.completion-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(23, 33, 43, 0.42);
+  backdrop-filter: blur(4px);
+}
+
+.completion-overlay[hidden] {
+  display: none;
+}
+
+.completion-panel {
+  display: grid;
+  gap: 18px;
+  width: min(560px, 100%);
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(11, 110, 79, 0.12), transparent 34%),
+    rgba(255, 250, 240, 0.94);
+  box-shadow: var(--shadow);
+}
+
+.completion-panel h3 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1;
+}
+
+.completion-summary {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.completion-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.completion-stats div {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.completion-stats dt {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.completion-stats dd {
+  margin: 5px 0 0;
+  color: var(--ink);
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.completion-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 @media (max-width: 760px) {
   .shell {
     padding-top: 36px;
@@ -554,11 +632,16 @@ button:disabled {
   .support-notes {
     grid-template-columns: 1fr;
   }
+
+  .completion-stats {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 560px) {
   .source-actions,
   .part-row,
+  .completion-actions,
   .practice-actions {
     flex-direction: column;
     align-items: stretch;
@@ -567,6 +650,7 @@ button:disabled {
   .source-actions button,
   .part-action,
   .practice-actions button,
+  .completion-actions button,
   .prompt-actions button,
   .practice-topbar button {
     width: 100%;

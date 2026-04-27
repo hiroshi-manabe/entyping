@@ -29,6 +29,14 @@ const translationText = document.querySelector("#translation-text");
 const studyNoteText = document.querySelector("#study-note-text");
 const previousItemButton = document.querySelector("#prev-item");
 const nextItemButton = document.querySelector("#next-item");
+const completionOverlay = document.querySelector("#completion-overlay");
+const completionTitle = document.querySelector("#completion-title");
+const completionSummary = document.querySelector("#completion-summary");
+const completionItems = document.querySelector("#completion-items");
+const completionMistakes = document.querySelector("#completion-mistakes");
+const completionAccuracy = document.querySelector("#completion-accuracy");
+const retryPartButton = document.querySelector("#retry-part");
+const completionBackButton = document.querySelector("#completion-back");
 
 let activeDatasetUrl = "";
 let activeAudio = null;
@@ -219,6 +227,18 @@ function showPracticeView() {
   });
 }
 
+function showPracticeItemPanels() {
+  if (completionOverlay) {
+    completionOverlay.hidden = true;
+  }
+}
+
+function showCompletionPanel() {
+  if (completionOverlay) {
+    completionOverlay.hidden = false;
+  }
+}
+
 function handlePartSelect(unit, part) {
   if (!selectedPart || !selectedPartLabel) {
     return;
@@ -274,6 +294,10 @@ function getSessionAccuracy() {
   return Math.round((practiceSession.correctKeys / practiceSession.totalKeys) * 100);
 }
 
+function getSessionAccuracyLabel() {
+  return `${getSessionAccuracy()}%`;
+}
+
 function getKeyLabel(char) {
   if (char === " ") {
     return "space";
@@ -286,7 +310,7 @@ function renderSessionStats() {
     mistakeCount.textContent = String(practiceSession?.mistakes ?? 0);
   }
   if (accuracyValue) {
-    accuracyValue.textContent = `${getSessionAccuracy()}%`;
+    accuracyValue.textContent = getSessionAccuracyLabel();
   }
 }
 
@@ -342,7 +366,7 @@ function isEditableTarget(target) {
 }
 
 function focusTypingInput() {
-  if (!practiceSession || !typingInput || practiceScreen?.hidden) {
+  if (!practiceSession || practiceSession.completed || !typingInput || practiceScreen?.hidden) {
     return;
   }
   typingInput.focus({ preventScroll: true });
@@ -373,6 +397,8 @@ function renderPracticeItem({ playAudio = false } = {}) {
   const total = practiceSession.items.length;
   const progress = Math.round((itemNumber / total) * 100);
 
+  practiceSession.completed = false;
+  showPracticeItemPanels();
   practiceContext.textContent = formatPartContext(practiceSession.unit, practiceSession.part);
   practiceTitle.textContent = practiceSession.part.label ?? "Practice";
   practiceProgressText.textContent = `${itemNumber} / ${total}`;
@@ -409,9 +435,51 @@ function startPractice(unit, part) {
     mistakes: 0,
     correctKeys: 0,
     totalKeys: 0,
+    completed: false,
   };
   showPracticeView();
   renderPracticeItem({ playAudio: true });
+}
+
+function showCompletionView() {
+  if (!practiceSession) {
+    return;
+  }
+
+  practiceSession.completed = true;
+  practiceSession.typingState = null;
+  if (mistakeFlashTimer) {
+    window.clearTimeout(mistakeFlashTimer);
+    mistakeFlashTimer = null;
+  }
+
+  const partContext = formatPartContext(practiceSession.unit, practiceSession.part);
+  const itemCount = practiceSession.items.length;
+  practiceContext.textContent = partContext;
+  practiceTitle.textContent = "Complete";
+  practiceProgressText.textContent = `${itemCount} / ${itemCount}`;
+  practiceProgressBar.style.width = "100%";
+  renderSessionStats();
+
+  if (completionTitle) {
+    completionTitle.textContent = `${practiceSession.part.label ?? "Part"} complete`;
+  }
+  if (completionSummary) {
+    completionSummary.textContent = `You finished ${partContext}.`;
+  }
+  if (completionItems) {
+    completionItems.textContent = String(itemCount);
+  }
+  if (completionMistakes) {
+    completionMistakes.textContent = String(practiceSession.mistakes);
+  }
+  if (completionAccuracy) {
+    completionAccuracy.textContent = getSessionAccuracyLabel();
+  }
+
+  showCompletionPanel();
+  retryPartButton?.focus({ preventScroll: true });
+  setStatus(`Finished ${practiceSession.part.label}.`, "ok");
 }
 
 function goToNextItem() {
@@ -419,9 +487,7 @@ function goToNextItem() {
     return;
   }
   if (practiceSession.currentIndex >= practiceSession.items.length - 1) {
-    showContentsView();
-    setStatus(`Finished ${practiceSession.part.label}.`, "ok");
-    practiceSession = null;
+    showCompletionView();
     return;
   }
   practiceSession.currentIndex += 1;
@@ -495,11 +561,23 @@ function handleTypingKeydown(event) {
 }
 
 function goToPreviousItem() {
-  if (!practiceSession || practiceSession.currentIndex === 0) {
+  if (!practiceSession || practiceSession.completed || practiceSession.currentIndex === 0) {
     return;
   }
   practiceSession.currentIndex -= 1;
   renderPracticeItem({ playAudio: true });
+}
+
+function returnToContents() {
+  showContentsView();
+  practiceSession = null;
+}
+
+function retryCurrentPart() {
+  if (!practiceSession) {
+    return;
+  }
+  startPractice(practiceSession.unit, practiceSession.part);
 }
 
 function renderPartRow(unit, part) {
@@ -653,10 +731,7 @@ async function bootstrap() {
 
   datasetForm.addEventListener("submit", handleSubmit);
   resetSourceButton.addEventListener("click", handleReset);
-  backToContentsButton?.addEventListener("click", () => {
-    showContentsView();
-    practiceSession = null;
-  });
+  backToContentsButton?.addEventListener("click", returnToContents);
   playAudioButton?.addEventListener("click", () => {
     playCurrentAudio();
     window.requestAnimationFrame(focusTypingInput);
@@ -677,6 +752,8 @@ async function bootstrap() {
     }
   });
   previousItemButton?.addEventListener("click", goToPreviousItem);
+  retryPartButton?.addEventListener("click", retryCurrentPart);
+  completionBackButton?.addEventListener("click", returnToContents);
 
   const savedUrl = loadSavedDatasetUrl();
   const initialUrl = savedUrl || (isLocalDevelopmentHost() ? getDefaultDatasetUrl() : "");

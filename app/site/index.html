@@ -129,6 +129,41 @@
           <button id="prev-item" type="button" class="button-secondary">Previous</button>
           <button id="next-item" type="button">Next</button>
         </div>
+
+        <div
+          id="completion-overlay"
+          class="completion-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="completion-title"
+          hidden
+        >
+          <article class="completion-panel">
+            <p class="eyebrow">Complete</p>
+            <h3 id="completion-title">Part complete</h3>
+            <p id="completion-summary" class="completion-summary"></p>
+            <dl class="completion-stats">
+              <div>
+                <dt>Items</dt>
+                <dd id="completion-items">0</dd>
+              </div>
+              <div>
+                <dt>Mistakes</dt>
+                <dd id="completion-mistakes">0</dd>
+              </div>
+              <div>
+                <dt>Accuracy</dt>
+                <dd id="completion-accuracy">100%</dd>
+              </div>
+            </dl>
+            <div class="completion-actions">
+              <button id="retry-part" type="button">Practice Again</button>
+              <button id="completion-back" type="button" class="button-secondary">
+                Back to Contents
+              </button>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
   </body>
