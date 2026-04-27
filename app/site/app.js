@@ -239,6 +239,28 @@ function showCompletionPanel() {
   }
 }
 
+function isCompletionDialogOpen() {
+  return Boolean(completionOverlay && !completionOverlay.hidden);
+}
+
+function getCompletionFocusableElements() {
+  if (!completionOverlay) {
+    return [];
+  }
+  return [...completionOverlay.querySelectorAll("button, [href], input, select, textarea, [tabindex]")]
+    .filter((element) => {
+      if (!(element instanceof HTMLElement)) {
+        return false;
+      }
+      return !element.disabled && element.tabIndex >= 0 && !element.hidden;
+    });
+}
+
+function focusFirstCompletionAction() {
+  const [firstElement] = getCompletionFocusableElements();
+  firstElement?.focus({ preventScroll: true });
+}
+
 function handlePartSelect(unit, part) {
   if (!selectedPart || !selectedPartLabel) {
     return;
@@ -478,7 +500,7 @@ function showCompletionView() {
   }
 
   showCompletionPanel();
-  retryPartButton?.focus({ preventScroll: true });
+  focusFirstCompletionAction();
   setStatus(`Finished ${practiceSession.part.label}.`, "ok");
 }
 
@@ -495,7 +517,12 @@ function goToNextItem() {
 }
 
 function handleTypingKeydown(event) {
-  if (!practiceSession || practiceScreen?.hidden || isEditableTarget(event.target)) {
+  if (
+    !practiceSession ||
+    practiceScreen?.hidden ||
+    isCompletionDialogOpen() ||
+    isEditableTarget(event.target)
+  ) {
     return;
   }
 
@@ -578,6 +605,49 @@ function retryCurrentPart() {
     return;
   }
   startPractice(practiceSession.unit, practiceSession.part);
+}
+
+function handleCompletionDialogKeydown(event) {
+  if (!isCompletionDialogOpen()) {
+    return;
+  }
+
+  if (event.key === "Escape") {
+    event.preventDefault();
+    returnToContents();
+    return;
+  }
+
+  if (event.key !== "Tab") {
+    return;
+  }
+
+  const focusableElements = getCompletionFocusableElements();
+  if (!focusableElements.length) {
+    event.preventDefault();
+    return;
+  }
+
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+  const activeElement = document.activeElement;
+
+  if (!completionOverlay?.contains(activeElement)) {
+    event.preventDefault();
+    firstElement.focus({ preventScroll: true });
+    return;
+  }
+
+  if (event.shiftKey && activeElement === firstElement) {
+    event.preventDefault();
+    lastElement.focus({ preventScroll: true });
+    return;
+  }
+
+  if (!event.shiftKey && activeElement === lastElement) {
+    event.preventDefault();
+    firstElement.focus({ preventScroll: true });
+  }
 }
 
 function renderPartRow(unit, part) {
@@ -754,6 +824,7 @@ async function bootstrap() {
   previousItemButton?.addEventListener("click", goToPreviousItem);
   retryPartButton?.addEventListener("click", retryCurrentPart);
   completionBackButton?.addEventListener("click", returnToContents);
+  document.addEventListener("keydown", handleCompletionDialogKeydown);
 
   const savedUrl = loadSavedDatasetUrl();
   const initialUrl = savedUrl || (isLocalDevelopmentHost() ? getDefaultDatasetUrl() : "");
