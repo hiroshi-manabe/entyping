@@ -1,5 +1,6 @@
 const STORAGE_KEY = "entyping.datasetUrl";
 const OPEN_UNITS_STORAGE_KEY = "entyping.openUnits";
+const PART_PROGRESS_STORAGE_KEY = "entyping.partProgress";
 const LOCAL_DATASET_PATH = "/content/new_crown1/content.json";
 
 const datasetForm = document.querySelector("#dataset-form");
@@ -99,6 +100,24 @@ function saveOpenUnitIds(contentId, openUnitIds) {
   window.localStorage.setItem(OPEN_UNITS_STORAGE_KEY, JSON.stringify(saved));
 }
 
+function loadPartProgressByContent() {
+  const raw = window.localStorage.getItem(PART_PROGRESS_STORAGE_KEY);
+  if (!raw) {
+    return {};
+  }
+
+  try {
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+function savePartProgressByContent(progressByContent) {
+  window.localStorage.setItem(PART_PROGRESS_STORAGE_KEY, JSON.stringify(progressByContent));
+}
+
 function getOpenUnitIdsFromDom() {
   if (!contentsList) {
     return [];
@@ -191,6 +210,113 @@ function renderEmptyState(message) {
 
 function formatPartContext(unit, part) {
   return [unit.label, part.label].filter(Boolean).join(" / ");
+}
+
+function getActiveContentId() {
+  return activeDataset?.content?.id ?? "";
+}
+
+function getPartProgressKey(unit, part) {
+  return [unit.id ?? unit.label ?? "unit", part.id ?? part.label ?? "part"].join("/");
+}
+
+function getPartProgress(unit, part) {
+  const contentId = getActiveContentId();
+  if (!contentId) {
+    return null;
+  }
+  const progressByContent = loadPartProgressByContent();
+  const contentProgress = progressByContent[contentId];
+  if (!contentProgress || typeof contentProgress !== "object") {
+    return null;
+  }
+  return contentProgress[getPartProgressKey(unit, part)] ?? null;
+}
+
+function formatLastPracticed(isoTimestamp) {
+  if (!isoTimestamp) {
+    return "";
+  }
+
+  const practicedDate = new Date(isoTimestamp);
+  if (Number.isNaN(practicedDate.getTime())) {
+    return "";
+  }
+
+  const today = new Date();
+  const practicedDay = practicedDate.toDateString();
+  const todayDay = today.toDateString();
+  if (practicedDay === todayDay) {
+    return "Today";
+  }
+
+  const yesterday = new Date(today);
+  yesterday.setDate(today.getDate() - 1);
+  if (practicedDay === yesterday.toDateString()) {
+    return "Yesterday";
+  }
+
+  return practicedDate.toLocaleDateString(undefined, {
+    month: "short",
+    day: "numeric",
+  });
+}
+
+function formatPartProgress(progress) {
+  if (!progress) {
+    return "";
+  }
+
+  const labels = [`Completed ${progress.completedCount ?? 0}x`];
+  if (typeof progress.bestAccuracy === "number") {
+    labels.push(`Best ${progress.bestAccuracy}%`);
+  }
+  if (typeof progress.bestMistakes === "number") {
+    labels.push(`Fewest mistakes ${progress.bestMistakes}`);
+  }
+
+  const lastPracticed = formatLastPracticed(progress.lastPracticedAt);
+  if (lastPracticed) {
+    labels.push(lastPracticed);
+  }
+  return labels.join(" / ");
+}
+
+function saveCurrentPartProgress() {
+  if (!practiceSession) {
+    return;
+  }
+
+  const contentId = getActiveContentId();
+  if (!contentId) {
+    return;
+  }
+
+  const progressByContent = loadPartProgressByContent();
+  const contentProgress =
+    progressByContent[contentId] && typeof progressByContent[contentId] === "object"
+      ? progressByContent[contentId]
+      : {};
+  const progressKey = getPartProgressKey(practiceSession.unit, practiceSession.part);
+  const previous = contentProgress[progressKey] ?? {};
+  const accuracy = getSessionAccuracy();
+  const mistakes = practiceSession.mistakes;
+
+  contentProgress[progressKey] = {
+    attempts: (previous.attempts ?? 0) + 1,
+    completedCount: (previous.completedCount ?? 0) + 1,
+    bestAccuracy:
+      typeof previous.bestAccuracy === "number"
+        ? Math.max(previous.bestAccuracy, accuracy)
+        : accuracy,
+    bestMistakes:
+      typeof previous.bestMistakes === "number"
+        ? Math.min(previous.bestMistakes, mistakes)
+        : mistakes,
+    lastPracticedAt: new Date().toISOString(),
+  };
+  progressByContent[contentId] = contentProgress;
+  savePartProgressByContent(progressByContent);
 }
 
 function showContentsView() {
@@ -541,6 +667,7 @@ function showCompletionView() {
   if (completionAccuracy) {
     completionAccuracy.textContent = getSessionAccuracyLabel();
   }
+  saveCurrentPartProgress();
   updateNextPartAction();
 
   showCompletionPanel();
@@ -660,8 +787,12 @@ function goToPreviousItem() {
 }
 
 function returnToContents() {
-  showContentsView();
   practiceSession = null;
+  if (activeDataset) {
+    renderContents(activeDataset);
+  } else {
+    showContentsView();
+  }
 }
 
 function retryCurrentPart() {
@@ -728,9 +859,11 @@ function renderPartRow(unit, part) {
 
   const body = makeElement("div", { className: "part-body" });
   const label = makeElement("h3", { text: part.label ?? "Part" });
+  const metaText = `${getPartItemCount(part)} items`;
+  const progressText = formatPartProgress(getPartProgress(unit, part));
   const meta = makeElement("p", {
     className: "part-meta",
-    text: `${getPartItemCount(part)} items`,
+    text: progressText ? `${metaText} / ${progressText}` : metaText,
   });
   body.append(label, meta);
 
