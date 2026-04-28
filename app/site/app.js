@@ -358,6 +358,7 @@ function saveCurrentPartProgress() {
 }
 
 function showContentsView() {
+  document.body.dataset.screen = "contents";
   if (completionOverlay) {
     completionOverlay.hidden = true;
   }
@@ -379,6 +380,7 @@ function showContentsView() {
 }
 
 function showPracticeView() {
+  document.body.dataset.screen = "practice";
   if (hero) {
     hero.hidden = true;
   }
@@ -391,9 +393,6 @@ function showPracticeView() {
   if (practiceScreen) {
     practiceScreen.hidden = false;
   }
-  window.requestAnimationFrame(() => {
-    practiceScreen?.scrollIntoView({ block: "start" });
-  });
 }
 
 function showPracticeItemPanels() {
