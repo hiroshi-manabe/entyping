@@ -131,6 +131,43 @@ function getPartItemCount(part) {
   return Array.isArray(part.items) ? part.items.length : 0;
 }
 
+function getRouteId(entity) {
+  return entity?.id ?? null;
+}
+
+function encodeRoutePart(value) {
+  return encodeURIComponent(value);
+}
+
+function getContentsHash() {
+  return "#/";
+}
+
+function getPracticeHash(unit, part) {
+  const unitId = getRouteId(unit);
+  const partId = getRouteId(part);
+  if (!unitId || !partId) {
+    return null;
+  }
+  return `#/practice/${encodeRoutePart(unitId)}/${encodeRoutePart(partId)}`;
+}
+
+function parseRoute() {
+  const hash = window.location.hash || getContentsHash();
+  const parts = hash.replace(/^#\/?/, "").split("/").filter(Boolean);
+  if (!parts.length) {
+    return { name: "contents" };
+  }
+  if (parts[0] === "practice" && parts.length >= 3) {
+    return {
+      name: "practice",
+      unitId: decodeURIComponent(parts[1]),
+      partId: decodeURIComponent(parts[2]),
+    };
+  }
+  return { name: "contents" };
+}
+
 function getDatasetCounts(data) {
   const units = Array.isArray(data.units) ? data.units : [];
   const partCount = units.reduce((count, unit) => count + (unit.parts?.length ?? 0), 0);
@@ -262,12 +299,13 @@ function formatLastPracticed(isoTimestamp) {
   });
 }
 
-function formatPartProgress(progress) {
+function getPartProgressBadges(progress) {
+  const labels = [];
   if (!progress) {
-    return "";
+    return labels;
   }
 
-  const labels = [`Completed ${progress.completedCount ?? 0}x`];
+  labels.push(`Completed ${progress.completedCount ?? 0}x`);
   if (typeof progress.bestAccuracy === "number") {
     labels.push(`Best ${progress.bestAccuracy}%`);
   }
@@ -279,7 +317,7 @@ function formatPartProgress(progress) {
   if (lastPracticed) {
     labels.push(lastPracticed);
   }
-  return labels.join(" / ");
+  return labels;
 }
 
 function saveCurrentPartProgress() {
@@ -320,6 +358,9 @@ function saveCurrentPartProgress() {
 }
 
 function showContentsView() {
+  if (completionOverlay) {
+    completionOverlay.hidden = true;
+  }
   if (hero) {
     hero.hidden = false;
   }
@@ -430,7 +471,42 @@ function updateNextPartAction() {
   nextPartButton.title = nextPart ? formatPartContext(nextPart.unit, nextPart.part) : "";
 }
 
-function handlePartSelect(unit, part) {
+function findPracticePart(unitId, partId) {
+  for (const unit of activeDataset?.units ?? []) {
+    if (getRouteId(unit) !== unitId) {
+      continue;
+    }
+    for (const part of unit.parts ?? []) {
+      if (getRouteId(part) === partId && getPartItemCount(part) > 0) {
+        return { unit, part };
+      }
+    }
+  }
+  return null;
+}
+
+function navigateToHash(nextHash) {
+  if (window.location.hash === nextHash) {
+    applyRoute();
+    return;
+  }
+  window.location.hash = nextHash;
+}
+
+function navigateToContents() {
+  navigateToHash(getContentsHash());
+}
+
+function navigateToPractice(unit, part) {
+  const nextHash = getPracticeHash(unit, part);
+  if (!nextHash) {
+    startPractice(unit, part);
+    return;
+  }
+  navigateToHash(nextHash);
+}
+
+function setSelectedPartStatus(unit, part) {
   if (!selectedPart || !selectedPartLabel) {
     return;
   }
@@ -445,8 +521,10 @@ function handlePartSelect(unit, part) {
   } else {
     setStatus(`Selected ${part.label}.`, "ok");
   }
+}
 
-  startPractice(unit, part);
+function handlePartSelect(unit, part) {
+  navigateToPractice(unit, part);
 }
 
 function getCurrentItem() {
@@ -786,13 +864,17 @@ function goToPreviousItem() {
   renderPracticeItem({ playAudio: true });
 }
 
-function returnToContents() {
+function showContentsRoute() {
   practiceSession = null;
   if (activeDataset) {
     renderContents(activeDataset);
   } else {
     showContentsView();
   }
+}
+
+function returnToContents() {
+  navigateToContents();
 }
 
 function retryCurrentPart() {
@@ -808,7 +890,30 @@ function startNextPart() {
     return;
   }
   setStatus(`Started ${formatPartContext(nextPart.unit, nextPart.part)}.`, "ok");
-  startPractice(nextPart.unit, nextPart.part);
+  navigateToPractice(nextPart.unit, nextPart.part);
+}
+
+function applyRoute() {
+  const route = parseRoute();
+  if (route.name === "contents") {
+    showContentsRoute();
+    return;
+  }
+
+  if (!activeDataset) {
+    setStatus("Load a dataset before opening a practice route.", "missing");
+    return;
+  }
+
+  const nextPracticePart = findPracticePart(route.unitId, route.partId);
+  if (!nextPracticePart) {
+    setStatus("Practice route not found. Returning to contents.", "missing");
+    navigateToContents();
+    return;
+  }
+
+  setSelectedPartStatus(nextPracticePart.unit, nextPracticePart.part);
+  startPractice(nextPracticePart.unit, nextPracticePart.part);
 }
 
 function handleCompletionDialogKeydown(event) {
@@ -859,12 +964,11 @@ function renderPartRow(unit, part) {
 
   const body = makeElement("div", { className: "part-body" });
   const label = makeElement("h3", { text: part.label ?? "Part" });
-  const metaText = `${getPartItemCount(part)} items`;
-  const progressText = formatPartProgress(getPartProgress(unit, part));
-  const meta = makeElement("p", {
-    className: "part-meta",
-    text: progressText ? `${metaText} / ${progressText}` : metaText,
-  });
+  const meta = makeElement("div", { className: "part-meta" });
+  const badges = [`${getPartItemCount(part)} items`, ...getPartProgressBadges(getPartProgress(unit, part))];
+  for (const badge of badges) {
+    meta.append(makeElement("span", { className: "part-badge", text: badge }));
+  }
   body.append(label, meta);
 
   const action = makeElement("button", {
@@ -967,6 +1071,7 @@ async function loadDataset(datasetUrl, { save = true } = {}) {
   if (datasetUrlInput) {
     datasetUrlInput.value = normalizedUrl;
   }
+  applyRoute();
 }
 
 async function handleSubmit(event) {
@@ -1035,6 +1140,7 @@ async function bootstrap() {
   nextPartButton?.addEventListener("click", startNextPart);
   retryPartButton?.addEventListener("click", retryCurrentPart);
   completionBackButton?.addEventListener("click", returnToContents);
+  window.addEventListener("hashchange", applyRoute);
   document.addEventListener("keydown", handleCompletionDialogKeydown);
 
   const savedUrl = loadSavedDatasetUrl();
