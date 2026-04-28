@@ -35,10 +35,12 @@ const completionSummary = document.querySelector("#completion-summary");
 const completionItems = document.querySelector("#completion-items");
 const completionMistakes = document.querySelector("#completion-mistakes");
 const completionAccuracy = document.querySelector("#completion-accuracy");
+const nextPartButton = document.querySelector("#next-part");
 const retryPartButton = document.querySelector("#retry-part");
 const completionBackButton = document.querySelector("#completion-back");
 
 let activeDatasetUrl = "";
+let activeDataset = null;
 let activeAudio = null;
 let practiceSession = null;
 let mistakeFlashTimer = null;
@@ -259,6 +261,47 @@ function getCompletionFocusableElements() {
 function focusFirstCompletionAction() {
   const [firstElement] = getCompletionFocusableElements();
   firstElement?.focus({ preventScroll: true });
+}
+
+function getPracticePartEntries() {
+  const entries = [];
+  for (const unit of activeDataset?.units ?? []) {
+    for (const part of unit.parts ?? []) {
+      if (getPartItemCount(part) > 0) {
+        entries.push({ unit, part });
+      }
+    }
+  }
+  return entries;
+}
+
+function getCurrentPracticePartIndex(entries) {
+  if (!practiceSession) {
+    return -1;
+  }
+  return entries.findIndex(
+    ({ unit, part }) => unit === practiceSession.unit && part === practiceSession.part
+  );
+}
+
+function getNextPracticePart() {
+  const entries = getPracticePartEntries();
+  const currentIndex = getCurrentPracticePartIndex(entries);
+  if (currentIndex < 0) {
+    return null;
+  }
+  return entries[currentIndex + 1] ?? null;
+}
+
+function updateNextPartAction() {
+  if (!nextPartButton) {
+    return;
+  }
+
+  const nextPart = getNextPracticePart();
+  nextPartButton.hidden = !nextPart;
+  nextPartButton.disabled = !nextPart;
+  nextPartButton.title = nextPart ? formatPartContext(nextPart.unit, nextPart.part) : "";
 }
 
 function handlePartSelect(unit, part) {
@@ -498,6 +541,7 @@ function showCompletionView() {
   if (completionAccuracy) {
     completionAccuracy.textContent = getSessionAccuracyLabel();
   }
+  updateNextPartAction();
 
   showCompletionPanel();
   focusFirstCompletionAction();
@@ -627,6 +671,15 @@ function retryCurrentPart() {
   startPractice(practiceSession.unit, practiceSession.part);
 }
 
+function startNextPart() {
+  const nextPart = getNextPracticePart();
+  if (!nextPart) {
+    return;
+  }
+  setStatus(`Started ${formatPartContext(nextPart.unit, nextPart.part)}.`, "ok");
+  startPractice(nextPart.unit, nextPart.part);
+}
+
 function handleCompletionDialogKeydown(event) {
   if (!isCompletionDialogOpen()) {
     return;
@@ -754,6 +807,7 @@ function renderContents(data) {
 async function loadDataset(datasetUrl, { save = true } = {}) {
   const normalizedUrl = new URL(datasetUrl, window.location.href).toString();
   activeDatasetUrl = normalizedUrl;
+  activeDataset = null;
   setStatus(`Loading dataset from ${normalizedUrl} ...`, "loading");
 
   const response = await fetch(normalizedUrl, {
@@ -765,6 +819,7 @@ async function loadDataset(datasetUrl, { save = true } = {}) {
 
   const data = await response.json();
   validateDataset(data);
+  activeDataset = data;
   renderContents(data);
 
   if (save) {
@@ -801,6 +856,7 @@ async function handleSubmit(event) {
 function handleReset() {
   clearDatasetUrl();
   activeDatasetUrl = "";
+  activeDataset = null;
   renderEmptyState("Dataset contents will appear here after loading.");
   if (contentsSummary) {
     contentsSummary.textContent = "Load a dataset to show available units and parts.";
@@ -843,6 +899,7 @@ async function bootstrap() {
     }
   });
   previousItemButton?.addEventListener("click", goToPreviousItem);
+  nextPartButton?.addEventListener("click", startNextPart);
   retryPartButton?.addEventListener("click", retryCurrentPart);
   completionBackButton?.addEventListener("click", returnToContents);
   document.addEventListener("keydown", handleCompletionDialogKeydown);
