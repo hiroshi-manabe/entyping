@@ -105,7 +105,27 @@
 
         <article class="typing-card">
           <div class="prompt-actions">
-            <button id="play-audio" type="button">Play Audio</button>
+            <button id="play-audio" type="button" aria-label="Play audio">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                focusable="false"
+              >
+                <path
+                  d="M4 9.25h3.7L13 4.8v14.4l-5.3-4.45H4z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M16 8.2a5.2 5.2 0 0 1 0 7.6M18.4 5.8a8.6 8.6 0 0 1 0 12.4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
           </div>
           <p id="target-text" class="target-text"></p>
           <input

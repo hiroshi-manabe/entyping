@@ -582,6 +582,69 @@ function renderSessionStats() {
   }
 }
 
+function getInitialTargetTextScale(text) {
+  const length = [...text].length;
+  if (length >= 70) {
+    return 0.62;
+  }
+  if (length >= 56) {
+    return 0.7;
+  }
+  if (length >= 44) {
+    return 0.78;
+  }
+  if (length >= 34) {
+    return 0.88;
+  }
+  return 1;
+}
+
+function fitTargetTextToBox() {
+  if (!targetText) {
+    return;
+  }
+
+  const state = getCurrentTypingState();
+  if (!state) {
+    return;
+  }
+
+  let scale = getInitialTargetTextScale(state.displayText);
+  targetText.style.setProperty("--target-text-scale", String(scale));
+
+  const hasOverflow = () =>
+    targetText.scrollHeight > targetText.clientHeight + 1 ||
+    targetText.scrollWidth > targetText.clientWidth + 1;
+
+  while (scale > 0.52 && hasOverflow()) {
+    scale = Math.max(0.52, scale - 0.04);
+    targetText.style.setProperty("--target-text-scale", String(scale));
+  }
+}
+
+function scheduleTargetTextFit() {
+  window.requestAnimationFrame(fitTargetTextToBox);
+}
+
+function createTargetChar(char, index, state) {
+  const span = makeElement("span", { text: char === " " ? "\u00a0" : char });
+  span.classList.add("target-char");
+  if (char === " ") {
+    span.classList.add("target-space");
+  }
+  if (index < state.cursorIndex) {
+    span.classList.add("is-correct");
+  } else if (index === state.cursorIndex) {
+    span.classList.add("is-current");
+    if (state.mistakeFlash) {
+      span.classList.add("is-mistake");
+    }
+  } else {
+    span.classList.add("is-pending");
+  }
+  return span;
+}
+
 function renderTargetCharacters() {
   const state = getCurrentTypingState();
   if (!state || !targetText) {
@@ -589,24 +652,26 @@ function renderTargetCharacters() {
   }
 
   targetText.textContent = "";
-  for (const [index, char] of [...state.displayText].entries()) {
-    const span = makeElement("span", { text: char === " " ? "\u00a0" : char });
-    span.classList.add("target-char");
+  targetText.style.setProperty("--target-text-scale", "1");
+
+  const chars = [...state.displayText];
+  let word = null;
+
+  for (const [index, char] of chars.entries()) {
     if (char === " ") {
-      span.classList.add("target-space");
+      word = null;
+      targetText.append(createTargetChar(char, index, state));
+      continue;
     }
-    if (index < state.cursorIndex) {
-      span.classList.add("is-correct");
-    } else if (index === state.cursorIndex) {
-      span.classList.add("is-current");
-      if (state.mistakeFlash) {
-        span.classList.add("is-mistake");
-      }
-    } else {
-      span.classList.add("is-pending");
+
+    if (!word) {
+      word = makeElement("span", { className: "target-word" });
+      targetText.append(word);
     }
-    targetText.append(span);
+    word.append(createTargetChar(char, index, state));
   }
+
+  scheduleTargetTextFit();
 }
 
 function renderTypingState() {
@@ -651,7 +716,7 @@ function playCurrentAudio() {
   }
   activeAudio = new Audio(resolveAudioUrl(activeDatasetUrl, item.audio_url));
   activeAudio.play().catch(() => {
-    setTypingFeedback("Audio is ready. Press Play Audio.", "neutral");
+    setTypingFeedback("Audio is ready. Press the speaker button.", "neutral");
   });
 }
 
