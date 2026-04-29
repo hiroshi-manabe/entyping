@@ -2,6 +2,7 @@
 __pycache__/
 *.pyc
 dist/
+tmp/screenshots/
 content/new_crown1/audio/
 content/new_crown1/content.json
 content/new_crown1/source/

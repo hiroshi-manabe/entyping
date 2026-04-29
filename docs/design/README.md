@@ -45,3 +45,29 @@ Initial implementation can use Google Fonts for speed:
 ```
 
 If offline or local-first behavior becomes important, self-host this font later.
+
+## Current UI Screenshots
+
+Routine UI screenshots should be generated locally and are not committed by default.
+
+When making UI-facing changes, capture fresh screenshots as appropriate and use them to review layout, spacing, typography, and responsive behavior before committing. This is especially important for changes to the lesson selection screen, practice screen, completion dialog, typography, colors, or responsive layout.
+
+Workflow:
+
+1. Start the dev server:
+
+   ```sh
+   npm run dev
+   ```
+
+2. In another terminal, capture screenshots:
+
+   ```sh
+   npm run screenshots
+   ```
+
+3. Review the generated files under `tmp/screenshots/`.
+
+The screenshot script captures desktop and mobile views for both the contents screen and a representative practice route. The generated output is ignored by Git; commit screenshots only when they are intentional design references.
+
+The script uses the Playwright CLI. If system Google Chrome is installed, it uses Playwright's `chrome` channel so a separate Playwright browser download is not required.

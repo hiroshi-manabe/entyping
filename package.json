@@ -5,6 +5,7 @@
   "description": "A local-first English typing app with pluggable content packages.",
   "scripts": {
     "dev": "python3 scripts/dev_server.py",
-    "build": "python3 scripts/build_static_site.py"
+    "build": "python3 scripts/build_static_site.py",
+    "screenshots": "python3 scripts/capture_screenshots.py"
   }
 }
