@@ -19,6 +19,24 @@ Implementation notes:
 - Keep unimplemented gamification such as points or streaks out of the production UI until the app has real data for them.
 - Prefer a simpler first implementation: colored unit rails, clean part rows, compact progress badges, and a quiet settings entry point.
 
+## Practice Screen Concept
+
+File: `practice-screen-concept.png`
+
+Purpose:
+
+- Concept reference for the typing practice screen.
+- Target audience direction: the same friendly Japanese middle-school/high-school study app tone as the lesson selection concept.
+- Desired tone: focused, encouraging, and game-like enough to feel motivating without turning into a full arcade UI.
+
+Implementation notes:
+
+- Use the image as atmosphere and product-direction reference, not as a literal UI specification.
+- The current app practices full sentence items, while the concept image is more word/vocabulary oriented. Keep the current implementation model unless the product scope changes.
+- Borrow the clear practice hierarchy: large current prompt, visible progress, right-side stats, and strong action controls.
+- Treat streaks, points, keyboard shortcuts, and missed-word counters as future feature ideas unless backed by real app data.
+- Prefer incremental implementation: align typography, spacing, stats cards, and prompt focus first before adding new mechanics.
+
 ## Font Direction
 
 Preferred first choice: `M PLUS Rounded 1c`.
