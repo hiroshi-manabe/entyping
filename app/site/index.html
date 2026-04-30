@@ -77,8 +77,15 @@
 
       <section id="practice-screen" class="practice-screen" hidden>
         <div class="practice-topbar">
-          <button id="back-to-contents" type="button" class="button-secondary">
-            Back
+          <button
+            id="back-to-contents"
+            type="button"
+            class="button-secondary back-to-contents"
+            aria-label="Back to Contents"
+          >
+            <span aria-hidden="true">←</span>
+            <span class="back-label-wide">Back to Contents</span>
+            <span class="back-label-compact">Back</span>
           </button>
           <div>
             <p id="practice-context" class="practice-context">-</p>

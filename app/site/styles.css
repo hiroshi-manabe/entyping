@@ -425,10 +425,28 @@ button:disabled {
 }
 
 .practice-topbar .button-secondary {
-  min-width: 104px;
-  padding-block: 14px;
+  min-width: 170px;
+  padding: 14px 20px;
   border-radius: 999px;
+  border-color: #bfd0ee;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 8px 20px rgba(35, 58, 120, 0.08);
+}
+
+.practice-topbar .button-secondary:hover {
+  border-color: rgba(52, 120, 246, 0.38);
   background: #fff;
+}
+
+.back-to-contents {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.back-label-compact {
+  display: none;
 }
 
 .practice-context {
@@ -818,6 +836,18 @@ button:disabled {
 
   .practice-topbar {
     grid-template-columns: 1fr;
+  }
+
+  .practice-topbar .button-secondary {
+    min-width: 0;
+  }
+
+  .back-label-wide {
+    display: none;
+  }
+
+  .back-label-compact {
+    display: inline;
   }
 
   .prompt-actions {
