@@ -425,17 +425,18 @@ button:disabled {
 }
 
 .practice-topbar .button-secondary {
-  min-width: 170px;
+  min-width: 190px;
   padding: 14px 20px;
   border-radius: 999px;
-  border-color: #bfd0ee;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 8px 20px rgba(35, 58, 120, 0.08);
+  border-color: #7fa7e8;
+  background: #e4f0ff;
+  color: #0f1b60;
+  box-shadow: none;
 }
 
 .practice-topbar .button-secondary:hover {
-  border-color: rgba(52, 120, 246, 0.38);
-  background: #fff;
+  border-color: #3478f6;
+  background: #d7e9ff;
 }
 
 .back-to-contents {
@@ -751,9 +752,29 @@ button:disabled {
 }
 
 .completion-actions {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
+}
+
+.completion-actions button {
+  justify-content: center;
+}
+
+.completion-actions .button-secondary {
+  border-color: #7fa7e8;
+  background: #e4f0ff;
+  color: #0f1b60;
+  box-shadow: none;
+}
+
+.completion-actions .button-secondary:hover {
+  border-color: #3478f6;
+  background: #d7e9ff;
+}
+
+#completion-back {
+  grid-column: 1 / -1;
 }
 
 @media (max-width: 760px) {
