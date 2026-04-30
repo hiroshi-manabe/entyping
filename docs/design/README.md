@@ -64,6 +64,26 @@ Initial implementation can use Google Fonts for speed:
 
 If offline or local-first behavior becomes important, self-host this font later.
 
+## Production UI Direction
+
+Use generated images as concept references, not as the first source of production UI assets.
+
+Near-term implementation should be CSS-first:
+
+- Build the app atmosphere with gradients, soft color blobs, dotted patterns, angled shapes, borders, and card treatments.
+- Add a simple `Entyping` brand/header treatment in HTML/CSS before considering a bitmap logo.
+- Use inline SVG or CSS shapes for small decorative marks and icons when practical.
+- Avoid production bitmap backgrounds for now. They are harder to tune across viewport sizes, add file-management overhead, and can drift stylistically from the rest of the UI.
+- Consider generated SVG/PNG assets later only for specific needs that CSS cannot cover well, such as custom illustrations.
+
+Lesson selection should move toward unit-based visual themes:
+
+- Give each unit a stable accent color.
+- Use that color strongly in the unit header and softly in related elements such as borders, badges, open-state backgrounds, and small controls.
+- Keep unit images out of scope for now; the visual identity should come from color, spacing, and card structure.
+- Keep action colors consistent at first. `Start`, `Next`, and other forward actions can remain green even when unit theme colors vary.
+- Prefer a reusable color cycle through CSS custom properties, such as `--unit-accent`, `--unit-soft`, and `--unit-border`.
+
 ## Current UI Screenshots
 
 Routine UI screenshots should be generated locally and are not committed by default.
