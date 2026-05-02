@@ -2,6 +2,14 @@ const STORAGE_KEY = "entyping.datasetUrl";
 const OPEN_UNITS_STORAGE_KEY = "entyping.openUnits";
 const PART_PROGRESS_STORAGE_KEY = "entyping.partProgress";
 const LOCAL_DATASET_PATH = "/content/new_crown1/content.json";
+const UNIT_THEMES = [
+  { accent: "#3478f6", soft: "rgba(52, 120, 246, 0.12)", border: "rgba(52, 120, 246, 0.34)" },
+  { accent: "#37a354", soft: "rgba(55, 163, 84, 0.12)", border: "rgba(55, 163, 84, 0.34)" },
+  { accent: "#f29a22", soft: "rgba(242, 154, 34, 0.14)", border: "rgba(242, 154, 34, 0.36)" },
+  { accent: "#8f55e8", soft: "rgba(143, 85, 232, 0.13)", border: "rgba(143, 85, 232, 0.34)" },
+  { accent: "#13a0a5", soft: "rgba(19, 160, 165, 0.13)", border: "rgba(19, 160, 165, 0.34)" },
+  { accent: "#e65b8b", soft: "rgba(230, 91, 139, 0.12)", border: "rgba(230, 91, 139, 0.34)" },
+];
 
 const datasetForm = document.querySelector("#dataset-form");
 const datasetUrlInput = document.querySelector("#dataset-url");
@@ -318,6 +326,13 @@ function getPartProgressBadges(progress) {
     labels.push(lastPracticed);
   }
   return labels;
+}
+
+function applyUnitTheme(element, index) {
+  const theme = UNIT_THEMES[index % UNIT_THEMES.length];
+  element.style.setProperty("--unit-accent", theme.accent);
+  element.style.setProperty("--unit-soft", theme.soft);
+  element.style.setProperty("--unit-border", theme.border);
 }
 
 function saveCurrentPartProgress() {
@@ -1048,6 +1063,7 @@ function renderPartRow(unit, part) {
 
 function renderUnit(unit, index, openUnitIds, contentId) {
   const details = makeElement("details", { className: "unit-card" });
+  applyUnitTheme(details, index);
   details.dataset.unitId = unit.id;
   details.open = openUnitIds.has(unit.id);
   details.addEventListener("toggle", () => {
@@ -1061,16 +1077,18 @@ function renderUnit(unit, index, openUnitIds, contentId) {
   );
 
   const summary = makeElement("summary", { className: "unit-summary" });
-  const titleGroup = makeElement("span", { className: "unit-title-group" });
-  titleGroup.append(
-    makeElement("span", { className: "unit-kicker", text: `Unit ${index + 1}` }),
-    makeElement("span", { className: "unit-title", text: unit.label ?? "Untitled" })
+  const unitTile = makeElement("span", { className: "unit-tile" });
+  unitTile.append(
+    makeElement("span", { className: "unit-tile-label", text: "Unit" }),
+    makeElement("span", { className: "unit-tile-number", text: String(index + 1) })
   );
+  const titleGroup = makeElement("span", { className: "unit-title-group" });
+  titleGroup.append(makeElement("span", { className: "unit-title", text: unit.label ?? "Untitled" }));
   const counts = makeElement("span", {
     className: "unit-counts",
     text: `${partCount} parts / ${itemCount} items`,
   });
-  summary.append(titleGroup, counts);
+  summary.append(unitTile, titleGroup, counts);
 
   const parts = makeElement("div", { className: "part-list" });
   for (const part of unit.parts ?? []) {

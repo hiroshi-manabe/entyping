@@ -18,10 +18,21 @@
     <script src="./app.js" defer></script>
   </head>
   <body>
+    <div class="page-decor" aria-hidden="true">
+      <span class="decor-left-circle"></span>
+      <span class="decor-dots-left"></span>
+      <span class="decor-dots-right"></span>
+      <span class="decor-shape-beige"></span>
+      <span class="decor-shape-blue"></span>
+    </div>
     <main class="shell">
       <header class="hero">
         <div>
-          <p class="eyebrow">Entyping</p>
+          <img
+            class="brand-logo"
+            src="./assets/entyping_logo.png"
+            alt="Entyping"
+          />
           <h1>Choose a part to practice.</h1>
           <p class="lede">
             Pick a textbook part, then start a focused typing session. Full
@@ -76,6 +87,14 @@
       </section>
 
       <section id="practice-screen" class="practice-screen" hidden>
+        <div class="practice-decor" aria-hidden="true">
+          <span class="decor-left-circle"></span>
+          <span class="decor-dots-left"></span>
+          <span class="decor-dots-right"></span>
+          <span class="decor-shape-beige"></span>
+          <span class="decor-shape-blue"></span>
+        </div>
+
         <div class="practice-topbar">
           <button
             id="back-to-contents"
