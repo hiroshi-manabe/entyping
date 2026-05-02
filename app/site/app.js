@@ -15,6 +15,20 @@ const datasetForm = document.querySelector("#dataset-form");
 const datasetUrlInput = document.querySelector("#dataset-url");
 const datasetStatus = document.querySelector("#dataset-status");
 const resetSourceButton = document.querySelector("#reset-source");
+const openSettingsButton = document.querySelector("#open-settings");
+const settingsOverlay = document.querySelector("#settings-overlay");
+const closeSettingsButton = document.querySelector("#close-settings");
+const requestSaveResetButton = document.querySelector("#request-save-reset");
+const contentConfirmation = document.querySelector("#content-confirmation");
+const contentConfirmTitle = document.querySelector("#content-confirm-title");
+const contentConfirmMessage = document.querySelector("#content-confirm-message");
+const contentConfirmAction = document.querySelector("#content-confirm-action");
+const contentConfirmCancel = document.querySelector("#content-confirm-cancel");
+const saveConfirmation = document.querySelector("#save-confirmation");
+const saveConfirmTitle = document.querySelector("#save-confirm-title");
+const saveConfirmMessage = document.querySelector("#save-confirm-message");
+const saveConfirmAction = document.querySelector("#save-confirm-action");
+const saveConfirmCancel = document.querySelector("#save-confirm-cancel");
 const contentsSummary = document.querySelector("#contents-summary");
 const contentsList = document.querySelector("#contents-list");
 const selectedPart = document.querySelector("#selected-part");
@@ -53,6 +67,25 @@ let activeDataset = null;
 let activeAudio = null;
 let practiceSession = null;
 let mistakeFlashTimer = null;
+let settingsReturnFocus = null;
+let pendingSettingsConfirmation = null;
+let settingsConfirmationReturnFocus = null;
+const SETTINGS_CONFIRMATION_SLOTS = {
+  content: {
+    box: contentConfirmation,
+    title: contentConfirmTitle,
+    message: contentConfirmMessage,
+    action: contentConfirmAction,
+    cancel: contentConfirmCancel,
+  },
+  save: {
+    box: saveConfirmation,
+    title: saveConfirmTitle,
+    message: saveConfirmMessage,
+    action: saveConfirmAction,
+    cancel: saveConfirmCancel,
+  },
+};
 
 function isLocalDevelopmentHost() {
   const host = window.location.hostname;
@@ -81,6 +114,10 @@ function saveDatasetUrl(url) {
 
 function clearDatasetUrl() {
   window.localStorage.removeItem(STORAGE_KEY);
+}
+
+function clearSaveData() {
+  window.localStorage.removeItem(PART_PROGRESS_STORAGE_KEY);
 }
 
 function loadOpenUnitsByContent() {
@@ -435,13 +472,88 @@ function getCompletionFocusableElements() {
       if (!(element instanceof HTMLElement)) {
         return false;
       }
-      return !element.disabled && element.tabIndex >= 0 && !element.hidden;
+      return !element.disabled && element.tabIndex >= 0 && !element.hidden && !element.closest("[hidden]");
     });
 }
 
 function focusFirstCompletionAction() {
   const [firstElement] = getCompletionFocusableElements();
   firstElement?.focus({ preventScroll: true });
+}
+
+function isSettingsDialogOpen() {
+  return Boolean(settingsOverlay && !settingsOverlay.hidden);
+}
+
+function getSettingsFocusableElements() {
+  if (!settingsOverlay) {
+    return [];
+  }
+  return [...settingsOverlay.querySelectorAll("button, [href], input, select, textarea, [tabindex]")]
+    .filter((element) => {
+      if (!(element instanceof HTMLElement)) {
+        return false;
+      }
+      return !element.disabled && element.tabIndex >= 0 && !element.hidden && !element.closest("[hidden]");
+    });
+}
+
+function hideSettingsConfirmation() {
+  pendingSettingsConfirmation = null;
+  settingsConfirmationReturnFocus = null;
+  for (const slot of Object.values(SETTINGS_CONFIRMATION_SLOTS)) {
+    if (slot.box) {
+      slot.box.hidden = true;
+    }
+  }
+}
+
+function showSettingsConfirmation({
+  slot: slotName = "content",
+  tone = "warning",
+  title,
+  message,
+  confirmLabel,
+  onConfirm,
+}) {
+  const slot = SETTINGS_CONFIRMATION_SLOTS[slotName];
+  if (!slot?.box || !slot.title || !slot.message || !slot.action) {
+    onConfirm();
+    return;
+  }
+
+  hideSettingsConfirmation();
+  pendingSettingsConfirmation = onConfirm;
+  settingsConfirmationReturnFocus =
+    document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  slot.box.dataset.tone = tone;
+  slot.title.textContent = title;
+  slot.message.textContent = message;
+  slot.action.textContent = confirmLabel;
+  slot.action.className = tone === "danger" ? "button-danger" : "";
+  slot.box.hidden = false;
+  slot.action.focus({ preventScroll: true });
+}
+
+function openSettings() {
+  if (!settingsOverlay) {
+    return;
+  }
+  settingsReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  hideSettingsConfirmation();
+  settingsOverlay.hidden = false;
+  const focusTarget = closeSettingsButton ?? getSettingsFocusableElements()[0];
+  focusTarget?.focus({ preventScroll: true });
+}
+
+function closeSettings() {
+  if (!settingsOverlay) {
+    return;
+  }
+  settingsOverlay.hidden = true;
+  hideSettingsConfirmation();
+  settingsReturnFocus?.focus({ preventScroll: true });
+  settingsReturnFocus = null;
 }
 
 function getPracticePartEntries() {
@@ -1167,8 +1279,28 @@ async function handleSubmit(event) {
     return;
   }
 
+  if (activeDataset || loadSavedDatasetUrl()) {
+    showSettingsConfirmation({
+      slot: "content",
+      tone: "warning",
+      title: "Load this dataset?",
+      message:
+        "This will replace the currently loaded content package and save this URL as the dataset source.",
+      confirmLabel: "Load dataset",
+      onConfirm: () => {
+        void loadDatasetFromSettings(candidateUrl);
+      },
+    });
+    return;
+  }
+
+  await loadDatasetFromSettings(candidateUrl);
+}
+
+async function loadDatasetFromSettings(datasetUrl) {
   try {
-    await loadDataset(candidateUrl, { save: true });
+    hideSettingsConfirmation();
+    await loadDataset(datasetUrl, { save: true });
   } catch (error) {
     renderEmptyState("Dataset could not be loaded. Check the settings URL.");
     setStatus(error instanceof Error ? error.message : "Failed to load dataset.", "missing");
@@ -1176,6 +1308,7 @@ async function handleSubmit(event) {
 }
 
 function handleReset() {
+  hideSettingsConfirmation();
   clearDatasetUrl();
   activeDatasetUrl = "";
   activeDataset = null;
@@ -1192,13 +1325,114 @@ function handleReset() {
   setStatus("Saved dataset source cleared.", "missing");
 }
 
+function requestResetSource() {
+  showSettingsConfirmation({
+    slot: "content",
+    tone: "warning",
+    title: "Reset saved source?",
+    message:
+      "This will forget the saved dataset URL and clear the currently loaded contents. Practice save data is not changed.",
+    confirmLabel: "Reset saved source",
+    onConfirm: handleReset,
+  });
+}
+
+function handleRequestSaveReset() {
+  showSettingsConfirmation({
+    slot: "save",
+    tone: "danger",
+    title: "Reset save data?",
+    message:
+      "This will remove completed counts, best accuracy, and mistake records from this browser. Dataset source settings are not changed.",
+    confirmLabel: "Reset save data",
+    onConfirm: handleConfirmSaveReset,
+  });
+}
+
+function handleConfirmSaveReset() {
+  clearSaveData();
+  hideSettingsConfirmation();
+  if (activeDataset) {
+    renderContents(activeDataset);
+  }
+  setStatus("Save data reset. Dataset source settings were kept.", "ok");
+  requestSaveResetButton?.focus({ preventScroll: true });
+}
+
+function handleSettingsConfirmAction() {
+  const action = pendingSettingsConfirmation;
+  if (!action) {
+    return;
+  }
+  action();
+}
+
+function handleSettingsDialogKeydown(event) {
+  if (!isSettingsDialogOpen()) {
+    return;
+  }
+
+  if (event.key === "Escape") {
+    event.preventDefault();
+    closeSettings();
+    return;
+  }
+
+  if (event.key !== "Tab") {
+    return;
+  }
+
+  const focusableElements = getSettingsFocusableElements();
+  if (!focusableElements.length) {
+    event.preventDefault();
+    return;
+  }
+
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+  const activeElement = document.activeElement;
+
+  if (!settingsOverlay?.contains(activeElement)) {
+    event.preventDefault();
+    firstElement.focus({ preventScroll: true });
+    return;
+  }
+
+  if (event.shiftKey && activeElement === firstElement) {
+    event.preventDefault();
+    lastElement.focus({ preventScroll: true });
+    return;
+  }
+
+  if (!event.shiftKey && activeElement === lastElement) {
+    event.preventDefault();
+    firstElement.focus({ preventScroll: true });
+  }
+}
+
 async function bootstrap() {
   if (!datasetForm || !datasetUrlInput || !resetSourceButton) {
     return;
   }
 
   datasetForm.addEventListener("submit", handleSubmit);
-  resetSourceButton.addEventListener("click", handleReset);
+  resetSourceButton.addEventListener("click", requestResetSource);
+  openSettingsButton?.addEventListener("click", openSettings);
+  closeSettingsButton?.addEventListener("click", closeSettings);
+  settingsOverlay?.addEventListener("pointerdown", (event) => {
+    if (event.target === settingsOverlay) {
+      closeSettings();
+    }
+  });
+  requestSaveResetButton?.addEventListener("click", handleRequestSaveReset);
+  for (const slot of Object.values(SETTINGS_CONFIRMATION_SLOTS)) {
+    slot.action?.addEventListener("click", handleSettingsConfirmAction);
+    slot.cancel?.addEventListener("click", () => {
+      const focusTarget = settingsConfirmationReturnFocus;
+      hideSettingsConfirmation();
+      focusTarget?.focus({ preventScroll: true });
+    });
+  }
   backToContentsButton?.addEventListener("click", returnToContents);
   playAudioButton?.addEventListener("click", () => {
     playCurrentAudio();
@@ -1226,6 +1460,7 @@ async function bootstrap() {
   completionBackButton?.addEventListener("click", returnToContents);
   window.addEventListener("hashchange", applyRoute);
   document.addEventListener("keydown", handleCompletionDialogKeydown);
+  document.addEventListener("keydown", handleSettingsDialogKeydown);
 
   const savedUrl = loadSavedDatasetUrl();
   const initialUrl = savedUrl || (isLocalDevelopmentHost() ? getDefaultDatasetUrl() : "");
