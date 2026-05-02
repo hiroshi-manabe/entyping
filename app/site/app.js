@@ -851,16 +851,18 @@ function handleDebugShortcut(event) {
     practiceSession.completed ||
     practiceScreen?.hidden ||
     isCompletionDialogOpen() ||
-    event.key.toLowerCase() !== "j" ||
+    event.code !== "KeyJ" ||
     !event.ctrlKey ||
     !event.shiftKey ||
     event.metaKey ||
-    event.altKey
+    event.altKey ||
+    event.repeat
   ) {
     return;
   }
 
   event.preventDefault();
+  event.stopImmediatePropagation();
   showCompletionView();
 }
 
@@ -1208,7 +1210,7 @@ async function bootstrap() {
   practiceScreen?.addEventListener("pointerdown", () => {
     window.requestAnimationFrame(focusTypingInput);
   });
-  document.addEventListener("keydown", handleDebugShortcut);
+  document.addEventListener("keydown", handleDebugShortcut, { capture: true });
   document.addEventListener("keydown", handleTypingKeydown);
   nextItemButton?.addEventListener("click", () => {
     if (isTypingComplete()) {

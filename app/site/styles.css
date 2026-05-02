@@ -527,7 +527,11 @@ button:disabled {
   display: block;
 }
 
-.practice-screen > *:not(.practice-decor) {
+.practice-topbar,
+.practice-progress,
+.typing-card,
+.support-notes,
+.practice-actions {
   position: relative;
   z-index: 1;
 }
