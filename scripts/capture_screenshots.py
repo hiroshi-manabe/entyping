@@ -31,14 +31,14 @@ TARGETS = [
         name="contents-desktop",
         route="#/",
         selector="#contents-list",
-        viewport="1440,900",
+        viewport="1440,700",
         full_page=True,
     ),
     ScreenshotTarget(
         name="practice-desktop",
         route="#/practice/unit_001/part_001",
         selector="#target-text",
-        viewport="1440,900",
+        viewport="1440,700",
     ),
     ScreenshotTarget(
         name="contents-mobile",
