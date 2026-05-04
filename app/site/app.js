@@ -249,8 +249,8 @@ function validateDataset(data) {
   if (!firstItem) {
     throw new Error("Dataset does not contain any items.");
   }
-  if (typeof firstItem.audio_url !== "string" || !firstItem.audio_url) {
-    throw new Error("Dataset items are missing audio_url.");
+  if (firstItem.audio_url !== undefined && typeof firstItem.audio_url !== "string") {
+    throw new Error("Dataset item audio_url must be a string when present.");
   }
 }
 
@@ -871,6 +871,10 @@ function renderPracticeItem({ playAudio = false } = {}) {
   typingInput.readOnly = true;
   previousItemButton.disabled = practiceSession.currentIndex === 0;
   nextItemButton.textContent = practiceSession.currentIndex === total - 1 ? "Finish" : "Next";
+  if (playAudioButton) {
+    playAudioButton.disabled = !item.audio_url;
+    playAudioButton.hidden = !item.audio_url;
+  }
   setTypingFeedback("", "neutral");
   renderTypingState();
   focusTypingInput();
