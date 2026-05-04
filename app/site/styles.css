@@ -98,7 +98,8 @@ body[data-screen="practice"] {
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
 }
 
@@ -198,6 +199,39 @@ h1 {
   flex: 0 0 auto;
 }
 
+.content-source-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+
+body[data-screen="practice"] .content-source-bar {
+  display: none;
+}
+
+.content-source-field {
+  display: grid;
+  gap: 7px;
+  min-width: min(100%, 340px);
+}
+
+.content-source-field span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.content-source-field select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(26, 37, 70, 0.05);
+}
+
 .source-form {
   display: grid;
   gap: 8px;
@@ -221,6 +255,49 @@ input[type="url"] {
   border-radius: 12px;
   background: #fff;
   color: var(--ink);
+}
+
+.source-list {
+  display: grid;
+  gap: 8px;
+}
+
+.source-list-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.source-remove-confirm {
+  grid-column: 1 / -1;
+  margin-top: 2px;
+}
+
+.source-list-item strong,
+.source-list-item span {
+  display: block;
+}
+
+.source-list-item strong {
+  font-size: 0.95rem;
+}
+
+.source-list-item span {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  overflow-wrap: anywhere;
+}
+
+.source-list-item button {
+  padding: 7px 12px;
+  border-radius: 12px;
+  font-size: 0.82rem;
 }
 
 .source-actions {

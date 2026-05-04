@@ -71,6 +71,26 @@
 - The chosen dataset URL should be saved locally in the browser and editable later from settings.
 - Local validation should use a served URL such as `http://127.0.0.1:4173/content/new_crown1/content.json`, not `file://`.
 
+## Multi-Source Content Direction
+
+- The app should eventually support multiple registered dataset JSON URLs instead of a single saved source.
+- Normal use should expose a content selector in the main UI, while add/remove/reload controls remain in settings.
+- Registered sources should be stored as a local source registry, not just as one `datasetUrl` string.
+- A registered source should store at least:
+  - local source ID
+  - dataset URL
+  - dataset `content.id`
+  - dataset `content.title`
+  - item/unit/part counts when known
+  - last loaded timestamp when useful
+- Progress and saved state must be namespaced per source or per content identity so two datasets cannot overwrite each other.
+- If two different URLs use the same `content.id`, the app should either prevent duplicates or use a separate local source ID for save-data namespacing.
+- Removing a source should ask whether to remove only the source or also delete saved progress for that source.
+- Load/reload source, reset source, and delete progress actions should use a consistent in-app confirmation UI.
+- The current JSON `content` object only has `id`, `title`, and `audio_root`.
+- A short source description/tagline field is not present yet, but will likely be useful for the content selector.
+- A likely future metadata shape is `content.description`, for example a short phrase such as `Textbook-aligned NEW CROWN 1 practice` or `Synthetic 500-sentence JHS review`.
+
 ## Synthetic Fallback Dataset
 
 - File: [jhs1_typing_500_sentences.csv](/Users/manabe/Software/entyping/content/synthetic/source/jhs1_typing_500_sentences.csv)

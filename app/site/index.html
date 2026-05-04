@@ -73,6 +73,15 @@
         </button>
       </header>
 
+      <section class="content-source-bar" aria-label="Content source">
+        <label class="content-source-field">
+          <span>Current content</span>
+          <select id="source-select">
+            <option value="">No content source</option>
+          </select>
+        </label>
+      </section>
+
       <section class="contents-header" aria-live="polite">
         <div>
           <h2 id="contents-title">Contents</h2>
@@ -251,6 +260,9 @@
 
           <section class="settings-section">
             <h3>Content package</h3>
+            <div class="source-list" id="source-list">
+              <p class="settings-description">No saved content sources yet.</p>
+            </div>
             <form id="dataset-form" class="source-form">
               <label class="field">
                 <span>Dataset JSON URL</span>
@@ -264,9 +276,9 @@
                 />
               </label>
               <div class="source-actions">
-                <button id="load-dataset" type="submit">Load dataset</button>
+                <button id="load-dataset" type="submit">Add or load dataset</button>
                 <button id="reset-source" type="button" class="button-secondary">
-                  Reset saved source
+                  Remove current source
                 </button>
               </div>
             </form>
@@ -283,6 +295,9 @@
               <p id="content-confirm-message"></p>
               <div class="confirm-actions">
                 <button id="content-confirm-action" type="button">
+                  Confirm
+                </button>
+                <button id="content-confirm-secondary-action" type="button" hidden>
                   Confirm
                 </button>
                 <button

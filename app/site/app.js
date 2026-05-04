@@ -1,4 +1,6 @@
-const STORAGE_KEY = "entyping.datasetUrl";
+const LEGACY_STORAGE_KEY = "entyping.datasetUrl";
+const SOURCE_REGISTRY_STORAGE_KEY = "entyping.sources";
+const ACTIVE_SOURCE_STORAGE_KEY = "entyping.activeSourceId";
 const OPEN_UNITS_STORAGE_KEY = "entyping.openUnits";
 const PART_PROGRESS_STORAGE_KEY = "entyping.partProgress";
 const LOCAL_DATASET_PATH = "/content/new_crown1/content.json";
@@ -15,6 +17,8 @@ const datasetForm = document.querySelector("#dataset-form");
 const datasetUrlInput = document.querySelector("#dataset-url");
 const datasetStatus = document.querySelector("#dataset-status");
 const resetSourceButton = document.querySelector("#reset-source");
+const sourceSelect = document.querySelector("#source-select");
+const sourceList = document.querySelector("#source-list");
 const openSettingsButton = document.querySelector("#open-settings");
 const settingsOverlay = document.querySelector("#settings-overlay");
 const closeSettingsButton = document.querySelector("#close-settings");
@@ -23,6 +27,7 @@ const contentConfirmation = document.querySelector("#content-confirmation");
 const contentConfirmTitle = document.querySelector("#content-confirm-title");
 const contentConfirmMessage = document.querySelector("#content-confirm-message");
 const contentConfirmAction = document.querySelector("#content-confirm-action");
+const contentConfirmSecondaryAction = document.querySelector("#content-confirm-secondary-action");
 const contentConfirmCancel = document.querySelector("#content-confirm-cancel");
 const saveConfirmation = document.querySelector("#save-confirmation");
 const saveConfirmTitle = document.querySelector("#save-confirm-title");
@@ -64,6 +69,7 @@ const completionBackButton = document.querySelector("#completion-back");
 
 let activeDatasetUrl = "";
 let activeDataset = null;
+let activeSource = null;
 let activeAudio = null;
 let practiceSession = null;
 let mistakeFlashTimer = null;
@@ -76,6 +82,7 @@ const SETTINGS_CONFIRMATION_SLOTS = {
     title: contentConfirmTitle,
     message: contentConfirmMessage,
     action: contentConfirmAction,
+    secondaryAction: contentConfirmSecondaryAction,
     cancel: contentConfirmCancel,
   },
   save: {
@@ -104,20 +111,125 @@ function setStatus(message, state) {
   datasetStatus.dataset.state = state;
 }
 
-function loadSavedDatasetUrl() {
-  return window.localStorage.getItem(STORAGE_KEY);
+function createSourceId(url) {
+  let hash = 0;
+  for (const char of url) {
+    hash = (hash * 31 + char.charCodeAt(0)) | 0;
+  }
+  return `source_${Math.abs(hash).toString(36)}`;
 }
 
-function saveDatasetUrl(url) {
-  window.localStorage.setItem(STORAGE_KEY, url);
+function normalizeDatasetUrl(datasetUrl) {
+  return new URL(datasetUrl, window.location.href).toString();
 }
 
-function clearDatasetUrl() {
-  window.localStorage.removeItem(STORAGE_KEY);
+function loadSources() {
+  const raw = window.localStorage.getItem(SOURCE_REGISTRY_STORAGE_KEY);
+  if (!raw) {
+    return [];
+  }
+
+  try {
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed)) {
+      return [];
+    }
+    return parsed.filter(
+      (source) =>
+        source &&
+        typeof source === "object" &&
+        typeof source.id === "string" &&
+        typeof source.url === "string"
+    );
+  } catch {
+    return [];
+  }
 }
 
-function clearSaveData() {
-  window.localStorage.removeItem(PART_PROGRESS_STORAGE_KEY);
+function saveSources(sources) {
+  window.localStorage.setItem(SOURCE_REGISTRY_STORAGE_KEY, JSON.stringify(sources));
+}
+
+function loadActiveSourceId() {
+  return window.localStorage.getItem(ACTIVE_SOURCE_STORAGE_KEY);
+}
+
+function saveActiveSourceId(sourceId) {
+  window.localStorage.setItem(ACTIVE_SOURCE_STORAGE_KEY, sourceId);
+}
+
+function clearActiveSourceId() {
+  window.localStorage.removeItem(ACTIVE_SOURCE_STORAGE_KEY);
+}
+
+function loadLegacyDatasetUrl() {
+  return window.localStorage.getItem(LEGACY_STORAGE_KEY);
+}
+
+function clearLegacyDatasetUrl() {
+  window.localStorage.removeItem(LEGACY_STORAGE_KEY);
+}
+
+function makeSourceFromUrl(url, data = null) {
+  const normalizedUrl = normalizeDatasetUrl(url);
+  const { units, partCount, itemCount } = data ? getDatasetCounts(data) : {};
+  return {
+    id: createSourceId(normalizedUrl),
+    url: normalizedUrl,
+    contentId: data?.content?.id ?? null,
+    title: data?.content?.title ?? normalizedUrl,
+    unitCount: units?.length ?? null,
+    partCount: partCount ?? null,
+    itemCount: itemCount ?? null,
+    lastLoadedAt: data ? new Date().toISOString() : null,
+  };
+}
+
+function upsertSource(source) {
+  const sources = loadSources();
+  const existingIndex = sources.findIndex(
+    (candidate) => candidate.id === source.id || candidate.url === source.url
+  );
+  if (existingIndex >= 0) {
+    sources[existingIndex] = { ...sources[existingIndex], ...source };
+  } else {
+    sources.push(source);
+  }
+  saveSources(sources);
+  return source;
+}
+
+function removeSource(sourceId) {
+  const sources = loadSources().filter((source) => source.id !== sourceId);
+  saveSources(sources);
+  if (loadActiveSourceId() === sourceId) {
+    const [nextSource] = sources;
+    if (nextSource) {
+      saveActiveSourceId(nextSource.id);
+    } else {
+      clearActiveSourceId();
+    }
+  }
+  return sources;
+}
+
+function getSourceById(sourceId) {
+  return loadSources().find((source) => source.id === sourceId) ?? null;
+}
+
+function getActiveSaveScopeId() {
+  return activeSource?.id ?? activeDataset?.content?.id ?? "";
+}
+
+function clearSaveData(scopeId = null) {
+  if (!scopeId) {
+    window.localStorage.removeItem(PART_PROGRESS_STORAGE_KEY);
+    return;
+  }
+
+  const progressByContent = loadPartProgressByContent();
+  delete progressByContent[scopeId];
+  window.localStorage.setItem(PART_PROGRESS_STORAGE_KEY, JSON.stringify(progressByContent));
 }
 
 function loadOpenUnitsByContent() {
@@ -277,6 +389,79 @@ function makeElement(tagName, options = {}) {
   return element;
 }
 
+function getSourceLabel(source) {
+  return source.title || source.contentId || source.url;
+}
+
+function getSourceMeta(source) {
+  const counts = [];
+  if (typeof source.unitCount === "number") {
+    counts.push(`${source.unitCount} units`);
+  }
+  if (typeof source.partCount === "number") {
+    counts.push(`${source.partCount} parts`);
+  }
+  if (typeof source.itemCount === "number") {
+    counts.push(`${source.itemCount} items`);
+  }
+  return counts.length ? counts.join(", ") : source.url;
+}
+
+function renderSourceControls() {
+  const sources = loadSources();
+  const activeSourceId = activeSource?.id ?? loadActiveSourceId();
+
+  if (sourceSelect) {
+    sourceSelect.textContent = "";
+    if (!sources.length) {
+      sourceSelect.append(makeElement("option", { text: "No content source" }));
+      sourceSelect.disabled = true;
+    } else {
+      sourceSelect.disabled = false;
+      for (const source of sources) {
+        const option = makeElement("option", { text: getSourceLabel(source) });
+        option.value = source.id;
+        option.selected = source.id === activeSourceId;
+        sourceSelect.append(option);
+      }
+    }
+  }
+
+  if (sourceList) {
+    sourceList.textContent = "";
+    if (!sources.length) {
+      sourceList.append(
+        makeElement("p", {
+          className: "settings-description",
+          text: "No saved content sources yet.",
+        })
+      );
+    } else {
+      for (const source of sources) {
+        const row = makeElement("article", { className: "source-list-item" });
+        const body = makeElement("div");
+        body.append(
+          makeElement("strong", { text: getSourceLabel(source) }),
+          makeElement("span", { text: getSourceMeta(source) }),
+          makeElement("span", { text: source.url })
+        );
+        const removeButton = makeElement("button", {
+          className: source.id === activeSourceId ? "button-danger" : "button-secondary",
+          text: "Remove",
+        });
+        removeButton.type = "button";
+        removeButton.addEventListener("click", () => showInlineRemoveSourceConfirmation(row, source));
+        row.append(body, removeButton);
+        sourceList.append(row);
+      }
+    }
+  }
+
+  if (resetSourceButton) {
+    resetSourceButton.disabled = !activeSourceId;
+  }
+}
+
 function renderEmptyState(message) {
   if (!contentsList) {
     return;
@@ -303,16 +488,23 @@ function getPartProgressKey(unit, part) {
 }
 
 function getPartProgress(unit, part) {
-  const contentId = getActiveContentId();
-  if (!contentId) {
+  const scopeId = getActiveSaveScopeId();
+  if (!scopeId) {
     return null;
   }
   const progressByContent = loadPartProgressByContent();
-  const contentProgress = progressByContent[contentId];
-  if (!contentProgress || typeof contentProgress !== "object") {
-    return null;
+  const progressKey = getPartProgressKey(unit, part);
+  const scopedProgress = progressByContent[scopeId];
+  if (scopedProgress && typeof scopedProgress === "object") {
+    return scopedProgress[progressKey] ?? null;
   }
-  return contentProgress[getPartProgressKey(unit, part)] ?? null;
+
+  const legacyContentId = getActiveContentId();
+  const legacyProgress = legacyContentId ? progressByContent[legacyContentId] : null;
+  if (legacyProgress && typeof legacyProgress === "object") {
+    return legacyProgress[progressKey] ?? null;
+  }
+  return null;
 }
 
 function formatLastPracticed(isoTimestamp) {
@@ -377,15 +569,15 @@ function saveCurrentPartProgress() {
     return;
   }
 
-  const contentId = getActiveContentId();
-  if (!contentId) {
+  const scopeId = getActiveSaveScopeId();
+  if (!scopeId) {
     return;
   }
 
   const progressByContent = loadPartProgressByContent();
   const contentProgress =
-    progressByContent[contentId] && typeof progressByContent[contentId] === "object"
-      ? progressByContent[contentId]
+    progressByContent[scopeId] && typeof progressByContent[scopeId] === "object"
+      ? progressByContent[scopeId]
       : {};
   const progressKey = getPartProgressKey(practiceSession.unit, practiceSession.part);
   const previous = contentProgress[progressKey] ?? {};
@@ -405,7 +597,7 @@ function saveCurrentPartProgress() {
         : mistakes,
     lastPracticedAt: new Date().toISOString(),
   };
-  progressByContent[contentId] = contentProgress;
+  progressByContent[scopeId] = contentProgress;
   savePartProgressByContent(progressByContent);
 }
 
@@ -505,6 +697,10 @@ function hideSettingsConfirmation() {
     if (slot.box) {
       slot.box.hidden = true;
     }
+    if (slot.secondaryAction) {
+      slot.secondaryAction.hidden = true;
+      slot.secondaryAction.onclick = null;
+    }
   }
 }
 
@@ -514,6 +710,8 @@ function showSettingsConfirmation({
   title,
   message,
   confirmLabel,
+  secondaryLabel = "",
+  onSecondaryConfirm = null,
   onConfirm,
 }) {
   const slot = SETTINGS_CONFIRMATION_SLOTS[slotName];
@@ -531,6 +729,12 @@ function showSettingsConfirmation({
   slot.message.textContent = message;
   slot.action.textContent = confirmLabel;
   slot.action.className = tone === "danger" ? "button-danger" : "";
+  if (slot.secondaryAction) {
+    slot.secondaryAction.hidden = !secondaryLabel || !onSecondaryConfirm;
+    slot.secondaryAction.textContent = secondaryLabel;
+    slot.secondaryAction.className = "button-danger";
+    slot.secondaryAction.onclick = onSecondaryConfirm;
+  }
   slot.box.hidden = false;
   slot.action.focus({ preventScroll: true });
 }
@@ -1224,7 +1428,8 @@ function renderContents(data) {
 
   const { units, partCount, itemCount } = getDatasetCounts(data);
   const validUnitIds = new Set(units.map((unit) => unit.id).filter(Boolean));
-  const savedOpenUnitIds = loadOpenUnitIds(data.content.id);
+  const openUnitsScopeId = getActiveSaveScopeId() || data.content.id;
+  const savedOpenUnitIds = loadOpenUnitIds(openUnitsScopeId);
   const initialOpenUnitIds = savedOpenUnitIds
     ? savedOpenUnitIds.filter((unitId) => validUnitIds.has(unitId))
     : [units[0]?.id].filter(Boolean);
@@ -1237,14 +1442,16 @@ function renderContents(data) {
 
   contentsList.innerHTML = "";
   for (const [index, unit] of units.entries()) {
-    contentsList.append(renderUnit(unit, index, openUnitIds, data.content.id));
+    contentsList.append(renderUnit(unit, index, openUnitIds, openUnitsScopeId));
   }
+  renderSourceControls();
 }
 
-async function loadDataset(datasetUrl, { save = true } = {}) {
-  const normalizedUrl = new URL(datasetUrl, window.location.href).toString();
+async function loadDataset(datasetUrl, { save = true, source = null } = {}) {
+  const normalizedUrl = normalizeDatasetUrl(datasetUrl);
   activeDatasetUrl = normalizedUrl;
   activeDataset = null;
+  activeSource = source;
   setStatus(`Loading dataset from ${normalizedUrl} ...`, "loading");
 
   const response = await fetch(normalizedUrl, {
@@ -1257,11 +1464,18 @@ async function loadDataset(datasetUrl, { save = true } = {}) {
   const data = await response.json();
   validateDataset(data);
   activeDataset = data;
-  renderContents(data);
 
   if (save) {
-    saveDatasetUrl(normalizedUrl);
+    activeSource = upsertSource(makeSourceFromUrl(normalizedUrl, data));
+    saveActiveSourceId(activeSource.id);
+  } else if (source) {
+    activeSource = upsertSource({ ...source, ...makeSourceFromUrl(normalizedUrl, data), id: source.id });
+  } else {
+    activeSource = makeSourceFromUrl(normalizedUrl, data);
   }
+
+  renderSourceControls();
+  renderContents(data);
 
   const { units, partCount, itemCount } = getDatasetCounts(data);
   setStatus(
@@ -1283,14 +1497,14 @@ async function handleSubmit(event) {
     return;
   }
 
-  if (activeDataset || loadSavedDatasetUrl()) {
+  if (activeDataset || loadSources().length) {
     showSettingsConfirmation({
       slot: "content",
       tone: "warning",
-      title: "Load this dataset?",
+      title: "Add or load this dataset?",
       message:
-        "This will replace the currently loaded content package and save this URL as the dataset source.",
-      confirmLabel: "Load dataset",
+        "This will add the dataset to saved sources, switch to it, and update its metadata if it already exists.",
+      confirmLabel: "Add or load dataset",
       onConfirm: () => {
         void loadDatasetFromSettings(candidateUrl);
       },
@@ -1305,39 +1519,163 @@ async function loadDatasetFromSettings(datasetUrl) {
   try {
     hideSettingsConfirmation();
     await loadDataset(datasetUrl, { save: true });
+    renderSourceControls();
   } catch (error) {
     renderEmptyState("Dataset could not be loaded. Check the settings URL.");
     setStatus(error instanceof Error ? error.message : "Failed to load dataset.", "missing");
   }
 }
 
-function handleReset() {
-  hideSettingsConfirmation();
-  clearDatasetUrl();
+function clearActiveDatasetState() {
   activeDatasetUrl = "";
   activeDataset = null;
+  activeSource = null;
+  practiceSession = null;
+  if (activeAudio) {
+    activeAudio.pause();
+    activeAudio = null;
+  }
+}
+
+function renderNoDatasetState() {
   renderEmptyState("Dataset contents will appear here after loading.");
   if (contentsSummary) {
-    contentsSummary.textContent = "Load a dataset to show available units and parts.";
+    contentsSummary.textContent = "Add a dataset source to show available units and parts.";
   }
   if (selectedPart) {
     selectedPart.hidden = true;
   }
-  if (datasetUrlInput) {
-    datasetUrlInput.value = isLocalDevelopmentHost() ? getDefaultDatasetUrl() : "";
-  }
-  setStatus("Saved dataset source cleared.", "missing");
+  showContentsView();
 }
 
-function requestResetSource() {
+async function switchToSource(sourceId) {
+  const source = getSourceById(sourceId);
+  if (!source) {
+    setStatus("Saved source was not found.", "missing");
+    renderSourceControls();
+    return;
+  }
+
+  saveActiveSourceId(source.id);
+  if (datasetUrlInput) {
+    datasetUrlInput.value = source.url;
+  }
+
+  try {
+    await loadDataset(source.url, { save: false, source });
+    setStatus(`Switched to ${getSourceLabel(source)}.`, "ok");
+  } catch (error) {
+    clearActiveDatasetState();
+    renderNoDatasetState();
+    setStatus(error instanceof Error ? error.message : "Failed to load dataset.", "missing");
+  }
+}
+
+async function switchToFallbackSource() {
+  const [nextSource] = loadSources();
+  if (nextSource) {
+    await switchToSource(nextSource.id);
+    return;
+  }
+
+  clearActiveDatasetState();
+  clearActiveSourceId();
+  renderNoDatasetState();
+  renderSourceControls();
+}
+
+async function handleRemoveSource(sourceId, { deleteSaveData = false } = {}) {
+  hideSettingsConfirmation();
+  const source = getSourceById(sourceId);
+  if (!source) {
+    renderSourceControls();
+    return;
+  }
+  removeSource(sourceId);
+  if (deleteSaveData) {
+    clearSaveData(sourceId);
+    if (source.contentId) {
+      clearSaveData(source.contentId);
+    }
+  }
+  renderSourceControls();
+  if (datasetUrlInput) {
+    datasetUrlInput.value = "";
+  }
+  setStatus(
+    deleteSaveData
+      ? `Removed ${getSourceLabel(source)} and its save data.`
+      : `Removed ${getSourceLabel(source)}. Save data was kept.`,
+    "ok"
+  );
+
+  if (activeSource?.id === sourceId || !getSourceById(loadActiveSourceId())) {
+    await switchToFallbackSource();
+  }
+}
+
+function createRemoveSourceConfirmation(source) {
+  const confirmation = makeElement("section", { className: "confirm-box source-remove-confirm" });
+  confirmation.dataset.tone = "warning";
+  confirmation.setAttribute("aria-live", "polite");
+
+  const title = makeElement("h3", { text: "Remove this source?" });
+  const message = makeElement("p", {
+    text: "Remove this dataset source from this browser. You can keep its practice progress or delete it now.",
+  });
+  const actions = makeElement("div", { className: "confirm-actions" });
+
+  const removeOnly = makeElement("button", { text: "Remove source" });
+  removeOnly.type = "button";
+  removeOnly.addEventListener("click", () => {
+    void handleRemoveSource(source.id, { deleteSaveData: false });
+  });
+
+  const removeWithSaveData = makeElement("button", {
+    className: "button-danger",
+    text: "Remove source and save data",
+  });
+  removeWithSaveData.type = "button";
+  removeWithSaveData.addEventListener("click", () => {
+    void handleRemoveSource(source.id, { deleteSaveData: true });
+  });
+
+  const cancel = makeElement("button", { className: "button-secondary", text: "Cancel" });
+  cancel.type = "button";
+  cancel.addEventListener("click", () => confirmation.remove());
+
+  actions.append(removeOnly, removeWithSaveData, cancel);
+  confirmation.append(title, message, actions);
+  return confirmation;
+}
+
+function showInlineRemoveSourceConfirmation(row, source) {
+  row.querySelector(".source-remove-confirm")?.remove();
+  const confirmation = createRemoveSourceConfirmation(source);
+  row.append(confirmation);
+  confirmation.querySelector("button")?.focus({ preventScroll: true });
+}
+
+function requestRemoveSource(sourceId = activeSource?.id ?? loadActiveSourceId()) {
+  const source = sourceId ? getSourceById(sourceId) : null;
+  if (!source) {
+    setStatus("No saved source is selected.", "missing");
+    return;
+  }
   showSettingsConfirmation({
     slot: "content",
     tone: "warning",
-    title: "Reset saved source?",
+    title: "Remove this source?",
     message:
-      "This will forget the saved dataset URL and clear the currently loaded contents. Practice save data is not changed.",
-    confirmLabel: "Reset saved source",
-    onConfirm: handleReset,
+      "This will remove the dataset source from this browser. You can keep its practice progress or delete it now.",
+    confirmLabel: "Remove source",
+    secondaryLabel: "Remove source and save data",
+    onConfirm: () => {
+      void handleRemoveSource(source.id, { deleteSaveData: false });
+    },
+    onSecondaryConfirm: () => {
+      void handleRemoveSource(source.id, { deleteSaveData: true });
+    },
   });
 }
 
@@ -1420,7 +1758,13 @@ async function bootstrap() {
   }
 
   datasetForm.addEventListener("submit", handleSubmit);
-  resetSourceButton.addEventListener("click", requestResetSource);
+  resetSourceButton.addEventListener("click", () => requestRemoveSource());
+  sourceSelect?.addEventListener("change", () => {
+    if (!sourceSelect.value) {
+      return;
+    }
+    void switchToSource(sourceSelect.value);
+  });
   openSettingsButton?.addEventListener("click", openSettings);
   closeSettingsButton?.addEventListener("click", closeSettings);
   settingsOverlay?.addEventListener("pointerdown", (event) => {
@@ -1466,17 +1810,35 @@ async function bootstrap() {
   document.addEventListener("keydown", handleCompletionDialogKeydown);
   document.addEventListener("keydown", handleSettingsDialogKeydown);
 
-  const savedUrl = loadSavedDatasetUrl();
-  const initialUrl = savedUrl || (isLocalDevelopmentHost() ? getDefaultDatasetUrl() : "");
+  const legacyUrl = loadLegacyDatasetUrl();
+  if (legacyUrl && !loadSources().length) {
+    upsertSource(makeSourceFromUrl(legacyUrl));
+    saveActiveSourceId(createSourceId(normalizeDatasetUrl(legacyUrl)));
+    clearLegacyDatasetUrl();
+  }
+
+  if (!loadSources().length && isLocalDevelopmentHost()) {
+    const defaultSource = makeSourceFromUrl(getDefaultDatasetUrl());
+    upsertSource(defaultSource);
+    saveActiveSourceId(defaultSource.id);
+  }
+
+  renderSourceControls();
+
+  const activeSourceId = loadActiveSourceId();
+  const initialSource = activeSourceId ? getSourceById(activeSourceId) : loadSources()[0] ?? null;
+  const initialUrl = initialSource?.url ?? "";
   datasetUrlInput.value = initialUrl;
 
   if (!initialUrl) {
     setStatus("Open settings and enter a dataset JSON URL to begin.", "missing");
+    renderNoDatasetState();
     return;
   }
 
   try {
-    await loadDataset(initialUrl, { save: Boolean(savedUrl) });
+    await loadDataset(initialUrl, { save: false, source: initialSource });
+    saveActiveSourceId(activeSource.id);
   } catch (error) {
     renderEmptyState("Dataset could not be loaded. Check the settings URL.");
     setStatus(error instanceof Error ? error.message : "Failed to load dataset.", "missing");
