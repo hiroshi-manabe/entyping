@@ -4,7 +4,7 @@
 
 - The project is a local typing app for a new junior high school student.
 - Benchmark inspiration for tempo and game feel is `Pop Typing`.
-- The main content source is now textbook-aligned `NEW CROWN 1` data, not the synthetic CSV.
+- The main content source is now textbook-aligned `NEW CROWN 1` data, not the generated 500-sentence CSV.
 - The first version should stay simple at the UI level even if the content structure is richer underneath.
 - The repository should keep the typing program and content packages clearly separated.
 
@@ -89,12 +89,12 @@
 - Load/reload source, reset source, and delete progress actions should use a consistent in-app confirmation UI.
 - The current JSON `content` object only has `id`, `title`, and `audio_root`.
 - A short source description/tagline field is not present yet, but will likely be useful for the content selector.
-- A likely future metadata shape is `content.description`, for example a short phrase such as `Textbook-aligned NEW CROWN 1 practice` or `Synthetic 500-sentence JHS review`.
+- A likely future metadata shape is `content.description`, for example a short phrase such as `Textbook-aligned NEW CROWN 1 practice` or `500-sentence JHS 1 review`.
 
-## Synthetic Fallback Dataset
+## JHS 1 Typing 500 Dataset
 
-- File: [jhs1_typing_500_sentences.csv](/Users/manabe/Software/entyping/content/synthetic/source/jhs1_typing_500_sentences.csv)
-- The file remains useful as fallback or extra practice content.
+- File: [jhs1_typing_500_sentences.csv](/Users/manabe/Software/entyping/content/jhs1_typing_500/source/jhs1_typing_500_sentences.csv)
+- The file remains useful as supplemental or extra practice content.
 - It is no longer the primary direction for version 1.
 - The CSV has Japanese translations for all `500` rows.
 

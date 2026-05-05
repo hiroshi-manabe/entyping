@@ -6,8 +6,8 @@ Current packages:
 
 - `new_crown1`
   - current runtime asset area for `NEW CROWN 1`
-- `synthetic`
-  - fallback synthetic sentence content
+- `jhs1_typing_500`
+  - supplemental 500-sentence JHS 1 typing content
 
 The goal is for content to be replaceable without restructuring the typing program itself.
 

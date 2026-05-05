@@ -29,10 +29,10 @@ This repository is split into four concerns:
 
 At runtime, the app should be configured with the URL of `content.json` and resolve relative `audio_url` values from there.
 
-- `content/synthetic/`
-  - fallback synthetic content package
-- `content/synthetic/source/`
-  - synthetic sentence CSV
+- `content/jhs1_typing_500/`
+  - supplemental 500-sentence JHS 1 typing content package
+- `content/jhs1_typing_500/source/`
+  - source CSV for the 500-sentence package
 
 ## Tools
 
