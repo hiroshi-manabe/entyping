@@ -494,6 +494,11 @@ button:disabled {
   background: rgba(201, 77, 54, 0.08);
 }
 
+.confirm-box[data-tone="info"] {
+  border-color: rgba(52, 120, 246, 0.28);
+  background: rgba(52, 120, 246, 0.08);
+}
+
 .confirm-box h3 {
   color: var(--ink);
 }
@@ -505,6 +510,10 @@ button:disabled {
 
 .confirm-box[data-tone="danger"] p {
   color: #7a2e20;
+}
+
+.confirm-box[data-tone="info"] p {
+  color: #285292;
 }
 
 .confirm-actions {

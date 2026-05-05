@@ -1500,11 +1500,11 @@ async function handleSubmit(event) {
   if (activeDataset || loadSources().length) {
     showSettingsConfirmation({
       slot: "content",
-      tone: "warning",
-      title: "Add or load this dataset?",
+      tone: "info",
+      title: "Add this content source?",
       message:
-        "This will add the dataset to saved sources, switch to it, and update its metadata if it already exists.",
-      confirmLabel: "Add or load dataset",
+        "This will save the JSON URL as a selectable content source and switch to it. Existing sources and practice progress are kept. If this URL is already saved, only its metadata is refreshed.",
+      confirmLabel: "Add and switch",
       onConfirm: () => {
         void loadDatasetFromSettings(candidateUrl);
       },
