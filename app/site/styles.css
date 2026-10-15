@@ -300,6 +300,13 @@ input[type="url"] {
   font-size: 0.82rem;
 }
 
+.source-list-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
 .source-actions {
   display: flex;
   gap: 10px;
@@ -1211,6 +1218,7 @@ button:disabled {
 }
 
 @media (max-width: 560px) {
+  .source-list-actions,
   .source-actions,
   .part-row,
   .confirm-actions,
@@ -1220,6 +1228,7 @@ button:disabled {
     align-items: stretch;
   }
 
+  .source-list-actions button,
   .source-actions button,
   .confirm-actions button,
   .part-action,

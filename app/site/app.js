@@ -16,7 +16,6 @@ const UNIT_THEMES = [
 const datasetForm = document.querySelector("#dataset-form");
 const datasetUrlInput = document.querySelector("#dataset-url");
 const datasetStatus = document.querySelector("#dataset-status");
-const resetSourceButton = document.querySelector("#reset-source");
 const sourceSelect = document.querySelector("#source-select");
 const sourceList = document.querySelector("#source-list");
 const openSettingsButton = document.querySelector("#open-settings");
@@ -407,6 +406,36 @@ function getSourceMeta(source) {
   return counts.length ? counts.join(", ") : source.url;
 }
 
+async function copyTextToClipboard(text) {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.setAttribute("readonly", "");
+  textArea.style.position = "fixed";
+  textArea.style.left = "-9999px";
+  textArea.style.top = "0";
+  document.body.append(textArea);
+  textArea.select();
+  const copied = document.execCommand("copy");
+  textArea.remove();
+  if (!copied) {
+    throw new Error("Clipboard copy failed");
+  }
+}
+
+async function copySourceUrl(source) {
+  try {
+    await copyTextToClipboard(source.url);
+    setStatus(`Copied URL for ${getSourceLabel(source)}.`, "ok");
+  } catch {
+    setStatus("Could not copy the URL. Select and copy it from the source row.", "missing");
+  }
+}
+
 function renderSourceControls() {
   const sources = loadSources();
   const activeSourceId = activeSource?.id ?? loadActiveSourceId();
@@ -445,20 +474,26 @@ function renderSourceControls() {
           makeElement("span", { text: getSourceMeta(source) }),
           makeElement("span", { text: source.url })
         );
+        const actions = makeElement("div", { className: "source-list-actions" });
+        const copyButton = makeElement("button", {
+          className: "button-secondary",
+          text: "Copy URL",
+        });
+        copyButton.type = "button";
+        copyButton.addEventListener("click", () => {
+          void copySourceUrl(source);
+        });
         const removeButton = makeElement("button", {
           className: source.id === activeSourceId ? "button-danger" : "button-secondary",
           text: "Remove",
         });
         removeButton.type = "button";
         removeButton.addEventListener("click", () => showInlineRemoveSourceConfirmation(row, source));
-        row.append(body, removeButton);
+        actions.append(copyButton, removeButton);
+        row.append(body, actions);
         sourceList.append(row);
       }
     }
-  }
-
-  if (resetSourceButton) {
-    resetSourceButton.disabled = !activeSourceId;
   }
 }
 
@@ -702,6 +737,9 @@ function hideSettingsConfirmation() {
       slot.secondaryAction.onclick = null;
     }
   }
+  sourceList?.querySelectorAll(".source-remove-confirm").forEach((confirmation) => {
+    confirmation.remove();
+  });
 }
 
 function showSettingsConfirmation({
@@ -1483,7 +1521,7 @@ async function loadDataset(datasetUrl, { save = true, source = null } = {}) {
     "ok"
   );
   if (datasetUrlInput) {
-    datasetUrlInput.value = normalizedUrl;
+    datasetUrlInput.value = "";
   }
   applyRoute();
 }
@@ -1496,6 +1534,28 @@ async function handleSubmit(event) {
     setStatus("Enter a dataset JSON URL first.", "missing");
     return;
   }
+  let normalizedCandidateUrl = "";
+  try {
+    normalizedCandidateUrl = normalizeDatasetUrl(candidateUrl);
+  } catch {
+    setStatus("Enter a valid dataset JSON URL.", "missing");
+    return;
+  }
+
+  if (activeDatasetUrl && normalizedCandidateUrl === activeDatasetUrl) {
+    showSettingsConfirmation({
+      slot: "content",
+      tone: "info",
+      title: "Reload active source?",
+      message:
+        "This source is already active. Reload it only if the content package was updated. Existing sources and practice progress are kept.",
+      confirmLabel: "Reload source",
+      onConfirm: () => {
+        void loadDatasetFromSettings(normalizedCandidateUrl);
+      },
+    });
+    return;
+  }
 
   if (activeDataset || loadSources().length) {
     showSettingsConfirmation({
@@ -1506,13 +1566,13 @@ async function handleSubmit(event) {
         "This will save the JSON URL as a selectable content source and switch to it. Existing sources and practice progress are kept. If this URL is already saved, only its metadata is refreshed.",
       confirmLabel: "Add and switch",
       onConfirm: () => {
-        void loadDatasetFromSettings(candidateUrl);
+        void loadDatasetFromSettings(normalizedCandidateUrl);
       },
     });
     return;
   }
 
-  await loadDatasetFromSettings(candidateUrl);
+  await loadDatasetFromSettings(normalizedCandidateUrl);
 }
 
 async function loadDatasetFromSettings(datasetUrl) {
@@ -1557,9 +1617,6 @@ async function switchToSource(sourceId) {
   }
 
   saveActiveSourceId(source.id);
-  if (datasetUrlInput) {
-    datasetUrlInput.value = source.url;
-  }
 
   try {
     await loadDataset(source.url, { save: false, source });
@@ -1604,7 +1661,7 @@ async function handleRemoveSource(sourceId, { deleteSaveData = false } = {}) {
   }
   setStatus(
     deleteSaveData
-      ? `Removed ${getSourceLabel(source)} and its save data.`
+      ? `Removed ${getSourceLabel(source)} and deleted its save data.`
       : `Removed ${getSourceLabel(source)}. Save data was kept.`,
     "ok"
   );
@@ -1633,7 +1690,7 @@ function createRemoveSourceConfirmation(source) {
 
   const removeWithSaveData = makeElement("button", {
     className: "button-danger",
-    text: "Remove source and save data",
+    text: "Remove source and delete data",
   });
   removeWithSaveData.type = "button";
   removeWithSaveData.addEventListener("click", () => {
@@ -1654,29 +1711,6 @@ function showInlineRemoveSourceConfirmation(row, source) {
   const confirmation = createRemoveSourceConfirmation(source);
   row.append(confirmation);
   confirmation.querySelector("button")?.focus({ preventScroll: true });
-}
-
-function requestRemoveSource(sourceId = activeSource?.id ?? loadActiveSourceId()) {
-  const source = sourceId ? getSourceById(sourceId) : null;
-  if (!source) {
-    setStatus("No saved source is selected.", "missing");
-    return;
-  }
-  showSettingsConfirmation({
-    slot: "content",
-    tone: "warning",
-    title: "Remove this source?",
-    message:
-      "This will remove the dataset source from this browser. You can keep its practice progress or delete it now.",
-    confirmLabel: "Remove source",
-    secondaryLabel: "Remove source and save data",
-    onConfirm: () => {
-      void handleRemoveSource(source.id, { deleteSaveData: false });
-    },
-    onSecondaryConfirm: () => {
-      void handleRemoveSource(source.id, { deleteSaveData: true });
-    },
-  });
 }
 
 function handleRequestSaveReset() {
@@ -1753,12 +1787,11 @@ function handleSettingsDialogKeydown(event) {
 }
 
 async function bootstrap() {
-  if (!datasetForm || !datasetUrlInput || !resetSourceButton) {
+  if (!datasetForm || !datasetUrlInput) {
     return;
   }
 
   datasetForm.addEventListener("submit", handleSubmit);
-  resetSourceButton.addEventListener("click", () => requestRemoveSource());
   sourceSelect?.addEventListener("change", () => {
     if (!sourceSelect.value) {
       return;
