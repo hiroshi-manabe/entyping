@@ -1,7 +1,7 @@
 {
   "content": {
-    "id": "new_crown1_replacement",
-    "title": "NEW CROWN 1 Replacement Course",
+    "id": "jhs_english_course_1",
+    "title": "JHS English Course 1",
     "audio_root": "audio/"
   },
   "source_files": {
@@ -41,7 +41,7 @@
               "speaker": "Leo",
               "text": "Hi, Hana. This is my first week here.",
               "ja": "こんにちは、ハナ。ここでの最初の一週間です。",
-              "study_note": "`This is ...` は「これは...です」という表現です。`first week` は「最初の一週間」です。",
+              "study_note": "`first week` は学校や仕事などを始めてから最初の週です。`here` は「ここで、ここに」という場所を表します。",
               "audio_url": "audio/item_00002.mp3"
             },
             {
@@ -61,7 +61,7 @@
               "speaker": "Leo",
               "text": "We study English and science today.",
               "ja": "私たちは今日、英語と理科を勉強します。",
-              "study_note": "`we study ...` は「私たちは...を勉強します」という現在形の文です。",
+              "study_note": "`study` は教科などを「勉強する」です。`science` は理科や科学を表します。`today` は「今日」という時間のことばです。",
               "audio_url": "audio/item_00004.mp3"
             },
             {
@@ -81,7 +81,7 @@
               "speaker": "Leo",
               "text": "What subject do you enjoy most?",
               "ja": "あなたはどの教科をいちばん楽しんでいますか。",
-              "study_note": "`What + 名詞 + do you + 動詞?` で、種類をたずねることができます。",
+              "study_note": "`What subject ...?` は「どの教科」と教科の種類をたずねます。`most` は「いちばん」で、好きなものを比べる感じを出します。",
               "audio_url": "audio/item_00006.mp3"
             },
             {
@@ -91,7 +91,7 @@
               "speaker": "Hana",
               "text": "I like English.",
               "ja": "私は英語が好きです。",
-              "study_note": "`I like + 名詞` で「私は...が好きです」と答えます。",
+              "study_note": "`like` は人やものを「好きだ」と言う動詞です。`English` は教科名としても、英語という言語としても使えます。",
               "audio_url": "audio/item_00007.mp3"
             },
             {
@@ -101,7 +101,7 @@
               "speaker": "Leo",
               "text": "Do you study science after lunch?",
               "ja": "あなたは昼食後に理科を勉強しますか。",
-              "study_note": "`Do you + 動詞...?` は一般動詞の現在形の質問です。",
+              "study_note": "`study` は「勉強する」です。`science` は教科の理科です。`after lunch` は昼食のあとという時間を表します。",
               "audio_url": "audio/item_00008.mp3"
             },
             {
@@ -141,7 +141,7 @@
               "speaker": "Hana",
               "text": "What do you do after school?",
               "ja": "あなたは放課後に何をしますか。",
-              "study_note": "`What do you do after school?` は放課後の習慣をたずねる表現です。",
+              "study_note": "`What do you do ...?` は「何をしますか」と行動をたずねます。`after school` は「放課後に」という時間を表します。",
               "audio_url": "audio/item_00011.mp3"
             },
             {
@@ -201,7 +201,7 @@
               "speaker": "Leo",
               "text": "Wow. You are busy.",
               "ja": "わあ。あなたは忙しいですね。",
-              "study_note": "`You are + 形容詞` で相手の様子を言えます。`busy` は「忙しい」です。",
+              "study_note": "`Wow.` は驚きや感心を表す短い反応です。`busy` は予定やすることが多い様子を表します。",
               "audio_url": "audio/item_00017.mp3"
             }
           ]
@@ -221,7 +221,7 @@
               "speaker": "Leo",
               "text": "Who is on the class shelf?",
               "ja": "クラスの棚にいるのはだれですか。",
-              "study_note": "`Who is ...?` は「...はだれですか」とたずねる表現です。",
+              "study_note": "`Who is ...?` は「だれですか」と人やキャラクターをたずねます。`on the class shelf` は「クラスの棚に」という場所を表します。",
               "audio_url": "audio/item_00018.mp3"
             },
             {
@@ -261,7 +261,7 @@
               "speaker": "Leo",
               "text": "He is a fox, right?",
               "ja": "彼はキツネですよね。",
-              "study_note": "`He is a ...` は男性や男の子として扱うものを説明する文です。`a` は単数の数えられる名詞の前に置きます。",
+              "study_note": "`fox` はキツネという動物です。文末の `right?` は、自分の考えを相手に確認するときに使います。",
               "audio_url": "audio/item_00022.mp3"
             },
             {
@@ -281,7 +281,7 @@
               "speaker": "Leo",
               "text": "Do you know him well?",
               "ja": "あなたは彼をよく知っていますか。",
-              "study_note": "`him` は男性を受ける目的語の代名詞です。",
+              "study_note": "`him` は男性を受ける目的語の代名詞です。`well` はここでは「よく、十分に」という意味です。",
               "audio_url": "audio/item_00024.mp3"
             },
             {
@@ -291,7 +291,7 @@
               "speaker": "Hana",
               "text": "Yes, I know him.",
               "ja": "はい、彼を知っています。",
-              "study_note": "`know him` は「彼を知っている」です。",
+              "study_note": "`know` は人やものを知っているという動詞です。`him` は男性を受ける目的語の代名詞です。",
               "audio_url": "audio/item_00025.mp3"
             },
             {
@@ -371,7 +371,7 @@
               "speaker": "Hana",
               "text": "Where do you want to walk first?",
               "ja": "最初にどこを歩きたいですか。",
-              "study_note": "`Where do you want to ...?` は、したいことの場所をたずねる表現です。",
+              "study_note": "`where` は場所をたずねる疑問詞です。`want to walk` は歩きたいという希望を表します。`first` は順番の最初を表します。",
               "audio_url": "audio/item_00032.mp3"
             },
             {
@@ -381,7 +381,7 @@
               "speaker": "Leo",
               "text": "I want to go to the art room.",
               "ja": "私は美術室へ行きたいです。",
-              "study_note": "`I want to go to ...` は「私は...へ行きたいです」という意味です。",
+              "study_note": "`want to go to ...` はどこかへ行きたい気持ちを表します。`art room` は美術を学ぶ部屋です。",
               "audio_url": "audio/item_00033.mp3"
             },
             {
@@ -401,7 +401,7 @@
               "speaker": "Leo",
               "text": "Both of those ideas sound good.",
               "ja": "その二つの案はどちらもよさそうです。",
-              "study_note": "`Both of those ideas` は「その二つの考えの両方」です。`good` は「よい」という意味です。",
+              "study_note": "`Both of those ideas` は「その二つの考えの両方」です。主語が複数なので `sounds` ではなく `sound good` になります。",
               "audio_url": "audio/item_00035.mp3"
             },
             {
@@ -411,7 +411,7 @@
               "speaker": "Hana",
               "text": "Let's tell Ms. Mori.",
               "ja": "森先生に伝えましょう。",
-              "study_note": "`Let's + 動詞` は「...しましょう」と誘う表現です。",
+              "study_note": "`Let's + 動詞` は「...しましょう」と誘う形です。`tell Ms. Mori` は「森先生に伝える」で、`tell` は相手に知らせる動詞です。",
               "audio_url": "audio/item_00036.mp3"
             }
           ]
@@ -438,7 +438,7 @@
               "speaker": "Rina",
               "text": "Hey, Kaito. Our English class starts today, right?",
               "ja": "ねえ、カイト。私たちの英語の授業は今日始まるんだよね。",
-              "study_note": "`right?` は文の最後につけて「...だよね」と確認する表現です。",
+              "study_note": "`starts` は「始まる」です。`today` は「今日」、文末の `right?` は「...だよね」と確認する表現です。",
               "audio_url": "audio/item_00037.mp3"
             },
             {
@@ -458,7 +458,7 @@
               "speaker": "Rina",
               "text": "I'm really excited, so I brought this passport.",
               "ja": "私は本当にわくわくしているので、このパスポートを持ってきました。",
-              "study_note": "`so` は理由と結果をつなぎます。`really` は気持ちを強めます。",
+              "study_note": "`I'm really excited` は「本当にわくわくしています」という気持ちの表現です。`so` は前の理由から後ろの結果へつなぎます。",
               "audio_url": "audio/item_00039.mp3"
             },
             {
@@ -468,7 +468,7 @@
               "speaker": "Kaito",
               "text": "Wow. Look at all these stamps.",
               "ja": "わあ。これらのスタンプを全部見て。",
-              "study_note": "`all these + 複数名詞` は「これらの...全部」という意味です。",
+              "study_note": "`Look at ...` は「...を見て」と注意を向ける表現です。`all these stamps` は「これらのスタンプ全部」というまとまりです。",
               "audio_url": "audio/item_00040.mp3"
             },
             {
@@ -478,7 +478,7 @@
               "speaker": "Rina",
               "text": "We can choose from four lunch questions.",
               "ja": "私たちは四つの昼休みの質問から選べます。",
-              "study_note": "`can + 動詞の原形` で「...できる」と言います。",
+              "study_note": "`can choose from ...` は「...から選ぶことができる」です。`from` は選ぶ範囲を表します。",
               "audio_url": "audio/item_00041.mp3"
             },
             {
@@ -498,7 +498,7 @@
               "speaker": "Rina",
               "text": "The first question is about club activities.",
               "ja": "最初の質問は部活動についてです。",
-              "study_note": "`first` は「一番目の、最初の」という意味です。",
+              "study_note": "`first` は「最初の」、`question` は「質問」です。`about ...` は内容やテーマが「...について」であることを表します。",
               "audio_url": "audio/item_00043.mp3"
             },
             {
@@ -508,7 +508,7 @@
               "speaker": "Kaito",
               "text": "I want to join the science club.",
               "ja": "私は科学部に入りたいです。",
-              "study_note": "`want to + 動詞` は「...したい」という意味です。",
+              "study_note": "`want to join ...` は「...に入りたい」です。`the science club` は特定の科学部を指しています。",
               "audio_url": "audio/item_00044.mp3"
             },
             {
@@ -518,7 +518,7 @@
               "speaker": "Rina",
               "text": "Nice. I want to join a sports club.",
               "ja": "いいね。私は運動部に入りたいです。",
-              "study_note": "`a sports club` の `a` は一つのクラブを指します。",
+              "study_note": "`want to join ...` は「...に入りたい」です。`a sports club` は運動系のクラブを一つ選んで言う形です。",
               "audio_url": "audio/item_00045.mp3"
             },
             {
@@ -548,7 +548,7 @@
               "speaker": "Ms. Kim",
               "text": "Hi. I am Kim.",
               "ja": "こんにちは。私はキムです。",
-              "study_note": "`I am + 名前` で自分の名前を言います。",
+              "study_note": "`I` は「私は」、`am` は「です」にあたるbe動詞です。名前を続けると自己紹介になります。",
               "audio_url": "audio/item_00047.mp3"
             },
             {
@@ -558,7 +558,7 @@
               "speaker": "Ms. Kim",
               "text": "I'm an English teacher from New Zealand.",
               "ja": "私はニュージーランド出身の英語の先生です。",
-              "study_note": "`from` は「...出身の、...からの」という意味です。",
+              "study_note": "`an English teacher` は「英語の先生」です。`from New Zealand` は「ニュージーランド出身の」という出身を表すまとまりです。",
               "audio_url": "audio/item_00048.mp3"
             },
             {
@@ -578,7 +578,7 @@
               "speaker": "Ms. Kim",
               "text": "Nice to meet you, too.",
               "ja": "こちらこそ、はじめまして。",
-              "study_note": "`too` は「...も」という意味を足します。",
+              "study_note": "`Nice to meet you` は初対面のあいさつです。`too` は「こちらも」という気持ちを足します。",
               "audio_url": "audio/item_00050.mp3"
             },
             {
@@ -598,7 +598,7 @@
               "speaker": "Kaito",
               "text": "You are our helper today?",
               "ja": "あなたは今日、私たちの手伝い係ですか。",
-              "study_note": "語尾を上げる言い方で、短く確認できます。",
+              "study_note": "`our` は「私たちの」です。`helper` は「手伝う人、補助する人」という意味です。",
               "audio_url": "audio/item_00052.mp3"
             },
             {
@@ -618,7 +618,7 @@
               "speaker": "Ms. Kim",
               "text": "I like music.",
               "ja": "私は音楽が好きです。",
-              "study_note": "`I like + 名詞` で好きなものを言います。",
+              "study_note": "`like` は「好きである」という動詞です。`music` は「音楽」で、好きなものとして後ろに置かれています。",
               "audio_url": "audio/item_00054.mp3"
             },
             {
@@ -628,7 +628,7 @@
               "speaker": "Ms. Kim",
               "text": "I play the violin and practice it every day.",
               "ja": "私はバイオリンをひき、毎日それを練習しています。",
-              "study_note": "楽器名にはふつう `the` をつけます。`it` は前の `the violin` を受けます。",
+              "study_note": "楽器名にはふつう `the` をつけて `the violin` と言います。`practice` は「練習する」、`every day` は「毎日」です。",
               "audio_url": "audio/item_00055.mp3"
             },
             {
@@ -638,7 +638,7 @@
               "speaker": "Rina",
               "text": "Oh. You are a violin player?",
               "ja": "へえ。あなたはバイオリン奏者ですか。",
-              "study_note": "`You are ...?` は聞き返しや確認に使えます。",
+              "study_note": "`violin` は「バイオリン」、`player` は「演奏する人」です。`a` は単数の名詞の前に置きます。",
               "audio_url": "audio/item_00056.mp3"
             },
             {
@@ -648,7 +648,7 @@
               "speaker": "Ms. Kim",
               "text": "Sometimes I go to the river park.",
               "ja": "ときどき川の公園へ行きます。",
-              "study_note": "`go to + 場所` で行き先を表します。",
+              "study_note": "`Sometimes` は「ときどき」という頻度を表し、文の最初にも置けます。`go to ...` は行き先を表します。",
               "audio_url": "audio/item_00057.mp3"
             },
             {
@@ -658,7 +658,7 @@
               "speaker": "Kaito",
               "text": "Nice! Do you like animals?",
               "ja": "いいですね。動物は好きですか。",
-              "study_note": "`Do you like ...?` は好みをたずねる質問です。",
+              "study_note": "`Do you like ...?` は好みをたずねる質問です。`animals` は複数形で、動物全般を表します。",
               "audio_url": "audio/item_00058.mp3"
             },
             {
@@ -668,7 +668,7 @@
               "speaker": "Ms. Kim",
               "text": "Yes, I do. I often watch birds there.",
               "ja": "はい、好きです。私はそこでよく鳥を見ます。",
-              "study_note": "`often` は「よく」という頻度を表します。",
+              "study_note": "`watch birds` は鳥を「見る、観察する」です。`there` は前に出た場所を指します。",
               "audio_url": "audio/item_00059.mp3"
             }
           ]
@@ -688,7 +688,7 @@
               "speaker": "Minato",
               "text": "Hi. I am Minato.",
               "ja": "こんにちは。私はミナトです。",
-              "study_note": "自己紹介で `I am ...` を使います。",
+              "study_note": "`I` は「私は」、`am` は「です」にあたるbe動詞です。名前を続けると自己紹介になります。",
               "audio_url": "audio/item_00060.mp3"
             },
             {
@@ -698,7 +698,7 @@
               "speaker": "Minato",
               "text": "I like English and art.",
               "ja": "私は英語と美術が好きです。",
-              "study_note": "`A and B` で二つの名詞をつなげます。",
+              "study_note": "`like` は「好きだ」という動詞です。`and` は二つのものを並べる語で、`art` は教科の「美術」です。",
               "audio_url": "audio/item_00061.mp3"
             },
             {
@@ -708,7 +708,7 @@
               "speaker": "Rina",
               "text": "Nice to meet you, Minato.",
               "ja": "はじめまして、ミナト。",
-              "study_note": "名前を後ろにつけて相手に呼びかけられます。",
+              "study_note": "`Nice to meet you` は初対面のあいさつです。後ろに `Minato` を付けると相手の名前を呼びかけられます。",
               "audio_url": "audio/item_00062.mp3"
             },
             {
@@ -718,7 +718,7 @@
               "speaker": "Kaito",
               "text": "Do you play badminton?",
               "ja": "あなたはバドミントンをしますか。",
-              "study_note": "`Do you + 動詞...?` は一般動詞の現在形の質問です。",
+              "study_note": "`Do you play ...?` はスポーツなどを「しますか」とたずねます。`badminton` は球技名なので、ここでは `the` を付けません。",
               "audio_url": "audio/item_00063.mp3"
             },
             {
@@ -728,7 +728,7 @@
               "speaker": "Minato",
               "text": "Yes, I do.",
               "ja": "はい、します。",
-              "study_note": "一般動詞の質問への短い肯定です。",
+              "study_note": "`Yes, I do.` は `Do you ...?` への短い肯定の答えです。動詞をくり返さずに答えられます。",
               "audio_url": "audio/item_00064.mp3"
             },
             {
@@ -738,7 +738,7 @@
               "speaker": "Minato",
               "text": "I often watch tennis games on TV.",
               "ja": "私はよくテレビでテニスの試合を見ます。",
-              "study_note": "`on TV` はテレビという媒体を表します。",
+              "study_note": "`often` は「よく」という頻度です。`watch tennis games` は「テニスの試合を見る」、`on TV` は「テレビで」です。",
               "audio_url": "audio/item_00065.mp3"
             },
             {
@@ -768,7 +768,7 @@
               "speaker": "Minato",
               "text": "I'm good at drawing animals.",
               "ja": "私は動物を描くことが得意です。",
-              "study_note": "`good at + 動名詞` で得意な動作を言えます。",
+              "study_note": "`be good at + 動名詞` で「...することが得意」です。`drawing animals` は `draw` に `-ing` を付けたまとまりです。",
               "audio_url": "audio/item_00068.mp3"
             },
             {
@@ -778,7 +778,7 @@
               "speaker": "Kaito",
               "text": "I sometimes read comics in English.",
               "ja": "私はときどき英語でマンガを読みます。",
-              "study_note": "`in English` は「英語で」という意味です。",
+              "study_note": "`sometimes` は「ときどき」という頻度を表します。`comics` は複数形でマンガ本を表します。",
               "audio_url": "audio/item_00069.mp3"
             },
             {
@@ -808,7 +808,7 @@
               "speaker": "Kaito",
               "text": "Are you in a club at school, Yui?",
               "ja": "ユイ、あなたは学校でクラブに入っていますか。",
-              "study_note": "`Are you in ...?` で所属をたずねます。",
+              "study_note": "`Are you in ...?` は所属をたずねます。`in a club` は「クラブに入っている」という意味です。",
               "audio_url": "audio/item_00071.mp3"
             },
             {
@@ -828,7 +828,7 @@
               "speaker": "Yui",
               "text": "I take karate lessons after school.",
               "ja": "私は放課後に空手のレッスンを受けています。",
-              "study_note": "`take ... lessons` は習い事をしていることを表します。",
+              "study_note": "`take karate lessons` は「空手のレッスンを受ける」です。`after school` は「放課後に」です。",
               "audio_url": "audio/item_00073.mp3"
             },
             {
@@ -848,7 +848,7 @@
               "speaker": "Yui",
               "text": "Yes, I do. I practice on Saturdays.",
               "ja": "はい、好きです。土曜日ごとに練習しています。",
-              "study_note": "`on Saturdays` は毎週土曜日という習慣を表します。",
+              "study_note": "`practice` は「練習する」です。`on Saturdays` は毎週土曜日という習慣を表します。",
               "audio_url": "audio/item_00075.mp3"
             },
             {
@@ -858,7 +858,7 @@
               "speaker": "Kaito",
               "text": "Are you a strong player?",
               "ja": "あなたは強い選手ですか。",
-              "study_note": "`Are you a ...?` で立場や種類をたずねます。",
+              "study_note": "`Are you a ...?` は「あなたは...ですか」と立場や種類をたずねます。`a strong player` は「強い選手」です。",
               "audio_url": "audio/item_00076.mp3"
             },
             {
@@ -868,7 +868,7 @@
               "speaker": "Yui",
               "text": "No, I'm not. But I can kick well.",
               "ja": "いいえ、違います。でも、上手にけれます。",
-              "study_note": "`can + 動詞の原形` でできることを表します。",
+              "study_note": "`But` は前の内容と対比して続ける語です。`kick` は「ける」、`well` は「上手に」です。",
               "audio_url": "audio/item_00077.mp3"
             },
             {
@@ -878,7 +878,7 @@
               "speaker": "Rina",
               "text": "Cool! Let's practice together sometime.",
               "ja": "いいね。いつか一緒に練習しましょう。",
-              "study_note": "`Let's ...` は「...しましょう」と誘う表現です。",
+              "study_note": "`together` は「一緒に」、`sometime` は「いつか」という意味です。",
               "audio_url": "audio/item_00078.mp3"
             },
             {
@@ -888,7 +888,7 @@
               "speaker": "Yui",
               "text": "We have a club trial from Wednesday to Friday.",
               "ja": "水曜日から金曜日までクラブ体験があります。",
-              "study_note": "`from A to B` は「AからBまで」です。",
+              "study_note": "`club trial` は「クラブ体験」です。`from Wednesday to Friday` は「水曜日から金曜日まで」という期間を表します。",
               "audio_url": "audio/item_00079.mp3"
             },
             {
@@ -928,7 +928,7 @@
               "speaker": "Aoi",
               "text": "Yes, I do.",
               "ja": "はい、ひきます。",
-              "study_note": "一般動詞の質問への短い肯定です。",
+              "study_note": "`Yes, I do.` は `Do you play ...?` への答えです。`play` をくり返さずに短く答えます。",
               "audio_url": "audio/item_00082.mp3"
             },
             {
@@ -938,7 +938,7 @@
               "speaker": "Aoi",
               "text": "I have piano lessons on Tuesdays and Fridays.",
               "ja": "私は火曜日と金曜日にピアノのレッスンがあります。",
-              "study_note": "`on Tuesdays and Fridays` は毎週の予定を表します。",
+              "study_note": "`have piano lessons` は「ピアノのレッスンがある」です。`on Tuesdays and Fridays` は毎週火曜日と金曜日の予定を表します。",
               "audio_url": "audio/item_00083.mp3"
             },
             {
@@ -948,7 +948,7 @@
               "speaker": "Kaito",
               "text": "I see. What music do you like?",
               "ja": "なるほど。どんな音楽が好きですか。",
-              "study_note": "`What + 名詞 do you like?` は種類をたずねる表現です。",
+              "study_note": "`What music do you like?` は好きな音楽の種類をたずねます。`What + 名詞` で「どんな...」を表せます。",
               "audio_url": "audio/item_00084.mp3"
             },
             {
@@ -958,7 +958,7 @@
               "speaker": "Aoi",
               "text": "I like game music.",
               "ja": "私はゲーム音楽が好きです。",
-              "study_note": "`like + 名詞` で好みを言います。",
+              "study_note": "`game music` は名詞の前に名詞を置いて「ゲーム音楽」と表すまとまりです。",
               "audio_url": "audio/item_00085.mp3"
             },
             {
@@ -978,7 +978,7 @@
               "speaker": "Rina",
               "text": "Do you listen to them often?",
               "ja": "それらをよく聞きますか。",
-              "study_note": "`listen to ...` は「...を聞く」です。",
+              "study_note": "`listen to ...` は「...を聞く」です。`them` は前に出た `old game songs` を指し、`often` は「よく」という頻度です。",
               "audio_url": "audio/item_00087.mp3"
             },
             {
@@ -988,7 +988,7 @@
               "speaker": "Aoi",
               "text": "Yes, I do.",
               "ja": "はい、聞きます。",
-              "study_note": "`Do you ...?` への短い肯定です。",
+              "study_note": "`Yes, I do.` は一般動詞の質問への答えです。ここでは `listen to them` をくり返さずに答えています。",
               "audio_url": "audio/item_00088.mp3"
             },
             {
@@ -998,7 +998,7 @@
               "speaker": "Kaito",
               "text": "What cartoons do you like?",
               "ja": "どんなアニメが好きですか。",
-              "study_note": "`What ... do you like?` で好みの種類をたずねます。",
+              "study_note": "`What ... do you like?` は好きなものの種類をたずねる形です。`cartoons` は複数形で、作品の種類を広く聞いています。",
               "audio_url": "audio/item_00089.mp3"
             },
             {
@@ -1008,7 +1008,7 @@
               "speaker": "Aoi",
               "text": "My favorite is about a space dog.",
               "ja": "私のお気に入りは宇宙犬についてのものです。",
-              "study_note": "`about ...` は内容やテーマを表します。",
+              "study_note": "`My favorite` は前の質問の `cartoons` を受けて「私のお気に入りのもの」という意味で使っています。",
               "audio_url": "audio/item_00090.mp3"
             },
             {
@@ -1018,7 +1018,7 @@
               "speaker": "Rina",
               "text": "Oh, cool.",
               "ja": "へえ、いいね。",
-              "study_note": "興味を持ったときの短い反応です。",
+              "study_note": "`Oh, cool.` は相手の話に興味や好意を示す短い反応です。`cool` はここでは「いいね」に近い意味です。",
               "audio_url": "audio/item_00091.mp3"
             }
           ]
@@ -1038,7 +1038,7 @@
               "speaker": "Kaito",
               "text": "What do you do after school, Sota?",
               "ja": "ソウタ、あなたは放課後に何をしますか。",
-              "study_note": "`What do you do after school?` は放課後の習慣をたずねます。",
+              "study_note": "`What do you do?` は「何をしますか」と行動をたずねる形です。`after school` は「放課後に」という時を表します。",
               "audio_url": "audio/item_00092.mp3"
             },
             {
@@ -1048,7 +1048,7 @@
               "speaker": "Sota",
               "text": "I take coding lessons after school.",
               "ja": "私は放課後にプログラミングのレッスンを受けています。",
-              "study_note": "`take ... lessons` で習い事を表します。",
+              "study_note": "`take ... lessons` は習い事のレッスンを受けるという意味です。`coding lessons` はプログラミングのレッスンです。",
               "audio_url": "audio/item_00093.mp3"
             },
             {
@@ -1068,7 +1068,7 @@
               "speaker": "Kaito",
               "text": "What do you do on weekends?",
               "ja": "週末には何をしますか。",
-              "study_note": "`on weekends` は週末の習慣を表します。",
+              "study_note": "`What do you do?` は「何をしますか」と行動をたずねる形です。`on weekends` は週末の習慣を表します。",
               "audio_url": "audio/item_00095.mp3"
             },
             {
@@ -1078,7 +1078,7 @@
               "speaker": "Sota",
               "text": "I watch mystery movies at home.",
               "ja": "私は家でミステリー映画を見ます。",
-              "study_note": "`watch movies` は映画を見ることを表します。",
+              "study_note": "`watch movies` は映画を見ることを表します。`mystery movies` は「ミステリー映画」、`at home` は「家で」です。",
               "audio_url": "audio/item_00096.mp3"
             },
             {
@@ -1098,7 +1098,7 @@
               "speaker": "Sota",
               "text": "I like train movies and robot movies.",
               "ja": "私は電車の映画とロボットの映画が好きです。",
-              "study_note": "`A and B` で二つのものを並べます。",
+              "study_note": "`train movies and robot movies` のように `and` で二つの好きな種類を並べます。どちらも `movies` が付く名詞のまとまりです。",
               "audio_url": "audio/item_00098.mp3"
             },
             {
@@ -1118,7 +1118,7 @@
               "speaker": "Sota",
               "text": "On weekends, I sometimes make movie posters.",
               "ja": "週末には、私はときどき映画のポスターを作ります。",
-              "study_note": "`On weekends, ...` は文の前に時を置く形です。",
+              "study_note": "`On weekends` は文頭に置いて「週末には」と話題にできます。`make movie posters` は「映画のポスターを作る」です。",
               "audio_url": "audio/item_00100.mp3"
             },
             {
@@ -1128,7 +1128,7 @@
               "speaker": "Rina",
               "text": "Nice. We need posters for the passport table.",
               "ja": "いいね。パスポートのテーブルにはポスターが必要です。",
-              "study_note": "`posters` は `poster` の複数形です。",
+              "study_note": "`need ... for ...` は「...のために...が必要だ」です。`posters` は複数のポスター、`passport table` はパスポート用のテーブルを表します。",
               "audio_url": "audio/item_00101.mp3"
             }
           ]
@@ -1148,7 +1148,7 @@
               "speaker": "Rina",
               "text": "What do you do after lunch, Mei?",
               "ja": "メイ、昼食の後に何をしますか。",
-              "study_note": "`after + 名詞` で「...の後」を表します。",
+              "study_note": "`after + 名詞` は「...の後」を表します。`lunch` は「昼食」で、`after lunch` は「昼食後に」です。",
               "audio_url": "audio/item_00102.mp3"
             },
             {
@@ -1158,7 +1158,7 @@
               "speaker": "Mei",
               "text": "I often take pictures in the school garden.",
               "ja": "私はよく学校の庭で写真を撮ります。",
-              "study_note": "`take pictures` は「写真を撮る」という意味です。",
+              "study_note": "`often` は「よく」という頻度です。`take pictures` は「写真を撮る」、`in the school garden` は「学校の庭で」という場所を表します。",
               "audio_url": "audio/item_00103.mp3"
             },
             {
@@ -1178,7 +1178,7 @@
               "speaker": "Mei",
               "text": "I like turtles and birds.",
               "ja": "私はカメと鳥が好きです。",
-              "study_note": "複数形で動物の種類全体を表せます。",
+              "study_note": "`turtles and birds` のように複数形にすると、特定の一匹ではなく種類全体を表せます。",
               "audio_url": "audio/item_00105.mp3"
             },
             {
@@ -1198,7 +1198,7 @@
               "speaker": "Rina",
               "text": "Is this a picture of your pet?",
               "ja": "これはあなたのペットの写真ですか。",
-              "study_note": "`a picture of ...` は「...の写真」です。",
+              "study_note": "`a picture of ...` は「...の写真」です。`your pet` は「あなたのペット」で、`of` の後に写っているものを置きます。",
               "audio_url": "audio/item_00107.mp3"
             },
             {
@@ -1208,7 +1208,7 @@
               "speaker": "Mei",
               "text": "Yes. This is my pet hamster.",
               "ja": "はい。これは私のペットのハムスターです。",
-              "study_note": "`This is ...` は近くのものを説明するときに使います。",
+              "study_note": "`This is ...` は近くのものを紹介する形です。`my pet hamster` は「私のペットのハムスター」という名詞のまとまりです。",
               "audio_url": "audio/item_00108.mp3"
             },
             {
@@ -1228,7 +1228,7 @@
               "speaker": "Rina",
               "text": "You have a hamster?",
               "ja": "ハムスターを飼っているんですか。",
-              "study_note": "語尾を上げると、短く確認する質問になります。",
+              "study_note": "`have` は「持っている、飼っている」に使えます。`hamster` は「ハムスター」です。",
               "audio_url": "audio/item_00110.mp3"
             },
             {
@@ -1238,7 +1238,7 @@
               "speaker": "Mei",
               "text": "Yes, I do. Her name is Momo.",
               "ja": "はい、飼っています。彼女の名前はモモです。",
-              "study_note": "`Yes, I do.` は一般動詞の質問への短い答えです。",
+              "study_note": "`Her name is ...` は女性やメスの動物の名前を紹介する表現です。",
               "audio_url": "audio/item_00111.mp3"
             },
             {
@@ -1248,7 +1248,7 @@
               "speaker": "Kaito",
               "text": "The passport has so many ideas now.",
               "ja": "パスポートには今、とてもたくさんのアイデアがあります。",
-              "study_note": "`so many + 複数名詞` で数の多さを表します。",
+              "study_note": "`has` はここでは「持っている、ある」という意味です。`so many ideas` は「とてもたくさんのアイデア」、`now` は「今」です。",
               "audio_url": "audio/item_00112.mp3"
             }
           ]
@@ -1295,7 +1295,7 @@
               "speaker": "Haru",
               "text": "Some yellow flowers are near the gate.",
               "ja": "黄色い花がいくつか門の近くにあります。",
-              "study_note": "`Some + 複数名詞` は「いくつかの...」を表します。",
+              "study_note": "`Some + 複数名詞` は「いくつかの...」を表します。`near the gate` は「門の近くに」という場所を表します。",
               "audio_url": "audio/item_00115.mp3"
             },
             {
@@ -1305,7 +1305,7 @@
               "speaker": "Yuna",
               "text": "Wow. The flowers are so bright.",
               "ja": "わあ。その花はとても明るい色です。",
-              "study_note": "`so + 形容詞` は「とても...」と強く言う形です。",
+              "study_note": "`so + 形容詞` は「とても...」と強く言う形です。`bright` は色や光が「明るい、鮮やかな」という意味です。",
               "audio_url": "audio/item_00116.mp3"
             },
             {
@@ -1315,7 +1315,7 @@
               "speaker": "Haru",
               "text": "I'd like to draw them on my quiz sheet.",
               "ja": "私はそれらを自分のクイズ用紙に描きたいです。",
-              "study_note": "`I'd like to + 動詞` は「私は...したいです」というていねいな言い方です。`them` は前の `flowers` を受けます。",
+              "study_note": "`I'd like to + 動詞` は「私は...したいです」というていねいな言い方です。`draw` は「描く」、`them` は前の `flowers` を受ける語です。",
               "audio_url": "audio/item_00117.mp3"
             },
             {
@@ -1325,7 +1325,7 @@
               "speaker": "Yuna",
               "text": "How many bikes do you count by the tree?",
               "ja": "木のそばに自転車を何台数えますか。",
-              "study_note": "`How many + 複数名詞 + do you + 動詞?` で数をたずねます。",
+              "study_note": "`How many + 複数名詞 ...?` で数をたずねます。`by the tree` は「木のそばに」という場所を表します。",
               "audio_url": "audio/item_00118.mp3"
             },
             {
@@ -1335,7 +1335,7 @@
               "speaker": "Haru",
               "text": "I count two red bikes and some blue bikes.",
               "ja": "赤い自転車を二台と、青い自転車を何台か数えます。",
-              "study_note": "`two + 複数名詞` で「二つの...」を表します。`and` は二つの名詞のまとまりをつなぎます。",
+              "study_note": "`count` は「数える」という動作です。`red bikes` と `blue bikes` では、色を表す語が名詞 `bikes` を前から説明しています。",
               "audio_url": "audio/item_00119.mp3"
             },
             {
@@ -1345,7 +1345,7 @@
               "speaker": "Yuna",
               "text": "This is an animal quiz, too.",
               "ja": "これは動物のクイズでもあります。",
-              "study_note": "`animal` は「動物」です。`too` は「...も」という意味を足します。",
+              "study_note": "`animal quiz` は `animal` が後ろの `quiz` を説明するまとまりです。`too` は文末に置いて「...も」を表します。",
               "audio_url": "audio/item_00120.mp3"
             },
             {
@@ -1355,7 +1355,7 @@
               "speaker": "Haru",
               "text": "The panda icon is cute.",
               "ja": "パンダのアイコンはかわいいです。",
-              "study_note": "`cute` は「かわいい」という意味です。",
+              "study_note": "`panda icon` は `panda` が後ろの `icon` を説明するまとまりです。`cute` は「かわいい」という意味の形容詞です。",
               "audio_url": "audio/item_00121.mp3"
             },
             {
@@ -1365,7 +1365,7 @@
               "speaker": "Yuna",
               "text": "The kangaroo word is on this sheet.",
               "ja": "カンガルーという単語はこの用紙にあります。",
-              "study_note": "`on this sheet` は「この用紙に」という位置を表します。",
+              "study_note": "`kangaroo word` は `kangaroo` が後ろの `word` を説明するまとまりです。`on this sheet` は「この用紙の上に」という場所を表します。",
               "audio_url": "audio/item_00122.mp3"
             },
             {
@@ -1375,7 +1375,7 @@
               "speaker": "Haru",
               "text": "Let's check the animal words.",
               "ja": "動物の単語を確認しましょう。",
-              "study_note": "`Let's + 動詞` は「...しましょう」と誘う表現です。",
+              "study_note": "`Let's + 動詞` は「...しましょう」と誘う表現です。`check` は「確認する」、`animal words` は「動物に関する単語」のまとまりです。",
               "audio_url": "audio/item_00123.mp3"
             },
             {
@@ -1412,7 +1412,7 @@
               "speaker": "Emi",
               "text": "Hey, Sora. We start club trial today.",
               "ja": "ねえ、ソラ。私たちは今日クラブ体験を始めます。",
-              "study_note": "`Hey` は友だちへの呼びかけです。`today` は「今日」です。",
+              "study_note": "`start` は「始める」という動作です。`club trial` はクラブを試してみる活動、`today` は「今日」という時を表します。",
               "audio_url": "audio/item_00125.mp3"
             },
             {
@@ -1422,7 +1422,7 @@
               "speaker": "Sora",
               "text": "Yes, that's right. These are our skill cards.",
               "ja": "はい、その通りです。これらは私たちのスキルカードです。",
-              "study_note": "`our` は「私たちの」です。`cards` は複数形です。",
+              "study_note": "`that's right` は相手の言ったことを「その通り」と受け止める表現です。`these` は近くの複数のもの、`our` は「私たちの」を表します。",
               "audio_url": "audio/item_00126.mp3"
             },
             {
@@ -1432,7 +1432,7 @@
               "speaker": "Emi",
               "text": "We write about people we learn from.",
               "ja": "私たちは学ぶ相手について書きます。",
-              "study_note": "`we + 動詞` で「私たちは...します」と言えます。",
+              "study_note": "`write about ...` は「...について書く」です。`people we learn from` は「私たちが学ぶ相手」という意味です。",
               "audio_url": "audio/item_00127.mp3"
             },
             {
@@ -1452,7 +1452,7 @@
               "speaker": "Emi",
               "text": "Which person do you admire?",
               "ja": "あなたはどの人をすばらしいと思っていますか。",
-              "study_note": "`Which person ...?` で「どの人」とたずねます。",
+              "study_note": "`which person` は何人かの中から「どの人」と選んでたずねる表現です。`admire` は相手をすばらしいと思ったり尊敬したりする気持ちを表します。",
               "audio_url": "audio/item_00129.mp3"
             },
             {
@@ -1462,7 +1462,7 @@
               "speaker": "Sora",
               "text": "My role model is a baker near my house.",
               "ja": "私のお手本は家の近くのパン屋さんです。",
-              "study_note": "`a baker` の `a` は一人の職業を表します。",
+              "study_note": "`role model` は「お手本になる人」です。`near my house` は「私の家の近くの」です。",
               "audio_url": "audio/item_00130.mp3"
             },
             {
@@ -1522,7 +1522,7 @@
               "speaker": "Sora",
               "text": "Wow. Is she a singer?",
               "ja": "わあ。彼女は歌手ですか。",
-              "study_note": "`Is she a ...?` で女性について役割をたずねます。",
+              "study_note": "`Is she a ...?` は女性について「彼女は...ですか」とたずねます。`a singer` は「歌手」という役割です。",
               "audio_url": "audio/item_00135.mp3"
             },
             {
@@ -1532,7 +1532,7 @@
               "speaker": "Hana",
               "text": "Yes. She is really popular at our school.",
               "ja": "はい。彼女は私たちの学校で本当に人気があります。",
-              "study_note": "`really + 形容詞` で意味を強めます。",
+              "study_note": "`popular at our school` は「私たちの学校で人気がある」です。場所にはここで `at` を使っています。",
               "audio_url": "audio/item_00136.mp3"
             },
             {
@@ -1562,7 +1562,7 @@
               "speaker": "Sora",
               "text": "What is your favorite song?",
               "ja": "あなたのお気に入りの歌は何ですか。",
-              "study_note": "`your favorite ...` は「あなたのお気に入りの...」です。",
+              "study_note": "`favorite` は一番好きなものを表す形容詞です。`your favorite song` のように、だれのお気に入りかを `your` で示せます。",
               "audio_url": "audio/item_00139.mp3"
             },
             {
@@ -1572,7 +1572,7 @@
               "speaker": "Hana",
               "text": "My favorite song is about a rainy town.",
               "ja": "私のお気に入りの歌は雨の町についての歌です。",
-              "study_note": "`about ...` は内容やテーマを表します。",
+              "study_note": "`about` は話題や内容を表します。`rainy` は雨に関係する様子を表す形容詞で、`town` は町です。",
               "audio_url": "audio/item_00140.mp3"
             },
             {
@@ -1582,7 +1582,7 @@
               "speaker": "Emi",
               "text": "Please let us listen to it later.",
               "ja": "後でそれを聞かせてください。",
-              "study_note": "`listen to ...` は「...を聞く」です。`it` はその歌を指します。",
+              "study_note": "`let us + 動詞` は「私たちに...させる」です。お願いなので前に `Please` を置いています。",
               "audio_url": "audio/item_00141.mp3"
             },
             {
@@ -1622,7 +1622,7 @@
               "speaker": "Emi",
               "text": "The photo has a skateboard.",
               "ja": "その写真にはスケートボードがあります。",
-              "study_note": "`the photo` は前に見ているカード上の写真を指します。",
+              "study_note": "`has` は主語が一つのもののときの `have` の形です。ここでは写真の中にあるものを表します。",
               "audio_url": "audio/item_00144.mp3"
             },
             {
@@ -1642,7 +1642,7 @@
               "speaker": "Sora",
               "text": "Can you do a trick?",
               "ja": "あなたはトリックができますか。",
-              "study_note": "`Can you + 動詞...?` でできるかをたずねます。",
+              "study_note": "`do a trick` は技を「する、やる」という意味です。`can` の後ろは動詞の原形です。",
               "audio_url": "audio/item_00146.mp3"
             },
             {
@@ -1652,7 +1652,7 @@
               "speaker": "Ren",
               "text": "No, I can't. But I can turn slowly.",
               "ja": "いいえ、できません。でも、ゆっくり曲がることはできます。",
-              "study_note": "`can't + 動詞` は「...できない」です。`but` は対比を表します。",
+              "study_note": "`can't + 動詞` は「...できない」です。`But I can turn slowly` で、できないことの後にできることを対比しています。",
               "audio_url": "audio/item_00147.mp3"
             },
             {
@@ -1672,7 +1672,7 @@
               "speaker": "Emi",
               "text": "One player moved quickly.",
               "ja": "一人の選手はすばやく動きました。",
-              "study_note": "`player` は選手です。`quickly` は動き方を表します。",
+              "study_note": "`moved` は `move` の過去形です。`quickly` は「すばやく」と動き方を表します。",
               "audio_url": "audio/item_00149.mp3"
             },
             {
@@ -1682,7 +1682,7 @@
               "speaker": "Sora",
               "text": "He can shoot the ball from far away.",
               "ja": "彼は遠くからボールをシュートできます。",
-              "study_note": "`can + 動詞の原形` で能力を表します。",
+              "study_note": "`from far away` は「遠くから」です。`shoot the ball` はボールをシュートすることを表します。",
               "audio_url": "audio/item_00150.mp3"
             },
             {
@@ -1692,7 +1692,7 @@
               "speaker": "Ren",
               "text": "He is one of the great players in our city.",
               "ja": "彼は私たちの町のすばらしい選手の一人です。",
-              "study_note": "`one of the + 複数名詞` は「...の一人」です。",
+              "study_note": "`one of the + 複数名詞` は「...の一人」です。`great players in our city` は「私たちの町のすばらしい選手たち」というまとまりです。",
               "audio_url": "audio/item_00151.mp3"
             }
           ]
@@ -1712,7 +1712,7 @@
               "speaker": "Aki",
               "text": "I have a game card, too.",
               "ja": "私もゲームカードを持っています。",
-              "study_note": "`have` は持っているものを言うときに使えます。",
+              "study_note": "`game card` はゲームについてのカードです。`too` は「それも」「同じく」と追加するときに使います。",
               "audio_url": "audio/item_00152.mp3"
             },
             {
@@ -1722,7 +1722,7 @@
               "speaker": "Hana",
               "text": "You like shogi, right?",
               "ja": "あなたは将棋が好きですよね。",
-              "study_note": "`right?` は確認を表します。",
+              "study_note": "`shogi` は日本の将棋を表す語です。文末の `right?` は、相手に「そうですよね」と確認するときに使います。",
               "audio_url": "audio/item_00153.mp3"
             },
             {
@@ -1742,7 +1742,7 @@
               "speaker": "Emi",
               "text": "Can you read the kanji on this piece?",
               "ja": "この駒の漢字を読めますか。",
-              "study_note": "`Can you read ...?` は読めるかをたずねます。`this piece` は近くの一つを指します。",
+              "study_note": "`read the kanji` は漢字を読んで理解することを表します。`on this piece` は「この駒の上にある」という位置を示します。",
               "audio_url": "audio/item_00155.mp3"
             },
             {
@@ -1762,7 +1762,7 @@
               "speaker": "Aki",
               "text": "This piece moves across the board.",
               "ja": "この駒は盤の横方向に動きます。",
-              "study_note": "`moves` は一つのものが動くときの形です。",
+              "study_note": "`across the board` は盤を横切るような動きを表します。",
               "audio_url": "audio/item_00157.mp3"
             },
             {
@@ -1772,7 +1772,7 @@
               "speaker": "Hana",
               "text": "Does it move forward, too?",
               "ja": "それは前にも動きますか。",
-              "study_note": "`forward` は「前へ」です。`too` は「...も」です。",
+              "study_note": "`Does it + 動詞...?` は主語が `it` のときの一般動詞の質問です。動詞は原形の `move` になります。",
               "audio_url": "audio/item_00158.mp3"
             },
             {
@@ -1782,7 +1782,7 @@
               "speaker": "Aki",
               "text": "No. It can't jump over other pieces.",
               "ja": "いいえ。他の駒を飛びこえることはできません。",
-              "study_note": "`can't + 動詞` は「...できない」です。`pieces` は複数形です。",
+              "study_note": "`jump over ...` は「...を飛びこえる」です。`other pieces` は「ほかの駒」です。",
               "audio_url": "audio/item_00159.mp3"
             },
             {
@@ -1792,7 +1792,7 @@
               "speaker": "Sora",
               "text": "I know! Games use many ideas.",
               "ja": "わかった。ゲームは多くの考えを使います。",
-              "study_note": "`many + 複数名詞` で数の多さを表します。",
+              "study_note": "`I know!` は「わかった」と気づきを表す短い反応です。`ideas` は複数形です。",
               "audio_url": "audio/item_00160.mp3"
             }
           ]
@@ -1822,7 +1822,7 @@
               "speaker": "Sora",
               "text": "The captain is a brave dancer.",
               "ja": "そのキャプテンは勇敢なダンサーです。",
-              "study_note": "`a brave dancer` は一人の人を説明します。",
+              "study_note": "`brave` は「勇敢な」です。職業や役割を表す単数名詞の前には `a` を置きます。",
               "audio_url": "audio/item_00162.mp3"
             },
             {
@@ -1842,7 +1842,7 @@
               "speaker": "Ren",
               "text": "She is amazing and cool.",
               "ja": "彼女はすばらしくてかっこいいです。",
-              "study_note": "`amazing and cool` は二つの形容詞をつないでいます。",
+              "study_note": "`amazing` は「すばらしい、驚くほどよい」という強いほめ言葉です。`and cool` を続けて、二つの評価を並べています。",
               "audio_url": "audio/item_00164.mp3"
             },
             {
@@ -1872,7 +1872,7 @@
               "speaker": "Sora",
               "text": "Can you show the move to me?",
               "ja": "その動きを私に見せてくれますか。",
-              "study_note": "`Can you show ...?` はできるかをたずねながら依頼する表現です。",
+              "study_note": "`show A to B` は「AをBに見せる」です。ここでは `the move` を `me` に見せます。",
               "audio_url": "audio/item_00167.mp3"
             },
             {
@@ -1882,7 +1882,7 @@
               "speaker": "Emi",
               "text": "Sure. Please watch my feet.",
               "ja": "もちろん。私の足を見てください。",
-              "study_note": "`Please watch ...` は相手に見ることをお願いする表現です。",
+              "study_note": "`Please watch ...` は見ることをお願いする表現です。`my feet` は動きを見る対象として「私の足」を表します。",
               "audio_url": "audio/item_00168.mp3"
             },
             {
@@ -1949,7 +1949,7 @@
               "speaker": "Nao",
               "text": "My birthday is July 6.",
               "ja": "私の誕生日は7月6日です。",
-              "study_note": "月名の後ろに日にちを置いて日付を表します。",
+              "study_note": "`My birthday is + 月 + 日付` で誕生日を言います。`July 6` のように月名の後ろに日にちを置きます。",
               "audio_url": "audio/item_00173.mp3"
             },
             {
@@ -1959,7 +1959,7 @@
               "speaker": "Ren",
               "text": "July 6?",
               "ja": "7月6日ですか。",
-              "study_note": "日付だけを上げ調子で言うと確認になります。",
+              "study_note": "`July 6?` のように日付だけを上げ調子で言うと、聞き返しや確認になります。",
               "audio_url": "audio/item_00174.mp3"
             },
             {
@@ -1979,7 +1979,7 @@
               "speaker": "Ren",
               "text": "It's late, but happy birthday anyway.",
               "ja": "遅くなったけれど、とにかく誕生日おめでとう。",
-              "study_note": "`It's late, but ...` は「遅いけれど...」と対比して続ける形です。",
+              "study_note": "`It's late, but ...` は「遅いけれど...」と前置きします。`anyway` は「それでも、とにかく」で、遅れても祝う気持ちを続けます。",
               "audio_url": "audio/item_00176.mp3"
             },
             {
@@ -1989,7 +1989,7 @@
               "speaker": "Nao",
               "text": "Thank you. Put my sticker on July 6.",
               "ja": "ありがとう。私のシールを7月6日に貼ってください。",
-              "study_note": "`my` は「私の」です。ここでは誕生日シールを指します。",
+              "study_note": "`Put A on B` は「AをBの上に置く、貼る」です。`my sticker` は「私のシール」です。",
               "audio_url": "audio/item_00177.mp3"
             }
           ]
@@ -2056,7 +2056,7 @@
               "speaker": "Leo",
               "text": "Wow. They have many good shops there.",
               "ja": "わあ。そこにはよい店がたくさんあります。",
-              "study_note": "場所について `They have ...` と言うと「そこには...がある」と表せます。",
+              "study_note": "`many good shops` は「たくさんのよい店」です。`there` は「そこに、そこで」と場所を表します。",
               "audio_url": "audio/item_00182.mp3"
             },
             {
@@ -2066,7 +2066,7 @@
               "speaker": "Yui",
               "text": "Yes. This street is good for photos.",
               "ja": "はい。この通りは写真に向いています。",
-              "study_note": "`this + singular noun` は近くの1つのものを指します。",
+              "study_note": "`be good for ...` は「...に向いている、...によい」という意味です。ここでは `photos` に向いている通りだと言っています。",
               "audio_url": "audio/item_00183.mp3"
             },
             {
@@ -2076,7 +2076,7 @@
               "speaker": "Leo",
               "text": "Oh really? I don't know local shops so well.",
               "ja": "え、本当ですか。ぼくは地元の店をあまりよく知りません。",
-              "study_note": "`don't + verb` は現在形の否定です。`so well` は「それほどよく」です。",
+              "study_note": "`local shops` は「地元の店」です。`so well` は否定文で「あまりよく」と弱めて言う表現です。",
               "audio_url": "audio/item_00184.mp3"
             },
             {
@@ -2096,7 +2096,7 @@
               "speaker": "Leo",
               "text": "My favorite ice cream shop is on this street.",
               "ja": "ぼくのお気に入りのアイスクリーム店はこの通りにあります。",
-              "study_note": "`My favorite ... is on this street.` でお気に入りの店の場所を言えます。",
+              "study_note": "`favorite` は「お気に入りの」です。`on this street` は「この通りに、この通り沿いに」と場所を表します。",
               "audio_url": "audio/item_00186.mp3"
             },
             {
@@ -2116,7 +2116,7 @@
               "speaker": "Leo",
               "text": "The arcade photo is here.",
               "ja": "アーケードの写真はここにあります。",
-              "study_note": "`here` は「ここに、この場所に」という意味です。",
+              "study_note": "`The arcade photo` の `the` は、相手もどの写真かわかっているものを指します。`here` は「ここに」です。",
               "audio_url": "audio/item_00188.mp3"
             }
           ]
@@ -2156,7 +2156,7 @@
               "speaker": "Yui",
               "text": "This is matcha.",
               "ja": "これは抹茶です。",
-              "study_note": "`This is + food name.` で食べ物や味の名前を紹介します。",
+              "study_note": "`This is + food name.` で近くの食べ物や味を紹介します。`matcha` は抹茶味を表します。",
               "audio_url": "audio/item_00191.mp3"
             },
             {
@@ -2166,7 +2166,7 @@
               "speaker": "Leo",
               "text": "It's bitter.",
               "ja": "苦いです。",
-              "study_note": "`It's + adjective` で味や様子を説明します。",
+              "study_note": "`bitter` は味が「苦い」という意味の形容詞です。",
               "audio_url": "audio/item_00192.mp3"
             },
             {
@@ -2176,7 +2176,7 @@
               "speaker": "Yui",
               "text": "I see. And this cup is azuki.",
               "ja": "なるほど。それから、このカップはあずきです。",
-              "study_note": "`And ...` は前の内容に情報を加えるときに使います。",
+              "study_note": "`And ...` は前の内容に情報を加えるときに使います。`this cup` は近くにあるカップを指しています。",
               "audio_url": "audio/item_00193.mp3"
             },
             {
@@ -2206,7 +2206,7 @@
               "speaker": "Yui",
               "text": "Azuki means red bean.",
               "ja": "あずきは赤い豆という意味です。",
-              "study_note": "`red bean` は「あずき、赤い豆」を表します。",
+              "study_note": "`means` は「...という意味です」。ことばの意味を説明するときに `A means B.` が使えます。",
               "audio_url": "audio/item_00196.mp3"
             },
             {
@@ -2216,7 +2216,7 @@
               "speaker": "Leo",
               "text": "Red bean?",
               "ja": "赤い豆ですか。",
-              "study_note": "聞いた語をくり返すと確認になります。",
+              "study_note": "`Red bean?` のように聞いた語を上げ調子でくり返すと、「赤い豆ですか」と確認できます。",
               "audio_url": "audio/item_00197.mp3"
             },
             {
@@ -2236,7 +2236,7 @@
               "speaker": "Leo",
               "text": "Here is the new fruit and vegetable shop.",
               "ja": "ここに新しい青果店があります。",
-              "study_note": "`the new ... shop` は話題にしている新しい店を表します。",
+              "study_note": "`Here is ...` は「ここに...があります」と相手に見せながら言う形です。`fruit and vegetable shop` は青果店です。",
               "audio_url": "audio/item_00199.mp3"
             },
             {
@@ -2286,7 +2286,7 @@
               "speaker": "Yui",
               "text": "This is not a cucumber. It is a zucchini.",
               "ja": "これはきゅうりではありません。ズッキーニです。",
-              "study_note": "`This is not a ...` は近くのものについて「...ではありません」と言います。",
+              "study_note": "`cucumber` は「きゅうり」、`zucchini` は「ズッキーニ」です。`not a ...` で「...ではない」と否定します。",
               "audio_url": "audio/item_00204.mp3"
             }
           ]
@@ -2306,7 +2306,7 @@
               "speaker": "Rina",
               "text": "We are at Sakura Inari shrine in this photo.",
               "ja": "この写真では私たちは桜稲荷神社にいます。",
-              "study_note": "`We are at ...` は「私たちは...にいます」と場所を表します。",
+              "study_note": "`at` は場所の一点を示す前置詞です。`shrine` は「神社」、`in this photo` は「この写真では」です。",
               "audio_url": "audio/item_00205.mp3"
             },
             {
@@ -2316,7 +2316,7 @@
               "speaker": "Leo",
               "text": "This is a torii.",
               "ja": "これは鳥居です。",
-              "study_note": "`This is a ...` は近くのものを説明するときに使います。",
+              "study_note": "`torii` は日本の神社にある「鳥居」です。`a` は1つのものを初めて紹介するときに付けます。",
               "audio_url": "audio/item_00206.mp3"
             },
             {
@@ -2326,7 +2326,7 @@
               "speaker": "Rina",
               "text": "It is a gate to the shrine.",
               "ja": "それは神社への門です。",
-              "study_note": "`It is a ...` は前に出た1つのものを受けて説明します。",
+              "study_note": "`It` は前の `a torii` を受けています。`a gate to ...` は「...への門」という意味です。",
               "audio_url": "audio/item_00207.mp3"
             },
             {
@@ -2336,7 +2336,7 @@
               "speaker": "Yui",
               "text": "Wow, the gate is big.",
               "ja": "わあ、その門は大きいです。",
-              "study_note": "`big` は大きさを表す基本的な形容詞です。",
+              "study_note": "`the gate` の `the` は、前に出た鳥居を指します。`big` は大きさを表す形容詞です。",
               "audio_url": "audio/item_00208.mp3"
             },
             {
@@ -2346,7 +2346,7 @@
               "speaker": "Leo",
               "text": "Oh look, that white statue is a fox.",
               "ja": "あ、見て、あの白い像はキツネです。",
-              "study_note": "`that + noun` は少し離れたものを指します。",
+              "study_note": "`that white statue` は「あの白い像」。`that` は少し離れたものを指し、`white` が `statue` を説明しています。",
               "audio_url": "audio/item_00209.mp3"
             },
             {
@@ -2356,7 +2356,7 @@
               "speaker": "Yui",
               "text": "That dog looks scary.",
               "ja": "あの犬はこわそうです。",
-              "study_note": "`scary` は「こわい」という評価を表します。",
+              "study_note": "`looks + 形容詞` は「...そうに見える」です。`scary` は「こわい」という印象を表します。",
               "audio_url": "audio/item_00210.mp3"
             },
             {
@@ -2366,7 +2366,7 @@
               "speaker": "Rina",
               "text": "That is not a dog. It is a fox statue.",
               "ja": "あれは犬ではありません。キツネの像です。",
-              "study_note": "`That is not a ...` は離れたものについて否定する形です。",
+              "study_note": "`not a dog` は「犬ではない」です。`fox statue` は「キツネの像」という名詞のまとまりです。",
               "audio_url": "audio/item_00211.mp3"
             },
             {
@@ -2376,7 +2376,7 @@
               "speaker": "Leo",
               "text": "You can see statues of foxes at Inari shrines.",
               "ja": "稲荷神社ではキツネの像を見ることができます。",
-              "study_note": "`You can see ...` は「...を見ることができます」と可能性を表します。",
+              "study_note": "`statues of foxes` は「キツネの像」です。`at Inari shrines` は「稲荷神社で」と場所を表します。",
               "audio_url": "audio/item_00212.mp3"
             },
             {
@@ -2386,7 +2386,7 @@
               "speaker": "Yui",
               "text": "This caption is good.",
               "ja": "この説明文はよいです。",
-              "study_note": "`this + singular noun` は近くの1つのものを指します。",
+              "study_note": "`caption` は写真や図に付ける「説明文、キャプション」です。`good` はここでは内容がよい評価を表します。",
               "audio_url": "audio/item_00213.mp3"
             }
           ]
@@ -2406,7 +2406,7 @@
               "speaker": "Rina",
               "text": "Welcome to my house on video.",
               "ja": "ビデオで私の家へようこそ。",
-              "study_note": "`Welcome to ...` は「...へようこそ」と迎える表現です。",
+              "study_note": "`Welcome to ...` は「...へようこそ」と迎える表現です。`on video` は「ビデオ越しに、ビデオで」という意味です。",
               "audio_url": "audio/item_00214.mp3"
             },
             {
@@ -2416,7 +2416,7 @@
               "speaker": "Rina",
               "text": "Please come in and have a seat in your classroom.",
               "ja": "どうぞ教室で入ったつもりで座ってください。",
-              "study_note": "`come in and have ...` は2つの命令を `and` でつなげています。",
+              "study_note": "`Please + 動詞` はていねいな指示です。`come in and have a seat` は「入って座ってください」と2つの動作をつなげています。",
               "audio_url": "audio/item_00215.mp3"
             },
             {
@@ -2436,7 +2436,7 @@
               "speaker": "Yui",
               "text": "Hey, what is this on the shelf?",
               "ja": "ねえ、棚の上のこれは何ですか。",
-              "study_note": "`What is this?` は近くのものが何かをたずねます。",
+              "study_note": "`What is this?` は近くのものが何かをたずねます。`on the shelf` は「棚の上にある」と場所を加えています。",
               "audio_url": "audio/item_00217.mp3"
             },
             {
@@ -2456,7 +2456,7 @@
               "speaker": "Rina",
               "text": "Ganesha is a Hindu God with the head of an elephant.",
               "ja": "ガネーシャは象の頭を持つヒンドゥー教の神です。",
-              "study_note": "`with the head of ...` は「...の頭を持つ」という特徴を説明します。",
+              "study_note": "`with the head of ...` は「...の頭を持つ」と特徴を足す表現です。`a Hindu God` は「ヒンドゥー教の神」です。",
               "audio_url": "audio/item_00219.mp3"
             },
             {
@@ -2476,7 +2476,7 @@
               "speaker": "Rina",
               "text": "Here, have some tea after the call.",
               "ja": "はい、通話のあとでお茶をどうぞ。",
-              "study_note": "`Have some ...` は食べ物や飲み物をすすめる表現です。",
+              "study_note": "`Have some ...` は食べ物や飲み物をすすめる表現です。`after the call` は「通話のあとで」と時を表します。",
               "audio_url": "audio/item_00221.mp3"
             },
             {
@@ -2486,7 +2486,7 @@
               "speaker": "Yui",
               "text": "Is this Indian tea in the photo?",
               "ja": "写真のこれはインドのお茶ですか。",
-              "study_note": "`Is this ...?` は「これは...ですか」とたずねます。",
+              "study_note": "`Is this ...?` は「これは...ですか」とたずねます。`in the photo` は「写真の中の」と場所を表します。",
               "audio_url": "audio/item_00222.mp3"
             },
             {
@@ -2496,7 +2496,7 @@
               "speaker": "Rina",
               "text": "Yes, it is. It is chai.",
               "ja": "はい、そうです。チャイです。",
-              "study_note": "`Yes, it is.` は `Is this/it ...?` への肯定の答えです。",
+              "study_note": "`Yes, it is.` は `Is this ...?` への肯定の答えです。続く `It is chai.` で名前を説明しています。",
               "audio_url": "audio/item_00223.mp3"
             },
             {
@@ -2516,7 +2516,7 @@
               "speaker": "Leo",
               "text": "Wow, sweet and spicy.",
               "ja": "わあ、甘くてスパイシーですね。",
-              "study_note": "`adjective and adjective` で2つの形容詞を並べます。",
+              "study_note": "`sweet and spicy` のように `and` で2つの形容詞を並べ、味の特徴をまとめて言えます。",
               "audio_url": "audio/item_00225.mp3"
             },
             {
@@ -2546,7 +2546,7 @@
               "speaker": "Leo",
               "text": "You have so many books behind you.",
               "ja": "後ろに本がとてもたくさんありますね。",
-              "study_note": "`so many ...` は「とても多くの...」と数を強調します。",
+              "study_note": "`so many + 複数名詞` は「とても多くの...」。`behind you` は「あなたの後ろに」です。",
               "audio_url": "audio/item_00228.mp3"
             },
             {
@@ -2556,7 +2556,7 @@
               "speaker": "Rina",
               "text": "Yes. This old dictionary is from my grandfather.",
               "ja": "はい。この古い辞書は祖父からのものです。",
-              "study_note": "`old` は年齢や古さを表す形容詞です。",
+              "study_note": "`be from ...` は「...からのものです」と出どころを表します。`This old dictionary` は「この古い辞書」です。",
               "audio_url": "audio/item_00229.mp3"
             },
             {
@@ -2566,7 +2566,7 @@
               "speaker": "Rina",
               "text": "Look inside. It is an English-Hindi dictionary.",
               "ja": "中を見て。それは英語ヒンディー語辞書です。",
-              "study_note": "`Look inside.` は「中を見て」という指示です。",
+              "study_note": "`Look inside.` は「中を見て」という指示です。`English-Hindi dictionary` は英語とヒンディー語を結ぶ辞書です。",
               "audio_url": "audio/item_00230.mp3"
             },
             {
@@ -2586,7 +2586,7 @@
               "speaker": "Leo",
               "text": "Here it is. But I cannot read Hindi.",
               "ja": "あった。でもぼくはヒンディー語を読むことができません。",
-              "study_note": "`I cannot read ...` は「...を読むことができません」です。",
+              "study_note": "`Here it is.` は探していたものを見つけたときの「あった」です。`cannot + 動詞` は「...できません」。",
               "audio_url": "audio/item_00232.mp3"
             }
           ]
@@ -2626,7 +2626,7 @@
               "speaker": "Leo",
               "text": "A sitar, a traditional musical instrument in India.",
               "ja": "シタール、インドの伝統的な楽器ですね。",
-              "study_note": "`a ..., a ...` は名詞を言い換えて説明する形です。",
+              "study_note": "`a sitar, a traditional musical instrument` は、後ろの名詞句で前の語を言い換えて説明する形です。`traditional` は「伝統的な」です。",
               "audio_url": "audio/item_00235.mp3"
             },
             {
@@ -2646,7 +2646,7 @@
               "speaker": "Rina",
               "text": "A little. I sometimes take online lessons.",
               "ja": "少しだけ。私は時々オンラインレッスンを受けています。",
-              "study_note": "`sometimes` は「時々」という頻度を表します。",
+              "study_note": "`A little.` は「少しだけ」と短く答える表現です。`sometimes` は「時々」という頻度を表します。",
               "audio_url": "audio/item_00237.mp3"
             },
             {
@@ -2686,7 +2686,7 @@
               "speaker": "Leo",
               "text": "You have a lot of DVDs on this list.",
               "ja": "このリストにはDVDがたくさんありますね。",
-              "study_note": "`You have a lot of ...` は相手が多く持っていることを言う形です。",
+              "study_note": "`a lot of DVDs` は「たくさんのDVD」。`on this list` は「このリストに載っている」という場所を表します。",
               "audio_url": "audio/item_00240.mp3"
             },
             {
@@ -2696,7 +2696,7 @@
               "speaker": "Rina",
               "text": "Yes. I watch many movies for English club.",
               "ja": "はい。私は英語部のためにたくさんの映画を見ます。",
-              "study_note": "`I watch many ...` は習慣として多くのものを見ることを表します。",
+              "study_note": "`movies` は「映画」です。`for English club` は「英語部のために」と目的を表します。",
               "audio_url": "audio/item_00241.mp3"
             },
             {
@@ -2716,7 +2716,7 @@
               "speaker": "Rina",
               "text": "My favorite is Harry Potter.",
               "ja": "私のお気に入りはハリー・ポッターです。",
-              "study_note": "`My favorite is ...` で自分のお気に入りを言います。",
+              "study_note": "`favorite` は名詞として「お気に入りのもの」という意味でも使えます。ここでは好きな映画を指しています。",
               "audio_url": "audio/item_00243.mp3"
             },
             {
@@ -2746,7 +2746,7 @@
               "speaker": "Rina",
               "text": "He is Neville. He is smart and brave.",
               "ja": "彼はネビルです。彼はかしこくて勇敢です。",
-              "study_note": "`He is ...` は男性や男性キャラクターを説明します。",
+              "study_note": "`smart` は「かしこい」、`brave` は「勇敢な」です。性格を表す形容詞を `and` で並べています。",
               "audio_url": "audio/item_00246.mp3"
             },
             {
@@ -2776,7 +2776,7 @@
               "speaker": "Yui",
               "text": "My favorite is a short story series.",
               "ja": "私のお気に入りは短い物語のシリーズです。",
-              "study_note": "`series` はシリーズ作品を表す名詞です。",
+              "study_note": "`My favorite is ...` はお気に入りを言う形です。`series` は続きものの作品を表します。",
               "audio_url": "audio/item_00249.mp3"
             },
             {
@@ -2786,7 +2786,7 @@
               "speaker": "Yui",
               "text": "The stories are funny.",
               "ja": "その物語はおもしろいです。",
-              "study_note": "`The stories are ...` は複数主語に `are` を使います。",
+              "study_note": "`stories` は `story` の複数形です。`funny` は「おもしろい、笑える」という意味です。",
               "audio_url": "audio/item_00250.mp3"
             },
             {
@@ -2806,7 +2806,7 @@
               "speaker": "Yui",
               "text": "Yes. I know this series.",
               "ja": "はい。私はこのシリーズを知っています。",
-              "study_note": "`I know this ...` は「この...を知っています」と認識を表します。",
+              "study_note": "`know` は「知っている」です。`this series` は「このシリーズ、この続きものの作品」を指します。",
               "audio_url": "audio/item_00252.mp3"
             },
             {
@@ -2816,7 +2816,7 @@
               "speaker": "Rina",
               "text": "This sticker is from that series, right?",
               "ja": "このシールはそのシリーズのものですよね。",
-              "study_note": "`This is from ...` は出どころや作品を表します。",
+              "study_note": "`This sticker is from ...` は「このシールは...のものです」と出どころを表します。文末の `right?` は確認です。",
               "audio_url": "audio/item_00253.mp3"
             },
             {
@@ -2826,7 +2826,7 @@
               "speaker": "Yui",
               "text": "That is right. I love stories and characters.",
               "ja": "そのとおりです。私は物語と登場人物が大好きです。",
-              "study_note": "`That is right.` は相手の確認に答える表現です。",
+              "study_note": "`That is right.` は相手の確認に答える表現です。`love` は `like` より強く「大好き」を表します。",
               "audio_url": "audio/item_00254.mp3"
             },
             {
@@ -2876,7 +2876,7 @@
               "speaker": "Yui",
               "text": "She is a character in this manga.",
               "ja": "彼女はこのマンガの登場人物です。",
-              "study_note": "`She is a character in ...` は女性キャラクターの出どころを説明します。",
+              "study_note": "`character` は物語やマンガの「登場人物」です。`in this manga` は「このマンガの中の」と出どころを表します。",
               "audio_url": "audio/item_00258.mp3"
             },
             {
@@ -2886,7 +2886,7 @@
               "speaker": "Yui",
               "text": "Her nickname is Maruko.",
               "ja": "彼女のニックネームはまる子です。",
-              "study_note": "`Her ... is ...` は「彼女の...は...です」と所有を表します。",
+              "study_note": "`nickname` は「ニックネーム、あだ名」です。`Her` は「彼女の」と持ち主を表します。",
               "audio_url": "audio/item_00259.mp3"
             },
             {
@@ -2906,7 +2906,7 @@
               "speaker": "Leo",
               "text": "She is friendly and funny.",
               "ja": "彼女は親しみやすくておもしろいです。",
-              "study_note": "`She is adjective and adjective` で2つの形容詞を並べて説明します。",
+              "study_note": "`friendly` は「親しみやすい」、`funny` は「おもしろい」です。2つの形容詞は `and` で並べられます。",
               "audio_url": "audio/item_00261.mp3"
             },
             {
@@ -2926,7 +2926,7 @@
               "speaker": "Rina",
               "text": "Me, too. I study Japanese with it.",
               "ja": "私もです。私はそれで日本語を勉強します。",
-              "study_note": "`with it` は「それを使って」という道具や手段を表します。",
+              "study_note": "`Me, too.` は同じ気持ちを表します。`with it` は「それを使って」という手段を表します。",
               "audio_url": "audio/item_00263.mp3"
             },
             {
@@ -2936,7 +2936,7 @@
               "speaker": "Leo",
               "text": "That is a good idea.",
               "ja": "それはよい考えです。",
-              "study_note": "`That is a good idea.` は相手の考えをよいと評価する表現です。",
+              "study_note": "`good idea` は「よい考え、いい案」という短いまとまりです。`That` は相手が言った内容を指します。",
               "audio_url": "audio/item_00264.mp3"
             }
           ]
@@ -2993,7 +2993,7 @@
               "speaker": "Man",
               "text": "Then turn left at the second corner.",
               "ja": "それから、2つ目の角で左に曲がってください。",
-              "study_note": "`then` は順番を表します。`turn left` は「左に曲がる」です。",
+              "study_note": "`then` は次の動作へ進む合図です。`turn left` は「左に曲がる」、`at the second corner` は場所を表すまとまりです。",
               "audio_url": "audio/item_00268.mp3"
             },
             {
@@ -3003,7 +3003,7 @@
               "speaker": "Aki",
               "text": "Straight, then left at the second corner?",
               "ja": "まっすぐ、それから2つ目の角で左ですか。",
-              "study_note": "聞いた道順を短くくり返して確認しています。",
+              "study_note": "`straight` は方向、`then` は順番、`left` は曲がる向きを表します。道案内ではこのような大事な語だけでも確認できます。",
               "audio_url": "audio/item_00269.mp3"
             },
             {
@@ -3080,7 +3080,7 @@
               "speaker": "Clerk",
               "text": "We have many great tours for you.",
               "ja": "あなたにぴったりのすばらしいツアーがたくさんあります。",
-              "study_note": "`We have ...` は店や団体が「...があります」と案内するときに使えます。",
+              "study_note": "`many` は「たくさんの」です。`great tours` は「すばらしいツアー」という意味です。",
               "audio_url": "audio/item_00275.mp3"
             },
             {
@@ -3090,7 +3090,7 @@
               "speaker": "Clerk",
               "text": "In Singapore, you can enjoy shopping and delicious food.",
               "ja": "シンガポールでは、買い物とおいしい食べ物を楽しめます。",
-              "study_note": "`In Singapore, ...` で場所を先に示します。`you can enjoy ...` は「...を楽しめます」です。",
+              "study_note": "`In Singapore` は場所を先に示します。`enjoy` は「楽しむ」、`delicious` は「おいしい」です。",
               "audio_url": "audio/item_00276.mp3"
             },
             {
@@ -3160,7 +3160,7 @@
               "speaker": "Clerk",
               "text": "Find your next plan here at Blue Map.",
               "ja": "あなたの次の計画をここブルーマップで見つけてください。",
-              "study_note": "`Find your ... here at ...` は広告の呼びかけとして使えます。",
+              "study_note": "`next` は「次の」、`here at Blue Map` は「ここブルーマップで」と場所を強調します。`Find ...` は広告でよく使う呼びかけです。",
               "audio_url": "audio/item_00283.mp3"
             }
           ]
@@ -3190,7 +3190,7 @@
               "speaker": "Mina",
               "text": "I went to my grandparents' farm in Gunma.",
               "ja": "私は群馬にある祖父母の農場へ行きました。",
-              "study_note": "`I went to ...` は「...へ行きました」です。`grandparents'` は「祖父母の」という所有を表します。",
+              "study_note": "`went` は `go` の過去形です。`grandparents'` は「祖父母の」という所有を表し、`farm` は「農場」です。",
               "audio_url": "audio/item_00285.mp3"
             },
             {
@@ -3210,7 +3210,7 @@
               "speaker": "Mina",
               "text": "I ate curry and rice for lunch.",
               "ja": "昼食にカレーライスを食べました。",
-              "study_note": "`I ate ...` は `eat` の過去形です。`for lunch` は「昼食に」です。",
+              "study_note": "`ate` は `eat` の過去形です。`curry and rice` は「カレーライス」、`for lunch` は「昼食に」です。",
               "audio_url": "audio/item_00287.mp3"
             },
             {
@@ -3220,7 +3220,7 @@
               "speaker": "Mina",
               "text": "It was delicious.",
               "ja": "それはおいしかったです。",
-              "study_note": "`It was ...` は過去の様子を説明します。",
+              "study_note": "`delicious` は食べ物が「とてもおいしい」という意味です。過去の感想なので `was` を使っています。",
               "audio_url": "audio/item_00288.mp3"
             },
             {
@@ -3240,7 +3240,7 @@
               "speaker": "Leo",
               "text": "I went to the sea with my family.",
               "ja": "私は家族と海へ行きました。",
-              "study_note": "`with my family` は「家族といっしょに」を表します。",
+              "study_note": "`went` は `go` の過去形です。`the sea` は「海」、`with my family` は「家族といっしょに」です。",
               "audio_url": "audio/item_00290.mp3"
             },
             {
@@ -3280,7 +3280,7 @@
               "speaker": "Leo",
               "text": "Yeah, and at night I saw many beautiful stars.",
               "ja": "うん、それに夜には美しい星をたくさん見ました。",
-              "study_note": "`Yeah` はくだけた同意です。`at night` は「夜に」です。",
+              "study_note": "`at night` は「夜に」です。`saw` は `see` の過去形で、`many beautiful stars` は「たくさんの美しい星」です。",
               "audio_url": "audio/item_00294.mp3"
             },
             {
@@ -3310,7 +3310,7 @@
               "speaker": "Mina",
               "text": "Well, last year I was in Osaka.",
               "ja": "ええと、去年は大阪にいました。",
-              "study_note": "`Well` は答える前のつなぎです。`I was in ...` は「...にいました」です。",
+              "study_note": "`Well` は答える前のつなぎです。`last year` は「去年」、`in Osaka` は「大阪に」です。",
               "audio_url": "audio/item_00297.mp3"
             },
             {
@@ -3320,7 +3320,7 @@
               "speaker": "Leo",
               "text": "Oh, that's right.",
               "ja": "ああ、そうでしたね。",
-              "study_note": "`Oh` は気づきや反応、`That's right` は「その通りです」です。",
+              "study_note": "`That's right.` は「そうでしたね、その通りです」と思い出したり同意したりするときに使えます。",
               "audio_url": "audio/item_00298.mp3"
             },
             {
@@ -3330,7 +3330,7 @@
               "speaker": "Leo",
               "text": "What did you do there?",
               "ja": "そこで何をしましたか。",
-              "study_note": "`there` は前に出た場所を指します。",
+              "study_note": "`What did you do ...?` は過去にしたことをたずねます。`there` は前に出た場所を指します。",
               "audio_url": "audio/item_00299.mp3"
             },
             {
@@ -3340,7 +3340,7 @@
               "speaker": "Mina",
               "text": "I watched a movie with my cousins.",
               "ja": "いとこたちと映画を見ました。",
-              "study_note": "`with my cousins` は「いとこたちといっしょに」です。",
+              "study_note": "`watched` は `watch` の過去形です。`with my cousins` は「いとこたちといっしょに」を表します。",
               "audio_url": "audio/item_00300.mp3"
             },
             {
@@ -3350,7 +3350,7 @@
               "speaker": "Mina",
               "text": "It was fun.",
               "ja": "それは楽しかったです。",
-              "study_note": "`fun` は「楽しい」という意味で使えます。",
+              "study_note": "`It was fun.` は過去の体験について「楽しかったです」と感想を言う定番表現です。",
               "audio_url": "audio/item_00301.mp3"
             }
           ]
@@ -3400,7 +3400,7 @@
               "speaker": "Hana",
               "text": "It was beautiful.",
               "ja": "それは美しかったです。",
-              "study_note": "`It was ...` で過去の感想を言います。",
+              "study_note": "`beautiful` は「美しい、きれいな」という感想を表す形容詞です。過去の感想なので `was` を使っています。",
               "audio_url": "audio/item_00305.mp3"
             },
             {
@@ -3410,7 +3410,7 @@
               "speaker": "Hana",
               "text": "That night, I ate a hot vegetable soup.",
               "ja": "その夜、熱い野菜スープを食べました。",
-              "study_note": "`That night` は「その夜」。`a + adjective + noun` の形で名詞を説明します。",
+              "study_note": "`That night` は「その夜」です。`hot vegetable soup` では `hot` と `vegetable` が `soup` を説明しています。",
               "audio_url": "audio/item_00306.mp3"
             },
             {
@@ -3430,7 +3430,7 @@
               "speaker": "Hana",
               "text": "It was so good.",
               "ja": "それはとてもおいしかったです。",
-              "study_note": "`so` はここでは「とても」という強調です。",
+              "study_note": "`It was ...` は過去の感想です。`so good` は「とてもよかった、とてもおいしかった」と強くほめる表現です。",
               "audio_url": "audio/item_00308.mp3"
             },
             {
@@ -3440,7 +3440,7 @@
               "speaker": "Hana",
               "text": "I had cheesecake for dessert.",
               "ja": "デザートにチーズケーキを食べました。",
-              "study_note": "`for dessert` は「デザートに」です。",
+              "study_note": "食事では `had` が `ate` と同じように「食べた」を表すことがあります。`for dessert` は「デザートに」です。",
               "audio_url": "audio/item_00309.mp3"
             }
           ]
@@ -3460,7 +3460,7 @@
               "speaker": "Aoi",
               "text": "This is your first summer festival in Japan, right?",
               "ja": "これはあなたにとって日本で初めての夏祭りですよね。",
-              "study_note": "`This is your first ... , right?` は初めての経験か確認する表現です。",
+              "study_note": "`your first summer festival in Japan` は「あなたにとって日本で初めての夏祭り」。文末の `right?` は確認です。",
               "audio_url": "audio/item_00310.mp3"
             },
             {
@@ -3470,7 +3470,7 @@
               "speaker": "Ben",
               "text": "Yes.",
               "ja": "はい。",
-              "study_note": "`Yes` は確認への答えです。",
+              "study_note": "`Yes.` は直前の `right?` に対して「はい、そうです」と確認に答えています。",
               "audio_url": "audio/item_00311.mp3"
             },
             {
@@ -3480,7 +3480,7 @@
               "speaker": "Ben",
               "text": "I'm so excited.",
               "ja": "とてもわくわくしています。",
-              "study_note": "`be excited` は「わくわくしている」という気持ちを表します。",
+              "study_note": "`be excited` は「わくわくしている」という気持ちを表します。`so` は気持ちの強さを表す「とても」です。",
               "audio_url": "audio/item_00312.mp3"
             },
             {
@@ -3500,7 +3500,7 @@
               "speaker": "Ben",
               "text": "I want to go to the stage.",
               "ja": "舞台へ行きたいです。",
-              "study_note": "`I want to go to ...` は行きたい場所を言う表現です。",
+              "study_note": "`want to` は「...したい」です。`go to ...` は「...へ行く」という意味です。",
               "audio_url": "audio/item_00314.mp3"
             },
             {
@@ -3510,7 +3510,7 @@
               "speaker": "Ben",
               "text": "I want to see taiko.",
               "ja": "太鼓を見たいです。",
-              "study_note": "`I want to see ...` は見たいものを言います。",
+              "study_note": "`want to` は「...したい」です。`see` は「見る」、`taiko` は和太鼓を指します。",
               "audio_url": "audio/item_00315.mp3"
             },
             {
@@ -3530,7 +3530,7 @@
               "speaker": "Aoi",
               "text": "So you're interested in traditional Japanese culture.",
               "ja": "では、あなたは伝統的な日本文化に興味があるのですね。",
-              "study_note": "`you're interested in ...` は相手の興味を確認する表現です。",
+              "study_note": "`be interested in ...` は「...に興味がある」です。`So` は相手の話から「では、つまり」と受ける働きです。",
               "audio_url": "audio/item_00317.mp3"
             },
             {
@@ -3540,7 +3540,7 @@
               "speaker": "Ben",
               "text": "Yes, I really like drums.",
               "ja": "はい、私は太鼓が本当に好きです。",
-              "study_note": "`I really like ...` は好きな気持ちを強めて言います。",
+              "study_note": "`really` は「本当に」と好きな気持ちを強めます。`drums` は複数形で、太鼓やドラム類をまとめて指します。",
               "audio_url": "audio/item_00318.mp3"
             },
             {
@@ -3550,7 +3550,7 @@
               "speaker": "Aoi",
               "text": "In South Korea, do you go to concerts?",
               "ja": "韓国では、コンサートへ行きますか。",
-              "study_note": "`In South Korea, ...` で場所の話題を先に出しています。",
+              "study_note": "`In South Korea, ...` で場所の話題を先に出しています。`Do you go to ...?` は習慣をたずねる現在形の質問です。",
               "audio_url": "audio/item_00319.mp3"
             },
             {
@@ -3560,7 +3560,7 @@
               "speaker": "Ben",
               "text": "Yes, I like K-pop concerts.",
               "ja": "はい、Kポップのコンサートが好きです。",
-              "study_note": "`K-pop` は音楽ジャンルの名前です。",
+              "study_note": "`K-pop concerts` は「Kポップのコンサート」です。`concerts` は複数形で、コンサート一般を表します。",
               "audio_url": "audio/item_00320.mp3"
             },
             {
@@ -3570,7 +3570,7 @@
               "speaker": "Ben",
               "text": "I also want to eat Japanese festival food.",
               "ja": "日本の祭りの食べ物も食べたいです。",
-              "study_note": "`I also want to ...` は「...もしたい」です。",
+              "study_note": "`I also want to ...` は「...もしたい」です。`Japanese festival food` は日本の祭りで食べる食べ物をまとめて言っています。",
               "audio_url": "audio/item_00321.mp3"
             },
             {
@@ -3590,7 +3590,7 @@
               "speaker": "Ben",
               "text": "After the festival, I want to see penguins at the zoo in Asahikawa.",
               "ja": "祭りの後、旭川の動物園でペンギンを見たいです。",
-              "study_note": "`at the zoo` は場所、`in Asahikawa` は都市を表します。",
+              "study_note": "`After the festival` は「祭りの後」です。`penguins` は複数形で、`at the zoo` は動物園という場所を表します。",
               "audio_url": "audio/item_00323.mp3"
             },
             {
@@ -3610,7 +3610,7 @@
               "speaker": "Aoi",
               "text": "Try local ramen there.",
               "ja": "そこで地元のラーメンを食べてみてください。",
-              "study_note": "`local` は「その地域の」です。`ramen` は食べ物の名前です。",
+              "study_note": "`Try ...` は「...を試してみて、食べてみて」というすすめです。`there` は前に出た場所を指します。",
               "audio_url": "audio/item_00325.mp3"
             }
           ]
@@ -3630,7 +3630,7 @@
               "speaker": "Teacher",
               "text": "Where do you want to go?",
               "ja": "あなたはどこへ行きたいですか。",
-              "study_note": "`Where do you want to + verb?` は「どこへ...したいですか」とたずねます。",
+              "study_note": "`Where` は場所をたずねる語です。`want to go` は「行きたい」、`do you ...?` は現在形の質問です。",
               "audio_url": "audio/item_00326.mp3"
             },
             {
@@ -3640,7 +3640,7 @@
               "speaker": "Emma",
               "text": "I want to go to Seattle.",
               "ja": "シアトルへ行きたいです。",
-              "study_note": "`I want to go to Seattle.` は行きたい場所を言う文です。",
+              "study_note": "`want to go to ...` は「...へ行きたい」という意味です。場所の前に `to` を置きます。",
               "audio_url": "audio/item_00327.mp3"
             },
             {
@@ -3660,7 +3660,7 @@
               "speaker": "Teacher",
               "text": "Why do you want to go there?",
               "ja": "なぜそこへ行きたいのですか。",
-              "study_note": "理由をたずねる橋渡しの文です。",
+              "study_note": "`Why do you want to ...?` は「なぜ...したいのですか」と理由をたずねます。`there` は前に出た場所です。",
               "audio_url": "audio/item_00329.mp3"
             },
             {
@@ -3670,7 +3670,7 @@
               "speaker": "Emma",
               "text": "I want to see my baby cousin.",
               "ja": "幼いいとこに会いたいです。",
-              "study_note": "`I want to see ...` は会いたい人や見たいものを言います。",
+              "study_note": "`baby cousin` は「幼いいとこ」です。`see` は人が目的語のとき「会う」という意味にもなります。",
               "audio_url": "audio/item_00330.mp3"
             },
             {
@@ -3680,7 +3680,7 @@
               "speaker": "Emma",
               "text": "I also want to eat a Seattle Dog.",
               "ja": "シアトルドッグも食べたいです。",
-              "study_note": "`I also want to + verb` は「...もしたい」です。",
+              "study_note": "`also` は「...も」と情報を加えます。`eat a Seattle Dog` は食べたいものを表します。",
               "audio_url": "audio/item_00331.mp3"
             },
             {
@@ -3690,7 +3690,7 @@
               "speaker": "Teacher",
               "text": "What's a Seattle Dog?",
               "ja": "シアトルドッグとは何ですか。",
-              "study_note": "`What's a/an + noun?` はものが何かをたずねる表現です。",
+              "study_note": "`What's ...?` は `What is ...?` の短い形です。`a Seattle Dog` のように、初めて出すものには `a` を付けます。",
               "audio_url": "audio/item_00332.mp3"
             },
             {
@@ -3767,7 +3767,7 @@
               "speaker": "Staff",
               "text": "We have boiled egg, corn, and fried garlic.",
               "ja": "ゆで卵、コーン、揚げにんにくがあります。",
-              "study_note": "食べ物を並べるとき、最後に `and` を使えます。",
+              "study_note": "`boiled egg` は「ゆで卵」、`fried garlic` は「揚げにんにく」です。食べ物を3つ並べるとき、最後の前に `and` を使います。",
               "audio_url": "audio/item_00338.mp3"
             },
             {
@@ -3797,7 +3797,7 @@
               "speaker": "Staff",
               "text": "We also recommend a tuna sandwich.",
               "ja": "ツナサンドイッチもおすすめします。",
-              "study_note": "`also` は別のものを加えるときに使います。",
+              "study_note": "`also` は別のおすすめを加えるときの「も、また」です。`recommend` は「すすめる」という意味です。",
               "audio_url": "audio/item_00341.mp3"
             },
             {
@@ -3807,7 +3807,7 @@
               "speaker": "Staff",
               "text": "You can add onions, avocado, or lettuce.",
               "ja": "玉ねぎ、アボカド、またはレタスを加えられます。",
-              "study_note": "`or` は選択肢の最後に使います。",
+              "study_note": "`add` は「加える」です。選択肢を並べるとき、最後の前に `or` を使います。",
               "audio_url": "audio/item_00342.mp3"
             },
             {
@@ -3827,7 +3827,7 @@
               "speaker": "Staff",
               "text": "Finally, we have small pizza.",
               "ja": "最後に、小さなピザがあります。",
-              "study_note": "`Finally` は最後の項目を示します。",
+              "study_note": "`Finally` は順番の最後を示す語です。`small` は大きさが「小さい」ことを表す形容詞です。",
               "audio_url": "audio/item_00344.mp3"
             },
             {
@@ -3837,7 +3837,7 @@
               "speaker": "Staff",
               "text": "Each pizza starts with tomato sauce and cheese.",
               "ja": "それぞれのピザはトマトソースとチーズから始まります。",
-              "study_note": "`each + 単数名詞` は「それぞれの...」です。",
+              "study_note": "`each + 単数名詞` は「それぞれの...」で、動詞は `starts` のように三単現になります。`start with ...` は「...から始まる」です。",
               "audio_url": "audio/item_00345.mp3"
             },
             {
@@ -3847,7 +3847,7 @@
               "speaker": "Staff",
               "text": "Then choose sausage, shrimp, or mixed vegetables.",
               "ja": "次に、ソーセージ、エビ、またはミックス野菜を選びます。",
-              "study_note": "`then` は順番の「次に」です。",
+              "study_note": "`Then` は順番の「次に」です。`choose ...` は命令文で「...を選んでください」という案内になります。",
               "audio_url": "audio/item_00346.mp3"
             },
             {
@@ -3867,7 +3867,7 @@
               "speaker": "Staff",
               "text": "A lemon dessert comes with it.",
               "ja": "レモンのデザートがそれに付きます。",
-              "study_note": "`dessert` は食後などに食べる甘いものです。",
+              "study_note": "`come with ...` は「...に付いてくる」です。`dessert` は食後などに食べる甘いものです。",
               "audio_url": "audio/item_00348.mp3"
             },
             {
@@ -3877,7 +3877,7 @@
               "speaker": "Staff",
               "text": "Enjoy one of Harbor Food Court's specials today!",
               "ja": "今日、ハーバー・フードコートのスペシャルを1つ楽しんでください。",
-              "study_note": "`special` は店のおすすめメニューです。",
+              "study_note": "`one of ...` は「...のうちの1つ」です。`specials` は店のおすすめメニューを表します。",
               "audio_url": "audio/item_00349.mp3"
             }
           ]
@@ -3924,7 +3924,7 @@
               "speaker": "Staff",
               "text": "Do you want anything with it?",
               "ja": "それと一緒に何かいりますか。",
-              "study_note": "`anything` は「何か」という意味です。`with it` は「それと一緒に」です。",
+              "study_note": "`Do you want ...?` は「...がほしいですか」とたずねます。`anything with it` は注文に何かを付けるか聞く表現です。",
               "audio_url": "audio/item_00352.mp3"
             },
             {
@@ -3934,7 +3934,7 @@
               "speaker": "Customer",
               "text": "Orange juice and French fries, please.",
               "ja": "オレンジジュースとフライドポテトをお願いします。",
-              "study_note": "`A and B` で二つのものをつなげます。",
+              "study_note": "注文では品名だけでも通じます。`please` を付けると「お願いします」とていねいになります。",
               "audio_url": "audio/item_00353.mp3"
             },
             {
@@ -3944,7 +3944,7 @@
               "speaker": "Customer",
               "text": "How much is the total?",
               "ja": "合計はいくらですか。",
-              "study_note": "`How much is ...?` は値段をたずねる表現です。",
+              "study_note": "`How much is ...?` は値段をたずねる表現です。`the total` は全部合わせた金額、つまり「合計」です。",
               "audio_url": "audio/item_00354.mp3"
             },
             {
@@ -3964,7 +3964,7 @@
               "speaker": "Staff",
               "text": "Please pick up your order at that red counter.",
               "ja": "あちらの赤いカウンターでご注文を受け取ってください。",
-              "study_note": "`pick up` は「受け取る」です。`your order` は「あなたの注文」です。",
+              "study_note": "`pick up your order` は「注文を受け取る」です。`at that red counter` は少し離れた赤いカウンターの場所を示します。",
               "audio_url": "audio/item_00356.mp3"
             },
             {
@@ -3974,7 +3974,7 @@
               "speaker": "Customer",
               "text": "Thank you.",
               "ja": "ありがとうございます。",
-              "study_note": "`Thank you.` はお礼を言う表現です。",
+              "study_note": "`Thank you.` はお礼を言う基本表現です。注文や案内のあとにも自然に使えます。",
               "audio_url": "audio/item_00357.mp3"
             }
           ]
@@ -4011,7 +4011,7 @@
               "speaker": "Teacher",
               "text": "Hint 1: I walk a lot after rain.",
               "ja": "ヒント1：私は雨のあとによく歩きます。",
-              "study_note": "`a lot` は「たくさん、よく」という意味です。",
+              "study_note": "`a lot` は動作の多さや頻度を表し、ここでは「よく歩く」です。`after rain` は「雨のあとに」という時を表します。",
               "audio_url": "audio/item_00359.mp3"
             },
             {
@@ -4021,7 +4021,7 @@
               "speaker": "Teacher",
               "text": "I can get very dirty outside.",
               "ja": "私は外でとても汚くなることがあります。",
-              "study_note": "`can + 動詞` は可能性を表します。`get + 形容詞` は「...になる」です。",
+              "study_note": "`get dirty` は「よごれる、よごれた状態になる」です。`very` は意味を強め、`outside` は「外で」という場所を表します。",
               "audio_url": "audio/item_00360.mp3"
             },
             {
@@ -4031,7 +4031,7 @@
               "speaker": "Teacher",
               "text": "I work with my twin brother.",
               "ja": "私は双子の兄弟と一緒に働きます。",
-              "study_note": "`with + 人` は「...と一緒に」という意味です。",
+              "study_note": "`twin brother` は「双子の兄弟」です。`with my twin brother` で「私の双子の兄弟と一緒に」というまとまりになります。",
               "audio_url": "audio/item_00361.mp3"
             },
             {
@@ -4061,7 +4061,7 @@
               "speaker": "Teacher",
               "text": "Good. Let's go to the next one.",
               "ja": "いいですね。次のものに行きましょう。",
-              "study_note": "`next` は「次の」です。",
+              "study_note": "`Let's go to ...` は「...へ行きましょう、...に進みましょう」という提案です。`the next one` は「次のもの」を指します。",
               "audio_url": "audio/item_00364.mp3"
             },
             {
@@ -4071,7 +4071,7 @@
               "speaker": "Teacher",
               "text": "Hint 1: I have two long wings.",
               "ja": "ヒント1：私には長い翼が二つあります。",
-              "study_note": "`have + 複数名詞` で複数のものを持っていることを言います。",
+              "study_note": "`two long wings` は「2つの長い翼」というまとまりです。`wing` は鳥や飛行機などの「翼」を表します。",
               "audio_url": "audio/item_00365.mp3"
             },
             {
@@ -4091,7 +4091,7 @@
               "speaker": "Teacher",
               "text": "You can fly with me above the sea.",
               "ja": "私と一緒に海の上を飛べます。",
-              "study_note": "`with me` は「私と一緒に」です。`can fly` は「飛べる」です。",
+              "study_note": "`fly` は「飛ぶ」です。`with me` は「私と一緒に」、`above the sea` は「海の上に」という場所を表します。",
               "audio_url": "audio/item_00367.mp3"
             },
             {
@@ -4101,7 +4101,7 @@
               "speaker": "Teacher",
               "text": "What am I?",
               "ja": "私は何でしょう。",
-              "study_note": "同じクイズ質問をくり返しています。",
+              "study_note": "`What am I?` は、ものや動物になりきって正体をたずねるクイズの定番表現です。",
               "audio_url": "audio/item_00368.mp3"
             },
             {
@@ -4158,7 +4158,7 @@
               "speaker": "Miki",
               "text": "Who's that with the paint boxes?",
               "ja": "絵の具箱を持っているあの人はだれですか。",
-              "study_note": "`Who's that?` は人の名前や関係をたずねる表現です。",
+              "study_note": "`Who's that?` は人の名前や関係をたずねる表現です。`with the paint boxes` は「絵の具箱を持っている」と人を説明しています。",
               "audio_url": "audio/item_00372.mp3"
             },
             {
@@ -4168,7 +4168,7 @@
               "speaker": "Ren",
               "text": "That's my mother.",
               "ja": "あれは私の母です。",
-              "study_note": "`my mother` は「私の母」です。`This is my ...` と同じ紹介の働きです。",
+              "study_note": "`That's ...` は少し離れた人や写真の中の人を指して「あれは...です」と紹介します。",
               "audio_url": "audio/item_00373.mp3"
             },
             {
@@ -4178,7 +4178,7 @@
               "speaker": "Miki",
               "text": "Where is she in this picture?",
               "ja": "この写真では彼女はどこにいますか。",
-              "study_note": "`Where is + 人?` は場所をたずねます。",
+              "study_note": "`in this picture` は「この写真の中で」と、見る範囲をしぼっています。",
               "audio_url": "audio/item_00374.mp3"
             },
             {
@@ -4188,7 +4188,7 @@
               "speaker": "Ren",
               "text": "She's in her studio tent.",
               "ja": "彼女は自分のスタジオテントにいます。",
-              "study_note": "`her` は「彼女の」です。`She's in ...` は場所を言います。",
+              "study_note": "`her studio tent` は「彼女自身の作業用テント」を表します。`studio` は絵などを作る場所を表す語です。",
               "audio_url": "audio/item_00375.mp3"
             },
             {
@@ -4198,7 +4198,7 @@
               "speaker": "Ren",
               "text": "She teaches art there on weekends.",
               "ja": "彼女は週末にそこで美術を教えています。",
-              "study_note": "`teaches` は三人称単数現在形です。",
+              "study_note": "`art` は教科や活動としての美術です。`there` は前に出た場所を指し、`on weekends` は毎週末の習慣を表します。",
               "audio_url": "audio/item_00376.mp3"
             },
             {
@@ -4208,7 +4208,7 @@
               "speaker": "Ren",
               "text": "She has many students from our town.",
               "ja": "彼女には私たちの町の生徒がたくさんいます。",
-              "study_note": "`has` は `have` の三人称単数形です。`many` は複数名詞と使います。",
+              "study_note": "`many students` は数が多い生徒を表します。`from our town` はその生徒たちがどこから来ているかを説明します。",
               "audio_url": "audio/item_00377.mp3"
             },
             {
@@ -4218,7 +4218,7 @@
               "speaker": "Ren",
               "text": "She lives in a flat near London.",
               "ja": "彼女はロンドンの近くのアパートに住んでいます。",
-              "study_note": "`She lives ...` は主語が三人称単数なので動詞に `-s` が付きます。",
+              "study_note": "`flat` はイギリス英語でアパートの一室を表します。`near London` はロンドンに近い場所を表します。",
               "audio_url": "audio/item_00378.mp3"
             }
           ]
@@ -4238,7 +4238,7 @@
               "speaker": "Ren",
               "text": "My father drives a taxi in London.",
               "ja": "私の父はロンドンでタクシーを運転しています。",
-              "study_note": "職業を別の言い方で説明しています。`father` は「父」です。",
+              "study_note": "`drives a taxi` は「タクシーを運転する」です。主語が `My father` なので動詞は `drives` になります。",
               "audio_url": "audio/item_00379.mp3"
             },
             {
@@ -4248,7 +4248,7 @@
               "speaker": "Miki",
               "text": "So he's busy.",
               "ja": "それなら彼は忙しいですね。",
-              "study_note": "`He's` は `He is` の短縮形です。",
+              "study_note": "`So` は前の話を受けて「だから、それなら」と考えをつなげます。",
               "audio_url": "audio/item_00380.mp3"
             },
             {
@@ -4258,7 +4258,7 @@
               "speaker": "Ren",
               "text": "He knows every old street by the river.",
               "ja": "彼は川のそばの古い通りを全部知っています。",
-              "study_note": "`He knows` は三人称単数現在形です。`every` は「すべての」です。",
+              "study_note": "`every old street` は古い通りを一つ残らず意識する言い方です。`by the river` は川のすぐそばにある場所を表します。",
               "audio_url": "audio/item_00381.mp3"
             },
             {
@@ -4278,7 +4278,7 @@
               "speaker": "Ren",
               "text": "Big Ben is one stop on his route.",
               "ja": "ビッグベンは彼のルート上の一つの立ち寄り先です。",
-              "study_note": "`Big Ben` はロンドンの有名な場所の名前です。",
+              "study_note": "`one stop` は「1つの立ち寄り先」です。`on his route` は「彼のルート上に」という位置を表します。",
               "audio_url": "audio/item_00383.mp3"
             },
             {
@@ -4288,7 +4288,7 @@
               "speaker": "Ren",
               "text": "On Saturdays, he often watches games on TV.",
               "ja": "土曜日には、彼はよくテレビで試合を見ます。",
-              "study_note": "`often` は頻度を表す副詞です。",
+              "study_note": "`often` は「よく」と頻度を表す副詞です。`On Saturdays` は「土曜日には」と習慣の時を表します。",
               "audio_url": "audio/item_00384.mp3"
             },
             {
@@ -4298,7 +4298,7 @@
               "speaker": "Miki",
               "text": "Is football his favorite sport?",
               "ja": "サッカーは彼のお気に入りのスポーツですか。",
-              "study_note": "`favorite` は「お気に入りの」です。",
+              "study_note": "`favorite sport` は一番好きなスポーツを表します。`Is ...?` は be 動詞を文の前に出してたずねる形です。",
               "audio_url": "audio/item_00385.mp3"
             },
             {
@@ -4328,7 +4328,7 @@
               "speaker": "Ren",
               "text": "They wear their favorite team's uniform for the games.",
               "ja": "彼らは試合のときにお気に入りのチームのユニフォームを着ます。",
-              "study_note": "`They wear` は複数主語なので動詞は原形です。`their` は「彼らの」です。",
+              "study_note": "`favorite team's uniform` は好きなチームのユニフォームです。`for the games` は試合のために、または試合の時にという目的・場面を表します。",
               "audio_url": "audio/item_00388.mp3"
             }
           ]
@@ -4348,7 +4348,7 @@
               "speaker": "Miki",
               "text": "Who runs the sports booth?",
               "ja": "スポーツブースを運営しているのはだれですか。",
-              "study_note": "`Who ...?` で人をたずねます。",
+              "study_note": "`runs` はここでは「走る」ではなく「運営する」です。主語になる `Who` を三人称単数のように扱います。",
               "audio_url": "audio/item_00389.mp3"
             },
             {
@@ -4358,7 +4358,7 @@
               "speaker": "Ren",
               "text": "My sister does.",
               "ja": "私の姉です。",
-              "study_note": "`sister` は「姉、妹」です。",
+              "study_note": "`does` は前の `runs the sports booth` を受けて、「運営しています」を短く答えています。",
               "audio_url": "audio/item_00390.mp3"
             },
             {
@@ -4368,7 +4368,7 @@
               "speaker": "Ren",
               "text": "Her name is Nora.",
               "ja": "彼女の名前はノラです。",
-              "study_note": "`Her name is ...` は女性の名前を言う形です。",
+              "study_note": "`Her name is ...` は女性の名前を言う形です。`her` は「彼女の」で、後ろに名詞 `name` が続きます。",
               "audio_url": "audio/item_00391.mp3"
             },
             {
@@ -4398,7 +4398,7 @@
               "speaker": "Ren",
               "text": "She lives with our parents during the week.",
               "ja": "彼女は平日は私たちの両親と住んでいます。",
-              "study_note": "`our` は「私たちの」です。`parents` は複数形です。",
+              "study_note": "`lives with ...` は「...と一緒に住んでいる」です。`during the week` は「平日の間、週の間に」です。",
               "audio_url": "audio/item_00394.mp3"
             },
             {
@@ -4418,7 +4418,7 @@
               "speaker": "Ren",
               "text": "She's a teacher.",
               "ja": "彼女は先生です。",
-              "study_note": "`She's a teacher.` は職業を言う基本形です。",
+              "study_note": "`She's a teacher.` は職業を言う基本形です。職業名を単数で言うときは `a` を付けます。",
               "audio_url": "audio/item_00396.mp3"
             },
             {
@@ -4458,7 +4458,7 @@
               "speaker": "Ren",
               "text": "She teaches P.E. and dance.",
               "ja": "彼女は体育とダンスを教えています。",
-              "study_note": "`teaches` は `teach` に `-es` が付いた形です。",
+              "study_note": "`P.E.` は physical education の略で、体育を表します。`dance` はここでは教科・活動名として使われています。",
               "audio_url": "audio/item_00400.mp3"
             }
           ]
@@ -4478,7 +4478,7 @@
               "speaker": "Miki",
               "text": "Who plays music tonight?",
               "ja": "今夜音楽を演奏するのはだれですか。",
-              "study_note": "`Who ...?` は人をたずねる疑問文です。",
+              "study_note": "`Who plays ...?` は「だれが...しますか」と、動作をする人をたずねる形です。`plays music` は「音楽を演奏する」、`tonight` は「今夜」です。",
               "audio_url": "audio/item_00401.mp3"
             },
             {
@@ -4488,7 +4488,7 @@
               "speaker": "Ren",
               "text": "My brother, Hugo, plays on the small stage.",
               "ja": "私の兄のヒューゴが小さなステージで演奏します。",
-              "study_note": "`brother` は「兄、弟」です。名前を足して紹介できます。",
+              "study_note": "`My brother, Hugo,` のように名前をコンマではさむと、兄弟がだれかを補足できます。`plays on ...` は「...で演奏する」です。",
               "audio_url": "audio/item_00402.mp3"
             },
             {
@@ -4498,7 +4498,7 @@
               "speaker": "Ren",
               "text": "He studies music at university.",
               "ja": "彼は大学で音楽を学んでいます。",
-              "study_note": "`studies` は `study` の三人称単数現在形です。",
+              "study_note": "`studies music` は音楽を専門的に学ぶことを表します。`at university` は大学で、という学ぶ場所を表します。",
               "audio_url": "audio/item_00403.mp3"
             },
             {
@@ -4528,7 +4528,7 @@
               "speaker": "Miki",
               "text": "Is he a guitarist?",
               "ja": "彼はギタリストですか。",
-              "study_note": "`Is he ...?` は `be` 動詞の疑問文です。",
+              "study_note": "`Is he ...?` は「彼は...ですか」とたずねる be 動詞の疑問文です。`a guitarist` は「ギタリスト」で、職業や役割を表す単数名詞には `a` を付けます。",
               "audio_url": "audio/item_00406.mp3"
             },
             {
@@ -4548,7 +4548,7 @@
               "speaker": "Ren",
               "text": "He does not play the guitar in that band.",
               "ja": "彼はそのバンドでギターを弾きません。",
-              "study_note": "`does not play` では動詞は原形です。",
+              "study_note": "`does not play` では `plays` ではなく動詞の原形 `play` を使います。`the guitar` は「ギターを弾く」、`in that band` は「そのバンドで」です。",
               "audio_url": "audio/item_00408.mp3"
             },
             {
@@ -4558,7 +4558,7 @@
               "speaker": "Ren",
               "text": "He plays the bagpipes.",
               "ja": "彼はバグパイプを演奏します。",
-              "study_note": "`He plays ...` は三人称単数なので `plays` になります。",
+              "study_note": "`the bagpipes` は袋と管を使う楽器で、英語では複数形の形で使われます。`plays` は楽器を演奏する時にも使えます。",
               "audio_url": "audio/item_00409.mp3"
             },
             {
@@ -4568,7 +4568,7 @@
               "speaker": "Ren",
               "text": "They are a traditional musical instrument in Scotland.",
               "ja": "それらはスコットランドの伝統的な楽器です。",
-              "study_note": "`They` は前の複数名詞を受けます。",
+              "study_note": "`They` は前の複数名詞 `the bagpipes` を受けます。`traditional musical instrument` は「伝統的な楽器」です。",
               "audio_url": "audio/item_00410.mp3"
             },
             {
@@ -4588,7 +4588,7 @@
               "speaker": "Miki",
               "text": "Does he play them in concerts?",
               "ja": "彼はコンサートでそれらを演奏しますか。",
-              "study_note": "`them` は複数名詞を受ける目的格です。",
+              "study_note": "`them` は複数名詞を受ける目的格で、ここでは `the bagpipes` を指します。`Does he play ...?` では動詞は原形 `play` です。",
               "audio_url": "audio/item_00412.mp3"
             },
             {
@@ -4608,7 +4608,7 @@
               "speaker": "Ren",
               "text": "You can watch his performances on the internet later.",
               "ja": "後でインターネットで彼の演奏を見ることができます。",
-              "study_note": "`can + 動詞の原形` は「...できる」です。`his` は「彼の」です。",
+              "study_note": "`can watch ...` は「...を見ることができる」です。`his performances` は「彼の演奏」、`on the internet later` は「後でインターネットで」です。",
               "audio_url": "audio/item_00414.mp3"
             }
           ]
@@ -4658,7 +4658,7 @@
               "speaker": "Miki",
               "text": "Whose towel is this by the bench?",
               "ja": "ベンチのそばのこのタオルはだれのものですか。",
-              "study_note": "`Whose ...?` は持ち主をたずねる表現です。",
+              "study_note": "`Whose ...?` は持ち主をたずねる表現です。`this by the bench` は「ベンチのそばにあるこの...」と、場所で物を説明しています。",
               "audio_url": "audio/item_00418.mp3"
             },
             {
@@ -4698,7 +4698,7 @@
               "speaker": "Ren",
               "text": "It's Aya's.",
               "ja": "それはアヤのものです。",
-              "study_note": "人名に `’s` を付けると「...のもの」を表します。",
+              "study_note": "`Aya's` のように人名に `'s` を付けると、その人のものを表します。`It's ...` は持ち主を短く答える時にも使えます。",
               "audio_url": "audio/item_00422.mp3"
             },
             {
@@ -4728,7 +4728,7 @@
               "speaker": "Ren",
               "text": "Here is one quiz card for the guide.",
               "ja": "ガイド用のクイズカードが一枚あります。",
-              "study_note": "`Here is ...` は一つのものを示す表現です。",
+              "study_note": "`Here is ...` は一つのものを示す表現です。複数なら `Here are ...` になる点に注意します。",
               "audio_url": "audio/item_00424.mp3"
             },
             {
@@ -4758,7 +4758,7 @@
               "speaker": "Miki",
               "text": "Is he a real person?",
               "ja": "彼は実在の人物ですか。",
-              "study_note": "`Is he ...?` は人についてたずねる疑問文です。",
+              "study_note": "`Is he ...?` は人についてたずねる be 動詞の疑問文です。`a real person` は「実在の人物」で、架空の人物かどうかを確認しています。",
               "audio_url": "audio/item_00427.mp3"
             },
             {
@@ -4808,7 +4808,7 @@
               "speaker": "Ren",
               "text": "He solves difficult problems in the stories.",
               "ja": "彼は物語の中で難しい問題を解決します。",
-              "study_note": "`solves` は三人称単数現在形です。`solve` は「解決する」です。",
+              "study_note": "`solves difficult problems` は難しい問題を解き明かすことを表します。`in the stories` は本の中の物語での出来事だと示します。",
               "audio_url": "audio/item_00432.mp3"
             }
           ]
@@ -4855,7 +4855,7 @@
               "speaker": "Announcer",
               "text": "Please be quiet during each throw.",
               "ja": "それぞれの投球中は静かにしてください。",
-              "study_note": "`Please be ...` はていねいな指示です。`during each ...` は「それぞれの...の間」、`throw` は競技での「投球」です。",
+              "study_note": "`be quiet` は「静かにする」、`during each ...` は「それぞれの...の間」です。`throw` は競技での「投球」です。",
               "audio_url": "audio/item_00435.mp3"
             },
             {
@@ -4865,7 +4865,7 @@
               "speaker": "Announcer",
               "text": "Loud cheers can disturb the players.",
               "ja": "大きな声援は選手たちのじゃまになることがあります。",
-              "study_note": "`can + verb` は「...することがある、...できる」です。`loud cheers` は「大きな声援」、`disturb` は「じゃまする」です。",
+              "study_note": "`can disturb` は「じゃますることがある」と可能性を表します。`loud cheers` は「大きな声援」、`the players` は「その選手たち」です。",
               "audio_url": "audio/item_00436.mp3"
             },
             {
@@ -4875,7 +4875,7 @@
               "speaker": "Announcer",
               "text": "You can clap after the stone stops.",
               "ja": "ストーンが止まったあとで拍手をしてもよいです。",
-              "study_note": "`You can ...` は許可を表せます。`after + clause` は「...したあとで」、`stone stops` は「ストーンが止まる」です。",
+              "study_note": "`clap` は「拍手する」、`after ...` は「...のあとで」です。`the stone stops` では `stops` が「止まる」という動きを表します。",
               "audio_url": "audio/item_00437.mp3"
             },
             {
@@ -4905,7 +4905,7 @@
               "speaker": "Announcer",
               "text": "Please put your bags under your seat.",
               "ja": "かばんは座席の下に置いてください。",
-              "study_note": "`Please put ... under ...` は「...を...の下に置いてください」です。`bags` は「かばん」、`under your seat` は「座席の下に」です。",
+              "study_note": "`put ... under ...` は「...を...の下に置く」です。`bags` は「かばん」、`under your seat` は「自分の座席の下に」です。",
               "audio_url": "audio/item_00440.mp3"
             },
             {
@@ -4935,7 +4935,7 @@
               "speaker": "Announcer",
               "text": "You can drink water here, and the restrooms are on the first floor.",
               "ja": "ここでは水を飲めます。トイレは1階にあります。",
-              "study_note": "`drink` は「飲む」です。`restrooms` は「トイレ」、`on the first floor` は「1階に」です。",
+              "study_note": "`can drink water` は「水を飲むことができる」、`restrooms` は「トイレ」です。`on the first floor` は「1階に」を表します。",
               "audio_url": "audio/item_00443.mp3"
             },
             {
@@ -4945,7 +4945,7 @@
               "speaker": "Announcer",
               "text": "Please enjoy yourself.",
               "ja": "どうぞお楽しみください。",
-              "study_note": "`Please enjoy yourself.` は「どうぞ楽しんでください」というていねいな締めの表現です。",
+              "study_note": "`enjoy yourself` は「楽しむ」という意味です。`Please` を前に置くと、ていねいな呼びかけになります。",
               "audio_url": "audio/item_00444.mp3"
             }
           ]
@@ -5002,7 +5002,7 @@
               "speaker": "Ken",
               "text": "He is throwing a football.",
               "ja": "彼はフットボールを投げています。",
-              "study_note": "`He is + -ing` は「彼は今...しています」。`a football` は1つのボールです。",
+              "study_note": "`throwing` はボールなどを投げる動作です。`football` はアメリカンフットボールで使うボールを指します。",
               "audio_url": "audio/item_00448.mp3"
             },
             {
@@ -5012,7 +5012,7 @@
               "speaker": "Yui",
               "text": "He's the captain of his school's football team.",
               "ja": "彼は自分の学校のフットボールチームのキャプテンです。",
-              "study_note": "`He's the ...` は役割を紹介します。`the captain of ...` は「...のキャプテン」です。",
+              "study_note": "`captain` はチームをまとめる役割の人です。`his school's football team` は「彼の学校のフットボールチーム」というまとまりです。",
               "audio_url": "audio/item_00449.mp3"
             },
             {
@@ -5042,7 +5042,7 @@
               "speaker": "Ken",
               "text": "Our school doesn't have a cafeteria.",
               "ja": "私たちの学校にはカフェテリアがありません。",
-              "study_note": "`Our school ...` は「私たちの学校は...」。`doesn't have ...` は「持っていない」です。",
+              "study_note": "`doesn't have ...` は「...がない」と言う否定です。`cafeteria` は学校などの食堂を表します。",
               "audio_url": "audio/item_00460.mp3"
             },
             {
@@ -5062,7 +5062,7 @@
               "speaker": "Ken",
               "text": "Cafeteria?",
               "ja": "カフェテリアですか。",
-              "study_note": "相手の言葉をくり返すと、驚きや確認を表せます。",
+              "study_note": "`Cafeteria?` のように相手の言葉をくり返すと、驚きや確認を表せます。",
               "audio_url": "audio/item_00462.mp3"
             },
             {
@@ -5072,7 +5072,7 @@
               "speaker": "Yui",
               "text": "They're eating in the school cafeteria.",
               "ja": "彼らは学校のカフェテリアで食べています。",
-              "study_note": "`They're + -ing` は `They are + -ing` の短縮形です。",
+              "study_note": "`They're` は `They are` の短縮形です。`school cafeteria` は学校の食堂で、`in ...` は場所の中を表します。",
               "audio_url": "audio/item_00463.mp3"
             },
             {
@@ -5082,7 +5082,7 @@
               "speaker": "Ken",
               "text": "Are they eating in the classroom?",
               "ja": "彼らは教室で食べているのですか。",
-              "study_note": "`Are ... + -ing?` は今している動作をたずねます。",
+              "study_note": "`Are they + -ing?` は今している動作をたずねます。`in the classroom` は「教室で」で、食べている場所を表します。",
               "audio_url": "audio/item_00464.mp3"
             },
             {
@@ -5112,7 +5112,7 @@
               "speaker": "Yui",
               "text": "He is choosing his lunch from a tray line.",
               "ja": "彼は配膳の列で昼食を選んでいます。",
-              "study_note": "`choosing` は `choose` の進行形です。`his lunch` は「彼の昼食」です。",
+              "study_note": "`is choosing ...` は「...を選んでいる」という進行形です。`from a tray line` は「配膳の列から」で、どこから選ぶかを表します。",
               "audio_url": "audio/item_00467.mp3"
             }
           ]
@@ -5132,7 +5132,7 @@
               "speaker": "Ken",
               "text": "Is this his school schedule board?",
               "ja": "これは彼の学校の時間割ボードですか。",
-              "study_note": "写真の内容を確認する橋渡しの質問です。",
+              "study_note": "`school schedule` は学校の時間割や予定を表します。`board` は情報を貼ったり書いたりする板や掲示です。",
               "audio_url": "audio/item_00452.mp3"
             },
             {
@@ -5152,7 +5152,7 @@
               "speaker": "Ken",
               "text": "Everyone has a different schedule.",
               "ja": "みんな違う時間割を持っています。",
-              "study_note": "`Everyone has ...` は単数扱いで `has` を使います。",
+              "study_note": "`everyone` は「みんな」でも英語では単数扱いです。`different schedule` は人によって違う時間割を表します。",
               "audio_url": "audio/item_00454.mp3"
             },
             {
@@ -5162,7 +5162,7 @@
               "speaker": "Yui",
               "text": "This is a picture of a short break between classes.",
               "ja": "これは授業と授業の間の短い休みの写真です。",
-              "study_note": "`This is a picture of ...` は写真の内容を説明します。`between classes` は「授業と授業の間」です。",
+              "study_note": "`short break` は短い休み時間です。`between classes` は2つの授業にはさまれた時間を表します。",
               "audio_url": "audio/item_00455.mp3"
             },
             {
@@ -5172,7 +5172,7 @@
               "speaker": "Ken",
               "text": "The girl is carrying gym shoes to P.E. class.",
               "ja": "その女の子は体育の授業へ体育館シューズを運んでいます。",
-              "study_note": "`The girl is + -ing` は一人の女の子の今の動作を表します。",
+              "study_note": "`carrying ... to ...` は「...を...へ運んでいる」です。`P.E.` は体育を表します。",
               "audio_url": "audio/item_00456.mp3"
             },
             {
@@ -5182,7 +5182,7 @@
               "speaker": "Yui",
               "text": "The boy is going to music class.",
               "ja": "その男の子は音楽の授業へ行っています。",
-              "study_note": "`The boy is + -ing` は一人の男の子の今の動作を表します。",
+              "study_note": "`music class` は音楽の授業です。`is going to ...` は今その場所へ向かっている途中の動作を表します。",
               "audio_url": "audio/item_00457.mp3"
             },
             {
@@ -5202,7 +5202,7 @@
               "speaker": "Yui",
               "text": "These students are walking to their next class.",
               "ja": "この生徒たちは次の授業へ歩いています。",
-              "study_note": "`These students are + -ing` は複数の人の今の動作を表します。",
+              "study_note": "`their next class` は「彼らの次の授業」で、`their` は複数の人の所有を表します。",
               "audio_url": "audio/item_00459.mp3"
             },
             {
@@ -5212,7 +5212,7 @@
               "speaker": "Yui",
               "text": "Some students buy lunch at the cafeteria.",
               "ja": "何人かの生徒はカフェテリアで昼食を買います。",
-              "study_note": "`Some students ...` は「何人かの生徒は...」。`buy lunch` は「昼食を買う」です。",
+              "study_note": "`some students` は全員ではなく一部の生徒を指します。`buy lunch` は昼食を買うこと、`at the cafeteria` は買う場所を表します。",
               "audio_url": "audio/item_00468.mp3"
             },
             {
@@ -5232,7 +5232,7 @@
               "speaker": "Ken",
               "text": "What kind of food do they bring?",
               "ja": "彼らはどんな種類の食べ物を持ってくるのですか。",
-              "study_note": "`What kind of ...?` は種類をたずねる表現です。",
+              "study_note": "`What kind of ...?` は種類をたずねる表現です。`do they bring?` では `do` を使い、主語 `they` のふだんの行動をたずねています。",
               "audio_url": "audio/item_00470.mp3"
             },
             {
@@ -5242,7 +5242,7 @@
               "speaker": "Yui",
               "text": "Well, sandwiches and fresh fruit are common.",
               "ja": "そうですね、サンドイッチと新鮮な果物が一般的です。",
-              "study_note": "`Well` は答える前のつなぎ言葉です。`A and B are ...` は2つ以上の主語に使います。",
+              "study_note": "`Well,` は答えを考えながら話し始めるときの言葉です。`fresh fruit` は新鮮な果物、`common` はよく見られることを表します。",
               "audio_url": "audio/item_00471.mp3"
             },
             {
@@ -5252,7 +5252,7 @@
               "speaker": "Ken",
               "text": "This food table is fun.",
               "ja": "この食べ物の表は楽しいです。",
-              "study_note": "写真から表へ話題を移す橋渡しの文です。",
+              "study_note": "`This food table` は「この食べ物の表」です。`fun` は「楽しい、おもしろい」という気持ちを表す形容詞です。",
               "audio_url": "audio/item_00472.mp3"
             },
             {
@@ -5262,7 +5262,7 @@
               "speaker": "Yui",
               "text": "Is this boy eating a sandwich?",
               "ja": "この男の子はサンドイッチを食べているのですか。",
-              "study_note": "`Is this boy + -ing?` は一人の男の子の今の動作をたずねます。",
+              "study_note": "`this boy` は写真などの中の近くに見える男の子を指します。`eating a sandwich` はサンドイッチを食べている動作です。",
               "audio_url": "audio/item_00473.mp3"
             },
             {
@@ -5282,7 +5282,7 @@
               "speaker": "Yui",
               "text": "He is eating a taco.",
               "ja": "彼はタコスを食べています。",
-              "study_note": "`He is eating ...` は「彼は今...を食べています」。`a taco` は1つの食べ物です。",
+              "study_note": "`eating` は食べている動作です。`a taco` はメキシコ料理のタコスを1つ数える言い方です。",
               "audio_url": "audio/item_00475.mp3"
             },
             {
@@ -5292,7 +5292,7 @@
               "speaker": "Ken",
               "text": "It's a popular Mexican food.",
               "ja": "それは人気のあるメキシコ料理です。",
-              "study_note": "`It's a ...` はすでに話題に出たものを説明します。`popular` は「人気がある」です。",
+              "study_note": "`popular` は多くの人に好まれていることを表します。`Mexican food` はメキシコの料理です。",
               "audio_url": "audio/item_00476.mp3"
             }
           ]
@@ -5312,7 +5312,7 @@
               "speaker": "Ken",
               "text": "Look at the lunch news.",
               "ja": "昼食のお知らせを見てください。",
-              "study_note": "`Look at ...` を復習する橋渡しの文です。",
+              "study_note": "`Look at ...` は「...を見てください」という命令文です。`the lunch news` は昼食についてのお知らせを指します。",
               "audio_url": "audio/item_00477.mp3"
             },
             {
@@ -5322,7 +5322,7 @@
               "speaker": "Yui",
               "text": "We can choose our dessert at lunch next Wednesday.",
               "ja": "来週の水曜日、昼食のときに私たちはデザートを選べます。",
-              "study_note": "`We can choose ...` は「私たちは...を選べます」。`our ...` は「私たちの...」です。",
+              "study_note": "`choose` は「選ぶ」、`dessert` は「デザート」です。`next Wednesday` は「来週の水曜日」です。",
               "audio_url": "audio/item_00478.mp3"
             },
             {
@@ -5342,7 +5342,7 @@
               "speaker": "Ken",
               "text": "I'm so excited.",
               "ja": "私はとてもわくわくしています。",
-              "study_note": "`I'm so ...` は「私はとても...です」。`so` は形容詞を強めます。",
+              "study_note": "`excited` は楽しみでわくわくしている気持ちです。`so` はその気持ちの強さを表します。",
               "audio_url": "audio/item_00480.mp3"
             },
             {
@@ -5362,7 +5362,7 @@
               "speaker": "Ken",
               "text": "I want chocolate cake.",
               "ja": "私はチョコレートケーキがほしいです。",
-              "study_note": "`I want ...` は「私は...がほしいです」。",
+              "study_note": "`want ...` はほしいものを言う表現です。`chocolate cake` は2語で1つの食べ物名として使われています。",
               "audio_url": "audio/item_00482.mp3"
             },
             {
@@ -5372,7 +5372,7 @@
               "speaker": "Yui",
               "text": "I want apple pie.",
               "ja": "私はアップルパイがほしいです。",
-              "study_note": "同じ形で別のほしいものを言えます。",
+              "study_note": "`want ...` はほしいものを言う表現です。`apple pie` は2語で1つのデザート名として使われています。",
               "audio_url": "audio/item_00483.mp3"
             },
             {
@@ -5382,7 +5382,7 @@
               "speaker": "Ken",
               "text": "I can't wait!",
               "ja": "待ちきれません。",
-              "study_note": "`I can't ...` は「...できない」。`I can't wait!` は楽しみで待てない気持ちを表します。",
+              "study_note": "`can't` は `cannot` の短縮形で「...できない」です。`wait` は「待つ」という意味です。",
               "audio_url": "audio/item_00484.mp3"
             },
             {
@@ -5432,7 +5432,7 @@
               "speaker": "Olivia",
               "text": "This is a picture of my favorite class.",
               "ja": "これは私の好きな授業の写真です。",
-              "study_note": "`This is a picture of ...` は写真の内容を紹介します。`of my favorite ...` は「私の一番好きな...の」です。",
+              "study_note": "`favorite` はいちばん好きなものを表す語です。`my favorite class` は自分が特に好きな授業を指します。",
               "audio_url": "audio/item_00489.mp3"
             },
             {
@@ -5442,7 +5442,7 @@
               "speaker": "Olivia",
               "text": "We are studying Spanish.",
               "ja": "私たちはスペイン語を勉強しています。",
-              "study_note": "`We are studying ...` は「私たちは今...を勉強しています」。",
+              "study_note": "`studying` は `study` のing形です。`Spanish` は「スペイン語」で、言語名は英語ではふつう大文字で始めます。",
               "audio_url": "audio/item_00490.mp3"
             },
             {
@@ -5452,7 +5452,7 @@
               "speaker": "Olivia",
               "text": "We are listening to a story in Spanish.",
               "ja": "私たちはスペイン語で物語を聞いています。",
-              "study_note": "`We are listening to ...` は「私たちは...を聞いています」。`in Spanish` は使われている言語を表します。",
+              "study_note": "`listening to` は「...を聞いている」です。`story` は「物語」、`in Spanish` はスペイン語で話されていることを表します。",
               "audio_url": "audio/item_00491.mp3"
             },
             {
@@ -5482,7 +5482,7 @@
               "speaker": "Olivia",
               "text": "Many students choose Japanese.",
               "ja": "多くの生徒は日本語を選びます。",
-              "study_note": "`Many students choose ...` は「多くの生徒は...を選びます」。",
+              "study_note": "`many` は数が多いことを表します。`Japanese` は言語名では「日本語」で、英語では大文字で始めます。",
               "audio_url": "audio/item_00494.mp3"
             },
             {
@@ -5502,7 +5502,7 @@
               "speaker": "Olivia",
               "text": "Please share this e-mail with your friends.",
               "ja": "このメールをあなたの友だちと共有してください。",
-              "study_note": "`Share this e-mail with ...` は「このメールを...と共有して」です。",
+              "study_note": "`Please share ... with ...` は「...を...と共有してください」という形です。`this e-mail` は共有するもの、`your friends` は共有する相手です。",
               "audio_url": "audio/item_00496.mp3"
             },
             {
@@ -5559,7 +5559,7 @@
               "speaker": "Guide",
               "text": "It's three experiences in one.",
               "ja": "3つの体験が1つになっています。",
-              "study_note": "`It's three ... in one.` は「3つの...が1つにまとまっている」という意味です。`experience` は「体験」です。",
+              "study_note": "`three experiences` は「3つの体験」で、`experiences` は複数形です。`in one` は「1つの中に、1つにまとまって」という意味を加えます。",
               "audio_url": "audio/item_00500.mp3"
             },
             {
@@ -5579,7 +5579,7 @@
               "speaker": "Guide",
               "text": "Shop for fresh fruits and vegetables from local farmers.",
               "ja": "地元の農家から新鮮な果物や野菜を買いましょう。",
-              "study_note": "`Shop for ...` は「...を買いに行く、探して買う」です。`fresh fruits and vegetables` は「新鮮な果物や野菜」です。",
+              "study_note": "`Shop for ...` は、目的のものを探して買う感じです。`fresh fruits and vegetables` は新鮮な農産物のまとまりで、`from local farmers` は買う相手や出どころを表します。",
               "audio_url": "audio/item_00502.mp3"
             },
             {
@@ -5599,7 +5599,7 @@
               "speaker": "Guide",
               "text": "Go to the craft area next.",
               "ja": "次にクラフトエリアへ行ってください。",
-              "study_note": "`Go to ...` は「...へ行ってください」という指示です。`craft area` は目標外語句ですが、場面を分かりやすくします。",
+              "study_note": "`craft area` は手作り品などを扱う場所を指します。`next` は文末で「次に」と順番を示します。",
               "audio_url": "audio/item_00504.mp3"
             },
             {
@@ -5619,7 +5619,7 @@
               "speaker": "Guide",
               "text": "You can buy handmade candles and organic soaps.",
               "ja": "手作りのろうそくやオーガニック石けんを買えます。",
-              "study_note": "`You can buy ...` は「...を買うことができます」です。`handmade candles` と `organic soaps` は売り物の名詞句です。",
+              "study_note": "`handmade candles` は手作りのろうそく、`organic soaps` は自然素材などを意識した石けんです。`and` で2種類の商品を並べています。",
               "audio_url": "audio/item_00506.mp3"
             },
             {
@@ -5669,7 +5669,7 @@
               "speaker": "Guide",
               "text": "Come to Crown Park with your family.",
               "ja": "家族とクラウン公園に来てください。",
-              "study_note": "`Come to ...` は「...に来てください」です。`with your family` は目標外ですが、呼びかけを自然にします。",
+              "study_note": "`Come to ...` は「...に来てください」と相手を誘う命令文です。`with your family` は「家族と一緒に」です。",
               "audio_url": "audio/item_00511.mp3"
             },
             {
@@ -5689,7 +5689,7 @@
               "speaker": "Guide",
               "text": "Enjoy food, music, and shopping at the same time.",
               "ja": "食べ物、音楽、買い物を同時に楽しんでください。",
-              "study_note": "`at the same time` は「同時に」です。3つの内容を並べ、イベントのまとめにしています。",
+              "study_note": "`Enjoy A, B, and C` は3つのものを並べて「A、B、Cを楽しんでください」と言う形です。`at the same time` は「同時に」です。",
               "audio_url": "audio/item_00513.mp3"
             }
           ]
@@ -5746,7 +5746,7 @@
               "speaker": "Ren",
               "text": "I don't feel well.",
               "ja": "気分がよくありません。",
-              "study_note": "`I don't ...` は「私は...しません」という否定です。`I don't feel well.` は体調がよくないことを伝える表現です。",
+              "study_note": "`feel well` は体調や気分がよい状態を表します。`don't` が付くと、その状態ではないことを伝えます。",
               "audio_url": "audio/item_00517.mp3"
             },
             {
@@ -5766,7 +5766,7 @@
               "speaker": "Ren",
               "text": "I have a headache.",
               "ja": "頭痛がします。",
-              "study_note": "`I have a ...` は症状を言うときにも使えます。`headache` は「頭痛」です。",
+              "study_note": "`have` は症状を言うときにも使えます。`headache` は「頭痛」という意味です。",
               "audio_url": "audio/item_00519.mp3"
             },
             {
@@ -5833,7 +5833,7 @@
               "speaker": "MC",
               "text": "Welcome to Sports Challenge Day.",
               "ja": "スポーツ・チャレンジ・デーへようこそ。",
-              "study_note": "場面を始める橋渡しの文です。`Welcome to ...` は「...へようこそ」です。",
+              "study_note": "`Welcome to ...` は「...へようこそ」と人を迎える表現です。`Sports Challenge Day` のような行事名の前にも使えます。",
               "audio_url": "audio/item_00524.mp3"
             },
             {
@@ -5843,7 +5843,7 @@
               "speaker": "MC",
               "text": "We have a special guest for the first event.",
               "ja": "最初のイベントに特別ゲストをお迎えしています。",
-              "study_note": "`We have ...` は「私たちには...がいます／あります」。`special guest` は招かれた特別な人です。",
+              "study_note": "`special guest` は招かれた特別な人。`first event` はいくつかある行事の最初のものを指します。",
               "audio_url": "audio/item_00525.mp3"
             },
             {
@@ -5853,7 +5853,7 @@
               "speaker": "Yui",
               "text": "Who is he?",
               "ja": "彼はだれですか。",
-              "study_note": "ゲストについてたずねる短い橋渡しの疑問文です。",
+              "study_note": "`Who is ...?` は「...はだれですか」と人をたずねる疑問文です。`he` は男性を指す代名詞です。",
               "audio_url": "audio/item_00526.mp3"
             },
             {
@@ -5863,7 +5863,7 @@
               "speaker": "MC",
               "text": "He’s a player in wheelchair basketball.",
               "ja": "彼は車いすバスケットボールの選手です。",
-              "study_note": "`He’s a ...` は男性を紹介する形。`player` は競技をする人です。",
+              "study_note": "`player in wheelchair basketball` は「車いすバスケットボールの選手」です。`wheelchair basketball` が競技名として `player` を説明しています。",
               "audio_url": "audio/item_00527.mp3"
             },
             {
@@ -5883,7 +5883,7 @@
               "speaker": "Yui",
               "text": "Did the team get a medal?",
               "ja": "そのチームはメダルを取りましたか。",
-              "study_note": "過去の事実を `Did ...?` でたずねる橋渡しの文です。",
+              "study_note": "`get a medal` は「メダルを取る」。`the team` は前に出た日本代表チームを指します。",
               "audio_url": "audio/item_00529.mp3"
             },
             {
@@ -5923,7 +5923,7 @@
               "speaker": "MC",
               "text": "Later, you can try a short game with him.",
               "ja": "あとで、みなさんは彼と短いゲームを体験できます。",
-              "study_note": "`later` は「あとで」。`you can ...` は機会があること、`with him` は「彼と一緒に」を表します。",
+              "study_note": "`later` は「あとで」。`try a short game` は短い試合を体験してみること、`with him` は相手が彼であることを表します。",
               "audio_url": "audio/item_00533.mp3"
             }
           ]
@@ -5953,7 +5953,7 @@
               "speaker": "Guest",
               "text": "I had a big goal: become a good shooter.",
               "ja": "私には大きな目標がありました。よいシューターになることです。",
-              "study_note": "`had` は `have` の過去形。コロンの後に目標の内容を置きます。",
+              "study_note": "`big goal` は大きな目標。`become a good shooter` は、シュートがうまい選手になるという目標の内容です。",
               "audio_url": "audio/item_00535.mp3"
             },
             {
@@ -5963,7 +5963,7 @@
               "speaker": "Guest",
               "text": "First, I did not think about games.",
               "ja": "まず、私は試合のことは考えませんでした。",
-              "study_note": "`First,` は最初の段階を示します。次の文へつなぐ橋渡しです。",
+              "study_note": "`did not think about ...` は「...について考えなかった」です。`First,` は手順や話の最初を示します。",
               "audio_url": "audio/item_00536.mp3"
             },
             {
@@ -5983,7 +5983,7 @@
               "speaker": "Guest",
               "text": "I set small goals: pass well, shoot with one hand, and move quickly.",
               "ja": "私は小さな目標を立てました。よいパスをすること、片手でシュートすること、すばやく動くことです。",
-              "study_note": "`I set small goals: ...` はコロンの後に目標を列挙します。`shoot with one hand` は方法を表します。",
+              "study_note": "`small goals:` の後に、`pass well`, `shoot with one hand`, `move quickly` のような練習目標を並べています。",
               "audio_url": "audio/item_00538.mp3"
             },
             {
@@ -5993,7 +5993,7 @@
               "speaker": "Guest",
               "text": "Every goal was for my wheelchair skills.",
               "ja": "どの目標も私の車いすの技術のためでした。",
-              "study_note": "`my wheelchair skills` の中で `wheelchair` が具体的な技能を説明しています。",
+              "study_note": "`Every goal` は「どの目標も」という意味です。`for my wheelchair skills` は車いすを使う技術を伸ばすため、という目的を表します。",
               "audio_url": "audio/item_00539.mp3"
             },
             {
@@ -6033,7 +6033,7 @@
               "speaker": "Guest",
               "text": "For a big goal, set small goals first.",
               "ja": "大きな目標には、まず小さな目標を立てましょう。",
-              "study_note": "`For ...,` で対象を示し、命令文で助言します。`first` は優先順位を表します。",
+              "study_note": "`a big goal` に向けて、先に `small goals` を立てるという助言です。`first` は順番の最初を表します。",
               "audio_url": "audio/item_00543.mp3"
             }
           ]
@@ -6113,7 +6113,7 @@
               "speaker": "Ren",
               "text": "Did you read it on the train?",
               "ja": "電車でそれを読みましたか。",
-              "study_note": "`Did you ...?` は過去の行動をたずねます。`it` はインタビューを指します。",
+              "study_note": "`read it` の `it` は前に出たインタビューを指します。`on the train` は読む場所や場面を表します。",
               "audio_url": "audio/item_00550.mp3"
             },
             {
@@ -6143,7 +6143,7 @@
               "speaker": "Ren",
               "text": "Can I borrow it before lunch?",
               "ja": "昼食前にそれを借りてもいいですか。",
-              "study_note": "`Can I ...?` は許可を求める形。`borrow` は借りて返すことです。",
+              "study_note": "`borrow` は借りてあとで返すこと。`before lunch` は昼食より前の時間を表します。",
               "audio_url": "audio/item_00553.mp3"
             },
             {
@@ -6183,7 +6183,7 @@
               "speaker": "Magazine",
               "text": "Special interview: a wheelchair basketball player",
               "ja": "特別インタビュー：車いすバスケットボール選手",
-              "study_note": "`special interview` は特集されたインタビューという意味です。",
+              "study_note": "`a wheelchair basketball player` は「車いすバスケットボール選手」で、1人の選手なので `a` が付きます。",
               "audio_url": "audio/item_00556.mp3"
             },
             {
@@ -6193,7 +6193,7 @@
               "speaker": "Reporter",
               "text": "How did you become a successful athlete?",
               "ja": "どのようにして成功したアスリートになったのですか。",
-              "study_note": "`How did you ...?` は過去の道筋をたずねます。`become` は「...になる」です。",
+              "study_note": "`How` は方法や道筋をたずねます。`become` は「...になる」、`successful athlete` は結果を出した選手を表します。",
               "audio_url": "audio/item_00557.mp3"
             },
             {
@@ -6203,7 +6203,7 @@
               "speaker": "Guest",
               "text": "I had a goal: be the best player on my team.",
               "ja": "私には目標がありました。自分のチームで一番よい選手になることです。",
-              "study_note": "`I had a goal: ...` は目標の内容を続ける形。`on my team` は所属を表します。",
+              "study_note": "`goal:` の後に目標の内容が続きます。`the best player` は一番よい選手、`on my team` は自分のチーム内でという範囲です。",
               "audio_url": "audio/item_00558.mp3"
             },
             {
@@ -6233,7 +6233,7 @@
               "speaker": "Reporter",
               "text": "Did you change your goal then?",
               "ja": "そのとき、目標を変えたのですか。",
-              "study_note": "`Did you change ...?` は過去に変えたかをたずねます。",
+              "study_note": "`change your goal` は目標を変えること。`then` は話の中の「そのとき」を指します。",
               "audio_url": "audio/item_00561.mp3"
             },
             {
@@ -6303,7 +6303,7 @@
               "speaker": "Reading",
               "text": "In 2021, people enjoyed a new Olympic sport: skateboarding.",
               "ja": "2021年、人々は新しいオリンピック競技、スケートボードを楽しみました。",
-              "study_note": "`In 2021` は年を表します。コロンの後でスポーツ名を示しています。",
+              "study_note": "`In 2021` は「2021年に」と時を表します。`a new Olympic sport: skateboarding` はコロンの後で具体例を示す形です。",
               "audio_url": "audio/item_00567.mp3"
             },
             {
@@ -6313,7 +6313,7 @@
               "speaker": "Reading",
               "text": "They loved its energy.",
               "ja": "人々はその活気を気に入りました。",
-              "study_note": "`They` は前の `people` を指します。`its` はスポーツを指す所有の語です。",
+              "study_note": "`They` は前の `people` を指します。`its energy` はスケートボードの持つ活気や勢いを表します。",
               "audio_url": "audio/item_00568.mp3"
             },
             {
@@ -6323,7 +6323,7 @@
               "speaker": "Reading",
               "text": "Skateboarders did amazing tricks near the crowd.",
               "ja": "スケートボーダーたちは観客の近くですばらしい技をしました。",
-              "study_note": "`did` はここでは「した」。`amazing tricks` は印象的な技です。",
+              "study_note": "`amazing tricks` は見ている人を驚かせるような技。`near the crowd` は観客の近くで行ったことを表します。",
               "audio_url": "audio/item_00569.mp3"
             },
             {
@@ -6343,7 +6343,7 @@
               "speaker": "Reading",
               "text": "Even at practice, skateboarders cheered each other on.",
               "ja": "練習のときでさえ、スケートボーダーたちは互いに声援を送りました。",
-              "study_note": "`Even at practice` は「練習でさえ」。`each other` は「お互いに」です。",
+              "study_note": "`Even at practice` は「練習でさえ」。`cheered each other on` は「お互いを応援した」という句動詞表現です。",
               "audio_url": "audio/item_00571.mp3"
             },
             {
@@ -6373,7 +6373,7 @@
               "speaker": "Reading",
               "text": "Sports are for courage and friendship, not only for victory.",
               "ja": "スポーツは勇気と友情のためのもので、勝利のためだけではありません。",
-              "study_note": "`Sports are for ..., not only for ...` は目的が一つだけではないことを説明します。",
+              "study_note": "`not only for ...` は「...のためだけではない」です。`courage` は「勇気」、`friendship` は「友情」です。",
               "audio_url": "audio/item_00574.mp3"
             },
             {
@@ -6490,7 +6490,7 @@
               "speaker": "Narrator",
               "text": "The rabbit holds his pocket watch near his ear.",
               "ja": "そのウサギは自分の懐中時計を耳の近くに持っています。",
-              "study_note": "`The rabbit` は特定のウサギを指します。`holds` は三人称単数現在形、`his` は「彼の、自分の」です。",
+              "study_note": "`pocket watch` は「懐中時計」です。`near his ear` は耳に近い位置を表します。`holds` は `hold` の三単現です。",
               "audio_url": "audio/item_00584.mp3"
             },
             {
@@ -6510,7 +6510,7 @@
               "speaker": "Narrator",
               "text": "He runs under a tree and into a round hole.",
               "ja": "彼は木の下を走り、丸い穴へ入ります。",
-              "study_note": "`runs` は `run` の三人称単数現在形です。`run into ...` は「走って...に入る」という意味です。",
+              "study_note": "`under a tree` は木の下の場所を表します。`into a round hole` は丸い穴の中へ向かう動きです。`runs` は `run` の三単現です。",
               "audio_url": "audio/item_00586.mp3"
             },
             {
@@ -6520,7 +6520,7 @@
               "speaker": "Narrator",
               "text": "Rina follows the rabbit with her notebook.",
               "ja": "リナはノートを持ってそのウサギについて行きます。",
-              "study_note": "`follows` は「ついて行く」です。すでに出てきたウサギなので `the rabbit` を使います。",
+              "study_note": "`follows` は後について行く動きを表します。`with her notebook` はノートを持っている状態を添えます。`the rabbit` はすでに出てきたウサギです。",
               "audio_url": "audio/item_00587.mp3"
             },
             {
@@ -6530,7 +6530,7 @@
               "speaker": "Narrator",
               "text": "She falls into a quiet tunnel.",
               "ja": "彼女は静かなトンネルに落ちます。",
-              "study_note": "`She` は女の子を受ける主語です。`falls into ...` は「...に落ちる」という意味です。",
+              "study_note": "`falls into ...` は中へ落ちる動きを表します。`quiet tunnel` は静かなトンネルという場所を表します。",
               "audio_url": "audio/item_00588.mp3"
             },
             {
@@ -6550,7 +6550,7 @@
               "speaker": "Narrator",
               "text": "At last, she goes to Wonderland.",
               "ja": "ついに、彼女はワンダーランドへ行きます。",
-              "study_note": "`goes to ...` は「...へ行く」です。`Wonderland` は物語の場所の名前です。",
+              "study_note": "`At last` は長い流れのあとに「ついに」と言う表現です。`goes to ...` はある場所へ向かう動きです。`Wonderland` は物語の場所の名前です。",
               "audio_url": "audio/item_00590.mp3"
             },
             {
@@ -6570,7 +6570,7 @@
               "speaker": "Narrator",
               "text": "The egg said, \"My card says Oval.\"",
               "ja": "その卵は「私のカードにはオーバルと書いてあります」と言いました。",
-              "study_note": "`said` は `say` の過去形です。引用符の中が言った内容です。",
+              "study_note": "`said` は `say` の過去形です。`My card says Oval.` の `says` は、カードなどに「...と書いてある」という意味で使えます。",
               "audio_url": "audio/item_00592.mp3"
             },
             {
@@ -6590,7 +6590,7 @@
               "speaker": "Rina",
               "text": "My name is Rina.",
               "ja": "私の名前はリナです。",
-              "study_note": "`My name is ...` は自分の名前を伝える基本表現です。",
+              "study_note": "`My name is ...` は自分の名前を伝える基本表現です。`name` は人やものの名前を表す語です。",
               "audio_url": "audio/item_00594.mp3"
             },
             {
@@ -6620,7 +6620,7 @@
               "speaker": "Narrator",
               "text": "Rina asked the egg.",
               "ja": "リナはその卵にたずねました。",
-              "study_note": "`asked` は `ask` の過去形です。物語の中で質問したことを表します。",
+              "study_note": "`asked` は `ask` の過去形で、たずねたことを表します。`the egg` は前に出てきた卵を指します。",
               "audio_url": "audio/item_00597.mp3"
             },
             {
@@ -6630,7 +6630,7 @@
               "speaker": "Egg",
               "text": "Of course.",
               "ja": "もちろんです。",
-              "study_note": "相手の質問に強く肯定して答える表現です。",
+              "study_note": "`Of course.` は「もちろん」と強く肯定する返事です。相手の疑問に自信をもって答えるときに使います。",
               "audio_url": "audio/item_00598.mp3"
             },
             {
@@ -6640,7 +6640,7 @@
               "speaker": "Egg",
               "text": "Every name means a color, a sound, or a shape.",
               "ja": "どの名前も色や音や形を意味します。",
-              "study_note": "`means` は三人称単数現在形です。`shape` は「形」です。",
+              "study_note": "`Every name` は「どの名前も」で、単数扱いなので `means` になります。`a color, a sound, or a shape` は3つの可能性を並べています。",
               "audio_url": "audio/item_00599.mp3"
             },
             {
@@ -6650,7 +6650,7 @@
               "speaker": "Egg",
               "text": "My name means a long round shape.",
               "ja": "私の名前は細長い丸い形を意味します。",
-              "study_note": "`My name means ...` は名前の意味を説明する形です。",
+              "study_note": "`My name means ...` は名前の意味を説明する形です。`a long round shape` は `long` と `round` が `shape` を説明しています。",
               "audio_url": "audio/item_00600.mp3"
             },
             {
@@ -6660,7 +6660,7 @@
               "speaker": "Rina",
               "text": "I see.",
               "ja": "なるほど。",
-              "study_note": "理解したことを示す短い返事です。",
+              "study_note": "`I see.` は「なるほど、わかりました」と理解を示す短い返事です。相手の説明を受けた後によく使います。",
               "audio_url": "audio/item_00601.mp3"
             },
             {
@@ -6670,7 +6670,7 @@
               "speaker": "Rina",
               "text": "Your belt is very nice and gold.",
               "ja": "あなたのベルトはとてもすてきで金色ですね。",
-              "study_note": "`Your ... is very nice.` は相手のものをほめる形です。`belt` は「ベルト」です。",
+              "study_note": "`belt` は腰に巻くベルトです。`very nice` は強くほめる表現です。`gold` はここでは金色のという形容詞です。",
               "audio_url": "audio/item_00602.mp3"
             },
             {
@@ -6680,7 +6680,7 @@
               "speaker": "Egg",
               "text": "This is not my belt.",
               "ja": "これは私のベルトではありません。",
-              "study_note": "`This is not ...` は「これは...ではありません」と否定して説明する形です。",
+              "study_note": "`not` は後ろの内容を否定します。`my belt` は自分のベルトという意味で、相手の思い違いを直しています。",
               "audio_url": "audio/item_00603.mp3"
             },
             {
@@ -6690,7 +6690,7 @@
               "speaker": "Egg",
               "text": "It is a blue tie.",
               "ja": "それは青いネクタイです。",
-              "study_note": "`It is a ...` は物を説明する形です。`tie` は「ネクタイ」です。",
+              "study_note": "`blue` は色を表す形容詞です。`tie` は首に巻くネクタイです。前の `belt` との違いが大切です。",
               "audio_url": "audio/item_00604.mp3"
             },
             {
@@ -6740,7 +6740,7 @@
               "speaker": "Rina",
               "text": "Please be careful up there.",
               "ja": "どうかその上で気をつけてください。",
-              "study_note": "`Please ...` はていねいな命令文です。`be careful` は「気をつける」です。",
+              "study_note": "`Please ...` はていねいな命令文です。`be careful` は「気をつける」、`up there` は高い場所にいる相手を指します。",
               "audio_url": "audio/item_00609.mp3"
             },
             {
@@ -6750,7 +6750,7 @@
               "speaker": "Rina",
               "text": "Do you know the old wall song?",
               "ja": "古い壁の歌を知っていますか。",
-              "study_note": "`Do you know ...?` は「...を知っていますか」とたずねる形です。`song` は「歌」です。",
+              "study_note": "`know` は知っているかをたずねるときに使います。`old wall song` は古くからある壁についての歌を指します。`song` は歌です。",
               "audio_url": "audio/item_00610.mp3"
             },
             {
@@ -6770,7 +6770,7 @@
               "speaker": "Rina",
               "text": "It had a great fall in the last line.",
               "ja": "最後の行で、それは大きく落ちました。",
-              "study_note": "`had` は `have` の過去形です。`great fall` は「大きな落下」です。",
+              "study_note": "`had a great fall` は「大きく落ちた」という表現です。`in the last line` は「最後の行で」と場所を表します。",
               "audio_url": "audio/item_00612.mp3"
             },
             {
@@ -6780,7 +6780,7 @@
               "speaker": "Egg",
               "text": "Stop!",
               "ja": "やめて。",
-              "study_note": "強く止める短い命令文です。",
+              "study_note": "`Stop!` は「やめて」と強く止める命令文です。主語 `you` は省略されています。",
               "audio_url": "audio/item_00613.mp3"
             },
             {
@@ -6857,7 +6857,7 @@
               "speaker": "Eri",
               "text": "I saw your bike-trip pictures on your blog.",
               "ja": "あなたの自転車旅行の写真をブログで見たよ。",
-              "study_note": "`saw` は `see` の過去形です。`on your blog` は「あなたのブログで」という意味です。",
+              "study_note": "`saw` は `see` の過去形です。`bike-trip pictures` は「自転車旅行の写真」、`on your blog` は写真を見た場所を表します。",
               "audio_url": "audio/item_00619.mp3"
             },
             {
@@ -6867,7 +6867,7 @@
               "speaker": "Kota",
               "text": "Oh, thank you.",
               "ja": "ああ、ありがとう。",
-              "study_note": "ほめられたときのていねいな返事です。",
+              "study_note": "`thank you` は感謝を伝える基本表現です。`Oh,` は少し驚いた気持ちを添えます。",
               "audio_url": "audio/item_00620.mp3"
             },
             {
@@ -6877,7 +6877,7 @@
               "speaker": "Eri",
               "text": "They were nice.",
               "ja": "それらはすてきだったよ。",
-              "study_note": "`They were ...` は複数のものについて過去の様子を言います。",
+              "study_note": "`nice` は人や物に使える「よい、すてきな」という形容詞です。`They` は前に出た複数の写真を指します。",
               "audio_url": "audio/item_00621.mp3"
             },
             {
@@ -6897,7 +6897,7 @@
               "speaker": "Eri",
               "text": "This picture is beautiful.",
               "ja": "この写真は美しいね。",
-              "study_note": "`beautiful` は「美しい」という形容詞です。",
+              "study_note": "`beautiful` は見た目などを強くほめる形容詞です。`This picture` の `This` は近くのものや今話題のものを指します。",
               "audio_url": "audio/item_00623.mp3"
             },
             {
@@ -6907,7 +6907,7 @@
               "speaker": "Eri",
               "text": "Where did you take that picture?",
               "ja": "その写真はどこで撮ったの。",
-              "study_note": "`Where did you ...?` は過去の行動について場所をたずねます。",
+              "study_note": "`Where did you ...?` は過去の行動について場所をたずねます。`take that picture` は「その写真を撮る」という意味です。",
               "audio_url": "audio/item_00624.mp3"
             },
             {
@@ -6917,7 +6917,7 @@
               "speaker": "Kota",
               "text": "I took it near a small station.",
               "ja": "小さな駅の近くでそれを撮ったよ。",
-              "study_note": "`took` は `take` の過去形です。`it` は前の `picture` を指します。",
+              "study_note": "`took` は `take` の過去形です。`near a small station` は写真を撮った場所を表し、`it` は前の `picture` を指します。",
               "audio_url": "audio/item_00625.mp3"
             },
             {
@@ -6937,7 +6937,7 @@
               "speaker": "Kota",
               "text": "It was sunny that day, and the view was great.",
               "ja": "その日は晴れていて、景色はすばらしかったよ。",
-              "study_note": "`It was ...` は天気などを過去形で言います。`view` は「景色」です。",
+              "study_note": "`sunny` は天気を表す形容詞です。`that day` は「あの日、その日」という過去の時を指します。`view` は見える景色や眺めのことです。",
               "audio_url": "audio/item_00627.mp3"
             }
           ]
@@ -6967,7 +6967,7 @@
               "speaker": "Guide",
               "text": "In the morning, we rode a train along the river.",
               "ja": "午前中、私たちは川沿いを電車で進みました。",
-              "study_note": "`In the morning` は文の時間を表します。",
+              "study_note": "`rode` は `ride` の過去形です。`along the river` は「川に沿って」という意味です。",
               "audio_url": "audio/item_00629.mp3"
             },
             {
@@ -6977,7 +6977,7 @@
               "speaker": "Guide",
               "text": "The leaves were so colorful.",
               "ja": "葉はとても色あざやかでした。",
-              "study_note": "`The leaves were ...` は複数のものの過去の様子です。`so` は「とても」です。",
+              "study_note": "`colorful` は色が多い、色あざやかな様子を表します。`so` は形容詞を強める言葉で、感想を少し強くします。",
               "audio_url": "audio/item_00630.mp3"
             },
             {
@@ -6997,7 +6997,7 @@
               "speaker": "Guide",
               "text": "Then we joined a tea ceremony.",
               "ja": "それから茶道体験に参加しました。",
-              "study_note": "`Then` は「それから」です。`joined` は「参加した」という過去形です。",
+              "study_note": "`Then` は「それから」です。`joined a tea ceremony` は茶道の行事や体験に参加したことを表します。",
               "audio_url": "audio/item_00632.mp3"
             },
             {
@@ -7007,7 +7007,7 @@
               "speaker": "Guide",
               "text": "We drank matcha, a Japanese green tea.",
               "ja": "私たちは抹茶、つまり日本の緑茶を飲みました。",
-              "study_note": "`drank` は `drink` の過去形です。コンマではさむ説明で名詞を言い換えます。",
+              "study_note": "`drank` は `drink` の過去形です。`matcha, a Japanese green tea` はコンマの後で `matcha` を説明する形です。",
               "audio_url": "audio/item_00633.mp3"
             },
             {
@@ -7017,7 +7017,7 @@
               "speaker": "Guide",
               "text": "It was bitter, but very delicious with the sweets.",
               "ja": "それは苦かったけれど、お菓子と一緒だととてもおいしかったです。",
-              "study_note": "`but` は対比を表します。`with the sweets` は「そのお菓子と一緒に」です。",
+              "study_note": "`bitter` は「苦い」、`delicious` は「おいしい」です。`with the sweets` はお菓子と一緒に飲むときの組み合わせを表します。",
               "audio_url": "audio/item_00634.mp3"
             }
           ]
@@ -7047,7 +7047,7 @@
               "speaker": "Hana",
               "text": "I was skiing with my family.",
               "ja": "家族とスキーをしていたの。",
-              "study_note": "`was skiing` は「スキーをしていた」という過去進行形です。",
+              "study_note": "`was skiing` は過去のある時点に進行中だった動作を表します。`skiing` は「スキーをすること」、`with my family` は一緒にいた相手を表します。",
               "audio_url": "audio/item_00636.mp3"
             },
             {
@@ -7057,7 +7057,7 @@
               "speaker": "Ren",
               "text": "What’s up?",
               "ja": "どうしたの。",
-              "study_note": "相手に何があったのかをたずねるくだけた表現です。",
+              "study_note": "`What’s up?` は「どうしたの、何かあったの」とたずねるくだけた表現です。`What’s` は `What is` の短い形です。",
               "audio_url": "audio/item_00637.mp3"
             },
             {
@@ -7067,7 +7067,7 @@
               "speaker": "Hana",
               "text": "I had a problem with my homework, but it’s OK now.",
               "ja": "宿題で困ったことがあったけど、今はもう大丈夫。",
-              "study_note": "`I had ...` は `have` の過去形です。`but it’s OK now` は問題が解決したことを表します。",
+              "study_note": "`had a problem with ...` は「...で困ったことがあった」です。`but it’s OK now` は今は問題が解決していることを表します。",
               "audio_url": "audio/item_00638.mp3"
             },
             {
@@ -7077,7 +7077,7 @@
               "speaker": "Ren",
               "text": "Where are you?",
               "ja": "どこにいるの。",
-              "study_note": "`Where are you?` は現在いる場所をたずねます。",
+              "study_note": "`Where` は場所をたずねる疑問詞です。`are` はここでは今いる場所を聞くときに使われています。",
               "audio_url": "audio/item_00639.mp3"
             },
             {
@@ -7087,7 +7087,7 @@
               "speaker": "Hana",
               "text": "I’m in Yamagata with my family.",
               "ja": "家族と山形にいるよ。",
-              "study_note": "`I’m in ...` で現在の場所を言います。",
+              "study_note": "`in Yamagata` の `in` は広い場所や地域の中にいることを表します。`with my family` は一緒にいる相手を表します。",
               "audio_url": "audio/item_00640.mp3"
             },
             {
@@ -7097,7 +7097,7 @@
               "speaker": "Ren",
               "text": "Lucky you!",
               "ja": "いいなあ。",
-              "study_note": "相手のよい状況をうらやましく思う反応です。",
+              "study_note": "`Lucky you!` は「いいなあ、運がいいね」と相手をうらやむ反応です。短い会話でよく使います。",
               "audio_url": "audio/item_00641.mp3"
             },
             {
@@ -7107,7 +7107,7 @@
               "speaker": "Ren",
               "text": "How was the weather today?",
               "ja": "今日の天気はどうだった。",
-              "study_note": "`How was ...?` は過去の状態や感想をたずねます。",
+              "study_note": "`How was ...?` は過去の状態や感想をたずねます。`the weather today` で「今日の天気」を話題にしています。",
               "audio_url": "audio/item_00642.mp3"
             },
             {
@@ -7147,7 +7147,7 @@
               "speaker": "Yuto",
               "text": "It was wonderful.",
               "ja": "すばらしかったよ。",
-              "study_note": "過去の経験に対するよい評価を表します。",
+              "study_note": "`wonderful` は「すばらしい」と強くほめる形容詞です。`It` は直前の `your trip to Nagano` を受けています。",
               "audio_url": "audio/item_00645.mp3"
             },
             {
@@ -7177,7 +7177,7 @@
               "speaker": "Mei",
               "text": "Did you make soba?",
               "ja": "そばを作ったの。",
-              "study_note": "`Did you ...?` は過去の行動をたずねます。動詞は原形になります。",
+              "study_note": "`make soba` は「そばを作る」というまとまりです。過去の疑問文では `Did` を前に置き、動詞は `make` のように原形にします。",
               "audio_url": "audio/item_00648.mp3"
             },
             {
@@ -7207,7 +7207,7 @@
               "speaker": "Mei",
               "text": "That’s cool.",
               "ja": "それはいいね。",
-              "study_note": "相手の話に対する肯定的な反応です。",
+              "study_note": "`That’s cool.` は「それはいいね」と相手の話をよく受け止める表現です。`That’s` は `That is` の短い形です。",
               "audio_url": "audio/item_00651.mp3"
             },
             {
@@ -7217,7 +7217,7 @@
               "speaker": "Mei",
               "text": "How was the drum performance?",
               "ja": "太鼓の演奏はどうだった。",
-              "study_note": "`How was the ...?` は特定のものについて感想をたずねます。",
+              "study_note": "`How was the ...?` は特定のものについて感想をたずねます。`drum performance` は「太鼓の演奏」です。",
               "audio_url": "audio/item_00652.mp3"
             },
             {
@@ -7237,7 +7237,7 @@
               "speaker": "Yuto",
               "text": "I was playing table tennis with my brother at that time.",
               "ja": "その時、兄と卓球をしていたんだ。",
-              "study_note": "`I was playing ...` は「...をしていた」という過去進行形です。",
+              "study_note": "`I was playing ...` は「...をしていた」という過去進行形です。`with my brother` は相手、`at that time` はその時点を表します。",
               "audio_url": "audio/item_00654.mp3"
             }
           ]
@@ -7257,7 +7257,7 @@
               "speaker": "Aoi",
               "text": "What’s up, Riku?",
               "ja": "どうしたの、リク。",
-              "study_note": "名前を呼びかけて、相手の様子をたずねる表現です。",
+              "study_note": "`What’s up?` は「どうしたの」と相手の様子をたずねるくだけた表現です。名前を後ろに置いて呼びかけています。",
               "audio_url": "audio/item_00655.mp3"
             },
             {
@@ -7267,7 +7267,7 @@
               "speaker": "Aoi",
               "text": "You look happy.",
               "ja": "うれしそうだね。",
-              "study_note": "`You look ...` は見た感じを形容詞で言います。",
+              "study_note": "`look happy` は見た様子から「うれしそうに見える」と言う表現です。`happy` は気持ちが明るい状態を表す形容詞です。",
               "audio_url": "audio/item_00656.mp3"
             },
             {
@@ -7297,7 +7297,7 @@
               "speaker": "Aoi",
               "text": "What is it?",
               "ja": "それは何。",
-              "study_note": "`What is it?` は物が何かをたずねます。",
+              "study_note": "`What` はものの名前や正体をたずねる疑問詞です。`it` は前に出た `this souvenir` を指しています。",
               "audio_url": "audio/item_00659.mp3"
             },
             {
@@ -7307,7 +7307,7 @@
               "speaker": "Riku",
               "text": "It’s a good luck charm.",
               "ja": "お守りだよ。",
-              "study_note": "`It’s a ...` は単数の物を説明します。",
+              "study_note": "`good luck charm` は「お守り、幸運を呼ぶもの」です。1つの物なので `a` が付きます。",
               "audio_url": "audio/item_00660.mp3"
             },
             {
@@ -7317,7 +7317,7 @@
               "speaker": "Aoi",
               "text": "It’s so cute!",
               "ja": "とてもかわいいね。",
-              "study_note": "`It’s so ...!` は強い感想を表します。",
+              "study_note": "`cute` は小さな物や人などを「かわいい」とほめる形容詞です。`so` は形容詞を強め、驚きや感動を出します。",
               "audio_url": "audio/item_00661.mp3"
             }
           ]
@@ -7337,7 +7337,7 @@
               "speaker": "Form",
               "text": "My Best Memory Contest",
               "ja": "私の最高の思い出コンテスト",
-              "study_note": "題名として使われる名詞句です。`best memory` は「最高の思い出」です。",
+              "study_note": "`best memory` は「最高の思い出」です。`contest` は「コンテスト、競技会」という意味です。",
               "audio_url": "audio/item_00662.mp3"
             },
             {
@@ -7357,7 +7357,7 @@
               "speaker": "Form",
               "text": "Name: Saki Mori",
               "ja": "名前：森咲",
-              "study_note": "`name` は用紙などで「名前」を示す語です。",
+              "study_note": "`Name:` は用紙で「名前」を書く欄を示します。コロンの後に具体的な名前を置きます。",
               "audio_url": "audio/item_00664.mp3"
             },
             {
@@ -7397,7 +7397,7 @@
               "speaker": "Saki",
               "text": "My friend said, “In August, 1945, many people died in the war.”",
               "ja": "友だちは「1945年8月、多くの人が戦争で亡くなりました」と言いました。",
-              "study_note": "`said` で発言を伝えます。引用符の中が言った内容です。",
+              "study_note": "`died` は `die` の過去形です。`in the war` は戦争という状況の中で起きたことを表します。引用符の中は友だちが実際に言った内容です。",
               "audio_url": "audio/item_00668.mp3"
             },
             {
@@ -7444,7 +7444,7 @@
               "speaker": "Narrator",
               "text": "Mika is a 13-year-old girl in Hoshimi, a small town in the mountains.",
               "ja": "ミカは山の中の小さな町、ほしみ町に住む13歳の女の子です。",
-              "study_note": "`13-year-old` は名詞の前で使う年齢表現です。",
+              "study_note": "`13-year-old` は名詞の前で使う年齢表現で、`year` は複数形にしません。`a small town in the mountains` は `Hoshimi` を説明しています。",
               "audio_url": "audio/item_00671.mp3"
             },
             {
@@ -7454,7 +7454,7 @@
               "speaker": "Narrator",
               "text": "She lives with her family above an old bookshop cafe.",
               "ja": "彼女は古いブックショップカフェの上で家族と暮らしています。",
-              "study_note": "`She lives with ...` は「彼女は...と暮らしている」です。",
+              "study_note": "`above ...` は「...の上に」で、建物なら上の階を表せます。`with her family` は「家族と一緒に」です。",
               "audio_url": "audio/item_00672.mp3"
             },
             {
@@ -7464,7 +7464,7 @@
               "speaker": "Narrator",
               "text": "Her parents have a cafe for readers and students.",
               "ja": "彼女の両親は読書好きや学生のためのカフェを持っています。",
-              "study_note": "`Her parents have ...` は「彼女の両親は...を持っています」です。",
+              "study_note": "`have a cafe` は店を持っている、営んでいるという意味で使えます。`readers` は本を読む人たち、`for readers and students` はカフェの対象を表します。",
               "audio_url": "audio/item_00673.mp3"
             },
             {
@@ -7474,7 +7474,7 @@
               "speaker": "Narrator",
               "text": "Their friends and neighbors come there after school.",
               "ja": "彼らの友人や近所の人たちは放課後そこへ来ます。",
-              "study_note": "`Their` は「彼らの」です。`friends and neighbors` は複数の人を表します。",
+              "study_note": "`neighbors` は近所に住む人たちです。`there` は前に出たカフェの場所を指し、`after school` は学校が終わったあとを表します。",
               "audio_url": "audio/item_00674.mp3"
             },
             {
@@ -7484,7 +7484,7 @@
               "speaker": "Narrator",
               "text": "Everyone loves the cafe's hot cocoa.",
               "ja": "みんながそのカフェのホットココアを大好きです。",
-              "study_note": "`Everyone` は単数扱いなので `loves` になります。",
+              "study_note": "`Everyone` は「みんな」でも単数扱いです。`the cafe's` は「そのカフェの」と持ち主や所属を表し、`hot cocoa` は温かいココアです。",
               "audio_url": "audio/item_00675.mp3"
             },
             {
@@ -7494,7 +7494,7 @@
               "speaker": "Narrator",
               "text": "Mika wants to be a writer at the cafe someday.",
               "ja": "ミカはいつかそのカフェで作家になりたいと思っています。",
-              "study_note": "`wants to be ...` は「...になりたいと思っている」です。",
+              "study_note": "`wants to be ...` は「...になりたい」です。`someday` は「いつか」と将来の希望を表します。",
               "audio_url": "audio/item_00676.mp3"
             },
             {
@@ -7504,7 +7504,7 @@
               "speaker": "Narrator",
               "text": "Her cousin Haru goes to college in another city.",
               "ja": "彼女のいとこのハルは別の街の大学に通っています。",
-              "study_note": "`goes` は `go` の三人称単数現在形です。",
+              "study_note": "`cousin` はいとこです。`goes to college` は大学に通っていることを表し、`another city` は今の町とは別の街です。",
               "audio_url": "audio/item_00677.mp3"
             },
             {
@@ -7514,7 +7514,7 @@
               "speaker": "Narrator",
               "text": "He tells Mika about his dreams for the future.",
               "ja": "彼は将来の夢についてミカに話します。",
-              "study_note": "`tell + 人 + about ...` は「人に...について話す」です。",
+              "study_note": "`tell + 人 + about ...` は「人に...について話す」です。`dreams for the future` は将来やりたいこと、なりたいものについての夢を表します。",
               "audio_url": "audio/item_00678.mp3"
             },
             {
@@ -7534,7 +7534,7 @@
               "speaker": "Company Worker",
               "text": "It'll build a new parking area here.",
               "ja": "ここに新しい駐車場を建てる予定です。",
-              "study_note": "`It'll` は `It will` の短い形です。",
+              "study_note": "`It'll` は `It will` の短い形で、これからすることを表します。`build` は「建てる、作る」です。",
               "audio_url": "audio/item_00680.mp3"
             },
             {
@@ -7544,7 +7544,7 @@
               "speaker": "Company Worker",
               "text": "Your cafe can't stay here anymore.",
               "ja": "あなたたちのカフェはもうここに残れません。",
-              "study_note": "`can't ... anymore` は「もう...できない」という意味です。",
+              "study_note": "`can't ... anymore` は「もう...できない」です。`stay here` は今いる場所に残ることを表します。",
               "audio_url": "audio/item_00681.mp3"
             },
             {
@@ -7554,7 +7554,7 @@
               "speaker": "Narrator",
               "text": "At the same time, Haru's blue notebook is missing.",
               "ja": "同じころ、ハルの青いノートが見当たりません。",
-              "study_note": "`missing` は「見つからない、なくなっている」です。",
+              "study_note": "`At the same time` は「同じころ、同時に」です。`is missing` は「見つからない、なくなっている」状態を表します。",
               "audio_url": "audio/item_00682.mp3"
             },
             {
@@ -7574,7 +7574,7 @@
               "speaker": "Narrator",
               "text": "To Mika and Haru?",
               "ja": "ミカとハルはどうなるのでしょうか。",
-              "study_note": "前の質問を受けて、短く続けています。",
+              "study_note": "`To Mika and Haru?` は前の `What happens to ...?` の `to` 以下だけを残した省略表現です。会話や宣伝文で使われます。",
               "audio_url": "audio/item_00684.mp3"
             },
             {
@@ -7584,7 +7584,7 @@
               "speaker": "Narrator",
               "text": "Come to Room 3 and find out.",
               "ja": "3番教室に来て、答えを見つけてください。",
-              "study_note": "`find out` は「わかる、見つけ出す」です。",
+              "study_note": "`Come to ... and ...` は「...へ来て、そして...してください」と2つの動作をつなぎます。`find out` は答えや真相を見つけ出すことです。",
               "audio_url": "audio/item_00685.mp3"
             }
           ]
@@ -7621,7 +7621,7 @@
               "speaker": "Ms. Sato",
               "text": "It will be rainy all day, so we can't have the evacuation drill outside.",
               "ja": "一日中雨になるでしょう。だから外で避難訓練はできません。",
-              "study_note": "`It will be ...` は未来の天気の予想です。`so` は理由から結果につなげます。",
+              "study_note": "`rainy all day` は雨が一日続くことを表します。`evacuation drill` は避難訓練です。`outside` は外で行うことを示します。",
               "audio_url": "audio/item_00687.mp3"
             },
             {
@@ -7631,7 +7631,7 @@
               "speaker": "Ms. Sato",
               "text": "Instead, we will prepare and eat emergency food.",
               "ja": "その代わりに、非常食を準備して食べます。",
-              "study_note": "`Instead` は「その代わりに」。`will + 動詞の原形` はこれからすることを表します。",
+              "study_note": "`Instead` は前の予定をやめて別のことをする合図です。`prepare and eat` は作る準備から食べるところまでをまとめています。`emergency food` は災害などに備える食べ物です。",
               "audio_url": "audio/item_00688.mp3"
             },
             {
@@ -7641,7 +7641,7 @@
               "speaker": "Ms. Sato",
               "text": "We will use the home economics room for lunch.",
               "ja": "昼食には家庭科室を使います。",
-              "study_note": "`for lunch` は「昼食に」「昼食のために」という意味です。",
+              "study_note": "`home economics room` は調理や家庭科の活動に使う教室です。`for lunch` は昼食の時間や目的に合わせて使うことを表します。",
               "audio_url": "audio/item_00689.mp3"
             },
             {
@@ -7651,7 +7651,7 @@
               "speaker": "Ms. Sato",
               "text": "You can choose noodles or curry and rice.",
               "ja": "ヌードルかカレーライスを選べます。",
-              "study_note": "`You can choose A or B.` は二つの選択肢を示す形です。",
+              "study_note": "`choose A or B` は二つのうち一つを選ぶときの形です。`noodles` と `curry and rice` がここでの選択肢です。",
               "audio_url": "audio/item_00690.mp3"
             },
             {
@@ -7661,7 +7661,7 @@
               "speaker": "Ms. Sato",
               "text": "It will be a good experience for you.",
               "ja": "それはあなたたちにとってよい経験になるでしょう。",
-              "study_note": "`It will be ... for you` は、相手にとってどうなるかを予想して言う形です。",
+              "study_note": "`good experience` は学びや役に立つ体験を表します。`for you` はその体験が聞き手に関係することを示します。",
               "audio_url": "audio/item_00691.mp3"
             },
             {
@@ -7671,7 +7671,7 @@
               "speaker": "Mei",
               "text": "Let's go to the manga library before club practice.",
               "ja": "部活動の前にまんが図書館へ行きましょう。",
-              "study_note": "`Let's + 動詞の原形` は「一緒に...しましょう」という提案です。",
+              "study_note": "`Let's` は相手を誘うときに使います。`manga library` はまんがを読める図書館です。`before club practice` は部活動の練習より前の時間を表します。",
               "audio_url": "audio/item_00702.mp3"
             },
             {
@@ -7691,7 +7691,7 @@
               "speaker": "Mei",
               "text": "Can we go after that?",
               "ja": "その後に行けますか。",
-              "study_note": "`Can we ...?` は一緒にできるかをたずねる形です。",
+              "study_note": "`Can we ...?` は相手と一緒にできるかをたずねる言い方です。`after that` は直前に話した予定のあとを指します。",
               "audio_url": "audio/item_00704.mp3"
             },
             {
@@ -7741,7 +7741,7 @@
               "speaker": "Mei",
               "text": "I'll wait for you at the school gate.",
               "ja": "校門であなたを待ちます。",
-              "study_note": "`I'll` は `I will` の短縮形です。`wait for ...` は「...を待つ」です。",
+              "study_note": "`I'll` は `I will` の短縮形です。`wait for ...` は人や物を待つ表現で、`at the school gate` は待つ場所を示します。",
               "audio_url": "audio/item_00709.mp3"
             }
           ]
@@ -7801,7 +7801,7 @@
               "speaker": "Kota",
               "text": "It was warm and tasty.",
               "ja": "それは温かくておいしかったです。",
-              "study_note": "`It was ... and ...` は過去の感想を二つの形容詞で言う形です。",
+              "study_note": "`warm` は食べ物が温かいことを表します。`tasty` は味がよい、おいしいという形容詞です。",
               "audio_url": "audio/item_00696.mp3"
             },
             {
@@ -7831,7 +7831,7 @@
               "speaker": "Kota",
               "text": "I will buy some emergency food for my house.",
               "ja": "家のために非常食を少し買います。",
-              "study_note": "`I will buy ...` はこれからの意志を表します。`for my house` は目的や置き場所を表します。",
+              "study_note": "`some emergency food` は非常食をいくらか買うという量の感じを出します。`for my house` は家に備える目的を表します。",
               "audio_url": "audio/item_00699.mp3"
             },
             {
@@ -7841,7 +7841,7 @@
               "speaker": "Mother",
               "text": "Go to the supermarket on Sakura Street.",
               "ja": "さくら通りのスーパーへ行きなさい。",
-              "study_note": "`Go to ...` は指示や助言の命令文です。",
+              "study_note": "`Go to ...` は相手に行き先を示す命令文です。`the supermarket` は話し手と聞き手が分かる特定の店を指します。`on Sakura Street` は通りに面した場所を表します。",
               "audio_url": "audio/item_00700.mp3"
             },
             {
@@ -7851,7 +7851,7 @@
               "speaker": "Mother",
               "text": "You will find many types of emergency food, even desserts.",
               "ja": "たくさんの種類の非常食が見つかります。デザートまであります。",
-              "study_note": "`You will find ...` は「見つかるでしょう」という予想です。`even` は意外な例を加えます。",
+              "study_note": "`many types of emergency food` は非常食にいろいろな種類があることを表します。`even desserts` はデザートのような意外なものまで含む、という強調です。",
               "audio_url": "audio/item_00701.mp3"
             },
             {
@@ -7861,7 +7861,7 @@
               "speaker": "Kota",
               "text": "I'm going to buy some emergency food this weekend.",
               "ja": "今週末、非常食を少し買うつもりです。",
-              "study_note": "`I'm going to buy ...` は買う予定を表します。",
+              "study_note": "`be going to` は前から考えている予定に使います。`some emergency food` は非常食をいくらか買うという量の感じです。`this weekend` は今度の週末を指します。",
               "audio_url": "audio/item_00710.mp3"
             },
             {
@@ -7871,7 +7871,7 @@
               "speaker": "Kota",
               "text": "What do you recommend?",
               "ja": "何をおすすめしますか。",
-              "study_note": "`recommend` は「すすめる」という意味です。",
+              "study_note": "`What do you ...?` は「何を...しますか」とたずねる形です。`recommend` は「すすめる」という意味です。",
               "audio_url": "audio/item_00711.mp3"
             },
             {
@@ -7881,7 +7881,7 @@
               "speaker": "Mei",
               "text": "Choose something familiar.",
               "ja": "なじみのあるものを選んでください。",
-              "study_note": "`Choose something ...` は「...なものを選んで」という助言の形です。",
+              "study_note": "`Choose ...` は「...を選んでください」という命令文です。`something familiar` は「なじみのあるもの」という意味です。",
               "audio_url": "audio/item_00712.mp3"
             },
             {
@@ -7901,7 +7901,7 @@
               "speaker": "Mei",
               "text": "Well, you'll probably want a calm taste after a disaster.",
               "ja": "ええと、災害の後はたぶん落ち着く味がほしくなるでしょう。",
-              "study_note": "`you'll` は `you will` の短縮形です。`after + 名詞` は「...の後に」です。",
+              "study_note": "`probably want ...` は「たぶん...をほしくなるでしょう」と予想をやわらかく言う形です。`a calm taste` は、食べると気持ちが落ち着くような味を表しています。",
               "audio_url": "audio/item_00714.mp3"
             },
             {
@@ -7911,7 +7911,7 @@
               "speaker": "Mei",
               "text": "A familiar food will comfort you.",
               "ja": "なじみのある食べ物はあなたを安心させるでしょう。",
-              "study_note": "`A familiar food will ...` は、主語が未来にどんな働きをするかを表します。",
+              "study_note": "`familiar food` は「なじみのある食べ物」です。`comfort you` は「あなたを安心させる、なぐさめる」という意味です。",
               "audio_url": "audio/item_00715.mp3"
             },
             {
@@ -7931,7 +7931,7 @@
               "speaker": "Mei",
               "text": "I eat it every morning with rice.",
               "ja": "私は毎朝それをごはんと一緒に食べます。",
-              "study_note": "現在形は習慣を表します。`every morning` は頻度を表す時間表現です。",
+              "study_note": "`every morning` は毎朝という習慣を表す時間表現です。`with rice` はごはんと一緒に食べる組み合わせを示します。",
               "audio_url": "audio/item_00717.mp3"
             },
             {
@@ -7961,7 +7961,7 @@
               "speaker": "Kota",
               "text": "I'll look for something like that.",
               "ja": "そのようなものを探します。",
-              "study_note": "`I'll look for ...` はこれから探すと決めたことを表します。",
+              "study_note": "`I'll look for ...` はこれから探すと決めたことを表します。`something like that` は「それに似たもの、そのようなもの」です。",
               "audio_url": "audio/item_00720.mp3"
             },
             {
@@ -7971,7 +7971,7 @@
               "speaker": "Reading",
               "text": "A Student Idea for Emergency Local Food",
               "ja": "地元の非常食のための生徒のアイデア",
-              "study_note": "タイトルでは名詞を組み合わせて内容を短く示します。",
+              "study_note": "`Student Idea` は生徒が考えた案という見出しの表現です。`Emergency Local Food` は非常時に役立つ地元の食べ物をまとめた言い方です。",
               "audio_url": "audio/item_00721.mp3"
             },
             {
@@ -8001,7 +8001,7 @@
               "speaker": "Reading",
               "text": "It is long-lasting, and people can prepare it easily.",
               "ja": "それは長持ちし、人々は簡単に準備できます。",
-              "study_note": "`It is ..., and people can ...` は二つの情報を `and` でつなぐ形です。",
+              "study_note": "`long-lasting` は「長持ちする」。`can prepare it easily` は「それを簡単に準備できる」です。",
               "audio_url": "audio/item_00724.mp3"
             },
             {
@@ -8021,7 +8021,7 @@
               "speaker": "Reading",
               "text": "Everybody needs emergency food in their go bags.",
               "ja": "だれもが非常用持ち出し袋に非常食を必要としています。",
-              "study_note": "`Everybody` は単数扱いです。`their go bags` は「自分たちの非常用袋に」です。",
+              "study_note": "`Everybody` は「だれもが」ですが単数扱いなので `needs` になります。`go bags` は非常用持ち出し袋のことです。",
               "audio_url": "audio/item_00726.mp3"
             },
             {
@@ -8031,7 +8031,7 @@
               "speaker": "Reading",
               "text": "I found an interesting example of this idea.",
               "ja": "私はこの考えのおもしろい例を見つけました。",
-              "study_note": "`I found an interesting example of ...` は見つけたものを紹介する形です。",
+              "study_note": "`interesting example` は説明した考えをよく示す、おもしろい実例を表します。`of this idea` はどの考えの例なのかを示します。",
               "audio_url": "audio/item_00727.mp3"
             },
             {
@@ -8061,7 +8061,7 @@
               "speaker": "Reading",
               "text": "In addition, people can share it in shelters.",
               "ja": "さらに、人々は避難所でそれを分け合うことができます。",
-              "study_note": "`In addition` は情報を追加します。`in shelters` は場所を表します。",
+              "study_note": "`In addition` は情報をさらに加える合図です。`share it` は同じものをほかの人と分け合うことを表します。`in shelters` は避難所という場所を示します。",
               "audio_url": "audio/item_00730.mp3"
             },
             {
@@ -8128,7 +8128,7 @@
               "speaker": "Announcer",
               "text": "Since Monday is a holiday, we have a long weekend.",
               "ja": "月曜日が祝日なので、長い週末になります。",
-              "study_note": "`Since ..., ...` は理由を先に言う形です。",
+              "study_note": "`Since` は理由を表す接続語です。`holiday` は学校や仕事が休みの日、`long weekend` は連休になる週末を指します。",
               "audio_url": "audio/item_00735.mp3"
             },
             {
@@ -8148,7 +8148,7 @@
               "speaker": "Announcer",
               "text": "On Saturday, it'll be cloudy during the day.",
               "ja": "土曜日は日中くもりでしょう。",
-              "study_note": "`it'll be ...` は天気を予想する形です。",
+              "study_note": "`cloudy` は雲が多い天気です。`during the day` は朝から夕方ごろまでの時間帯、`On Saturday` は曜日を指定するときの形です。",
               "audio_url": "audio/item_00737.mp3"
             },
             {
@@ -8158,7 +8158,7 @@
               "speaker": "Announcer",
               "text": "But it'll be clear in the evening.",
               "ja": "でも夕方には晴れるでしょう。",
-              "study_note": "`but` は対比を表します。`in the evening` は「夕方に」です。",
+              "study_note": "`But` は前の内容と反対の流れを作ります。`clear` は雲が少なく晴れた状態、`in the evening` は夕方から夜の早い時間を表します。",
               "audio_url": "audio/item_00738.mp3"
             },
             {
@@ -8178,7 +8178,7 @@
               "speaker": "Announcer",
               "text": "The low will be 15 degrees.",
               "ja": "最低気温は15度でしょう。",
-              "study_note": "`the low will be ...` は最低気温を言う形です。",
+              "study_note": "`The low` はその日の最低気温を指します。`degrees` は温度の「度」を表す語です。",
               "audio_url": "audio/item_00740.mp3"
             },
             {
@@ -8198,7 +8198,7 @@
               "speaker": "Announcer",
               "text": "It'll be warm in the afternoon.",
               "ja": "午後は暖かいでしょう。",
-              "study_note": "`warm` は「暖かい」です。",
+              "study_note": "`warm` は暑すぎず心地よい暖かさです。`in the afternoon` は昼過ぎから夕方前までの時間帯を表します。",
               "audio_url": "audio/item_00742.mp3"
             },
             {
@@ -8208,7 +8208,7 @@
               "speaker": "Announcer",
               "text": "Now the bad news.",
               "ja": "さて、よくないお知らせです。",
-              "study_note": "話題を切り替える短い表現です。",
+              "study_note": "`Now` は話題を切り替える合図です。`bad news` はよくない知らせのことです。`news` は数えられない名詞として使います。",
               "audio_url": "audio/item_00743.mp3"
             },
             {
@@ -8218,7 +8218,7 @@
               "speaker": "Announcer",
               "text": "It'll rain all day on Monday.",
               "ja": "月曜日は一日中雨が降るでしょう。",
-              "study_note": "`it'll rain` は「雨が降るでしょう」です。`all day` は「一日中」です。",
+              "study_note": "`rain` は動詞で「雨が降る」を表します。`all day` は朝から夜まで続く感じです。`on Monday` は曜日を指定します。",
               "audio_url": "audio/item_00744.mp3"
             },
             {
@@ -8238,7 +8238,7 @@
               "speaker": "Announcer",
               "text": "Enjoy your long weekend.",
               "ja": "長い週末を楽しんでください。",
-              "study_note": "`enjoy` は「楽しむ」です。",
+              "study_note": "`Enjoy ...` は「...を楽しんでください」という命令文です。`your long weekend` は相手の休みを指します。",
               "audio_url": "audio/item_00746.mp3"
             }
           ]
@@ -8265,7 +8265,7 @@
               "speaker": "Aki",
               "text": "What are you doing?",
               "ja": "何をしているのですか。",
-              "study_note": "`What are you doing?` は、今していることをたずねる現在進行形の質問です。",
+              "study_note": "`What` は内容をたずねる語です。`doing` は「する」の進行中の形で、今の動作について話すときに使います。",
               "audio_url": "audio/item_00747.mp3"
             },
             {
@@ -8275,7 +8275,7 @@
               "speaker": "Camp Leader",
               "text": "I'm making fish curry for dinner.",
               "ja": "夕食に魚のカレーを作っています。",
-              "study_note": "`I'm making ...` は「私は...を作っています」という現在進行形です。`for dinner` で夕食のために作っていることを表します。",
+              "study_note": "`making` は何かを作っている途中であることを表します。`fish curry` は魚を使ったカレーです。`for dinner` は食べる場面や目的を夕食にしぼります。",
               "audio_url": "audio/item_00748.mp3"
             },
             {
@@ -8285,7 +8285,7 @@
               "speaker": "Camp Leader",
               "text": "Can you cut these pieces of okra?",
               "ja": "このオクラを切ってくれますか。",
-              "study_note": "`Can you ...?` は相手にお願いをする表現です。`these pieces` は近くにある複数のものを指します。`okra` はオクラです。",
+              "study_note": "`Can you ...?` は相手に何かを頼むときにも使います。`cut` は包丁などで切る動作です。`pieces of okra` は切ったり分けたりしたオクラの一つ一つを表します。",
               "audio_url": "audio/item_00749.mp3"
             },
             {
@@ -8295,7 +8295,7 @@
               "speaker": "Aki",
               "text": "Sorry, I can't.",
               "ja": "ごめんなさい、できません。",
-              "study_note": "`Sorry, I can't.` は、できないことをていねいに断る表現です。",
+              "study_note": "`Sorry` は断る前にすまない気持ちを表す語です。`can't` は `can not` の短い形で、できないことを表します。",
               "audio_url": "audio/item_00750.mp3"
             },
             {
@@ -8305,7 +8305,7 @@
               "speaker": "Aki",
               "text": "They're slimy.",
               "ja": "それらはぬるぬるしています。",
-              "study_note": "`They're ...` は `They are ...` の短い形で、複数のものの様子を言います。`slimy` は「ぬるぬるした」という意味です。",
+              "study_note": "`slimy` は表面がぬるっとしている様子を表す形容詞です。`They` は前に話題に出た複数のものを受けます。",
               "audio_url": "audio/item_00751.mp3"
             },
             {
@@ -8315,7 +8315,7 @@
               "speaker": "Aki",
               "text": "I can't even touch them.",
               "ja": "それらにさわることさえできません。",
-              "study_note": "`I can't even ...` は「...さえできない」と強く言う形です。`them` は前に出た複数のものを指します。",
+              "study_note": "`even` は意外さや強調を加え、「それすら」という感じを出します。`touch` は手などでさわる動作です。`them` は前に出た複数のものを指します。",
               "audio_url": "audio/item_00752.mp3"
             },
             {
@@ -8325,7 +8325,7 @@
               "speaker": "Camp Leader",
               "text": "OK.",
               "ja": "わかりました。",
-              "study_note": "`OK.` は相手の言ったことを受け止める短い返事です。",
+              "study_note": "`OK.` は相手の言ったことを受け止める短い返事で、ここでは「わかりました」に近い意味です。",
               "audio_url": "audio/item_00753.mp3"
             },
             {
@@ -8335,7 +8335,7 @@
               "speaker": "Camp Leader",
               "text": "Then can you set the table by the lantern?",
               "ja": "それなら、ランタンのそばに食卓を準備してくれますか。",
-              "study_note": "`Then can you ...?` は、別の案や次のお願いを出すときに使えます。`set the table` は食器などを並べることです。",
+              "study_note": "`Then` は前の話を受けて次の案に移るときに使えます。`set the table` は食器などを食事のために並べる表現です。`by the lantern` はランタンのすぐ近くの場所を表します。",
               "audio_url": "audio/item_00754.mp3"
             },
             {
@@ -8345,7 +8345,7 @@
               "speaker": "Aki",
               "text": "Sure.",
               "ja": "もちろんです。",
-              "study_note": "`Sure.` はお願いを引き受ける短い返事です。",
+              "study_note": "`Sure.` はお願いを引き受ける短い返事で、「もちろんです」と快く答える感じです。",
               "audio_url": "audio/item_00755.mp3"
             },
             {
@@ -8355,7 +8355,7 @@
               "speaker": "Aki",
               "text": "I can do that.",
               "ja": "それならできます。",
-              "study_note": "`can + 動詞の原形` で「...できる」と言います。`I can do that.` は、その仕事ならできると言う表現です。",
+              "study_note": "`can` はできることを表し、後ろには動詞の原形を置きます。`do` はここでは頼まれた仕事をすることを表します。`that` は直前に言われた内容を指します。",
               "audio_url": "audio/item_00756.mp3"
             }
           ]
@@ -8422,7 +8422,7 @@
               "speaker": "Kaito",
               "text": "It is not a toy.",
               "ja": "それはおもちゃではありません。",
-              "study_note": "`not` を使って「...ではない」と言っています。",
+              "study_note": "`toy` は「おもちゃ」。`not ...` は後ろの内容を否定して、「...ではない」と言う形です。",
               "audio_url": "audio/item_00761.mp3"
             },
             {
@@ -8442,7 +8442,7 @@
               "speaker": "Narrator",
               "text": "\"You are safe now,\" he said.",
               "ja": "「もう安全だよ」と彼は言いました。",
-              "study_note": "`he said` は、だれが言ったかを示す物語の表現です。",
+              "study_note": "`safe` は「安全な」。`now` を加えると、「今はもう」という安心させる感じが出ます。",
               "audio_url": "audio/item_00763.mp3"
             },
             {
@@ -8492,7 +8492,7 @@
               "speaker": "Narrator",
               "text": "The lights were soft and beautiful.",
               "ja": "明かりはやわらかく美しかったです。",
-              "study_note": "`beautiful` は「美しい」。様子を表す形容詞です。",
+              "study_note": "`were soft and beautiful` は過去の様子を二つの形容詞で説明しています。`soft` は光などが「やわらかい」という意味です。",
               "audio_url": "audio/item_00768.mp3"
             },
             {
@@ -8532,7 +8532,7 @@
               "speaker": "Kaito",
               "text": "Please take me home.",
               "ja": "どうか私を家へ連れて帰ってください。",
-              "study_note": "`Take me home.` は「私を家へ連れて行って」という依頼です。",
+              "study_note": "`take 人 home` は「人を家へ連れて帰る」。`Please` を前に置くと、ていねいな依頼になります。",
               "audio_url": "audio/item_00772.mp3"
             },
             {
@@ -8552,7 +8552,7 @@
               "speaker": "Princess",
               "text": "This box is for you.",
               "ja": "この箱はあなたへのものです。",
-              "study_note": "`This ... is for you.` は、ものを渡すときに使える表現です。",
+              "study_note": "`for you` は「あなたのための、あなたに向けた」という意味で、贈り物を渡す場面でよく使います。",
               "audio_url": "audio/item_00774.mp3"
             },
             {
@@ -8562,7 +8562,7 @@
               "speaker": "Princess",
               "text": "But don't open it.",
               "ja": "でも、それを開けないで。",
-              "study_note": "文頭の `But` は対比や注意を表します。`don't open it` は「それを開けないで」です。",
+              "study_note": "文頭の `But` は前の内容に対する注意や逆の流れを示します。`open` は「開ける」、`don't` が付くと禁止になります。",
               "audio_url": "audio/item_00775.mp3"
             },
             {
@@ -8592,7 +8592,7 @@
               "speaker": "Kaito",
               "text": "Do you know me?",
               "ja": "私のことを知っていますか。",
-              "study_note": "`Do you + 動詞の原形...?` は一般動詞の疑問文です。",
+              "study_note": "`know me` は「私のことを知っている」という意味です。",
               "audio_url": "audio/item_00778.mp3"
             },
             {
@@ -8602,7 +8602,7 @@
               "speaker": "Villager",
               "text": "A villager responded, \"I know your name, but you disappeared long ago.\"",
               "ja": "村人は「あなたの名前は知っていますが、あなたはずっと前に姿を消しました」と答えました。",
-              "study_note": "`responded` は「答えた」。`but` は前後を対比します。",
+              "study_note": "`responded` は「答えた、反応した」。`disappeared` は「姿を消した」で、`long ago` はかなり昔のことを表します。",
               "audio_url": "audio/item_00779.mp3"
             },
             {
@@ -8612,7 +8612,7 @@
               "speaker": "Villager",
               "text": "People say that was three hundred years ago.",
               "ja": "人々は、それは三百年前だったと言っています。",
-              "study_note": "`... years ago` は「...年前」。過去の時を表します。",
+              "study_note": "`People say that ...` は「人々は...と言っている」という形です。`three hundred years ago` は「三百年前」です。",
               "audio_url": "audio/item_00780.mp3"
             },
             {
@@ -8622,7 +8622,7 @@
               "speaker": "Narrator",
               "text": "Kaito felt lonely and looked at the empty box.",
               "ja": "カイトはさびしく感じ、空の箱を見ました。",
-              "study_note": "`lonely` は「さびしい」。`empty` は「空の」です。",
+              "study_note": "`felt lonely` は「さびしく感じた」。`looked at ...` は「...を見た」、`empty` は「空の」です。",
               "audio_url": "audio/item_00781.mp3"
             },
             {
@@ -8682,7 +8682,7 @@
               "speaker": "Narrator",
               "text": "Their small house stood beside a narrow road.",
               "ja": "彼らの小さな家は細い道のそばにありました。",
-              "study_note": "`small house` は「小さな家」。場所を表す語句を後ろに置いています。",
+              "study_note": "`stood beside ...` は建物などが「...のそばに立っていた、あった」という意味です。`narrow road` は「細い道」です。",
               "audio_url": "audio/item_00786.mp3"
             },
             {
@@ -8762,7 +8762,7 @@
               "speaker": "Old Man",
               "text": "I am so happy.",
               "ja": "私はとてもうれしいです。",
-              "study_note": "`I am so ...` は強い気持ちを表します。`so` は「とても」です。",
+              "study_note": "`so` は気持ちや程度を強める語です。`happy` は「うれしい、幸せな」という意味です。",
               "audio_url": "audio/item_00794.mp3"
             },
             {
@@ -8772,7 +8772,7 @@
               "speaker": "Old Woman",
               "text": "She's so cute.",
               "ja": "彼女はとてもかわいいです。",
-              "study_note": "`She's so ...` は人の様子を強く言う形です。",
+              "study_note": "`She's` は `She is` の短縮形です。`cute` は「かわいい」、`so` は程度を強める語です。",
               "audio_url": "audio/item_00795.mp3"
             },
             {
@@ -8782,7 +8782,7 @@
               "speaker": "Old Man",
               "text": "Her name is Hikari.",
               "ja": "彼女の名前はヒカリです。",
-              "study_note": "`Her name is ...` は女の人や女の子の名前を言う形です。",
+              "study_note": "`name` は「名前」。`Her` は「彼女の」で、女の人や女の子について言うときに使います。",
               "audio_url": "audio/item_00796.mp3"
             },
             {
@@ -8852,7 +8852,7 @@
               "speaker": "Hikari",
               "text": "I will go home soon.",
               "ja": "私はもうすぐ家へ帰ります。",
-              "study_note": "`I will + 動詞` は未来のことを言う形。`soon` は「もうすぐ」です。",
+              "study_note": "`will` はこれからのことを言う助動詞です。`go home` は「家に帰る」、`soon` は「もうすぐ」です。",
               "audio_url": "audio/item_00803.mp3"
             },
             {
@@ -8862,7 +8862,7 @@
               "speaker": "Old Man",
               "text": "But you are home.",
               "ja": "でも、ここがあなたの家です。",
-              "study_note": "文頭の `But` は相手の言葉と違う考えを示します。",
+              "study_note": "`But` は前の内容と反対のことを言うときに使います。`home` はここでは「家に、家で」という意味です。",
               "audio_url": "audio/item_00804.mp3"
             },
             {
@@ -8902,7 +8902,7 @@
               "speaker": "Narrator",
               "text": "She went home to the moon.",
               "ja": "彼女は月へ帰りました。",
-              "study_note": "`went home` は `go home` の過去形です。",
+              "study_note": "`went home` は `go home` の過去形です。`to the moon` は帰る先を表しています。",
               "audio_url": "audio/item_00808.mp3"
             }
           ]
@@ -8929,7 +8929,7 @@
               "speaker": "Narrator",
               "text": "Once upon a time, a sleepy thunder lord watched over Minato Island.",
               "ja": "昔々、眠そうな雷の神様が港島を見守っていました。",
-              "study_note": "`Once upon a time, ...` は物語の始まり。`island` は水に囲まれた土地です。",
+              "study_note": "`watched over ...` は「...を見守っていた」。`Once upon a time` は昔話の始まりです。",
               "audio_url": "audio/item_00809.mp3"
             },
             {
@@ -8939,7 +8939,7 @@
               "speaker": "Narrator",
               "text": "The sun was bright every morning.",
               "ja": "太陽は毎朝明るく照っていました。",
-              "study_note": "`The sun was ...` は過去の状態を表す文。`bright` は「明るい」です。",
+              "study_note": "`bright` は「明るい」。`every morning` は「毎朝」と、くり返しの時を表します。",
               "audio_url": "audio/item_00810.mp3"
             },
             {
@@ -8959,7 +8959,7 @@
               "speaker": "Narrator",
               "text": "The fields became dry.",
               "ja": "畑は乾いていきました。",
-              "study_note": "`fields` は作物を育てる土地。`dry` は「乾いた」です。",
+              "study_note": "`became dry` は「乾いた状態になった」。`became` は `become` の過去形です。",
               "audio_url": "audio/item_00812.mp3"
             },
             {
@@ -8969,7 +8969,7 @@
               "speaker": "Narrator",
               "text": "The crops were dying.",
               "ja": "作物は枯れかけていました。",
-              "study_note": "`were dying` は過去進行形で、続いていた状態を表します。",
+              "study_note": "`crops` は「作物」です。`were dying` は「枯れかけていた、死にかけていた」と、過去にその状態が続いていたことを表します。",
               "audio_url": "audio/item_00813.mp3"
             },
             {
@@ -8979,7 +8979,7 @@
               "speaker": "Narrator",
               "text": "The village needed rain.",
               "ja": "その村には雨が必要でした。",
-              "study_note": "`needed` は `need` の過去形です。",
+              "study_note": "`needed` は `need` の過去形で「必要としていた」です。主語が場所でも、そこにいる人々を表すように使えます。",
               "audio_url": "audio/item_00814.mp3"
             },
             {
@@ -9009,7 +9009,7 @@
               "speaker": "Wise Old Woman",
               "text": "He makes thunder and brings rain.",
               "ja": "彼は雷を起こし、雨を運んできます。",
-              "study_note": "`makes` と `brings` は三人称単数現在形です。",
+              "study_note": "`makes thunder` は「雷を起こす」、`brings rain` は「雨をもたらす」です。主語が `He` なので、動詞に `-s` がついています。",
               "audio_url": "audio/item_00817.mp3"
             },
             {
@@ -9049,7 +9049,7 @@
               "speaker": "Narrator",
               "text": "She told them about the old woman's advice.",
               "ja": "彼女は老女の助言について彼らに話しました。",
-              "study_note": "`about ...` は話の内容を表します。",
+              "study_note": "`told them about ...` は「彼らに...について話した」です。`them` は前の `the people` を受けています。",
               "audio_url": "audio/item_00821.mp3"
             },
             {
@@ -9069,7 +9069,7 @@
               "speaker": "Young Villager",
               "text": "We can push them down together.",
               "ja": "私たちはそれらを一緒に押し下ろせます。",
-              "study_note": "`push` は「押す」。`them` は前の `stones` を受けています。",
+              "study_note": "`push them down` は「それらを下へ押す、押し下ろす」。`them` は前の `stones` を受けています。",
               "audio_url": "audio/item_00823.mp3"
             },
             {
@@ -9109,7 +9109,7 @@
               "speaker": "Young Villager",
               "text": "Ready?",
               "ja": "準備はいいですか。",
-              "study_note": "動作を始める前に準備を確認する短い表現です。",
+              "study_note": "`Ready?` は `Are you ready?` を短くした形で、「準備はいいですか」という意味です。",
               "audio_url": "audio/item_00827.mp3"
             },
             {
@@ -9119,7 +9119,7 @@
               "speaker": "Young Villager",
               "text": "One, two, push!",
               "ja": "一、二、押せ。",
-              "study_note": "合図と命令を組み合わせた表現です。",
+              "study_note": "`push!` は「押せ」という命令文です。`One, two` は動作を合わせるための合図です。",
               "audio_url": "audio/item_00828.mp3"
             },
             {
@@ -9159,7 +9159,7 @@
               "speaker": "Thunder Lord",
               "text": "What's happening?",
               "ja": "何が起こっているのですか。",
-              "study_note": "今起きていることをたずねる表現です。",
+              "study_note": "`happening` は「起こっている」という意味です。`What's ...?` は相手に何かをたずねる形です。",
               "audio_url": "audio/item_00832.mp3"
             },
             {
@@ -9169,7 +9169,7 @@
               "speaker": "Thunder Lord",
               "text": "What's that noise?",
               "ja": "あの音は何ですか。",
-              "study_note": "聞こえた音についてたずねる疑問文です。",
+              "study_note": "`noise` は「音、物音」。`that` は自分から少し離れて感じるものを指します。",
               "audio_url": "audio/item_00833.mp3"
             },
             {
@@ -9179,7 +9179,7 @@
               "speaker": "Thunder Lord",
               "text": "Is it thunder?",
               "ja": "それは雷ですか。",
-              "study_note": "`Is it ...?` は `be` 動詞の yes/no 疑問文です。",
+              "study_note": "`thunder` は「雷」です。`it` は直前に聞こえた音を指しています。",
               "audio_url": "audio/item_00834.mp3"
             },
             {
@@ -9199,7 +9199,7 @@
               "speaker": "Thunder Lord",
               "text": "That is my job.",
               "ja": "それは私の役目です。",
-              "study_note": "`job` はここでは「仕事、役目」です。",
+              "study_note": "`job` はここでは「仕事、役目」です。`my job` で「私の役目」と自分だけの仕事だと示しています。",
               "audio_url": "audio/item_00836.mp3"
             },
             {
@@ -9239,7 +9239,7 @@
               "speaker": "Thunder Lord",
               "text": "Boom!",
               "ja": "ドーン。",
-              "study_note": "大きな音を表す効果音です。",
+              "study_note": "`Boom!` は爆発音や雷のような大きな低い音を表す効果音です。",
               "audio_url": "audio/item_00840.mp3"
             },
             {
@@ -9259,7 +9259,7 @@
               "speaker": "Young Villager",
               "text": "It worked!",
               "ja": "うまくいきました。",
-              "study_note": "計画や方法が成功したときの表現です。",
+              "study_note": "`It worked!` は「うまくいった！」。計画や方法が成功したときに使います。",
               "audio_url": "audio/item_00842.mp3"
             },
             {

@@ -4,14 +4,15 @@ A local-first English typing app with pluggable content packages.
 
 ## Status
 
-This repository currently contains:
+The app supports multiple saved content sources, expandable unit and part selection,
+audio playback, per-keystroke typing feedback, part results, and saved practice progress.
+It is now being used for practice. The repository also contains content-package
+conventions, dataset/audio preparation scripts, and design notes.
 
-- the project structure for the typing app
-- content-package conventions
-- dataset/audio preparation scripts
-- notes about the current direction
-
-It does **not** yet contain the finished typing UI or game loop.
+Source settings and practice progress are stored in this browser's localStorage.
+Progress does not automatically sync between browsers or devices. Keep the app's
+origin, dataset URLs, and unit/part IDs stable to retain access to existing progress.
+Clearing browser site data or resetting save data removes those records.
 
 ## Design Goal
 

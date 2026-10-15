@@ -8,6 +8,8 @@ Current packages:
   - current runtime asset area for `NEW CROWN 1`
 - `jhs1_typing_500`
   - supplemental 500-sentence JHS 1 typing content
+- `jhs_english_course_1`
+  - generic first-year junior-high English course content
 
 The goal is for content to be replaceable without restructuring the typing program itself.
 

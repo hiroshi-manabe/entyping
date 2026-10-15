@@ -11,6 +11,18 @@ from typing import Any
 DEFAULT_CSV = Path("content/jhs1_typing_500/source/jhs1_typing_500_sentences.csv")
 DEFAULT_OUTPUT = Path("content/jhs1_typing_500/content.json")
 DEFAULT_AUDIO_ROOT = Path("content/jhs1_typing_500/audio")
+UNIT_LABELS = {
+    "unit_001": "be動詞と代名詞",
+    "unit_002": "can・一般動詞・場所",
+    "unit_003": "進行形・There is/are・want",
+    "unit_004": "can・be going to・三単現",
+    "unit_005": "進行形・目的格・疑問詞",
+    "unit_006": "習慣・want to・have to",
+    "unit_007": "has to・間接疑問の基礎",
+    "unit_008": "when/why・天気・過去のbe動詞",
+    "unit_009": "過去形の基本",
+    "unit_010": "過去形と総合復習",
+}
 
 REQUIRED_FIELDS = [
     "id",
@@ -68,7 +80,7 @@ def build_dataset(rows: list[dict[str, str]], csv_path: Path) -> dict[str, Any]:
         if unit is None:
             unit = {
                 "id": unit_id,
-                "label": clean(row["unit_label"]),
+                "label": UNIT_LABELS.get(unit_id, clean(row["unit_label"])),
                 "subtitle": None,
                 "parts": [],
                 "_part_index": {},
@@ -111,7 +123,7 @@ def build_dataset(rows: list[dict[str, str]], csv_path: Path) -> dict[str, Any]:
     return {
         "content": {
             "id": "jhs1_typing_500",
-            "title": "JHS 1 Typing 500",
+            "title": "中1英語 500文タイピング",
             "audio_root": "audio/",
         },
         "source_files": {

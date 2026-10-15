@@ -1,7 +1,7 @@
 {
   "content": {
     "id": "jhs1_typing_500",
-    "title": "JHS 1 Typing 500",
+    "title": "中1英語 500文タイピング",
     "audio_root": "audio/"
   },
   "source_files": {
@@ -13,7 +13,7 @@
   "units": [
     {
       "id": "unit_001",
-      "label": "Unit 1: Basics: Be Verbs and Pronouns",
+      "label": "be動詞と代名詞",
       "subtitle": null,
       "parts": [
         {
@@ -570,7 +570,7 @@
     },
     {
       "id": "unit_002",
-      "label": "Unit 2: Everyday Present Tense",
+      "label": "can・一般動詞・場所",
       "subtitle": null,
       "parts": [
         {
@@ -1127,7 +1127,7 @@
     },
     {
       "id": "unit_003",
-      "label": "Unit 3: Actions, Places, and Needs",
+      "label": "進行形・There is/are・want",
       "subtitle": null,
       "parts": [
         {
@@ -1684,7 +1684,7 @@
     },
     {
       "id": "unit_004",
-      "label": "Unit 4: Time, Questions, and Ability",
+      "label": "can・be going to・三単現",
       "subtitle": null,
       "parts": [
         {
@@ -2241,7 +2241,7 @@
     },
     {
       "id": "unit_005",
-      "label": "Unit 5: People, Feelings, and Descriptions",
+      "label": "進行形・目的格・疑問詞",
       "subtitle": null,
       "parts": [
         {
@@ -2798,7 +2798,7 @@
     },
     {
       "id": "unit_006",
-      "label": "Unit 6: Past and Future",
+      "label": "習慣・want to・have to",
       "subtitle": null,
       "parts": [
         {
@@ -3355,7 +3355,7 @@
     },
     {
       "id": "unit_007",
-      "label": "Unit 7: Infinitives and Gerunds",
+      "label": "has to・間接疑問の基礎",
       "subtitle": null,
       "parts": [
         {
@@ -3912,7 +3912,7 @@
     },
     {
       "id": "unit_008",
-      "label": "Unit 8: Comparison and Reasons",
+      "label": "when/why・天気・過去のbe動詞",
       "subtitle": null,
       "parts": [
         {
@@ -4469,7 +4469,7 @@
     },
     {
       "id": "unit_009",
-      "label": "Unit 9: Reading Sentences and Clauses",
+      "label": "過去形の基本",
       "subtitle": null,
       "parts": [
         {
@@ -5026,7 +5026,7 @@
     },
     {
       "id": "unit_010",
-      "label": "Unit 10: Integrated Review",
+      "label": "過去形と総合復習",
       "subtitle": null,
       "parts": [
         {
